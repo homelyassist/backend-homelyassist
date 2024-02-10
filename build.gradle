@@ -26,6 +26,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.session:spring-session-core'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'com.twilio.sdk:twilio:9.16.0'
 	implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
 	compileOnly 'org.projectlombok:lombok'
@@ -40,6 +41,16 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 }
+
+jar {
+	// Customize the JAR file name
+		archiveFileName = 'backend-homelyassist.jar'
+}
+
+//war {
+//	// Customize WAR settings if necessary
+//	archiveFileName = 'backend-homelyassist.war'
+//}
 
 tasks.named('test') {
 	useJUnitPlatform()
