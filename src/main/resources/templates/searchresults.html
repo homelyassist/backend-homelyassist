@@ -77,11 +77,30 @@
             /* Slightly darker text color */
             margin-bottom: 10px;
             /* Add space below paragraphs */
+            text-align: center; /* Center align the paragraph */
         }
 
         /* Center align button */
         .text-center {
             text-align: center;
+        }
+
+        /* Style for table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px; /* Add margin to the top of the table */
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: center; /* Center align table header */
         }
     </style>
 </head>
@@ -92,9 +111,29 @@
 <section id="content" class="content">
     <div class="container">
         <h3>Here are your homelyAssists</h3>
-        <!-- Placeholder for Full Name and Mobile Number -->
-        <p>Full Name: Lipsita Nayak as maid</p>
-        <p>Mobile Number: 8951386744</p>
+        <!-- Table to display information -->
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Information</th>
+            </tr>
+            <tr>
+                <td>Full Name</td>
+                <td>Amaresh Nayak</td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td>Category Placeholder</td>
+            </tr>
+            <tr>
+                <td>Sub-category</td>
+                <td>Sub-category Placeholder</td>
+            </tr>
+            <tr>
+                <td>Request Phone Number</td>
+                <td>click here to get the phone number</td>
+            </tr>
+        </table>
         <div class="text-center">
             <!-- Button to navigate back -->
             <button type="button" class="btn btn-back">Navigate back to modify your search</button>

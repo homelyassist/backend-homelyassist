@@ -4,8 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ConfirmController {
-    @GetMapping("confirm")
+    @GetMapping("confirmregister")
     public String RegisterAssistPage() {
-        return "confirm";
+        return "confirmregister";
+    }
+    @GetMapping("confirmsubmit")
+    public String SubmitAssistPage() {
+        return "confirmsubmit";
     }
 }
