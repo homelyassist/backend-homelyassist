@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Register as an Assist - homelyAssist</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link th:href="@{/assets/img/favicon.png}" rel="icon">
+    <link th:href="@{/assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link th:href="@{/assets/css/main.css}" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: PhotoFolio
+    * Updated: Jan 29 2024 with Bootstrap v5.3.2
+    * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+    <style>
+        /* Style for the buttons */
+        .btn-register {
+          background-color: #6cb83a; /* Green theme */
+          color: #ffffff;
+          border: none;
+          border-radius: 20px;
+          padding: 10px 20px;
+          margin-top: 10px;
+          transition: background-color 0.3s ease;
+        }
+
+        .btn-register:hover {
+          background-color: #f5cb42; /* Yellow theme on hover */
+        }
+
+        /* Style for the form */
+        #register-form {
+          background-color: #f7f7f7; /* Light gray background */
+          padding: 20px; /* Adjust padding as needed */
+          border-radius: 10px;
+          margin-top: 30px; /* Add some space between sections */
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+
+        #register-form h3 {
+          color: #333; /* Darker text color */
+          margin-bottom: 20px; /* Add space below the heading */
+          text-align: center; /* Center align the heading */
+        }
+
+        #register-form label {
+          color: #666; /* Slightly darker text color */
+          margin-bottom: 5px; /* Add space below the labels */
+        }
+
+        #register-form input, #register-form textarea, #register-form select {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ced4da;
+          border-radius: 5px;
+        }
+
+        #register-form textarea {
+          resize: none; /* Prevent textarea from being resized */
+        }
+
+        .form-group {
+          margin-bottom: 15px; /* Add space between form groups */
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1>homelyAssist</h1>
+        </a>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Register/Login as an Assist</a></li>
+                <li><a href="loginfind.html">Login to find an Assist</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav><!-- .navbar -->
+
+        <div class="header-social-links">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        </div>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+</header><!-- End Header -->
+
+<!-- ======= Form Section ======= -->
+<section id="form" class="form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6" data-aos="fade-up">
+                <form id="register-form">
+                    <h3>Enter your details to register</h3>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter your address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="areaCity">Area/City</label>
+                        <input type="text" class="form-control" id="areaCity" placeholder="Enter your area or city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="district">District</label>
+                        <input type="text" class="form-control" id="district" placeholder="Enter your district" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pin">Pin</label>
+                        <input type="text" class="form-control" id="pin" placeholder="Enter your PIN code" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactNo">Contact No</label>
+                        <input type="tel" class="form-control" id="contactNo" placeholder="Enter your contact number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" placeholder="Enter a brief description about yourself" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Photo</label>
+                        <input type="file" class="form-control" id="photo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subcategory">Select Subcategory</label>
+                        <select class="form-select" id="subcategory" required>
+                            <option selected disabled>Select a subcategory</option>
+                            <option value="agriculture">Agriculture Assist</option>
+                            <option value="construction">Construction Assist</option>
+                            <!-- Add more subcategories here -->
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-register">Register</button>
+                        <button type="button" class="btn btn-register">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section><!-- End Form Section -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="https://bootstrapmade.com/">homelyAssistTeam</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader">
+    <div class="line"></div>
+</div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
