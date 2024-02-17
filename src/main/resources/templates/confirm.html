@@ -96,7 +96,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6" data-aos="fade-up">
-                <form id="register-form">
+                <form id="register-form" action="registered">
                     <h3>Enter your details to register</h3>
                     <div class="form-group">
                         <label for="fullName">Full Name</label>
@@ -104,11 +104,11 @@
                     </div>
                     <div class="form-group">
                         <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address" placeholder="Enter your address" required>
+                        <input type="text" class="form-control" id="address" placeholder="Enter your address">
                     </div>
                     <div class="form-group">
-                        <label for="areaCity">Area/City</label>
-                        <input type="text" class="form-control" id="areaCity" placeholder="Enter your area or city" required>
+                        <label for="villageAreaCity">Village/Area/City</label>
+                        <input type="text" class="form-control" id="villageAreaCity" placeholder="Enter your village, area, or city" required>
                     </div>
                     <div class="form-group">
                         <label for="district">District</label>
@@ -128,7 +128,16 @@
                     </div>
                     <div class="form-group">
                         <label for="photo">Photo</label>
-                        <input type="file" class="form-control" id="photo" required>
+                        <input type="file" class="form-control" id="photo">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Select Category</label>
+                        <select class="form-select" id="category" required>
+                            <option selected disabled>Select a category</option>
+                            <option value="category1">Category 1</option>
+                            <option value="category2">Category 2</option>
+                            <!-- Add more categories here -->
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="subcategory">Select Subcategory</label>
@@ -141,7 +150,6 @@
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-register">Register</button>
-                        <button type="button" class="btn btn-register">Next</button>
                     </div>
                 </form>
             </div>
@@ -184,4 +192,3 @@
 </body>
 
 </html>
-
