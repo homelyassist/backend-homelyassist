@@ -1263,3 +1263,36 @@ h6 {
 .footer .credits a {
   color: var(--color-primary);
 }
+/* CSS for the separator */
+.separator {
+  margin: 0 10px; /* Adjust the margin as needed */
+}
+/* CSS for button size */
+.btn-get-started {
+  width: 150px; /* Adjust the width as needed */
+}
+/* CSS for button size and text */
+.btn-get-started {
+  width: 150px; /* Adjust the width as needed */
+  white-space: nowrap;
+}
+/* CSS for button size and text */
+.btn-get-started {
+  width: 150px; /* Adjust the width as needed */
+  white-space: nowrap;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.separator {
+  margin: 0 10px; /* Adjust the margin as needed */
+}
+
+.btn-get-started {
+  width: 150px; /* Adjust the width as needed */
+}
+.btn-get-started {
+  width: 150px; /* Adjust the width as needed */
+  white-space: nowrap;
+}
+

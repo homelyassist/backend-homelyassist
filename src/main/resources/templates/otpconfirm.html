@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>OTP Verification - homelyAssist</title>
+    <title>Enter your phone number and OTP - homelyAssist</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -37,77 +37,81 @@
     ======================================================== -->
     <style>
         /* Style for the buttons */
-        .btn-generate-otp,
-        .btn-resend-otp,
-        .btn-confirm {
-            background-color: #6cb83a; /* Green theme */
-            color: #ffffff;
-            border: none;
-            border-radius: 20px;
-            padding: 10px 20px;
-            margin-top: 10px;
-            transition: background-color 0.3s ease;
+        .btn-next {
+          background-color: #6cb83a; /* Green theme */
+          color: #ffffff;
+          border: none;
+          border-radius: 20px;
+          padding: 10px 20px;
+          margin-top: 10px;
+          transition: background-color 0.3s ease;
         }
 
-        .btn-generate-otp:hover,
-        .btn-resend-otp:hover,
-        .btn-confirm:hover {
-            background-color: #f5cb42; /* Yellow theme on hover */
+        .btn-next:hover {
+          background-color: #f5cb42; /* Yellow theme on hover */
         }
 
         /* Style for the form */
         #otp-form {
-            background-color: #f7f7f7; /* Light gray background */
-            padding: 20px; /* Adjust padding as needed */
-            border-radius: 10px;
-            margin-top: 30px; /* Add some space between sections */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+          background-color: #f7f7f7; /* Light gray background */
+          padding: 20px; /* Adjust padding as needed */
+          border-radius: 10px;
+          margin-top: 30px; /* Add some space between sections */
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
         }
 
         #otp-form h3 {
-            color: #333; /* Darker text color */
-            margin-bottom: 20px; /* Add space below the heading */
-            text-align: center; /* Center align the heading */
+          color: #333; /* Darker text color */
+          margin-bottom: 20px; /* Add space below the heading */
+          text-align: center; /* Center align the heading */
         }
 
         #otp-form label {
-            color: #666; /* Slightly darker text color */
-            margin-bottom: 5px; /* Add space below the labels */
+          color: #666; /* Slightly darker text color */
+          margin-bottom: 5px; /* Add space below the labels */
         }
 
-        #otp-form input,
-        #otp-form textarea,
-        #otp-form select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ced4da;
-            border-radius: 5px;
-        }
-
-        #otp-form textarea {
-            resize: none; /* Prevent textarea from being resized */
-        }
-
-        .form-group {
-            margin-bottom: 15px; /* Add space between form groups */
-        }
-
-        .confirm-link {
-            text-align: center;
-            display: block;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #6cb83a;
-        }
-
-        .confirm-link:hover {
-            text-decoration: underline;
+        #otp-form input {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ced4da;
+          border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1>homelyAssist</h1>
+        </a>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Register/Login as an Assist</a></li>
+                <li><a href="loginfind.html">Login to Find an Assist</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav><!-- .navbar -->
+
+        <div class="header-social-links">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        </div>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+</header><!-- End Header -->
 
 <!-- ======= Form Section ======= -->
 <section id="form" class="form">
@@ -115,28 +119,23 @@
         <div class="row justify-content-center">
             <div class="col-lg-6" data-aos="fade-up">
                 <form id="otp-form">
-                    <h3>Enter your mobile number</h3>
+                    <h3>Enter your phone number to get an OTP</h3>
                     <div class="form-group">
-                        <label for="mobileNumber">Mobile Number</label>
-                        <input type="tel" class="form-control" id="mobileNumber"
-                               placeholder="Enter your mobile number" required>
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
                     </div>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-generate-otp">Generate OTP</button>
-                    </div>
-                    <hr>
-                    <h3>Enter OTP</h3>
                     <div class="form-group">
-                        <label for="otp">OTP</label>
+                        <label for="otp">Enter OTP</label>
                         <input type="text" class="form-control" id="otp" placeholder="Enter OTP" required>
                     </div>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-resend-otp">Resend OTP</button>
+                    <div class="form-group text-center">
+                        <a href="#" class="send-otp-link">Send OTP</a>
                     </div>
-                    <hr>
+                    <div class="form-group text-center">
+                        <a href="#" class="resend-otp-link">Resend OTP</a>
+                    </div>
                     <div class="text-center">
-                        <a href="confirmregister" class="confirm-link">Confirmregister</a>
-                        <a href="confirmsubmit" class="confirm-link">Confirmsubmit</a>
+                        <button type="submit" class="btn btn-next">Next</button>
                     </div>
                 </form>
             </div>
@@ -160,8 +159,7 @@
     </div>
 </footer><!-- End Footer -->
 
-<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <div id="preloader">
     <div class="line"></div>
@@ -177,10 +175,7 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 
-<!-- Your custom scripts here -->
-<script>
-    // Add your custom JavaScript code here to handle functionality like generating OTP, resending OTP, etc.
-</script>
 </body>
 
 </html>
+

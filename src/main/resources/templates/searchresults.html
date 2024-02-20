@@ -5,41 +5,32 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Here are your homelyAssists - homelyAssist</title>
+    <title>Assists Available</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link th:href="@{/assets/img/favicon.png}" rel="icon">
-    <link th:href="@{/assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap">
 
     <!-- Vendor CSS Files -->
-    <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
-    <link th:href="@{/assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
-    <link th:href="@{/assets/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
-    <link th:href="@{/assets/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
-    <link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link th:href="@{/assets/css/main.css}" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: PhotoFolio
-    * Updated: Jan 29 2024 with Bootstrap v5.3.2
-    * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+    <!-- Custom CSS -->
     <style>
-        /* Style for the button */
-        .btn-back {
-            background-color: #6cb83a;
-            /* Green theme */
+        /* Style for the buttons */
+        .btn-search {
+            background-color: #6cb83a; /* Green theme */
             color: #ffffff;
             border: none;
             border-radius: 20px;
@@ -48,99 +39,145 @@
             transition: background-color 0.3s ease;
         }
 
-        .btn-back:hover {
-            background-color: #f5cb42;
-            /* Yellow theme on hover */
+        .btn-search:hover {
+            background-color: #f5cb42; /* Yellow theme on hover */
         }
 
-        /* Style for the content */
-        #content {
-            padding: 20px;
-            /* Adjust padding as needed */
-            margin-top: 30px;
-            /* Add some space between sections */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            /* Add a subtle shadow */
+        /* Style for the assists */
+        .assist-card {
+            background-color: #f7f7f7; /* Light gray background */
+            padding: 20px; /* Adjust padding as needed */
+            border-radius: 10px;
+            margin-top: 30px; /* Add some space between cards */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
         }
 
-        #content h3 {
-            color: #333;
-            /* Darker text color */
-            margin-bottom: 20px;
-            /* Add space below the heading */
-            text-align: center;
-            /* Center align the heading */
+        .assist-card h3 {
+            color: #333; /* Darker text color */
+            margin-bottom: 10px; /* Add space below the heading */
+            text-align: left; /* Left align the heading */
         }
 
-        #content p {
-            color: #666;
-            /* Slightly darker text color */
-            margin-bottom: 10px;
-            /* Add space below paragraphs */
-            text-align: center; /* Center align the paragraph */
+        .assist-card p {
+            color: #666; /* Slightly darker text color */
+            margin-bottom: 10px; /* Add space below the description */
+            text-align: left; /* Left align the description */
         }
 
-        /* Center align button */
-        .text-center {
-            text-align: center;
+        .assist-card .btn-details {
+            background-color: #6cb83a; /* Green theme */
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
         }
 
-        /* Style for table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px; /* Add margin to the top of the table */
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-            text-align: center; /* Center align table header */
+        .assist-card .btn-details:hover {
+            background-color: #f5cb42; /* Yellow theme on hover */
         }
     </style>
 </head>
 
 <body>
 
-<!-- ======= Content Section ======= -->
-<section id="content" class="content">
+<!-- ======= Assists Section ======= -->
+<section id="assists" class="assists">
     <div class="container">
-        <h3>Here are your homelyAssists</h3>
-        <!-- Table to display information -->
-        <table>
-            <tr>
-                <th>Field</th>
-                <th>Information</th>
-            </tr>
-            <tr>
-                <td>Full Name</td>
-                <td>Amaresh Nayak</td>
-            </tr>
-            <tr>
-                <td>Category</td>
-                <td>Category Placeholder</td>
-            </tr>
-            <tr>
-                <td>Sub-category</td>
-                <td>Sub-category Placeholder</td>
-            </tr>
-            <tr>
-                <td>Request Phone Number</td>
-                <td>click here to get the phone number</td>
-            </tr>
-        </table>
-        <div class="text-center">
-            <!-- Button to navigate back -->
-            <button type="button" class="btn btn-back">Navigate back to modify your search</button>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Available Assists in Your Locality</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Assist Card 1 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="assist-card">
+                    <h3>Assist Name 1</h3>
+                    <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
+                    <p>Reviews: 4.5/5</p>
+                    <button class="btn btn-details">View Details</button>
+                    <button class="btn btn-request">Request Mobile Number</button>
+                </div>
+            </div>
+            <!-- Assist Card 2 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                <div class="assist-card">
+                    <h3>Assist Name 2</h3>
+                    <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
+                    <p>Reviews: 4.7/5</p>
+                    <button class="btn btn-details">View Details</button>
+                    <button class="btn btn-request">Request Mobile Number</button>
+                </div>
+            </div>
+            <!-- Assist Card 3 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                <div class="assist-card">
+                    <h3>Assist Name 3</h3>
+                    <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
+                    <p>Reviews: 4.2/5</p>
+                    <button class="btn btn-details">View Details</button>
+                    <button class="btn btn-request">Request Mobile Number</button>
+                </div>
+            </div>
+            <!-- Assist Card 4 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                <div class="assist-card">
+                    <h3>Assist Name 4</h3>
+                    <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
+                    <p>Reviews: 4.8/5</p>
+                    <button class="btn btn-details">View Details</button>
+                    <button class="btn btn-request">Request Mobile Number</button>
+                </div>
+            </div>
+            <!-- Assist Card 5 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+                <div class="assist-card">
+                    <h3>Assist Name 5</h3>
+                    <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
+                    <p>Reviews: 4.9/5</p>
+                    <button class="btn btn-details">View Details</button>
+                    <button class="btn btn-request">Request Mobile Number</button>
+                </div>
+            </div>
+            <!-- Assist Card 6 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="600">
+                <div class="assist-card">
+                    <h3>Assist Name 6</h3>
+                    <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
+                    <p>Reviews: 4.9/5</p>
+                    <button class="btn btn-details">View Details</button>
+                    <button class="btn btn-request">Request Mobile Number</button>
+                </div>
+            </div>
         </div>
     </div>
-</section>
-<!-- End Content Section -->
+</section><!-- End Assists Section -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="https://bootstrapmade.com/">homelyAssistTeam</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader">
+    <div class="line"></div>
+</div>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
