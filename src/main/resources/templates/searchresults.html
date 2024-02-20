@@ -64,7 +64,8 @@
             text-align: left; /* Left align the description */
         }
 
-        .assist-card .btn-details {
+        .assist-card .btn-details,
+        .assist-card .btn-request {
             background-color: #6cb83a; /* Green theme */
             color: #ffffff;
             border: none;
@@ -74,8 +75,21 @@
             transition: background-color 0.3s ease;
         }
 
-        .assist-card .btn-details:hover {
+        .assist-card .btn-details:hover,
+        .assist-card .btn-request:hover {
             background-color: #f5cb42; /* Yellow theme on hover */
+        }
+
+        .btn-request {
+            background-color: transparent;
+            color: #6cb83a; /* Green theme */
+            border: 2px solid #6cb83a; /* Green border */
+            margin-right: 10px;
+        }
+
+        .btn-request:hover {
+            background-color: #6cb83a; /* Green theme on hover */
+            color: #ffffff; /* White text on hover */
         }
     </style>
 </head>
