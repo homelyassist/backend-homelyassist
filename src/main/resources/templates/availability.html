@@ -55,11 +55,51 @@
         /* Center the form */
         #availability-form {
             text-align: center;
+            padding: 50px 0;
         }
 
         /* Adjust form layout */
         #availability-form .form-group {
             margin-bottom: 15px;
+            text-align: left;
+        }
+
+        #availability-form label {
+            font-weight: bold;
+        }
+
+        /* Style section title */
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #6cb83a;
+            margin-bottom: 30px;
+        }
+
+        /* Style form inputs */
+        .form-control {
+            border-radius: 20px;
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+
+        /* Style form select */
+        select.form-control {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%236cb83a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M12 16l-6-6h12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 20px;
+            padding-right: 40px;
+        }
+
+        /* Style file input */
+        input[type="file"].form-control {
+            border: 1px solid #ced4da;
+            background-color: transparent;
+            padding: 10px 20px;
         }
     </style>
 </head>

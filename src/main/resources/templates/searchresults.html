@@ -50,18 +50,23 @@
             border-radius: 10px;
             margin-top: 30px; /* Add some space between cards */
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            text-align: center; /* Center align the content */
         }
 
         .assist-card h3 {
             color: #333; /* Darker text color */
             margin-bottom: 10px; /* Add space below the heading */
-            text-align: left; /* Left align the heading */
         }
 
         .assist-card p {
             color: #666; /* Slightly darker text color */
             margin-bottom: 10px; /* Add space below the description */
-            text-align: left; /* Left align the description */
+        }
+
+        .assist-card img {
+            width: 100%; /* Ensure image fills the container */
+            border-radius: 10px; /* Apply border-radius to image */
+            margin-bottom: 10px; /* Add space below the image */
         }
 
         .assist-card .btn-details,
@@ -91,6 +96,12 @@
             background-color: #6cb83a; /* Green theme on hover */
             color: #ffffff; /* White text on hover */
         }
+
+        /* Center align and change color of title */
+        .section-title h2 {
+            text-align: center;
+            color: #6cb83a; /* Green theme */
+        }
     </style>
 </head>
 
@@ -110,6 +121,7 @@
             <!-- Assist Card 1 -->
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                 <div class="assist-card">
+                    <img src="assets/img/assist1.jpg" alt="Assist 1">
                     <h3>Assist Name 1</h3>
                     <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
                     <p>Reviews: 4.5/5</p>
@@ -120,6 +132,7 @@
             <!-- Assist Card 2 -->
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                 <div class="assist-card">
+                    <img src="assets/img/assist2.jpg" alt="Assist 2">
                     <h3>Assist Name 2</h3>
                     <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
                     <p>Reviews: 4.7/5</p>
@@ -130,6 +143,7 @@
             <!-- Assist Card 3 -->
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                 <div class="assist-card">
+                    <img src="assets/img/assist3.jpg" alt="Assist 3">
                     <h3>Assist Name 3</h3>
                     <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
                     <p>Reviews: 4.2/5</p>
@@ -140,6 +154,7 @@
             <!-- Assist Card 4 -->
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                 <div class="assist-card">
+                    <img src="assets/img/assist4.jpg" alt="Assist 4">
                     <h3>Assist Name 4</h3>
                     <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
                     <p>Reviews: 4.8/5</p>
@@ -150,6 +165,7 @@
             <!-- Assist Card 5 -->
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
                 <div class="assist-card">
+                    <img src="assets/img/assist5.jpg" alt="Assist 5">
                     <h3>Assist Name 5</h3>
                     <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
                     <p>Reviews: 4.9/5</p>
@@ -160,6 +176,7 @@
             <!-- Assist Card 6 -->
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="600">
                 <div class="assist-card">
+                    <img src="assets/img/assist6.jpg" alt="Assist 6">
                     <h3>Assist Name 6</h3>
                     <p>Description of the assist goes here. This could include details about their expertise, availability, etc.</p>
                     <p>Reviews: 4.9/5</p>
@@ -186,12 +203,6 @@
         </div>
     </div>
 </footer><!-- End Footer -->
-
-<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<div id="preloader">
-    <div class="line"></div>
-</div>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
