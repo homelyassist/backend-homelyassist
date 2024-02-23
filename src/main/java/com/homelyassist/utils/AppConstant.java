@@ -9,4 +9,10 @@ public class AppConstant {
     public static class ERROR {
         public static final String INTERNAL_SERVER_ERROR = "Internal server error";
     }
+
+    public static class HTMLPage {
+        public static final String ASSIST_REGISTER = "assist_register";
+    }
+
+    public static final String VALID_TOKEN = "OK";
 }
