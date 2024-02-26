@@ -14,6 +14,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class MemberRegistrationResponseDto {
+
+    @JsonProperty("uuid")
+    private String uuid;
+
     @JsonProperty("phone_number")
     private String phoneNumber;
 

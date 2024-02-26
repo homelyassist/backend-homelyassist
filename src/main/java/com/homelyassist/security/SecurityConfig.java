@@ -23,7 +23,13 @@ public class SecurityConfig {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/").permitAll()
+                        .requestMatchers("/assist/availability").permitAll()
+                        .requestMatchers("/assets/**").permitAll()
+                        .requestMatchers("/api/auth/validate").authenticated()
                         .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/assist/register").permitAll()
+                        .requestMatchers("/loginconfirm").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

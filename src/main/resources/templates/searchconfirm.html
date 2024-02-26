@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Login to Find an Assist - homelyAssist</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link th:href="@{/assets/img/favicon.png}" rel="icon">
+    <link th:href="@{/assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link th:href="@{/assets/css/main.css}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Style for the form */
+        #search-form {
+            background-color: #f7f7f7; /* Light gray background */
+            padding: 30px; /* Adjust padding as needed */
+            border-radius: 10px;
+            margin-top: 50px; /* Add some space between sections */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+
+        #search-form h3 {
+            color: #ff6600; /* Orange theme */
+            margin-bottom: 20px; /* Add space below the heading */
+            text-align: center; /* Center align the heading */
+            font-size: 24px; /* Increase font size */
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+        }
+
+        #search-form label {
+            color: #333; /* Darker text color */
+            margin-bottom: 5px; /* Add space below the labels */
+            font-size: 18px; /* Adjust font size */
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+        }
+
+        #search-form input,
+        #search-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+        }
+
+        /* Style for the Back and Next buttons */
+        .btn-container {
+            text-align: center; /* Center align buttons */
+            margin-top: 30px; /* Add some space between buttons and form */
+        }
+
+        .btn-back,
+        .btn-next {
+            padding: 12px 32px;
+            margin: 0 10px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+        }
+
+        .btn-back {
+            background-color: #dcdcdc; /* Light gray background */
+            color: #333;
+            border: 1px solid #999; /* Add border for better visibility */
+        }
+
+        .btn-next {
+            background-color: #6cb83a; /* Green theme */
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-back:hover,
+        .btn-next:hover {
+            background-color: #f5f5f5; /* Light gray background on hover */
+        }
+
+        /* Style for the section title */
+        .section-title h2 {
+            color: #6cb83a; /* Green theme */
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ======= Form Section ======= -->
+<section id="form" class="form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6" data-aos="fade-up">
+                <h3 style="color: #ff6600;">Enter Below Details to Complete Your Search</h3>
+            </div>
+            <form action="#" method="post" role="form" class="php-email-form" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="category">Category</label>
+                        <select name="category" id="category" class="form-control" required>
+                            <option value="">Select Category</option>
+                            <option value="Agriculture Assist">Agriculture Assist</option>
+                            <option value="Construction Assist">Construction Assist</option>
+                            <option value="Electrical Assist">Electrical Assist</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="subcategory">Sub-Category</label>
+                        <select name="subcategory" id="subcategory" class="form-control" required>
+                            <option value="">Select Sub-Category</option>
+                            <!-- Add options corresponding to the selected category -->
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="village">Village/Area/City</label>
+                        <input type="text" name="village" class="form-control" id="village" placeholder="Village/Area/City" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="pin">Pin</label>
+                        <input type="text" name="pin" class="form-control" id="pin" placeholder="Pin" required>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" name="mobile" class="form-control" id="mobile" placeholder="Mobile Number" required>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <a href="#" class="btn-otp">Generate OTP</a>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP" required>
+                    </div>
+                    <div class="col-md-12 btn-container">
+                        <button type="button" class="btn btn-success" onclick="window.location.href='home'">Back</button>
+                        <button type="submit" class="btn btn-success" onclick="window.location.href='searchresults'">Confirm</button>
+                        <button type="button" class="btn btn-success">Next</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
