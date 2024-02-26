@@ -21,9 +21,19 @@
         displayError(thisForm, 'The form action property is not set!');
         return;
       }
-      thisForm.querySelector('.loading').classList.add('d-block');
-      thisForm.querySelector('.error-message').classList.remove('d-block');
-      thisForm.querySelector('.sent-message').classList.remove('d-block');
+      const loadingElement = thisForm.querySelector('.loading');
+      const errorElement = thisForm.querySelector('.error-message')
+      const sentElement = thisForm.querySelector('.sent-message')
+
+      if (loadingElement) {
+          loadingElement.classList.add('d-block');
+      }
+      if (errorElement) {
+        errorElement.classList.remove('d-block');
+      }
+      if (sentElement) {
+        sentElement.classList.remove('d-block');
+      }
 
       let formData = new FormData( thisForm );
 

@@ -119,15 +119,14 @@
                         <div class="col-md-12 form-group">
                             <label for="availability">Ensure Your Availability:</label>
                             <select name="availability" id="availability" class="form-control" required>
-                                <option value="">Select</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </select>
                         </div>
                         <div class="col-md-12 btn-container">
-                            <button type="button" class="btn btn-success" onclick="window.location.href='home'">Home</button>
-                            <button type="submit" class="btn btn-success">Save</button>
-                            <button type="button" class="btn btn-success">Change Registration Details</button>
+                            <!-- <button type="button" class="btn btn-success" onclick="window.location.href='home'">Home</button> -->
+                            <button type="button" class="btn btn-success" onclick="updateAvailabilityInfo()">Save</button>
+                            <!-- <button type="button" class="btn btn-success">Change Registration Details</button> -->
                         </div>
                     </div>
                 </form>
@@ -158,20 +157,21 @@
     <div class="line"></div>
 </div>
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-
-<!-- Template Main JS File -->
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
 <script src="/assets/js/main.js"></script>
+<script src="/assets/js/otp.js"></script>
+<script src="/assets/js/assist.js"></script>
+<script src="/assets/js/utils.js"></script>
 <script src="/assets/js/token_validator.js"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         validateToken();
+        fetchAssistInfo();
     });
 </script>
 

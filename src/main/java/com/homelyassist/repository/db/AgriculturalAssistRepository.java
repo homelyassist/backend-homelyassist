@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AgriculturalAssistRepository extends JpaRepository<AgriculturalAssist, Long> {
+public interface AgriculturalAssistRepository extends JpaRepository<AgriculturalAssist, String> {
 
     boolean existsByPhoneNumber(String phoneNumber);
 }

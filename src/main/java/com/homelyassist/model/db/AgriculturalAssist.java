@@ -8,8 +8,6 @@ import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Index;
 import jakarta.persistence.Table;
@@ -27,10 +25,9 @@ import java.util.List;
 public class AgriculturalAssist extends User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @JsonProperty("id")
     @Column(name = "id")
-    private Long id;
+    private String id;
 
     @JsonProperty("experience")
     @Column(name = "experience")
@@ -43,6 +40,6 @@ public class AgriculturalAssist extends User {
     @ElementCollection(targetClass = AgriculturalAssistType.class)
     @Enumerated(EnumType.STRING)
     @JsonProperty("assist_types")
-    @Column(name = "assist_types", nullable = false)
+    @Column(name = "assist_types", nullable = false, length=512)
     private List<AgriculturalAssistType> agriculturalAssistTypes;
 }

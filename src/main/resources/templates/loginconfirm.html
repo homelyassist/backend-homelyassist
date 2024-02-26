@@ -97,16 +97,16 @@
                             <input type="tel" name="mobile" class="form-control" id="mobile" placeholder="Mobile Number" required>
                         </div>
                         <div class="col-md-12 form-group">
-                            <a href="#" class="btn-otp">Generate OTP</a>
-                        </div>
-                        <div class="col-md-12 form-group">
                             <label for="otp">OTP</label>
                             <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP" required>
                         </div>
+                        <div class="col-md-12 form-group">
+                            <button type="button" class="btn btn-primary" onclick="generateOtp()">Generate OTP</button>
+                        </div>
                         <div class="col-md-12 btn-container">
-                            <button type="button" class="btn btn-success" onclick="window.location.href='home'">Back</button>
-                            <button type="submit" class="btn btn-success" onclick="window.location.href='availability'">Confirm</button>
-                            <button type="button" class="btn btn-success">Next</button>
+                            <!-- <button type="button" class="btn btn-success" onclick="window.location.href='home'">Back</button> -->
+                            <button type="submit" class="btn btn-success" onclick="assistLogin()">Login</button>
+                            <!-- <button type="button" class="btn btn-success">Next</button> -->
                         </div>
                     </div>
                 </form>
@@ -137,15 +137,16 @@
     <div class="line"></div>
 </div>
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/otp.js"></script>
+<script src="/assets/js/assist.js"></script>
+<script src="/assets/js/utils.js"></script>
+<script src="/assets/js/token_validator.js"></script>
 
 </body>
 

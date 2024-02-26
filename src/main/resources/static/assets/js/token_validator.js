@@ -10,6 +10,6 @@ async function validateToken() {
     
     if (!response.ok) {
         console.error('Failed to validate token');
-        window.location.href = "/";
+        window.location.assign("/");
     }
 }
