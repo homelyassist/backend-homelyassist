@@ -94,6 +94,15 @@
             background-color: transparent;
             padding: 10px 20px;
         }
+        /* Style checkboxes */
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .checkbox-item {
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
@@ -132,22 +141,34 @@
                             <label for="category">Category</label>
                             <select name="category" id="category" class="form-control" required>
                                 <option value="agriculture_assist">Agriculture Assist</option>
-<!--                                <option value="Construction Assist">Construction Assist</option>-->
-<!--                                <option value="Electrical Assist">Electrical Assist</option>-->
-                                <!-- Add more options as needed -->
                             </select>
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="subcategory">Sub-Category</label>
-                            <select name="subcategory" id="subcategory" class="form-control" required>
-<!--                                <option value="">Select Sub-Category</option>-->
-                                <option value="agriculture">Agriculture</option>
-                                <option value="farm_land_maintenance">Farm Land Maintenance</option>
-                                <option value="wood_cutting">Wood Cutting</option>
-                                <option value="tractor_power_tiller">Tractor/Power Tiller</option>
-                                <option value="animal_selling">Animal Selling</option>
-                            </select>
+                            <div class="checkbox-container">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="agriculture" name="agriculture" checked>
+                                    <label for="agriculture">Agriculture</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="farm_land_maintenance" name="farm_land_maintenance" checked>
+                                    <label for="farm_land_maintenance">Farm Land Maintenance</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="wood_cutting" name="wood_cutting" checked>
+                                    <label for="wood_cutting">Wood Cutting</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="tractor_power_tiller" name="tractor_power_tiller" checked>
+                                    <label for="tractor_power_tiller">Tractor/Power Tiller</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="animal_selling" name="animal_selling" checked>
+                                    <label for="animal_selling">Animal Selling</label>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="col-md-6 form-group">
                             <label for="description">Description</label>
                             <input type="text" name="description" class="form-control" id="description" placeholder="Description" required>
