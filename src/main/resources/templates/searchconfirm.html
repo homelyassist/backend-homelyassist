@@ -40,7 +40,7 @@
         }
 
         #search-form h3 {
-            color: #ff6600; /* Orange theme */
+            color: #6cb83a; /* Green theme */
             margin-bottom: 20px; /* Add space below the heading */
             text-align: center; /* Center align the heading */
             font-size: 24px; /* Increase font size */
@@ -65,41 +65,15 @@
             font-family: 'Roboto', sans-serif; /* Use Roboto font */
         }
 
-        /* Style for the Back and Next buttons */
-        .btn-container {
-            text-align: center; /* Center align buttons */
-            margin-top: 30px; /* Add some space between buttons and form */
-        }
-
-        .btn-back,
-        .btn-next {
-            padding: 12px 32px;
-            margin: 0 10px;
-            border-radius: 20px;
-            transition: background-color 0.3s ease;
-            font-family: 'Roboto', sans-serif; /* Use Roboto font */
-        }
-
-        .btn-back {
-            background-color: #dcdcdc; /* Light gray background */
-            color: #333;
-            border: 1px solid #999; /* Add border for better visibility */
-        }
-
-        .btn-next {
-            background-color: #6cb83a; /* Green theme */
-            color: #ffffff;
-            border: none;
-        }
-
-        .btn-back:hover,
-        .btn-next:hover {
-            background-color: #f5f5f5; /* Light gray background on hover */
-        }
-
         /* Style for the section title */
         .section-title h2 {
             color: #6cb83a; /* Green theme */
+        }
+
+        /* Center align the button */
+        .btn-container {
+            text-align: center;
+            margin-top: 30px; /* Adjust margin to move the button down */
         }
     </style>
 </head>
@@ -111,13 +85,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6" data-aos="fade-up">
-                <h3 style="color: #ff6600;">Enter Below Details to Complete Your Search</h3>
+                <h3>Enter Below Details to Complete Your Search</h3>
             </div>
-            <form action="#" method="post" role="form" class="php-email-form" data-aos="fade-up">
+            <form action="searchresults.html" method="get" role="form" class="php-email-form" data-aos="fade-up">
                 <div class="row">
                     <div class="col-md-6 form-group">
                         <label for="category">Category</label>
-                        <select name="category" id="category" class="form-control" required>
+                        <select name="category" id="category" class="form-control" required onchange="changeSubCategoryOptions()">
                             <option value="">Select Category</option>
                             <option value="Agriculture Assist">Agriculture Assist</option>
                             <option value="Construction Assist">Construction Assist</option>
@@ -125,11 +99,11 @@
                             <!-- Add more options as needed -->
                         </select>
                     </div>
-                    <div class="col-md-6 form-group">
+                    <div class="col-md-6 form-group" id="subCategoryContainer">
                         <label for="subcategory">Sub-Category</label>
                         <select name="subcategory" id="subcategory" class="form-control" required>
                             <option value="">Select Sub-Category</option>
-                            <!-- Add options corresponding to the selected category -->
+                            <!-- Sub-Category options will be dynamically populated here -->
                         </select>
                     </div>
                     <div class="col-md-6 form-group">
@@ -140,20 +114,8 @@
                         <label for="pin">Pin</label>
                         <input type="text" name="pin" class="form-control" id="pin" placeholder="Pin" required>
                     </div>
-                    <div class="col-md-12 form-group">
-                        <label for="mobile">Mobile Number</label>
-                        <input type="tel" name="mobile" class="form-control" id="mobile" placeholder="Mobile Number" required>
-                    </div>
-                    <div class="col-md-12 form-group">
-                        <a href="#" class="btn-otp">Generate OTP</a>
-                    </div>
-                    <div class="col-md-12 form-group">
-                        <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP" required>
-                    </div>
                     <div class="col-md-12 btn-container">
-                        <button type="button" class="btn btn-success" onclick="window.location.href='home'">Back</button>
-                        <button type="submit" class="btn btn-success" onclick="window.location.href='searchresults'">Confirm</button>
-                        <button type="button" class="btn btn-success">Next</button>
+                        <button type="button" class="btn btn-success" onclick="redirectToSearchResults()">Search</button>
                     </div>
                 </div>
             </form>
@@ -170,6 +132,56 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 
+<script>
+    // Function to change Sub-Category options based on selected Category
+    function changeSubCategoryOptions() {
+        var categorySelect = document.getElementById("category");
+        var subCategorySelect = document.getElementById("subcategory");
+        var selectedCategory = categorySelect.value;
+
+        // Clear existing options
+        subCategorySelect.innerHTML = "";
+
+        // Populate new options based on selected Category
+        switch (selectedCategory) {
+            case "Agriculture Assist":
+                subCategorySelect.innerHTML += '<option value="Option1">Agriculture</option>';
+                subCategorySelect.innerHTML += '<option value="Option2">Farm Land Maintenance</option>';
+                subCategorySelect.innerHTML += '<option value="Option3">Wood Cutting</option>';
+                subCategorySelect.innerHTML += '<option value="Option3">Tractor/Power Tiller</option>';
+                subCategorySelect.innerHTML += '<option value="Option3">Animal Selling</option>';
+                break;
+            case "Construction Assist":
+                subCategorySelect.innerHTML += '<option value="Option4">Option4</option>';
+                subCategorySelect.innerHTML += '<option value="Option5">Option5</option>';
+                subCategorySelect.innerHTML += '<option value="Option6">Option6</option>';
+                break;
+            case "Electrical Assist":
+                subCategorySelect.innerHTML += '<option value="Option7">Option7</option>';
+                subCategorySelect.innerHTML += '<option value="Option8">Option8</option>';
+                subCategorySelect.innerHTML += '<option value="Option9">Option9</option>';
+                break;
+            default:
+                subCategorySelect.innerHTML += '<option value="">Select Sub-Category</option>';
+                break;
+        }
+    }
+</script>
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="https://bootstrapmade.com/">homelyAssistTeam</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- End Footer -->
 </body>
 
 </html>
