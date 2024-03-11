@@ -125,7 +125,7 @@
                         </div>
                         <div class="col-md-12 btn-container">
                             <!-- Logout button -->
-                            <button id="logoutBtn" class="btn btn-danger">Logout</button>
+                            <button id="logoutBtn" class="btn btn-danger" onclick="logout()">Logout</button>
                             <!-- <button type="button" class="btn btn-success" onclick="window.location.href='home'">Home</button> -->
                             <button type="button" class="btn btn-success" onclick="updateAvailabilityInfo()">Save</button>
                             <!-- <button type="button" class="btn btn-success">Change Registration Details</button> -->
@@ -174,17 +174,6 @@
     document.addEventListener('DOMContentLoaded', function() {
         validateToken();
         fetchAssistInfo();
-    });
-
-    // Function to handle logout functionality
-    function logout() {
-        // Perform logout actions here, such as redirecting to the login page
-        window.location.href = "login.html"; // Replace "login.html" with your actual login page URL
-    }
-
-    // Add event listener to the logout button
-    document.getElementById("logoutBtn").addEventListener("click", function() {
-        logout();
     });
 </script>
 

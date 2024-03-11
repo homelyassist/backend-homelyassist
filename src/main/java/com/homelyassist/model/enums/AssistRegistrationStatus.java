@@ -2,7 +2,7 @@ package com.homelyassist.model.enums;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public enum MemberRegistrationStatus {
+public enum AssistRegistrationStatus {
     @JsonProperty("successful")
     SUCCESSFUL,
     @JsonProperty("error")

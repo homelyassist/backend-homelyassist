@@ -3,10 +3,13 @@ package com.homelyassist.service.assist;
 import com.homelyassist.exception.MemberAlreadyExistException;
 import com.homelyassist.model.db.AgriculturalAssist;
 import com.homelyassist.model.db.UserMapping;
+import com.homelyassist.model.enums.AgriculturalAssistType;
 import com.homelyassist.model.enums.AssistType;
-import com.homelyassist.model.enums.MemberRegistrationStatus;
+import com.homelyassist.model.enums.AssistRegistrationStatus;
 import com.homelyassist.model.rest.request.AvailabilityRequestDto;
-import com.homelyassist.model.rest.response.MemberRegistrationResponseDto;
+import com.homelyassist.model.rest.request.SearchAssistRequestDto;
+import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
+import com.homelyassist.model.rest.response.SearchAssistResponseDto;
 import com.homelyassist.repository.db.AgriculturalAssistRepository;
 import com.homelyassist.repository.db.UserMappingRepository;
 import com.homelyassist.utils.ErrorUtils;
@@ -15,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -31,8 +35,8 @@ public class AgriculturalAssistService {
         this.userMappingRepository = userMappingRepository;
     }
 
-    public MemberRegistrationResponseDto register(AgriculturalAssist agriculturalAssist) {
-        MemberRegistrationResponseDto response = new MemberRegistrationResponseDto();
+    public AssistRegistrationResponseDto register(AgriculturalAssist agriculturalAssist) {
+        AssistRegistrationResponseDto response = new AssistRegistrationResponseDto();
         try {
             validate(agriculturalAssist);
             agriculturalAssist.setActive(Boolean.TRUE);
@@ -47,11 +51,11 @@ public class AgriculturalAssistService {
             userMappingRepository.save(userMapping);
             response.setUuid(agriculturalAssist.getId());
             response.setPhoneNumber(agriculturalAssist.getPhoneNumber());
-            response.setMemberRegistrationStatus(MemberRegistrationStatus.SUCCESSFUL);
+            response.setAssistRegistrationStatus(AssistRegistrationStatus.SUCCESSFUL);
         } catch (Exception e) {
             log.error("error while registration agriculture member", e);
             response.setPhoneNumber(agriculturalAssist.getPhoneNumber());
-            response.setMemberRegistrationStatus(MemberRegistrationStatus.ERROR);
+            response.setAssistRegistrationStatus(AssistRegistrationStatus.ERROR);
             response.setErrorMessage(ErrorUtils.getErrorMessage(e));
         }
 
@@ -72,6 +76,15 @@ public class AgriculturalAssistService {
         AgriculturalAssist agriculturalAssist = fetchById(uuid);
         agriculturalAssist.setActive(availabilityRequestDto.isAvailability());
         return agriculturalAssistRepository.save(agriculturalAssist);
+    }
+
+    public SearchAssistResponseDto searchAssist(SearchAssistRequestDto searchAssistRequestDto) {
+        String area = searchAssistRequestDto.getCityArea();
+        String pinCode = searchAssistRequestDto.getPinCode();
+        List<AgriculturalAssistType> assistTypes = searchAssistRequestDto.getAssistTypes();
+
+        List<AgriculturalAssist> assist = agriculturalAssistRepository.findTop50ByPinCodeAndAgriculturalAssistTypesInAndCityArea(pinCode, assistTypes, area);
+        return new SearchAssistResponseDto(assist);
     }
 
     private void validate(AgriculturalAssist agriculturalAssist) {
