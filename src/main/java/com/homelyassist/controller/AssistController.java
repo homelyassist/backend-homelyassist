@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import static com.homelyassist.utils.AppConstant.HTMLPage.ASSIST_AVAILABILITY;
 import static com.homelyassist.utils.AppConstant.HTMLPage.ASSIST_REGISTER;
+import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_ASSIST;
 
 @Controller
 @RequestMapping("/assist")
@@ -17,7 +18,12 @@ public class AssistController {
     }
 
     @GetMapping("/availability")
-    public String AvailabilityPage() {
+    public String availability() {
         return ASSIST_AVAILABILITY;
+    }
+
+    @GetMapping("/search")
+    public String search() {
+        return SEARCH_ASSIST;
     }
 }

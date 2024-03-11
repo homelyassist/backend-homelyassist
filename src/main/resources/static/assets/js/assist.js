@@ -9,7 +9,7 @@ async function registerAssist() {
         city_area: document.getElementById("village").value,
         //landmark: document.getElementById("landmark").value, // Include landmark also
         description: document.getElementById("description").value,
-        assist_types: ["agriculture", "farm_land_maintenance", "wood_cutting", "tractor_power_tiller", "animal_selling"] // this will replce one UI change to checkbox
+        assist_types: getSelectedAssistTypes()
     };
 
     const response = await fetch("/api/assist/agriculture/register", { // make this generic as per category
@@ -135,4 +135,66 @@ async function assistLogin() {
         console.error("Error:", error);
         alert("Invalid OTP. Please enter a valid OTP.");
     }
+}
+
+
+async function searchAssist() {
+    var payload = {
+        pin_code: document.getElementById("pin").value,
+        city_area: document.getElementById("village").value,
+        assist_types: getSelectedAssistTypes()
+    }
+
+    const response = await fetch("/api/assist/agriculture/search", { // make this generic as per category
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": getBearerToken()
+        },
+        body: JSON.stringify(payload),
+    })
+
+    if (!response.ok) {
+        throw new Error("Unable to search for an Assist");
+    }
+
+    const data = await response.json();
+    console.log(data);
+    const container = document.getElementById('assistContainer');
+    container.innerHTML = '';
+    data.assist?.forEach(item => {
+        // Create a new div element for the assist card
+        const assistCard = document.createElement('div');
+        assistCard.classList.add('col-lg-4', 'col-md-6', 'd-flex', 'align-items-stretch');
+        assistCard.setAttribute('data-aos', 'fade-up');
+        assistCard.setAttribute('data-aos-delay', '100');
+  
+        // Create HTML structure for the assist card
+        assistCard.innerHTML = `
+          <div class="assist-card">
+            <img src="/assets/img/testimonials/testimonials-5.jpg" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p>${item.description}</p>
+            <button class="btn btn-request" onclick="openPopup()">Request Mobile Number</button>
+          </div>
+        `;
+  
+        // Append the assist card to the container
+        container.appendChild(assistCard);
+      });
+}
+
+function getSelectedAssistTypes() {
+    var selectedAssistTypes = [];
+    // Get all checkbox elements with name 'assist_type'
+    var checkboxes = document.querySelectorAll('input[name="assist_type"]');
+    // Iterate over each checkbox
+    checkboxes.forEach(function(checkbox) {
+        // Check if checkbox is checked
+        if (checkbox.checked) {
+            // Add the value of the checkbox to the selectedAssistTypes array
+            selectedAssistTypes.push(checkbox.value);
+        }
+    });
+    return selectedAssistTypes;
 }

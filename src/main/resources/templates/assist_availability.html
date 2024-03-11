@@ -10,7 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link th:href="@{/assets/img/favicon.png}" rel="icon">
+    <link th:href="@{/assets/img/homelyAssistlogo.jpg}" rel="icon">
     <link th:href="@{/assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -124,6 +124,8 @@
                             </select>
                         </div>
                         <div class="col-md-12 btn-container">
+                            <!-- Logout button -->
+                            <button id="logoutBtn" class="btn btn-danger" onclick="logout()">Logout</button>
                             <!-- <button type="button" class="btn btn-success" onclick="window.location.href='home'">Home</button> -->
                             <button type="button" class="btn btn-success" onclick="updateAvailabilityInfo()">Save</button>
                             <!-- <button type="button" class="btn btn-success">Change Registration Details</button> -->

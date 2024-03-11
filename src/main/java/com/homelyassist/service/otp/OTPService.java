@@ -14,6 +14,7 @@ import com.homelyassist.repository.db.OneTimePasswordRepository;
 import com.homelyassist.repository.db.UserMappingRepository;
 import com.homelyassist.service.jwt.JWTService;
 import com.homelyassist.utils.AppConstant;
+import com.homelyassist.utils.BasicValidationHelper;
 import com.homelyassist.utils.OTPHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +41,12 @@ public class OTPService {
     }
 
     public OTPResponseDto generateOTP(OTPRequestDto otpRequestDto) {
+        String phoneNumber = otpRequestDto.getPhoneNumber();
         OTPData otpData = new OTPData();
-        otpData.setPhoneNumber(otpRequestDto.getPhoneNumber());
+        if(!BasicValidationHelper.isValidIndianPhoneNumber(phoneNumber)) {
+            throw new IllegalArgumentException("Invalid phone number");
+        }
+        otpData.setPhoneNumber(phoneNumber);
         otpData.setCode(OTPHelper.createRandomOneTimePassword().get());
         otpData.setExpirationTime(LocalDateTime.now().plusMinutes(AppConstant.OTP.EXPIRY_INTERVAL));
         log.info("Sending opt with twilio with Opt Data: {}", otpData);

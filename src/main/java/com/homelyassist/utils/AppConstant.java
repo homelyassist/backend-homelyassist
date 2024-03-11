@@ -13,8 +13,8 @@ public class AppConstant {
     public static class HTMLPage {
         public static final String ASSIST_REGISTER = "assist_register";
         public static final String HOME_PAGE = "index";
-
         public static final String ASSIST_AVAILABILITY = "assist_availability";
+        public static final String SEARCH_ASSIST = "search_assist";
     }
 
     public static final String VALID_TOKEN = "OK";

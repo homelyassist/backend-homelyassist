@@ -2,7 +2,7 @@ package com.homelyassist.model.rest.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.homelyassist.model.enums.MemberRegistrationStatus;
+import com.homelyassist.model.enums.AssistRegistrationStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class MemberRegistrationResponseDto {
+public class AssistRegistrationResponseDto {
 
     @JsonProperty("uuid")
     private String uuid;
@@ -22,7 +22,7 @@ public class MemberRegistrationResponseDto {
     private String phoneNumber;
 
     @JsonProperty("status")
-    private MemberRegistrationStatus memberRegistrationStatus;
+    private AssistRegistrationStatus assistRegistrationStatus;
 
     @JsonProperty("error")
     private String errorMessage;

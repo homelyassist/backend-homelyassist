@@ -7,7 +7,7 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     <!-- Favicons -->
-    <link th:href="@{/assets/img/favicon.png}" rel="icon">
+    <link th:href="@{/assets/img/homelyAssistlogo.jpg}" rel="icon">
     <link th:href="@{/assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,66 +94,104 @@
             background-color: transparent;
             padding: 10px 20px;
         }
+        /* Style checkboxes */
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .checkbox-item {
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
 
-<!-- ======= Registration Form Section ======= -->
-<section id="registration-form" class="registration-form">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Fill below details to Register</h2>
-                </div>
-                <form action="#" method="post" role="form" class="php-email-form" data-aos="fade-up">
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <label for="fullname">Full Name</label>
-                            <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Full Name" required>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label for="address">Address</label>
-                            <input type="text" name="address" class="form-control" id="address" placeholder="Address" required>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label for="village">Village/Area/City</label>
-                            <input type="text" name="village" class="form-control" id="village" placeholder="Village/Area/City" required>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label for="district">District</label>
-                            <input type="text" name="district" class="form-control" id="district" placeholder="District" required>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label for="pin">Pin</label>
-                            <input type="text" name="pin" class="form-control" id="pin" placeholder="Pin" required>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label for="category">Category</label>
-                            <select name="category" id="category" class="form-control" required>
-                                <option value="agriculture_assist">Agriculture Assist</option>
-<!--                                <option value="Construction Assist">Construction Assist</option>-->
-<!--                                <option value="Electrical Assist">Electrical Assist</option>-->
-                                <!-- Add more options as needed -->
-                            </select>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label for="subcategory">Sub-Category</label>
-                            <select name="subcategory" id="subcategory" class="form-control" required>
-<!--                                <option value="">Select Sub-Category</option>-->
-                                <option value="agriculture">Agriculture</option>
-                                <option value="farm_land_maintenance">Farm Land Maintenance</option>
-                                <option value="wood_cutting">Wood Cutting</option>
-                                <option value="tractor_power_tiller">Tractor/Power Tiller</option>
-                                <option value="animal_selling">Animal Selling</option>
-                            </select>
-                        </div>
+    <!-- ======= Registration Form Section ======= -->
+    <section id="registration-form" class="registration-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>Fill below details to Register</h2>
+                    </div>
+                    <form action="#" method="post" role="form" class="php-email-form" data-aos="fade-up">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" name="fullname" class="form-control" id="fullname"
+                                    placeholder="Full Name" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="address">Address</label>
+                                <input type="text" name="address" class="form-control" id="address"
+                                    placeholder="Address" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="address">Landmark</label>
+                                <input type="text" name="landmark" class="form-control" id="landmark" placeholder="Landmark" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="village">Village/Area/City</label>
+                                <input type="text" name="village" class="form-control" id="village"
+                                    placeholder="Village/Area/City" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="district">District</label>
+                                <input type="text" name="district" class="form-control" id="district"
+                                    placeholder="District" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="pin">Pin</label>
+                                <input type="text" name="pin" class="form-control" id="pin" placeholder="Pin" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="category">Category</label>
+                                <select name="category" id="category" class="form-control" required>
+                                    <option value="agriculture_assist">Agriculture Assist</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="subcategory">Sub-Category</label>
+                                <div class="checkbox-container">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="agriculture" name="assist_type" value="agriculture"
+                                            checked>
+                                        <label for="agriculture">Agriculture</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="farm_land_maintenance" name="assist_type"
+                                            value="farm_land_maintenance" checked>
+                                        <label for="farm_land_maintenance">Farm Land Maintenance</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="wood_cutting" name="assist_type" value="wood_cutting"
+                                            checked>
+                                        <label for="wood_cutting">Wood Cutting</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="tractor_power_tiller" name="assist_type"
+                                            value="tractor_power_tiller" checked>
+                                        <label for="tractor_power_tiller">Tractor/Power Tiller rent</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="animal_selling" name="assist_type"
+                                            value="animal_selling" checked>
+                                        <label for="animal_selling">Animal Selling</label>
+                                    </div>
+                                </div>
+                            </div>
+
                         <div class="col-md-6 form-group">
                             <label for="description">Description</label>
                             <input type="text" name="description" class="form-control" id="description" placeholder="Description" required>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="photoaadhar">Photo/Aadhar</label>
+                            <label for="description">Experience</label>
+                            <input type="number" name="experience" class="form-control" id="experience" placeholder="Experience" required min="0" max="50">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="photoaadhar">Photo</label>
                             <input type="file" name="photoaadhar" class="form-control" id="photoaadhar" placeholder="Photo/Aadhar" required>
                         </div>
                         <div class="col-md-12 form-group">
@@ -164,8 +202,9 @@
                             <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP" required>
                         </div>
                         <div class="col-md-12 form-group">
-                            <button type="button" class="btn btn-primary" onclick="generateOtp()">Generate OTP</button>
-                            <button type="button" class="btn btn-success" onclick="validateOtp()">Validate OTP</button>
+                            <button type="button" class="btn btn-primary" id="otpButton" onclick="generateOtp()">Generate OTP</button>
+                            <button type="button" class="btn btn-success" id="validateOtpButton" onclick="validateOtp()" disabled>Validate OTP</button>
+                            <span id="timer"></span>
                         </div>
                         <div class="col-md-12 btn-container">
                             <button type="submit" class="btn btn-success" onclick="registerAssist()">Save</button>
