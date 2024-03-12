@@ -307,17 +307,6 @@
     <script src="/assets/js/utils.js"></script>
 
     <script>
-        // Function to open the pop-up
-        function openPopup() {
-            document.getElementById("popup").style.display = "block";
-        }
-
-        // Function to close the pop-up
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-        }
-
-        // Optional: Handle form submission
         document.getElementById("mobileOTPForm").addEventListener("submit", function(event) {
             event.preventDefault();
             var mobileNumber = document.getElementById("mobileNumber").value;

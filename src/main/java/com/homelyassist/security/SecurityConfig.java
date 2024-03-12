@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
-@Profile("local")
+@Profile("prod")
 public class SecurityConfig {
 
     @Bean
@@ -31,7 +31,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/assist/agriculture/search").permitAll()
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/assist/register").permitAll()
-                        .requestMatchers("/loginconfirm").permitAll()
+                        .requestMatchers("/assist/login").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

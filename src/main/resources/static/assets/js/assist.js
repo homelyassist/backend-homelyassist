@@ -1,4 +1,10 @@
 async function registerAssist() {
+    const validOpt = await validateOtp();
+
+    if(!validOpt) {
+        return;
+    }
+
     var payload = {
         name: document.getElementById("fullname").value,
         phone_number: document.getElementById("mobile").value,
@@ -7,7 +13,8 @@ async function registerAssist() {
         district: document.getElementById("district").value,
         pin_code: document.getElementById("pin").value,
         city_area: document.getElementById("village").value,
-        //landmark: document.getElementById("landmark").value, // Include landmark also
+        landmark: document.getElementById("landmark").value,
+        experience: document.getElementById("experience").value,
         description: document.getElementById("description").value,
         assist_types: getSelectedAssistTypes()
     };
@@ -27,7 +34,7 @@ async function registerAssist() {
 
     const data = await response.json();
 
-    if(data.state == "error") {
+    if(data.status == "error") {
         console.log(data.error)
         alert(data.error)
         throw new Error("Failed to register");
@@ -197,4 +204,13 @@ function getSelectedAssistTypes() {
         }
     });
     return selectedAssistTypes;
+}
+
+
+function openPopup() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
 }

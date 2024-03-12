@@ -24,22 +24,7 @@ async function generateOtp() {
 
     document.getElementById('otpButton').textContent = 'Resend OTP';
     document.getElementById('otpButton').disabled = true;
-    document.getElementById('validateOtpButton').disabled = false;
-
-    // Enable the button after 30 seconds
-    var countdown = 30; // seconds
-    var timerElement = document.getElementById('timer');
-    timerElement.textContent = countdown + 's';
-
-    var countdownInterval = setInterval(function() {
-        countdown--;
-        timerElement.textContent = countdown + 's';
-        if (countdown <= 0) {
-            clearInterval(countdownInterval);
-            document.getElementById('otpButton').disabled = false;
-            timerElement.textContent = ''; // Hide the timer
-        }
-    }, 1000); // Update every second
+    resendOptTimer30s();
 }
 
 async function validateOtp() {
@@ -82,4 +67,20 @@ async function validateOtp() {
         alert("Invalid OTP. Please enter a valid OTP.");
         return false;
     }
+}
+
+function resendOptTimer30s() {
+    var countdown = 30;
+    var timerElement = document.getElementById('timer');
+    timerElement.textContent = countdown + 's';
+
+    var countdownInterval = setInterval(function() {
+        countdown--;
+        timerElement.textContent = countdown + 's';
+        if (countdown <= 0) {
+            clearInterval(countdownInterval);
+            document.getElementById('otpButton').disabled = false;
+            timerElement.textContent = ''; 
+        }
+    }, 1000);
 }
