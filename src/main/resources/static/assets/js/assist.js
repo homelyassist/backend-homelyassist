@@ -51,7 +51,8 @@ async function registerAssist() {
 
     const uuid = data.uuid;
     const formData = new FormData();
-    formData.append('file', file);
+    const compressedBlob = await compressImage(file, 50 * 1024);
+    formData.append('file', compressedBlob);
 
     const imageResponse = await fetch(`/api/assist/agriculture/${uuid}/image/upload`, { // make this generic as per category
         method: "POST",
@@ -238,6 +239,32 @@ function generateBase64String(buffer) {
     return imageData
 }
 
+async function compressImage(file, maxSizeInBytes) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = async function(event) {
+            const img = new Image();
+            img.src = event.target.result;
+            img.onload = function() {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.drawImage(img, 0, 0);
+                canvas.toBlob((blob) => {
+                    resolve(blob);
+                }, 'image/jpeg', 0.7); // Adjust quality here (0.7 means 70% quality)
+            };
+            img.onerror = function(error) {
+                reject(error);
+            };
+        };
+        reader.onerror = function(error) {
+            reject(error);
+        };
+        reader.readAsDataURL(file);
+    });
+}
 
 
 function openPopup() {
