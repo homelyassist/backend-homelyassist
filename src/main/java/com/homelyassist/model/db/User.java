@@ -2,6 +2,7 @@ package com.homelyassist.model.db;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
+import jakarta.persistence.Lob;
 import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -61,4 +62,7 @@ public class User {
     @Column(name = "modified")
     private LocalDateTime modified;
 
+    @Lob
+    @Column(name = "image", columnDefinition = "MEDIUMBLOB")
+    private byte[] image;
 }

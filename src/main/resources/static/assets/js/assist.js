@@ -5,6 +5,15 @@ async function registerAssist() {
         return;
     }
 
+    const fileInput = document.getElementById('photo');
+    const file = fileInput.files[0];
+
+    if (!file) {
+        console.error('No file selected.');
+        alert("Please select photo");
+        return;
+    }
+
     var payload = {
         name: document.getElementById("fullname").value,
         phone_number: document.getElementById("mobile").value,
@@ -38,6 +47,22 @@ async function registerAssist() {
         console.log(data.error)
         alert(data.error)
         throw new Error("Failed to register");
+    }
+
+    const uuid = data.uuid;
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const imageResponse = await fetch(`/api/assist/agriculture/${uuid}/image/upload`, { // make this generic as per category
+        method: "POST",
+        headers: {
+            "Authorization": getBearerToken()
+        },
+        body: formData,
+    })
+
+    if (!imageResponse.ok) {
+        console.error("Failed to upload photo");
     }
 
     localStorage.setItem('uuid', data.uuid);
@@ -175,11 +200,12 @@ async function searchAssist() {
         assistCard.classList.add('col-lg-4', 'col-md-6', 'd-flex', 'align-items-stretch');
         assistCard.setAttribute('data-aos', 'fade-up');
         assistCard.setAttribute('data-aos-delay', '100');
+        const imageData = item.image;
   
         // Create HTML structure for the assist card
         assistCard.innerHTML = `
           <div class="assist-card">
-            <img src="/assets/img/testimonials/testimonials-5.jpg" alt="${item.name}">
+            <img src="${generateBase64String(imageData)}" alt="${item.name}">
             <h3>${item.name}</h3>
             <p>${item.description}</p>
             <button class="btn btn-request" onclick="openPopup()">Request Mobile Number</button>
@@ -205,6 +231,13 @@ function getSelectedAssistTypes() {
     });
     return selectedAssistTypes;
 }
+
+function generateBase64String(buffer) {
+    const base64String = buffer.slice(buffer.indexOf(',') + 1); // Remove the data URI prefix
+    const imageData = 'data:image/jpeg;base64,' + base64String;
+    return imageData
+}
+
 
 
 function openPopup() {
