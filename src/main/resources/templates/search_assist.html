@@ -56,6 +56,11 @@
             /* Use Roboto font */
         }
 
+        /* Change color of h3 in #form section */
+        #form h3 {
+            color: #6cb83a;
+        }
+
         #search-form label {
             color: #333;
             /* Darker text color */
@@ -147,6 +152,7 @@
             background-color: #f5cb42;
             /* Yellow theme on hover */
         }
+
         #popup {
             display: none;
             background-color: rgba(0, 0, 0, 0.5);
@@ -207,134 +213,134 @@
 
 <body>
 
-    <div class="container">
-        <section id="form" class="form">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6" data-aos="fade-up">
-                        <h3>Enter Below Details to Complete Your Search</h3>
-                    </div>
-                    <form action="searchresults.html" method="get" role="form" class="php-email-form"
-                        data-aos="fade-up">
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <label for="category">Category</label>
-                                <select name="category" id="category" class="form-control" required>
-                                    <option value="Agriculture Assist">Agriculture Assist</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <label for="subcategory">Sub-Category</label>
-                                <div class="checkbox-container">
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="agriculture" name="assist_type" value="agriculture"
-                                            checked>
-                                        <label for="agriculture">Agriculture</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="farm_land_maintenance" name="assist_type"
-                                            value="farm_land_maintenance" checked>
-                                        <label for="farm_land_maintenance">Farm Land Maintenance</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="wood_cutting" name="assist_type" value="wood_cutting"
-                                            checked>
-                                        <label for="wood_cutting">Wood Cutting</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="tractor_power_tiller" name="assist_type"
-                                            value="tractor_power_tiller" checked>
-                                        <label for="tractor_power_tiller">Tractor/Power Tiller rent</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="animal_selling" name="assist_type"
-                                            value="animal_selling" checked>
-                                        <label for="animal_selling">Animal Selling</label>
-                                    </div>
+<div class="container">
+    <section id="form" class="form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <h3>Enter Below Details to Complete Your Search</h3>
+                </div>
+                <form action="searchresults.html" method="get" role="form" class="php-email-form"
+                      data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="category">Category *</label>
+                            <select name="category" id="category" class="form-control" required>
+                                <option value="Agriculture Assist">Agriculture Assist</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="subcategory">Sub-Category *</label>
+                            <div class="checkbox-container">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="agriculture" name="assist_type" value="agriculture"
+                                           checked>
+                                    <label for="agriculture">Agriculture</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="farm_land_maintenance" name="assist_type"
+                                           value="farm_land_maintenance" checked>
+                                    <label for="farm_land_maintenance">Farm Land Maintenance</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="wood_cutting" name="assist_type" value="wood_cutting"
+                                           checked>
+                                    <label for="wood_cutting">Wood Cutting</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="tractor_power_tiller" name="assist_type"
+                                           value="tractor_power_tiller" checked>
+                                    <label for="tractor_power_tiller">Tractor/Power Tiller rent</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="animal_selling" name="assist_type"
+                                           value="animal_selling" checked>
+                                    <label for="animal_selling">Animal Selling</label>
                                 </div>
                             </div>
-                            <div class="col-md-6 form-group">
-                                <label for="village">Village/Area/City</label>
-                                <input type="text" name="village" class="form-control" id="village"
-                                    placeholder="Village/Area/City" required>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <label for="pin">Pin</label>
-                                <input type="text" name="pin" class="form-control" id="pin" placeholder="Pin" required>
-                            </div>
-                            <div class="col-md-12 btn-container">
-                                <button type="button" class="btn btn-success" onclick="searchAssist()">Search</button>
-                            </div>
-                            <hr class="my-4">
                         </div>
+                        <div class="col-md-6 form-group">
+                            <label for="village">Village/Area/City *</label>
+                            <input type="text" name="village" class="form-control" id="village"
+                                   placeholder="Village/Area/City" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="pin">Pin *</label>
+                            <input type="text" name="pin" class="form-control" id="pin" placeholder="Pin" required>
+                        </div>
+                        <div class="col-md-12 btn-container">
+                            <button type="button" class="btn btn-success" onclick="searchAssist()">Search</button>
+                        </div>
+                        <hr class="my-4">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="assists" class="assists">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>Available Assists in Your Locality</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" id="assistContainer">
+            </div>
+            <div id="popup">
+                <div>
+                    <h2>Enter Your Mobile Number and OTP</h2>
+                    <form id="mobileOTPForm">
+                        <input type="text" id="mobileNumber" placeholder="Mobile Number" required><br><br>
+                        <input type="text" id="otp" placeholder="OTP" required><br><br>
+                        <button type="submit">Submit</button>
+                        <button type="button" onclick="closePopup()">Close</button>
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+</div>
 
-        <section id="assists" class="assists">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="section-title" data-aos="fade-up">
-                            <h2>Available Assists in Your Locality</h2>
-                        </div>
-                    </div>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+<script src="/assets/js/assist.js"></script>
+<script src="/assets/js/utils.js"></script>
+
+<script>
+    document.getElementById("mobileOTPForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var mobileNumber = document.getElementById("mobileNumber").value;
+        var otp = document.getElementById("otp").value;
+        // Process the mobile number and OTP
+        console.log("Mobile Number:", mobileNumber);
+        console.log("OTP:", otp);
+        closePopup();
+    });
+</script>
+
+<!-- Template Main JS File -->
+<script src="/assets/js/main.js"></script>
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
                 </div>
-                <div class="row justify-content-center" id="assistContainer">
-                </div>
-                <div id="popup">
-                    <div>
-                        <h2>Enter Your Mobile Number and OTP</h2>
-                        <form id="mobileOTPForm">
-                            <input type="text" id="mobileNumber" placeholder="Mobile Number" required><br><br>
-                            <input type="text" id="otp" placeholder="OTP" required><br><br>
-                            <button type="submit">Submit</button>
-                            <button type="button" onclick="closePopup()">Close</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="/assets/vendor/aos/aos.js"></script>
-    <script src="/assets/vendor/php-email-form/validate.js"></script>
-    <script src="/assets/js/assist.js"></script>
-    <script src="/assets/js/utils.js"></script>
-
-    <script>
-        document.getElementById("mobileOTPForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            var mobileNumber = document.getElementById("mobileNumber").value;
-            var otp = document.getElementById("otp").value;
-            // Process the mobile number and OTP
-            console.log("Mobile Number:", mobileNumber);
-            console.log("OTP:", otp);
-            closePopup();
-        });
-    </script>
-
-    <!-- Template Main JS File -->
-    <script src="/assets/js/main.js"></script>
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="copyright">
-                        &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
-                    </div>
-                    <div class="credits">
-                        Designed by <a href="https://bootstrapmade.com/">homelyAssistTeam</a>
-                    </div>
+                <div class="credits">
+                    Designed by <a href="team">homelyAssistTeam</a>
                 </div>
             </div>
         </div>
-    </footer><!-- End Footer -->
+    </div>
+</footer><!-- End Footer -->
 </body>
 
 </html>
