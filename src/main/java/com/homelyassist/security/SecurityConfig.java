@@ -32,6 +32,8 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/assist/register").permitAll()
                         .requestMatchers("/assist/login").permitAll()
+                        .requestMatchers("/help").permitAll()
+                        .requestMatchers("/team").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

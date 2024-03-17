@@ -88,7 +88,7 @@ public class AgriculturalAssistService {
         String pinCode = searchAssistRequestDto.getPinCode();
         List<AgriculturalAssistType> assistTypes = searchAssistRequestDto.getAssistTypes();
 
-        List<AgriculturalAssist> assist = agriculturalAssistRepository.findTop50ByPinCodeAndAgriculturalAssistTypesInAndCityArea(pinCode, assistTypes, area);
+        List<AgriculturalAssist> assist = agriculturalAssistRepository.findTop50ByPinCodeAndAgriculturalAssistTypesInAndCityAreaAndActiveIsTrue(pinCode, assistTypes, area);
         return new SearchAssistResponseDto(assist);
     }
 

@@ -12,5 +12,5 @@ public interface AgriculturalAssistRepository extends JpaRepository<Agricultural
 
     boolean existsByPhoneNumber(String phoneNumber);
 
-    List<AgriculturalAssist> findTop50ByPinCodeAndAgriculturalAssistTypesInAndCityArea(String pinCode, List<AgriculturalAssistType> assistTypes, String cityArea);
+    List<AgriculturalAssist> findTop50ByPinCodeAndAgriculturalAssistTypesInAndCityAreaAndActiveIsTrue(String pinCode, List<AgriculturalAssistType> assistTypes, String cityArea);
 }

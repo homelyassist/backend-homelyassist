@@ -49,7 +49,7 @@ async function registerAssist() {
         throw new Error("Failed to register");
     }
 
-    const uuid = data.uuid;
+    const uuid = data.uuid; 
     const formData = new FormData();
     const compressedBlob = await compressImage(file, 50 * 1024);
     formData.append('file', compressedBlob);
@@ -127,7 +127,15 @@ async function updateAvailabilityInfo() {
         throw new Error("Failed to update Availability");
     }
 
+    $('#notificationToast').toast('show');
+
+    // Hide notification after 2 seconds
+    setTimeout(function() {
+        $('#notificationToast').toast('hide');
+    }, 2000);
 }
+
+
 
 async function assistLogin() {
     const mobile = document.getElementById("mobile").value;
@@ -139,7 +147,7 @@ async function assistLogin() {
     }
 
     var payload = {
-        phoneNumber: mobile,
+        phone_number: mobile,
         otp: otp,
     };
 
@@ -195,27 +203,31 @@ async function searchAssist() {
     console.log(data);
     const container = document.getElementById('assistContainer');
     container.innerHTML = '';
-    data.assist?.forEach(item => {
-        // Create a new div element for the assist card
-        const assistCard = document.createElement('div');
-        assistCard.classList.add('col-lg-4', 'col-md-6', 'd-flex', 'align-items-stretch');
-        assistCard.setAttribute('data-aos', 'fade-up');
-        assistCard.setAttribute('data-aos-delay', '100');
-        const imageData = item.image;
-  
-        // Create HTML structure for the assist card
-        assistCard.innerHTML = `
-          <div class="assist-card">
-            <img src="${generateBase64String(imageData)}" alt="${item.name}">
-            <h3>${item.name}</h3>
-            <p>${item.description}</p>
-            <button class="btn btn-request" onclick="openPopup()">Request Mobile Number</button>
-          </div>
-        `;
-  
-        // Append the assist card to the container
-        container.appendChild(assistCard);
-      });
+    if (data.assist && data.assist.length > 0) {
+        data.assist.forEach(item => {
+            const assistCard = document.createElement('div');
+            assistCard.classList.add('col-lg-4', 'col-md-6', 'd-flex', 'align-items-stretch');
+            assistCard.setAttribute('data-aos', 'fade-up');
+            assistCard.setAttribute('data-aos-delay', '100');
+            const imageData = item.image;
+    
+            assistCard.innerHTML = `
+                <div class="assist-card">
+                    <img src="${generateBase64String(imageData)}" alt="${item.name}">
+                    <h3>${item.name}</h3>
+                    <p>${item.description}</p>
+                    <button class="btn btn-request" data-uuid="${item.id}" id="${item.id}_btn" onclick="openPopup(event)">Request Mobile Number</button>
+                    <p id="${item.id}"></p>
+                </div>
+            `;
+    
+            container.appendChild(assistCard);
+        });
+    } else {
+        const noAssistAvailable = document.createElement('div');
+        noAssistAvailable.textContent = 'No assist available';
+        container.appendChild(noAssistAvailable);
+    }
 }
 
 function getSelectedAssistTypes() {
@@ -266,11 +278,69 @@ async function compressImage(file, maxSizeInBytes) {
     });
 }
 
+async function getAssistDetails(assistId) {
+    const m_vid = localStorage.getItem('m_vid');
 
-function openPopup() {
+    var payload = {
+        assist_id: assistId,
+        vid: m_vid
+    };
+
+    const response = await fetch("/member/assist/detail", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": getMemberBearerToken()
+        },
+        body: JSON.stringify(payload),
+    })
+
+    if (!response.ok) {
+        throw new Error("Unable to fetch Details for an Assist");
+    }
+
+    const data = await response.json();
+
+    return data;
+}
+
+function viewAssistPhoneNumber(data, assist_id) {
+    const phone_number = data.phone_number;
+    document.getElementById(assist_id).innerText = phone_number;
+    document.getElementById(assist_id + "_btn").disabled = true;
+}
+
+async function requestMobileNumber(event) {
+    const assist_uuid = event.target.dataset.uuid;
+    generateAnonymousToken()
+    closePopup();
+    const data = await getAssistDetails(assist_uuid);
+    viewAssistPhoneNumber(data, assist_uuid)
+}
+
+function tokenIsPresntAndValid() {
+    const m_expiry = localStorage.getItem('m_expiry');
+    const expiryTime = new Date(m_expiry);
+    const currentTime = new Date();
+    return currentTime < expiryTime;
+}
+
+async function openPopup(event) {
+    const uuid = event.target.dataset.uuid;
+    if(tokenIsPresntAndValid()) {
+        const data = await getAssistDetails(uuid);
+        viewAssistPhoneNumber(data, uuid)
+        return;
+    }
+    const submitButton = document.getElementById('popUpSubmitButton');
+    submitButton.setAttribute('data-uuid', uuid);
     document.getElementById("popup").style.display = "block";
 }
 
 function closePopup() {
+    document.getElementById('otpButton').textContent = 'Generate OTP';
+    document.getElementById('otpDisplay').innerText = "";
+    document.getElementById("mobile").value = "";
+    document.getElementById("otp").value = "";
     document.getElementById("popup").style.display = "none";
 }

@@ -22,8 +22,11 @@ async function generateOtp() {
         throw new Error("Failed to generate OTP. Please try again.");
     }
 
+    const data = await response.json();
+
     document.getElementById('otpButton').textContent = 'Resend OTP';
     document.getElementById('otpButton').disabled = true;
+    document.getElementById('otpDisplay').innerText = "Your OTP is: " + data.code;
     resendOptTimer30s();
 }
 
@@ -37,7 +40,7 @@ async function validateOtp() {
     }
 
     var payload = {
-        phoneNumber: mobile,
+        phone_number: mobile,
         otp: otp,
     };
 
@@ -67,6 +70,47 @@ async function validateOtp() {
         alert("Invalid OTP. Please enter a valid OTP.");
         return false;
     }
+}
+
+async function generateAnonymousToken() {
+    const mobile = document.getElementById("mobile").value;
+    const otp =  document.getElementById("otp").value;
+
+    if (!otp || !mobile) {
+        console.log("Please enter a valid moblie/otp");
+        return;
+    }
+
+    var payload = {
+        phone_number: mobile,
+        otp: otp,
+    };
+
+    const response = await fetch("/api/auth/token/anonymous/request", { // make this generic as per category
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+        throw new Error("Unable to search for an Assist");
+    }
+
+    const data = await response.json();
+
+    if (data.status === "SUCCESS" && data.token) {
+        localStorage.setItem("m_token", data.token);
+        localStorage.setItem("m_vid", data.vid);
+        localStorage.setItem("m_expiry", data.expiry);
+        localStorage.setItem("m_phone_number", data.phone_number);
+        return true;
+    } else {
+        alert("Failed to validate otp");
+        return false;
+    }
+    // put this in local stroage
 }
 
 function resendOptTimer30s() {
