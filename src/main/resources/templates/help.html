@@ -2,66 +2,115 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Our Team - homelyAssist</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>Our Team - homelyAssist</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/homelyAssistlogo.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="assets/img/homelyAssistlogo.jpg" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <style>
-    /* Customize the theme color */
-    :root {
-        --primary-color: #556B2F; /* Olive Sea Green */
-    }
+    <!-- Custom CSS -->
+    <style>
+        /* Footer Styling */
+        footer {
+          background-color: #f8f9fa;
+          padding: 30px 0;
+          text-align: center;
+        }
 
-    /* Update button styles with the new theme color */
-    .btn-primary {
-        background-color: var(--primary-color);
-        border-color: var(--primary-color);
-    }
+        .footer-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
 
-    .btn-primary:hover {
-        background-color: #8FBC8F; /* Dark Sea Green on hover */
-        border-color: #8FBC8F; /* Dark Sea Green on hover */
-    }
-  </style>
+        .footer-section {
+          margin-bottom: 20px;
+        }
+
+        .terms-list {
+          list-style-type: none;
+          padding: 0;
+          text-align: left;
+        }
+
+        .terms-list li {
+          margin-bottom: 5px;
+          color: #555;
+        }
+
+        /* Contact Us Styling */
+        .contact-us {
+          margin-bottom: 20px;
+          color: #333;
+        }
+
+        /* WhatsApp Icon Styling */
+        .whatsapp-icon {
+          width: 50px;
+          cursor: pointer;
+        }
+
+        /* WhatsApp Pop-up Styling */
+        .whatsapp-popup {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 300px;
+          background-color: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          padding: 20px;
+          display: none;
+        }
+    </style>
 </head>
 
 <body>
-<!-- Company Email and Terms & Conditions -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 text-center">
-        <p>Contact us: example@homelyassist.com</p>
-      </div>
-      <div class="col-md-6">
-        <p style="text-align: right;">Terms and Conditions: <a href="#">Link to terms and conditions</a></p>
-      </div>
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <div class="container footer-content">
+        <div class="footer-section contact-us">
+            <p>Contact us: homeconnecteasy@gmail.com</p>
+            <!-- WhatsApp Icon -->
+            <img src="assets/img/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon" onclick="openWhatsAppPopup()">
+            <!-- WhatsApp Pop-up -->
+            <div id="whatsapp-popup" class="whatsapp-popup">
+                Send your details to our team and we will register you on your behalf. <br>
+                WhatsApp: <a href="https://api.whatsapp.com/send?phone=8951386744&text=Send%20your%20details%20to%20our%20team%20and%20we%20will%20register%20you%20on%20your%20behalf" target="_blank">8951386744</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Terms and Conditions</h3>
+            <ul class="terms-list">
+                <li>User data is collected only with the explicit consent of the user.</li>
+                <li>Data will be promptly deleted upon the user's request.</li>
+                <li>The company bears no responsibility for any misuse of data by users.</li>
+                <li>Stringent security measures are implemented to safeguard the privacy of users' data.</li>
+            </ul>
+        </div>
     </div>
-  </div>
-</footer>
+</footer><!-- End Footer -->
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -72,21 +121,14 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="copyright">
-          &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          Designed by <a href="team">homelyAssistTeam</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer><!-- End Footer -->
+<!-- Custom JavaScript -->
+<script>
+    // Function to open WhatsApp pop-up
+    function openWhatsAppPopup() {
+      var popup = document.getElementById('whatsapp-popup');
+      popup.style.display = 'block';
+    }
+</script>
 
 </body>
 
