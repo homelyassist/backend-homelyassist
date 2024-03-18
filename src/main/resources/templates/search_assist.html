@@ -168,10 +168,10 @@
 
         #popup h2 {
             text-align: center;
+            color: black;
         }
 
-        #popup input[type="text"],
-        #popup button {
+        #popup input[type="text"] {
             display: block;
             width: calc(100% - 20px);
             margin: 10px auto;
@@ -181,26 +181,19 @@
             box-sizing: border-box;
         }
 
-        #popup button[type="submit"] {
-            background-color: #6cb83a;
-            color: #fff;
-            border: none;
-            cursor: pointer;
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
         }
 
-        #popup button[type="submit"]:hover {
-            background-color: #5a9c32;
+        .button-group button {
+            margin: 5px;
         }
 
-        #popup button[type="button"] {
-            background-color: #ccc;
-            color: #000;
-            border: none;
-            cursor: pointer;
-        }
-
-        #popup button[type="button"]:hover {
-            background-color: #b3b3b3;
+        #timer, #otpDisplay {
+            color: black;
         }
     </style>
 </head>
@@ -256,7 +249,7 @@
                             <div class="col-md-6 form-group">
                                 <label for="village">Village/Area/City</label>
                                 <input type="text" name="village" class="form-control" id="village"
-                                    placeholder="Village/Area/City" required>
+                                    placeholder="Village/Area/City"  maxlength="22" required>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="pin">Pin</label>
@@ -287,10 +280,17 @@
                     <div>
                         <h2>Enter Your Mobile Number and OTP</h2>
                         <form id="mobileOTPForm">
-                            <input type="text" id="mobileNumber" placeholder="Mobile Number" required><br><br>
+                            <input type="text" id="mobile" placeholder="Mobile Number" required><br><br>
                             <input type="text" id="otp" placeholder="OTP" required><br><br>
-                            <button type="submit">Submit</button>
-                            <button type="button" onclick="closePopup()">Close</button>
+                            <span id="otpDisplay"></span>
+                            <div class="button-group">
+                                <button type="button" class="btn btn-primary" id="otpButton" onclick="generateOtp()">Generate OTP</button>
+                                <span id="timer"></span>
+                            </div>
+                            <div class="button-group">
+                                <button type="button" class="btn btn-success" id="popUpSubmitButton" onclick="requestMobileNumber(event)">Submit</button>
+                                <button type="button" class="btn btn-danger" onclick="closePopup()">Close</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -305,29 +305,7 @@
     <script src="/assets/vendor/php-email-form/validate.js"></script>
     <script src="/assets/js/assist.js"></script>
     <script src="/assets/js/utils.js"></script>
-
-    <script>
-        // Function to open the pop-up
-        function openPopup() {
-            document.getElementById("popup").style.display = "block";
-        }
-
-        // Function to close the pop-up
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-        }
-
-        // Optional: Handle form submission
-        document.getElementById("mobileOTPForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            var mobileNumber = document.getElementById("mobileNumber").value;
-            var otp = document.getElementById("otp").value;
-            // Process the mobile number and OTP
-            console.log("Mobile Number:", mobileNumber);
-            console.log("OTP:", otp);
-            closePopup();
-        });
-    </script>
+    <script src="/assets/js/otp.js"></script>
 
     <!-- Template Main JS File -->
     <script src="/assets/js/main.js"></script>

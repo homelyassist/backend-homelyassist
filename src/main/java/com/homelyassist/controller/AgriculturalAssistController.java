@@ -7,12 +7,15 @@ import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
 import com.homelyassist.model.rest.response.SearchAssistResponseDto;
 import com.homelyassist.service.assist.AgriculturalAssistService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api/assist/agriculture")
@@ -29,6 +32,11 @@ public class AgriculturalAssistController {
     @PostMapping("/register")
     public AssistRegistrationResponseDto register(@RequestBody AgriculturalAssist agriculturalAssist) {
         return agriculturalAssistService.register(agriculturalAssist);
+    }
+
+    @PostMapping("/{uuid}/image/upload")
+    public ResponseEntity<String> uploadImage(@PathVariable("uuid") String id, @RequestParam("file") MultipartFile file) {
+        return agriculturalAssistService.uploadImage(id, file);
     }
 
     @GetMapping("/{uuid}")

@@ -5,6 +5,7 @@ import com.homelyassist.model.db.OTPData;
 import com.homelyassist.model.db.UserMapping;
 import com.homelyassist.model.enums.OTPGenerateStatus;
 import com.homelyassist.model.rest.request.OTPRequestDto;
+import com.homelyassist.model.rest.response.AnonymousTokenResponseDto;
 import com.homelyassist.model.rest.response.AssistLoginResponseDto;
 import com.homelyassist.model.rest.response.OTPResponseDto;
 import com.homelyassist.model.rest.request.OTPVerifyRequestDto;
@@ -22,6 +23,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
+import java.util.UUID;
 
 @Service
 @Slf4j
@@ -55,6 +57,7 @@ public class OTPService {
             // TODO: uncomment this once we've premium account
             //twilioService.sendOtp(new TwilioOtpData(otpData.getPhoneNumberWithCountryCode(), "Testing otp: " + otpData.getCode()));
             oneTimePasswordRepository.save(otpData);
+            otpResponseDto.setCode(otpData.getCode());
             otpResponseDto.setOtpGenerateStatus(OTPGenerateStatus.COMPLETED);
         } catch (Exception e) {
             log.error("error processing otp generation", e);
@@ -104,5 +107,28 @@ public class OTPService {
             oneTimePasswordRepository.delete(otpData);
         }
         return assistLoginResponseDto;
+    }
+
+    public AnonymousTokenResponseDto generateAnonymousToken(OTPVerifyRequestDto otpVerifyDto) {
+        String phoneNumber = otpVerifyDto.getPhoneNumber();
+        OTPData otpData = oneTimePasswordRepository.findOtpByPhoneNumber(phoneNumber);
+        AnonymousTokenResponseDto anonymousTokenResponseDto = new AnonymousTokenResponseDto();
+        anonymousTokenResponseDto.setPhoneNumber(phoneNumber);
+        anonymousTokenResponseDto.setVid(UUID.randomUUID().toString());
+        if (Objects.nonNull(otpData) && !otpData.isExpired() && otpData.getCode().equals(otpVerifyDto.getOtp())) {
+            log.info("OTP verification successful");
+            String token = jwtService.generateToken(otpData.getPhoneNumber());
+            anonymousTokenResponseDto.setToken(token);
+            anonymousTokenResponseDto.setExpiry(LocalDateTime.now().plusMinutes(30));
+            anonymousTokenResponseDto.setOtpVerifyStatus(OTPVerifyStatus.SUCCESS);
+        } else {
+            log.info("Invalid OTP");
+            anonymousTokenResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
+        }
+
+        if (Objects.nonNull(otpData)) {
+            oneTimePasswordRepository.delete(otpData);
+        }
+        return anonymousTokenResponseDto;
     }
 }

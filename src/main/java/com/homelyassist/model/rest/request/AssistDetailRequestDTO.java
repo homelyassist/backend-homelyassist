@@ -6,15 +6,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OTPVerifyRequestDto {
+public class AssistDetailRequestDTO {
 
-    @JsonProperty("phone_number")
-    private String phoneNumber;
+    @JsonProperty("vid")
+    private String vid;
 
-    @JsonProperty("otp")
-    private String otp;
+    @JsonProperty("assist_id")
+    private String assistId;
 }

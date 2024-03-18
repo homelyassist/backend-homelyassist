@@ -15,11 +15,16 @@ import com.homelyassist.repository.db.UserMappingRepository;
 import com.homelyassist.utils.ErrorUtils;
 import com.homelyassist.utils.MemberHelper;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -83,7 +88,7 @@ public class AgriculturalAssistService {
         String pinCode = searchAssistRequestDto.getPinCode();
         List<AgriculturalAssistType> assistTypes = searchAssistRequestDto.getAssistTypes();
 
-        List<AgriculturalAssist> assist = agriculturalAssistRepository.findTop50ByPinCodeAndAgriculturalAssistTypesInAndCityArea(pinCode, assistTypes, area);
+        List<AgriculturalAssist> assist = agriculturalAssistRepository.findTop50ByPinCodeAndAgriculturalAssistTypesInAndCityAreaAndActiveIsTrue(pinCode, assistTypes, area);
         return new SearchAssistResponseDto(assist);
     }
 
@@ -96,5 +101,28 @@ public class AgriculturalAssistService {
         }
 
         // TODO: specific validation
+    }
+
+    public ResponseEntity<String> uploadImage(String id, MultipartFile file) {
+        try {
+            Optional<AgriculturalAssist> optionalAssist = agriculturalAssistRepository.findById(id);
+            if (optionalAssist.isPresent()) {
+                AgriculturalAssist agriculturalAssist = optionalAssist.get();
+                agriculturalAssist.setImage(file.getBytes());
+                agriculturalAssistRepository.save(agriculturalAssist);
+                return ResponseEntity.ok("Image uploaded successfully");
+            } else {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body("Agricultural Assist not found with id: " + id);
+            }
+        } catch (IOException e) {
+            // Handle IOException
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Failed to read file data");
+        } catch (Exception e) {
+            // Log any other exceptions
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("An error occurred: " + e.getMessage());
+        }
     }
 }

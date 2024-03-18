@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -12,7 +13,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <!-- Vendor CSS Files -->
     <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
     <link th:href="@{/assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
@@ -25,7 +28,8 @@
     <style>
         /* Style for buttons */
         .btn-get-started {
-            background-color: #6cb83a; /* Green theme */
+            background-color: #6cb83a;
+            /* Green theme */
             color: #ffffff;
             border: none;
             border-radius: 20px;
@@ -33,37 +37,48 @@
             margin-top: 10px;
             transition: background-color 0.3s ease;
         }
+
         .btn-get-started:hover {
-            background-color: #f5cb42; /* Yellow theme on hover */
+            background-color: #f5cb42;
+            /* Yellow theme on hover */
         }
+
         .btn-otp {
-            color: #6cb83a; /* Green theme */
+            color: #6cb83a;
+            /* Green theme */
             font-weight: bold;
             text-decoration: underline;
             transition: color 0.3s ease;
         }
+
         .btn-otp:hover {
-            color: #f5cb42; /* Yellow theme on hover */
+            color: #f5cb42;
+            /* Yellow theme on hover */
         }
+
         /* Adjust button layout */
         .btn-container {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
         }
+
         /* Center the form */
         #registration-form {
             text-align: center;
             padding: 50px 0;
         }
+
         /* Adjust form layout */
         #registration-form .form-group {
             margin-bottom: 15px;
             text-align: left;
         }
+
         #registration-form label {
             font-weight: bold;
         }
+
         /* Style section title */
         .section-title h2 {
             font-size: 32px;
@@ -71,12 +86,14 @@
             color: #6cb83a;
             margin-bottom: 30px;
         }
+
         /* Style form inputs */
         .form-control {
             border-radius: 20px;
             padding: 12px 20px;
             font-size: 16px;
         }
+
         /* Style form select */
         select.form-control {
             appearance: none;
@@ -88,23 +105,27 @@
             background-size: 20px;
             padding-right: 40px;
         }
+
         /* Style file input */
         input[type="file"].form-control {
             border: 1px solid #ced4da;
             background-color: transparent;
             padding: 10px 20px;
         }
+
         /* Style checkboxes */
         .checkbox-container {
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 15px;
         }
+
         .checkbox-item {
             margin-right: 20px;
         }
     </style>
 </head>
+
 <body>
 
     <!-- ======= Registration Form Section ======= -->
@@ -120,26 +141,32 @@
                             <div class="col-md-6 form-group">
                                 <label for="fullname">Full Name</label>
                                 <input type="text" name="fullname" class="form-control" id="fullname"
-                                    placeholder="Full Name" required>
+                                    placeholder="Full Name" maxlength="22" required>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="address">Address</label>
                                 <input type="text" name="address" class="form-control" id="address"
-                                    placeholder="Address" required>
+                                    placeholder="Address" maxlength="50" required>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="address">Landmark</label>
-                                <input type="text" name="landmark" class="form-control" id="landmark" placeholder="Landmark" required>
+                                <input type="text" name="landmark" class="form-control" id="landmark"
+                                    placeholder="Landmark">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="village">Village/Area/City</label>
                                 <input type="text" name="village" class="form-control" id="village"
-                                    placeholder="Village/Area/City" required>
+                                    placeholder="Village/Area/City" maxlength="22" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="state">State</label>
+                                <input type="text" name="state" class="form-control" id="state"
+                                       placeholder="District" maxlength="22" required readonly>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="district">District</label>
                                 <input type="text" name="district" class="form-control" id="district"
-                                    placeholder="District" required>
+                                    placeholder="District" maxlength="22" required readonly>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="pin">Pin</label>
@@ -182,71 +209,82 @@
                                 </div>
                             </div>
 
-                        <div class="col-md-6 form-group">
-                            <label for="description">Description</label>
-                            <input type="text" name="description" class="form-control" id="description" placeholder="Description" required>
+                            <div class="col-md-6 form-group">
+                                <label for="description">Description</label>
+                                <textarea name="description" class="form-control" id="description" placeholder="Description" maxlength="70" required></textarea>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="description">Experience</label>
+                                <input type="number" name="experience" class="form-control" id="experience"
+                                    placeholder="Experience" required min="0" max="30">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="photo">Photo</label>
+                                <input type="file" name="photo" class="form-control" id="photo" placeholder="Photo"
+                                    accept="image/*" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label for="mobile">Mobile Number</label>
+                                <input type="tel" name="mobile" class="form-control" id="mobile"
+                                    placeholder="Mobile Number" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP"
+                                    required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <div>
+                                    <span id="otpDisplay"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <button type="button" class="btn btn-primary" id="otpButton"
+                                    onclick="generateOtp()">Generate OTP</button>
+                                <span id="timer"></span>
+                            </div>
+                            <div class="col-md-12 btn-container">
+                                <button type="submit" class="btn btn-success" onclick="registerAssist()">Save</button>
+                            </div>
                         </div>
-                        <div class="col-md-6 form-group">
-                            <label for="description">Experience</label>
-                            <input type="number" name="experience" class="form-control" id="experience" placeholder="Experience" required min="0" max="50">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label for="photoaadhar">Photo</label>
-                            <input type="file" name="photoaadhar" class="form-control" id="photoaadhar" placeholder="Photo/Aadhar" required>
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <label for="mobile">Mobile Number</label>
-                            <input type="tel" name="mobile" class="form-control" id="mobile" placeholder="Mobile Number" required>
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP" required>
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <button type="button" class="btn btn-primary" id="otpButton" onclick="generateOtp()">Generate OTP</button>
-                            <button type="button" class="btn btn-success" id="validateOtpButton" onclick="validateOtp()" disabled>Validate OTP</button>
-                            <span id="timer"></span>
-                        </div>
-                        <div class="col-md-12 btn-container">
-                            <button type="submit" class="btn btn-success" onclick="registerAssist()">Save</button>
-                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Registration Form Section -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
                     </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section><!-- End Registration Form Section -->
-
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="copyright">
-                    &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-                    Designed by <a href="https://bootstrapmade.com/">homelyAssistTeam</a>
+                    <div class="credits">
+                        Designed by <a href="https://bootstrapmade.com/">homelyAssistTeam</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader">
+        <div class="line"></div>
     </div>
-</footer><!-- End Footer -->
 
-<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<div id="preloader">
-    <div class="line"></div>
-</div>
-
-<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="/assets/vendor/aos/aos.js"></script>
-<script src="/assets/vendor/php-email-form/validate.js"></script>
-<script src="/assets/js/main.js"></script>
-<script src="/assets/js/otp.js"></script>
-<script src="/assets/js/assist.js"></script>
-<script src="/assets/js/utils.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/otp.js"></script>
+    <script src="/assets/js/assist.js"></script>
+    <script src="/assets/js/utils.js"></script>
 
 </body>
+
 </html>

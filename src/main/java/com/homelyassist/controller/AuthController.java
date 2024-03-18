@@ -2,6 +2,7 @@ package com.homelyassist.controller;
 
 import com.homelyassist.model.rest.request.OTPRequestDto;
 import com.homelyassist.model.rest.request.OTPVerifyRequestDto;
+import com.homelyassist.model.rest.response.AnonymousTokenResponseDto;
 import com.homelyassist.model.rest.response.AssistLoginResponseDto;
 import com.homelyassist.model.rest.response.OTPResponseDto;
 import com.homelyassist.model.rest.response.OTPVerifyResponseDto;
@@ -44,5 +45,10 @@ public class AuthController {
     @GetMapping("/validate")
     public String validate() {
         return VALID_TOKEN;
+    }
+
+    @PostMapping("/token/anonymous/request")
+    public AnonymousTokenResponseDto generateAnonymousToken(@RequestBody OTPVerifyRequestDto otpVerifyDto) {
+        return otpService.generateAnonymousToken(otpVerifyDto);
     }
 }
