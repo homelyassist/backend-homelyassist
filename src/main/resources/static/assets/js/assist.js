@@ -1,10 +1,4 @@
 async function registerAssist() {
-    const validOpt = await validateOtp();
-
-    if(!validOpt) {
-        return;
-    }
-
     const fileInput = document.getElementById('photo');
     const file = fileInput.files[0];
 
@@ -18,7 +12,7 @@ async function registerAssist() {
         name: document.getElementById("fullname").value,
         phone_number: document.getElementById("mobile").value,
         address: document.getElementById("address").value,
-        state: "Odisha", // This has to be change in html code 
+        state: document.getElementById("state").value, 
         district: document.getElementById("district").value,
         pin_code: document.getElementById("pin").value,
         city_area: document.getElementById("village").value,
@@ -27,6 +21,17 @@ async function registerAssist() {
         description: document.getElementById("description").value,
         assist_types: getSelectedAssistTypes()
     };
+
+    if(payload.state != "Odisha") {
+        alert("Only Odisha state registration is allowed");
+        return;
+    }
+
+    const validOpt = await validateOtp();
+
+    if(!validOpt) {
+        return;
+    }
 
     const response = await fetch("/api/assist/agriculture/register", { // make this generic as per category
         method: "POST",
@@ -344,3 +349,15 @@ function closePopup() {
     document.getElementById("otp").value = "";
     document.getElementById("popup").style.display = "none";
 }
+
+document.getElementById('pin').addEventListener('input', async function() {
+    const pincode = this.value;
+    try {
+        const data = await getInfoForPinCode(pincode);
+        document.getElementById('district').value = data.district;
+        document.getElementById('state').value = data.state;
+    } catch (error) {
+        document.getElementById('district').value = "";
+        document.getElementById('state').value = "";
+    }
+});
