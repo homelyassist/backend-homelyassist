@@ -95,17 +95,24 @@ public class OTPService {
             String token = jwtService.generateToken(otpData.getPhoneNumber());
             assistLoginResponseDto.setToken(token);
             UserMapping userMapping = userMappingRepository.findByPhoneNumber(phoneNumber);
-            assistLoginResponseDto.setUuid(userMapping.getId());
-            assistLoginResponseDto.setAssistType(userMapping.getAssistType());
-            assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.SUCCESS);
+            if (userMapping == null) {
+                assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
+                assistLoginResponseDto.setError("User doesn't exist");
+            } else {
+                assistLoginResponseDto.setUuid(userMapping.getId());
+                assistLoginResponseDto.setAssistType(userMapping.getAssistType());
+                assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.SUCCESS);
+            }
         } else {
             log.info("Invalid OTP");
             assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
+            assistLoginResponseDto.setError("Invalid OTP");
         }
 
-        if (Objects.nonNull(otpData)) {
-            oneTimePasswordRepository.delete(otpData);
-        }
+//        if (Objects.nonNull(otpData)) {
+//            oneTimePasswordRepository.delete(otpData);
+//        }
+
         return assistLoginResponseDto;
     }
 
