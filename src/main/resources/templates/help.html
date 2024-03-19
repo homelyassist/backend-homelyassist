@@ -82,6 +82,14 @@
           padding: 20px;
           display: none;
         }
+
+        /* Close button Styling */
+        .close-btn {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          cursor: pointer;
+        }
     </style>
 </head>
 
@@ -96,8 +104,9 @@
             <img src="assets/img/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon" onclick="openWhatsAppPopup()">
             <!-- WhatsApp Pop-up -->
             <div id="whatsapp-popup" class="whatsapp-popup">
+                <span class="close-btn" onclick="closeWhatsAppPopup()">X</span> <!-- Close button -->
                 Send your details to our team and we will register you on your behalf. <br>
-                WhatsApp: <a href="https://api.whatsapp.com/send?phone=8951386744&text=Send%20your%20details%20to%20our%20team%20and%20we%20will%20register%20you%20on%20your%20behalf" target="_blank">8951386744</a>
+                WhatsApp: <a href="https://api.whatsapp.com/send?phone=8951386744&text=Send%20your%20details%20to%20our%20team%20and%20we%20will%20register%20you%20on%20your%20behalf" target="_blank">+ 91 8951386744</a>
             </div>
         </div>
         <div class="footer-section">
@@ -127,6 +136,12 @@
     function openWhatsAppPopup() {
       var popup = document.getElementById('whatsapp-popup');
       popup.style.display = 'block';
+    }
+
+    // Function to close WhatsApp pop-up
+    function closeWhatsAppPopup() {
+      var popup = document.getElementById('whatsapp-popup');
+      popup.style.display = 'none';
     }
 </script>
 
