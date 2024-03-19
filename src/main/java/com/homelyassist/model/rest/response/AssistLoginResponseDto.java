@@ -19,6 +19,9 @@ public class AssistLoginResponseDto {
     @JsonProperty("status")
     private OTPVerifyStatus otpVerifyStatus;
 
+    @JsonProperty("error")
+    private String error;
+
     @JsonProperty("token")
     private String token;
 

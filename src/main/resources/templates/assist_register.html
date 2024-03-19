@@ -159,18 +159,18 @@
                                     placeholder="Village/Area/City" maxlength="22" required>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label for="state">State</label>
-                                <input type="text" name="state" class="form-control" id="state"
-                                       placeholder="District" maxlength="22" required readonly>
+                                <label for="pin">Pin</label>
+                                <input type="text" name="pin" class="form-control" id="pin" placeholder="Pin" required>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="district">District</label>
                                 <input type="text" name="district" class="form-control" id="district"
-                                    placeholder="District" maxlength="22" required readonly>
+                                       placeholder="District" maxlength="22" required readonly>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label for="pin">Pin</label>
-                                <input type="text" name="pin" class="form-control" id="pin" placeholder="Pin" required>
+                                <label for="state">State</label>
+                                <input type="text" name="state" class="form-control" id="state"
+                                       placeholder="State" maxlength="22" required readonly>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="category">Category</label>
@@ -261,7 +261,7 @@
                         &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
                     </div>
                     <div class="credits">
-                        Designed by <a href="https://bootstrapmade.com/">homelyAssistTeam</a>
+                        Designed by <a href="/team">homelyAssistTeam</a>
                     </div>
                 </div>
             </div>
@@ -284,6 +284,19 @@
     <script src="/assets/js/otp.js"></script>
     <script src="/assets/js/assist.js"></script>
     <script src="/assets/js/utils.js"></script>
+    <script>
+        document.getElementById('pin').addEventListener('input', async function() {
+            const pincode = this.value;
+            try {
+                const data = await getInfoForPinCode(pincode);
+                document.getElementById('district').value = data.district;
+                document.getElementById('state').value = data.state;
+            } catch (error) {
+                document.getElementById('district').value = "";
+                document.getElementById('state').value = "";
+            }
+        });
+    </script>
 
 </body>
 

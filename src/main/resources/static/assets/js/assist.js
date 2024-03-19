@@ -22,6 +22,19 @@ async function registerAssist() {
         assist_types: getSelectedAssistTypes()
     };
 
+    for (const key in payload) {
+        if(key == "landmark") {
+            continue;
+        }
+        if (payload.hasOwnProperty(key)) {
+            const value = payload[key];
+            if (!value) {
+                alert(`Please fill in the ${key.replace('_', ' ')} field.`);
+                return false;
+            }
+        }
+    }
+
     if(payload.state != "Odisha") {
         alert("Only Odisha state registration is allowed");
         return;
@@ -175,7 +188,8 @@ async function assistLogin() {
             localStorage.setItem("uuid", data.uuid);
             window.location.assign("/assist/availability");
         } else {
-            throw new Error("Failed to validate OTP");
+            console.error("Error login to server")
+            alert(data.error);
         }
     } catch (error) {
         console.error("Error:", error);
@@ -349,15 +363,3 @@ function closePopup() {
     document.getElementById("otp").value = "";
     document.getElementById("popup").style.display = "none";
 }
-
-document.getElementById('pin').addEventListener('input', async function() {
-    const pincode = this.value;
-    try {
-        const data = await getInfoForPinCode(pincode);
-        document.getElementById('district').value = data.district;
-        document.getElementById('state').value = data.state;
-    } catch (error) {
-        document.getElementById('district').value = "";
-        document.getElementById('state').value = "";
-    }
-});
