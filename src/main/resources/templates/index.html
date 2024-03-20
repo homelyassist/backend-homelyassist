@@ -86,6 +86,33 @@
         #categories a[href='#']:first-child a {
         color: blue; /* Change color to red */
         }
+        /* Style for the Categories section */
+.categories .category-link {
+    display: block;
+    color: #3d6d36; /* Dark green */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-bottom: 10px;
+    font-weight: bold; /* Make text bold */
+}
+
+.categories .category-link:hover {
+    color: #6cb83a;
+}
+
+.categories .category-link.available:before {
+    content: "\2022"; /* Bullet point */
+    color: #6cb83a;
+    margin-right: 5px;
+}
+
+.categories .category-link.under-development:before {
+    content: "\2022"; /* Bullet point */
+    color: #f5cb42; /* Yellow theme */
+    margin-right: 5px;
+}
+
+
     </style>
 </head>
 
@@ -104,7 +131,9 @@
                 <li><a href="assist/register" class="active">Register Assist</a></li>
                 <li><a href="assist/search">Find Assist</a></li>
                 <li><a href="/help">Help</a></li>
+                <li><a href="/admin">Admin</a></li>
             </ul>
+
         </nav><!-- .navbar -->
         <div class="header-social-links">
             <a href="https://twitter.com/homelyAssist" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -148,42 +177,18 @@
 </section><!-- End Search Assist Section -->
 
 <!-- ======= Categories Section ======= -->
-<section id="categories" class="categories d-flex justify-content-center" data-aos="fade-up">
+<section id="categories" class="categories" data-aos="fade-up">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3>Categories <span style="font-size: 14px; color:sea green;">(green color items are in service currently, we are working on others)</span></h3>
+                <h3 class="section-heading">Categories <span class="status">(In Service)</span></h3>
                 <div class="row justify-content-center">
                     <div class="col-md-3 col-sm-6">
                         <ul class="list-unstyled">
-                            <li><a href="#" class="available">Agriculture Assist</a></li>
-                            <li><span class="under-development">Construction Assist</span></li>
-                            <li><span class="under-development">Electrical Assist</span></li>
-                            <li><span class="under-development">Repair Assist</span></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <ul class="list-unstyled">
-                            <li><span class="under-development">Handcraft Assist</span></li>
-                            <li><span class="under-development">Cleaning Assist</span></li>
-                            <li><span class="under-development">Salon Assist</span></li>
-                            <li><span class="under-development">Laundry Assist</span></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <ul class="list-unstyled">
-                            <li><span class="under-development">Education Assist</span></li>
-                            <li><span class="under-development">Health Assist</span></li>
-                            <li><span class="under-development">Maid Assist</span></li>
-                            <li><span class="under-development">Credit Assist</span></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <ul class="list-unstyled">
-                            <li><span class="under-development">Transportation Assist</span></li>
-                            <li><span class="under-development">Local Shop Assist</span></li>
-                            <li><span class="under-development">SocialMedia/ Youtube Assist</span></li>
-                            <li><span class="under-development">Please write what you want as an assist</span></li>
+                            <li><a href="#" class="category-link available">Agriculture Assist</a></li>
+                            <li><a href="#" class="category-link under-development">Electrical Assist</a></li>
+                            <li><a href="#" class="category-link under-development">Health Assist</a></li>
+                            <li><a href="#" class="category-link under-development">Transportation Assist</a></li>
                         </ul>
                     </div>
                 </div>
@@ -191,6 +196,9 @@
         </div>
     </div>
 </section><!-- End Categories Section -->
+
+
+
 
 <!-- ======= Download App Section ======= -->
 <!--<section id="download-app" class="download-app">-->

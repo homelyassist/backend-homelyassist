@@ -33,38 +33,30 @@
         /* Style for the form */
         #search-form {
             background-color: #f7f7f7;
-            /* Light gray background */
             padding: 30px;
-            /* Adjust padding as needed */
             border-radius: 10px;
             margin-top: 50px;
-            /* Add some space between sections */
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            /* Add a subtle shadow */
         }
 
         #search-form h3 {
-            color: #6cb83a;
-            /* Green theme */
+            color: #6cb83a; /* Change to green theme */
             margin-bottom: 20px;
-            /* Add space below the heading */
             text-align: center;
-            /* Center align the heading */
             font-size: 24px;
-            /* Increase font size */
             font-family: 'Roboto', sans-serif;
-            /* Use Roboto font */
+        }
+
+        /* Change the color of Enter Below Details to match Available Assists in Your Locality */
+        #search-form h3 {
+            color: #6cb83a;
         }
 
         #search-form label {
             color: #333;
-            /* Darker text color */
             margin-bottom: 5px;
-            /* Add space below the labels */
             font-size: 18px;
-            /* Adjust font size */
             font-family: 'Roboto', sans-serif;
-            /* Use Roboto font */
         }
 
         #search-form input,
@@ -76,64 +68,48 @@
             border-radius: 5px;
             font-size: 16px;
             font-family: 'Roboto', sans-serif;
-            /* Use Roboto font */
         }
 
         /* Style for the section title */
         .section-title h2 {
             color: #6cb83a;
-            /* Green theme */
         }
 
         /* Center align the button */
         .btn-container {
             text-align: center;
             margin-top: 30px;
-            /* Adjust margin to move the button down */
         }
 
         /* Style for the assists */
         .assist-card {
             background-color: #f7f7f7;
-            /* Light gray background */
             padding: 20px;
-            /* Adjust padding as needed */
             border-radius: 10px;
             margin-top: 30px;
-            /* Add some space between cards */
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            /* Add a subtle shadow */
             text-align: center;
-            /* Center align the content */
         }
 
         .assist-card h3 {
             color: #333;
-            /* Darker text color */
             margin-bottom: 10px;
-            /* Add space below the heading */
         }
 
         .assist-card p {
             color: #666;
-            /* Slightly darker text color */
             margin-bottom: 10px;
-            /* Add space below the description */
         }
 
         .assist-card img {
             width: 100%;
-            /* Ensure image fills the container */
             border-radius: 10px;
-            /* Apply border-radius to image */
             margin-bottom: 10px;
-            /* Add space below the image */
         }
 
         .assist-card .btn-details,
         .assist-card .btn-request {
             background-color: #6cb83a;
-            /* Green theme */
             color: #ffffff;
             border: none;
             border-radius: 20px;
@@ -145,8 +121,8 @@
         .assist-card .btn-details:hover,
         .assist-card .btn-request:hover {
             background-color: #f5cb42;
-            /* Yellow theme on hover */
         }
+
         #popup {
             display: none;
             background-color: rgba(0, 0, 0, 0.5);
@@ -164,42 +140,9 @@
             margin: 50px auto;
             padding: 20px;
             border-radius: 10px;
-        }
-
-        #popup h2 {
-            text-align: center;
-            color: black;
-        }
-
-        #popup input[type="text"] {
-            display: block;
-            width: calc(100% - 20px);
-            margin: 10px auto;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-
-        .button-group {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .button-group button {
-            margin: 5px;
-        }
-
-        #timer, #otpDisplay {
-            color: black;
-        }
     </style>
 </head>
-
 <body>
-
     <div class="container">
         <section id="form" class="form">
             <div class="container">
@@ -212,39 +155,19 @@
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <label for="category">Category</label>
-                                <select name="category" id="category" class="form-control" required>
+                                <select name="category" id="category" class="form-control" required onchange="toggleSubCategory()">
+                                    <option value="" selected>Select the Category</option>
                                     <option value="Agriculture Assist">Agriculture Assist</option>
+                                    <option value="Electrical Assist">Electrical Assist</option>
+                                    <option value="Health Assist">Health Assist</option>
                                 </select>
                             </div>
-                            <div class="col-md-6 form-group">
+                            <div class="col-md-6 form-group sub-category" id="subCategoryContainer" style="display: none;">
                                 <label for="subcategory">Sub-Category</label>
-                                <div class="checkbox-container">
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="agriculture" name="assist_type" value="agriculture"
-                                            checked>
-                                        <label for="agriculture">Agriculture</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="farm_land_maintenance" name="assist_type"
-                                            value="farm_land_maintenance" checked>
-                                        <label for="farm_land_maintenance">Farm Land Maintenance</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="wood_cutting" name="assist_type" value="wood_cutting"
-                                            checked>
-                                        <label for="wood_cutting">Wood Cutting</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="tractor_power_tiller" name="assist_type"
-                                            value="tractor_power_tiller" checked>
-                                        <label for="tractor_power_tiller">Tractor/Power Tiller rent</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="animal_selling" name="assist_type"
-                                            value="animal_selling" checked>
-                                        <label for="animal_selling">Animal Selling</label>
-                                    </div>
+                                <div class="checkbox-container" id="subCategoryOptions">
+                                    <!-- Sub-categories will be dynamically added here based on selection -->
                                 </div>
+                            </div>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="village">Village/Area/City</label>
@@ -325,6 +248,49 @@
         </div>
     </footer><!-- End Footer -->
 
+    <script>
+        function toggleSubCategory() {
+            var category = document.getElementById('category').value;
+            var subCategoryContainer = document.getElementById('subCategoryContainer');
+            var subCategoryOptions = document.getElementById('subCategoryOptions');
+
+            // Clear previously selected sub-categories
+            subCategoryOptions.innerHTML = '';
+
+            // Check the selected category
+            if (category === 'Electrical Assist') {
+                subCategoryContainer.style.display = 'none'; // Hide sub-category container
+            } else if (category === 'Health Assist') {
+                subCategoryContainer.style.display = 'block'; // Show sub-category container
+                // Add sub-category options for Health Assist
+                var subCategories = ['Nurse', 'Caretaker for old people and kids', 'Pathlab'];
+                subCategories.forEach(function (subcategory) {
+                    var checkboxItem = document.createElement('div');
+                    checkboxItem.classList.add('checkbox-item');
+                    checkboxItem.innerHTML = `
+                        <input type="checkbox" id="${subcategory.toLowerCase().replace(/\s/g, '_')}" name="assist_type" value="${subcategory.toLowerCase().replace(/\s/g, '_')}">
+                        <label for="${subcategory.toLowerCase().replace(/\s/g, '_')}">${subcategory}</label>
+                    `;
+                    subCategoryOptions.appendChild(checkboxItem);
+                });
+            } else if (category === 'Agriculture Assist') {
+                subCategoryContainer.style.display = 'block'; // Show sub-category container
+                // Add sub-category options for Agriculture Assist
+                var subCategories = ['Agriculture', 'Farm Land Maintenance', 'Wood Cutting', 'Tractor/Power Tiller rent', 'Animal Selling'];
+                subCategories.forEach(function (subcategory) {
+                    var checkboxItem = document.createElement('div');
+                    checkboxItem.classList.add('checkbox-item');
+                    checkboxItem.innerHTML = `
+                        <input type="checkbox" id="${subcategory.toLowerCase().replace(/\s/g, '_')}" name="assist_type" value="${subcategory.toLowerCase().replace(/\s/g, '_')}">
+                        <label for="${subcategory.toLowerCase().replace(/\s/g, '_')}">${subcategory}</label>
+                    `;
+                    subCategoryOptions.appendChild(checkboxItem);
+                });
+            } else {
+                subCategoryContainer.style.display = 'none'; // Hide sub-category container for other categories
+            }
+        }
+    </script>
 </body>
 
 </html>
