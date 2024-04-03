@@ -19,6 +19,7 @@ async function registerAssist() {
         landmark: document.getElementById("landmark").value,
         experience: document.getElementById("experience").value,
         description: document.getElementById("description").value,
+        gender: document.getElementById("gender").value,
         assist_types: getSelectedAssistTypes()
     };
 
@@ -37,6 +38,18 @@ async function registerAssist() {
 
     if(payload.state != "Odisha") {
         alert("Only Odisha state registration is allowed");
+        return;
+    }
+    
+    const experience = parseInt(payload.experience)
+
+    if (Number.isNaN(experience) || experience < 0 || experience > 30) {
+        alert("Please provide a valid value for Experience between 0 and 30");
+        return;
+    }
+
+    if(payload.assist_types.length === 0) {
+        alert("Please select at least one Sub-Category.");
         return;
     }
 
@@ -78,6 +91,7 @@ async function registerAssist() {
             "Authorization": getBearerToken()
         },
         body: formData,
+        timeout: 30000
     })
 
     if (!imageResponse.ok) {
@@ -107,7 +121,6 @@ async function getAssistData() {
     }
 
     const data = await response.json();
-    console.log(data);
     return data;
 }
 
@@ -199,55 +212,67 @@ async function assistLogin() {
 
 
 async function searchAssist() {
+
+    const container = document.getElementById('assistContainer');
+    container.innerHTML = '';
+    container.appendChild(addLoadingIcon());
+
     var payload = {
         pin_code: document.getElementById("pin").value,
         city_area: document.getElementById("village").value,
         assist_types: getSelectedAssistTypes()
     }
 
-    const response = await fetch("/api/assist/agriculture/search", { // make this generic as per category
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": getBearerToken()
-        },
-        body: JSON.stringify(payload),
-    })
+    try {
+        const response = await fetch("/api/assist/agriculture/search", { // make this generic as per category
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": getBearerToken()
+            },
+            body: JSON.stringify(payload),
+        })
 
-    if (!response.ok) {
-        throw new Error("Unable to search for an Assist");
-    }
+        if (!response.ok) {
+            throw new Error("Unable to search for an Assist");
+        }
 
-    const data = await response.json();
-    console.log(data);
-    const container = document.getElementById('assistContainer');
-    container.innerHTML = '';
-    if (data.assist && data.assist.length > 0) {
-        data.assist.forEach(item => {
-            const assistCard = document.createElement('div');
-            assistCard.classList.add('col-lg-4', 'col-md-6', 'd-flex', 'align-items-stretch');
-            assistCard.setAttribute('data-aos', 'fade-up');
-            assistCard.setAttribute('data-aos-delay', '100');
-            const imageData = item.image;
-    
-            assistCard.innerHTML = `
-                <div class="assist-card">
-                    <img src="${generateBase64String(imageData)}" alt="${item.name}">
-                    <h3>${item.name}</h3>
-                    <p>${item.description}</p>
-                    <button class="btn btn-request" data-uuid="${item.id}" id="${item.id}_btn" onclick="openPopup(event)">Request Mobile Number</button>
-                    <p id="${item.id}"></p>
-                </div>
-            `;
-    
-            container.appendChild(assistCard);
-        });
-    } else {
-        const noAssistAvailable = document.createElement('div');
-        noAssistAvailable.textContent = 'No assist available';
-        container.appendChild(noAssistAvailable);
+        const data = await response.json();
+        if (data.assist && data.assist.length > 0) {
+            data.assist.forEach(item => {
+                const assistCard = document.createElement('div');
+                assistCard.classList.add('col-lg-4', 'col-md-6', 'd-flex', 'align-items-stretch');
+                assistCard.setAttribute('data-aos', 'fade-up');
+                assistCard.setAttribute('data-aos-delay', '100');
+                const imageData = item.image;
+                const gender = item.gender ? item.gender : 'male';
+        
+                assistCard.innerHTML = `
+                    <div class="assist-card">
+                        <img src="${generateBase64String(imageData, gender)}" alt="${item.name}">
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                        <button class="btn btn-request" data-uuid="${item.id}" id="${item.id}_btn" onclick="openPopup(event)">Request Mobile Number</button>
+                        <p id="${item.id}"></p>
+                    </div>
+                `;
+        
+                container.appendChild(assistCard);
+            });
+        } else {
+            const noAssistAvailable = document.createElement('div');
+            noAssistAvailable.textContent = 'No assist available';
+            container.appendChild(noAssistAvailable);
+        }
+    } catch (error) {
+        console.error(error);
+    } finally {
+        hideLoadingSpinner();
     }
 }
+
+
+
 
 function getSelectedAssistTypes() {
     var selectedAssistTypes = [];
@@ -264,7 +289,13 @@ function getSelectedAssistTypes() {
     return selectedAssistTypes;
 }
 
-function generateBase64String(buffer) {
+function generateBase64String(buffer, gender) {
+    
+    // image is not present
+    if(!buffer) {
+        return "/assets/img/" + gender + ".png"
+    }
+
     const base64String = buffer.slice(buffer.indexOf(',') + 1); // Remove the data URI prefix
     const imageData = 'data:image/jpeg;base64,' + base64String;
     return imageData
@@ -362,4 +393,19 @@ function closePopup() {
     document.getElementById("mobile").value = "";
     document.getElementById("otp").value = "";
     document.getElementById("popup").style.display = "none";
+}
+
+
+function addLoadingIcon() {
+    const loadingSpinner = document.createElement('div');
+    loadingSpinner.id = 'loading-spinner';
+    loadingSpinner.classList.add('spinner-border', 'text-primary');
+    loadingSpinner.setAttribute('role', 'status');
+    loadingSpinner.innerHTML = '<span class="sr-only">Loading...</span>';
+    return loadingSpinner;
+}
+
+function hideLoadingSpinner() {
+    // Hide the loading spinner
+    document.getElementById('loading-spinner').style.display = 'none';
 }

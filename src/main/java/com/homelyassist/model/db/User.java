@@ -1,6 +1,7 @@
 package com.homelyassist.model.db;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.homelyassist.model.enums.Gender;
 import jakarta.persistence.Column;
 import jakarta.persistence.Lob;
 import jakarta.persistence.MappedSuperclass;
@@ -21,6 +22,10 @@ public class User {
     @JsonProperty("name")
     @Column(name = "name", nullable = false)
     private String name;
+
+    @JsonProperty("gender")
+    @Column(name = "gender", nullable = false)
+    private Gender gender;
 
     @JsonProperty("phone_number")
     @Column(name = "phone_number", nullable = false, unique = true)

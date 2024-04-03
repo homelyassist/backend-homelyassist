@@ -67,6 +67,7 @@
         #registration-form {
             text-align: center;
             padding: 50px 0;
+            margin-top: 80px;
         }
 
         /* Adjust form layout */
@@ -123,10 +124,36 @@
         .checkbox-item {
             margin-right: 20px;
         }
+
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 10px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
 <body>
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="/assets/img/homelyAssistlogo.jpg" alt="">
+            <h1>homelyAssist</h1>
+        </a>
+        <div class="header-social-links">
+            <a href="https://twitter.com/homelyAssist" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/test-automation-factory/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </div>
+</header>
 
     <!-- ======= Registration Form Section ======= -->
     <section id="registration-form" class="registration-form">
@@ -142,6 +169,15 @@
                                 <label for="fullname">Full Name</label>
                                 <input type="text" name="fullname" class="form-control" id="fullname"
                                     placeholder="Full Name" maxlength="22" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="gender">Gender</label>
+                                <select name="gender" id="gender" class="form-control" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="address">Address</label>
@@ -165,12 +201,12 @@
                             <div class="col-md-6 form-group">
                                 <label for="district">District</label>
                                 <input type="text" name="district" class="form-control" id="district"
-                                       placeholder="District" maxlength="22" required readonly>
+                                    placeholder="District" maxlength="22" required readonly>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="state">State</label>
-                                <input type="text" name="state" class="form-control" id="state"
-                                       placeholder="State" maxlength="22" required readonly>
+                                <input type="text" name="state" class="form-control" id="state" placeholder="State"
+                                    maxlength="22" required readonly>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="category">Category</label>
@@ -211,7 +247,8 @@
 
                             <div class="col-md-6 form-group">
                                 <label for="description">Description</label>
-                                <textarea name="description" class="form-control" id="description" placeholder="Description" maxlength="70" required></textarea>
+                                <textarea name="description" class="form-control" id="description"
+                                    placeholder="Description" maxlength="70" required></textarea>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="description">Experience</label>
@@ -232,11 +269,11 @@
                                 <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP"
                                     required>
                             </div>
-                            <div class="col-md-12 form-group">
+                            <!-- <div class="col-md-12 form-group">
                                 <div>
                                     <span id="otpDisplay"></span>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-md-12 form-group">
                                 <button type="button" class="btn btn-primary" id="otpButton"
                                     onclick="generateOtp()">Generate OTP</button>
@@ -285,7 +322,7 @@
     <script src="/assets/js/assist.js"></script>
     <script src="/assets/js/utils.js"></script>
     <script>
-        document.getElementById('pin').addEventListener('input', async function() {
+        document.getElementById('pin').addEventListener('input', async function () {
             const pincode = this.value;
             try {
                 const data = await getInfoForPinCode(pincode);

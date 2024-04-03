@@ -26,8 +26,11 @@ async function generateOtp() {
 
     document.getElementById('otpButton').textContent = 'Resend OTP';
     document.getElementById('otpButton').disabled = true;
-    document.getElementById('otpDisplay').innerText = "Your OTP is: " + data.code;
-    resendOptTimer30s();
+    var otpDisplay = document.getElementById('otpDisplay')
+    if(otpDisplay) {
+        document.getElementById('otpDisplay').innerText = "Your OTP is: " + data.code;
+    }
+    resendOptTimer();
 }
 
 async function validateOtp() {
@@ -113,8 +116,8 @@ async function generateAnonymousToken() {
     // put this in local stroage
 }
 
-function resendOptTimer30s() {
-    var countdown = 30;
+function resendOptTimer() {
+    var countdown = 60;
     var timerElement = document.getElementById('timer');
     timerElement.textContent = countdown + 's';
 
