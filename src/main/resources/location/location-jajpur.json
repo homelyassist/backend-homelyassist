@@ -1,0 +1,2794 @@
+{
+  "State": "Odisha",
+  "District": "Jajpur",
+  "Block": [
+    {
+      "Name": "Dasarathpur",
+      "Pin": 755006,
+      "Village": [
+        {
+          "Name": "Akarapada"
+        },
+        {
+          "Name": "Andola"
+        },
+        {
+          "Name": "Badadogada"
+        },
+        {
+          "Name": "Bakuli"
+        },
+        {
+          "Name": "Baruadi"
+        },
+        {
+          "Name": "Bhelanga"
+        },
+        {
+          "Name": "Durgapur"
+        },
+        {
+          "Name": "Jalasarpur"
+        },
+        {
+          "Name": "Itachaiti"
+        },
+        {
+          "Name": "Itara"
+        },
+        {
+          "Name": "Khurubil"
+        },
+        {
+          "Name": "Malikapur"
+        },
+        {
+          "Name": "Praharajpur Unit"
+        },
+        {
+          "Name": "Sanadogada"
+        },
+        {
+          "Name": "Sridharapur"
+        },
+        {
+          "Name": "Asanpur"
+        },
+        {
+          "Name": "Chatrapada"
+        },
+        {
+          "Name": "Keruna"
+        },
+        {
+          "Name": "Panchupur"
+        },
+        {
+          "Name": "Rangas"
+        },
+        {
+          "Name": "Bihari"
+        },
+        {
+          "Name": "Palada"
+        },
+        {
+          "Name": "Saundhi"
+        },
+        {
+          "Name": "Rahasoi"
+        },
+        {
+          "Name": "Jaganathpur"
+        },
+        {
+          "Name": "Brudabanpur"
+        },
+        {
+          "Name": "Champa"
+        },
+        {
+          "Name": "Barei"
+        },
+        {
+          "Name": "Biripata"
+        },
+        {
+          "Name": "Charabatia"
+        },
+        {
+          "Name": "Kuania"
+        },
+        {
+          "Name": "Narigaon"
+        },
+        {
+          "Name": "Ranmbila"
+        },
+        {
+          "Name": "Bariana"
+        },
+        {
+          "Name": "Champeipal"
+        },
+        {
+          "Name": "Kuanarapur"
+        },
+        {
+          "Name": "Olei(Mangalpur)"
+        },
+        {
+          "Name": "TarangaSagarpur"
+        },
+        {
+          "Name": "Udayapur"
+        },
+        {
+          "Name": "Botaldanga"
+        },
+        {
+          "Name": "Chasakhanda"
+        },
+        {
+          "Name": "Karianga"
+        },
+        {
+          "Name": "Aruha"
+        },
+        {
+          "Name": "Chhanchina"
+        },
+        {
+          "Name": "Chhatish Atanpal"
+        },
+        {
+          "Name": "Chitalo"
+        },
+        {
+          "Name": "Jhadagaon"
+        },
+        {
+          "Name": "Kuruli"
+        },
+        {
+          "Name": "Sanaindas"
+        },
+        {
+          "Name": "Dasarathpur"
+        },
+        {
+          "Name": "Prakatpur"
+        },
+        {
+          "Name": "Balada"
+        },
+        {
+          "Name": "Jayantara"
+        },
+        {
+          "Name": "Shyamsundarpur"
+        },
+        {
+          "Name": "Kuturia"
+        },
+        {
+          "Name": "Chandakuda"
+        },
+        {
+          "Name": "Duduranta"
+        },
+        {
+          "Name": "Kantapada"
+        },
+        {
+          "Name": "Naranagocha"
+        },
+        {
+          "Name": "Gopalpur"
+        },
+        {
+          "Name": "Merdha"
+        },
+        {
+          "Name": "Bibhutipur"
+        },
+        {
+          "Name": "Aindipur"
+        },
+        {
+          "Name": "Dahanihata"
+        },
+        {
+          "Name": "Baunsabadi"
+        },
+        {
+          "Name": "Depura"
+        },
+        {
+          "Name": "Boulanga"
+        },
+        {
+          "Name": "Tentulidia"
+        },
+        {
+          "Name": "Kuansa"
+        },
+        {
+          "Name": "Gramanandipur"
+        },
+        {
+          "Name": "Babalpur"
+        },
+        {
+          "Name": "Mirjapur"
+        },
+        {
+          "Name": "Sripura"
+        },
+        {
+          "Name": "Biruan"
+        },
+        {
+          "Name": "Bhanara"
+        },
+        {
+          "Name": "Dhoda"
+        },
+        {
+          "Name": "Senanda"
+        },
+        {
+          "Name": "Pubasahi"
+        },
+        {
+          "Name": "Kamardihi"
+        },
+        {
+          "Name": "Kelanga"
+        },
+        {
+          "Name": "Itapada"
+        },
+        {
+          "Name": "Saimada"
+        },
+        {
+          "Name": "Kanikapada"
+        },
+        {
+          "Name": "Madhupur"
+        },
+        {
+          "Name": "Naranpal"
+        },
+        {
+          "Name": "Kamalapur"
+        },
+        {
+          "Name": "Kasapa"
+        },
+        {
+          "Name": "Katikata"
+        },
+        {
+          "Name": "Paniara sahi"
+        },
+        {
+          "Name": "Bihipur"
+        },
+        {
+          "Name": "Chandapur"
+        },
+        {
+          "Name": "Hirapur"
+        },
+        {
+          "Name": "Izapur"
+        },
+        {
+          "Name": "Mansada"
+        },
+        {
+          "Name": "Mansadabindha-I"
+        },
+        {
+          "Name": "Mansadabindha-II"
+        },
+        {
+          "Name": "Darava"
+        },
+        {
+          "Name": "Gunthuni pada"
+        },
+        {
+          "Name": "Ichhapur"
+        },
+        {
+          "Name": "Kayan"
+        },
+        {
+          "Name": "Astapraharaipur"
+        },
+        {
+          "Name": "Balipada"
+        },
+        {
+          "Name": "Bilipur"
+        },
+        {
+          "Name": "Dhamadhada"
+        },
+        {
+          "Name": "Khandara"
+        },
+        {
+          "Name": "Indas"
+        },
+        {
+          "Name": "Ranua"
+        },
+        {
+          "Name": "Sudgobinda"
+        },
+        {
+          "Name": "Jundupur"
+        },
+        {
+          "Name": "Khannagar"
+        },
+        {
+          "Name": "Ahiyas"
+        },
+        {
+          "Name": "Mahanty Patana"
+        },
+        {
+          "Name": "Mallikapur"
+        },
+        {
+          "Name": "Bajarapat"
+        },
+        {
+          "Name": "Ismailpur"
+        },
+        {
+          "Name": "Mangalpur"
+        },
+        {
+          "Name": "Kotapur"
+        },
+        {
+          "Name": "Nachhindrapur"
+        },
+        {
+          "Name": "Nizampur"
+        },
+        {
+          "Name": "Rdhagan"
+        },
+        {
+          "Name": "Solpal"
+        },
+        {
+          "Name": "Palatpur"
+        },
+        {
+          "Name": "Bindhanandipur"
+        },
+        {
+          "Name": "Muraripur"
+        },
+        {
+          "Name": "Nilakanthapur"
+        },
+        {
+          "Name": "Sathipur"
+        },
+        {
+          "Name": "Jafarpur"
+        },
+        {
+          "Name": "Chaulia"
+        },
+        {
+          "Name": "Batitanki"
+        },
+        {
+          "Name": "Garadiha"
+        },
+        {
+          "Name": "Iswarpur"
+        },
+        {
+          "Name": "Susua"
+        },
+        {
+          "Name": "Taliha"
+        },
+        {
+          "Name": "Sribachhapur"
+        },
+        {
+          "Name": "Sidheswarpur"
+        },
+        {
+          "Name": "Sidheswar"
+        },
+        {
+          "Name": "Penthabad"
+        },
+        {
+          "Name": "Garadeswar"
+        },
+        {
+          "Name": "Deulabad"
+        },
+        {
+          "Name": "Daspur"
+        },
+        {
+          "Name": "Birajapur",
+          "Pin": 755014
+        },
+        {
+          "Name": "Bamdebpur"
+        },
+        {
+          "Name": "Barahata"
+        },
+        {
+          "Name": "Badaadampur"
+        },
+        {
+          "Name": "Dhobabil"
+        },
+        {
+          "Name": "Khosalpur"
+        },
+        {
+          "Name": "Thalkudi"
+        },
+        {
+          "Name": "Dahanipur"
+        },
+        {
+          "Name": "Thalkudi"
+        },
+        {
+          "Name": "Duttapur"
+        },
+        {
+          "Name": "Naranapur"
+        }
+      ]
+    },
+    {
+      "Name": "Bari",
+      "Village": [
+        {
+          "Name": "Ratlanga"
+        },
+        {
+          "Name": "Bandhapada"
+        },
+        {
+          "Name": "Sadakpur(UI)"
+        },
+        {
+          "Name": "Udaynathpur"
+        },
+        {
+          "Name": "Kaharaganda"
+        },
+        {
+          "Name": "Bamdebpur"
+        },
+        {
+          "Name": "Talakaipada"
+        },
+        {
+          "Name": "Badaadampur"
+        },
+        {
+          "Name": "Uperkaipada"
+        },
+        {
+          "Name": "Kalamatia"
+        },
+        {
+          "Name": "Bidurpa"
+        },
+        {
+          "Name": "Anyasipur"
+        },
+        {
+          "Name": "Nuapada"
+        },
+        {
+          "Name": "Bajapada"
+        },
+        {
+          "Name": "Haladidiha(UI)"
+        },
+        {
+          "Name": "Kuanpur"
+        },
+        {
+          "Name": "Allipur"
+        },
+        {
+          "Name": "Ramachandrapur"
+        },
+        {
+          "Name": "Bhabanipur"
+        },
+        {
+          "Name": "Badachandrasekharpur"
+        },
+        {
+          "Name": "Balibili"
+        },
+        {
+          "Name": "Khameswar"
+        },
+        {
+          "Name": "Karadapipala"
+        },
+        {
+          "Name": "Kenkarada"
+        },
+        {
+          "Name": "Birajapur"
+        },
+        {
+          "Name": "Gokhara(UI)"
+        },
+        {
+          "Name": "Bhanra"
+        },
+        {
+          "Name": "Badaadampur"
+        },
+        {
+          "Name": "Raipur"
+        },
+        {
+          "Name": "Chatumari"
+        },
+        {
+          "Name": "Sangadeipur"
+        },
+        {
+          "Name": "Bhurunga"
+        },
+        {
+          "Name": "Bodua"
+        },
+        {
+          "Name": "Kumbhuka"
+        },
+        {
+          "Name": "Sarabera"
+        },
+        {
+          "Name": "Kantia"
+        },
+        {
+          "Name": "Erada"
+        },
+        {
+          "Name": "Rampa"
+        },
+        {
+          "Name": "Pagghira"
+        },
+        {
+          "Name": "Neula"
+        },
+        {
+          "Name": "Atira"
+        },
+        {
+          "Name": "Arual"
+        },
+        {
+          "Name": "Mahamadpur"
+        },
+        {
+          "Name": "Kimbhiriapal"
+        },
+        {
+          "Name": "Gobindabati"
+        },
+        {
+          "Name": "Malada"
+        },
+        {
+          "Name": "Bholinuagan"
+        },
+        {
+          "Name": "Udaypur"
+        },
+        {
+          "Name": "Mililalpur"
+        },
+        {
+          "Name": "Bahadalpur"
+        },
+        {
+          "Name": "Bainsiria"
+        },
+        {
+          "Name": "Sarangapur"
+        },
+        {
+          "Name": "Swainkhanda"
+        },
+        {
+          "Name": "Jampada"
+        },
+        {
+          "Name": "Kalakhanda"
+        },
+        {
+          "Name": "Golkunda"
+        },
+        {
+          "Name": "Deulapada"
+        },
+        {
+          "Name": "Katana"
+        },
+        {
+          "Name": "Mandha"
+        },
+        {
+          "Name": "(Sasanda)Haripur"
+        },
+        {
+          "Name": "Nurpur-I"
+        },
+        {
+          "Name": "Nurpur-II"
+        },
+        {
+          "Name": "Paramandapur"
+        },
+        {
+          "Name": "Balia"
+        },
+        {
+          "Name": "Nahan-II"
+        },
+        {
+          "Name": "Nahan-I(UI)"
+        },
+        {
+          "Name": "Dharpur"
+        },
+        {
+          "Name": "Nathpur"
+        },
+        {
+          "Name": "Ishanpur"
+        },
+        {
+          "Name": "Sahupada"
+        },
+        {
+          "Name": "Haladibasanta"
+        },
+        {
+          "Name": "Arangabad"
+        },
+        {
+          "Name": "Fullapur"
+        },
+        {
+          "Name": "Rajapur"
+        },
+        {
+          "Name": "Bari"
+        },
+        {
+          "Name": "Madhusudanpur"
+        },
+        {
+          "Name": "Chakrapur"
+        },
+        {
+          "Name": "Sundarpur"
+        },
+        {
+          "Name": "Angalo"
+        },
+        {
+          "Name": "Arilo"
+        },
+        {
+          "Name": "Baringi"
+        },
+        {
+          "Name": "Bioitalupatana"
+        },
+        {
+          "Name": "Rampur"
+        },
+        {
+          "Name": "Sukala"
+        },
+        {
+          "Name": "Jagannathpur"
+        },
+        {
+          "Name": "Chandanpur"
+        },
+        {
+          "Name": "Mirzapur"
+        },
+        {
+          "Name": "Mandari"
+        },
+        {
+          "Name": "Meduakula"
+        },
+        {
+          "Name": "Barampur"
+        },
+        {
+          "Name": "Arikana"
+        },
+        {
+          "Name": "Banjarapur"
+        },
+        {
+          "Name": "Serapur"
+        },
+        {
+          "Name": "Srirampur"
+        },
+        {
+          "Name": "Krushnapur"
+        },
+        {
+          "Name": "Gamu"
+        },
+        {
+          "Name": "Mahakalapda"
+        },
+        {
+          "Name": "Dihapal"
+        },
+        {
+          "Name": "Mitrasenpur"
+        },
+        {
+          "Name": "Nilapada"
+        },
+        {
+          "Name": "Balikankara"
+        },
+        {
+          "Name": "Basantapal(U.I)"
+        },
+        {
+          "Name": "Birehipur(UI)"
+        },
+        {
+          "Name": "Batitanki(UI)"
+        },
+        {
+          "Name": "Ratnagiri"
+        },
+        {
+          "Name": "Aliabad"
+        },
+        {
+          "Name": "Patna"
+        },
+        {
+          "Name": "Khairimunda"
+        },
+        {
+          "Name": "Routasahi"
+        },
+        {
+          "Name": "Malasahi"
+        },
+        {
+          "Name": "Amathpur"
+        },
+        {
+          "Name": "Kampagarh"
+        },
+        {
+          "Name": "Asaliur"
+        },
+        {
+          "Name": "Palatpur"
+        }
+      ]
+    },
+    {
+      "Name": "Jajpur Town"
+    },
+    {
+      "Name": "Barchana",
+      "Village": [
+        {
+          "Name": "Achyutabasanta"
+        },
+        {
+          "Name": "Asia"
+        },
+        {
+          "Name": "Gadjit"
+        },
+        {
+          "Name": "Anaka"
+        },
+        {
+          "Name": "Bhulaka"
+        },
+        {
+          "Name": "Dakhinkul"
+        },
+        {
+          "Name": "Khadianga"
+        },
+        {
+          "Name": "Krushnapur sasan"
+        },
+        {
+          "Name": "Mahadeipur"
+        },
+        {
+          "Name": "Mahipur"
+        },
+        {
+          "Name": "Raghunathpur"
+        },
+        {
+          "Name": "Rahal"
+        },
+        {
+          "Name": "Arakhapur"
+        },
+        {
+          "Name": "Bandha"
+        },
+        {
+          "Name": "Barabati"
+        },
+        {
+          "Name": "Nilambarapur"
+        },
+        {
+          "Name": "Padmanavpur"
+        },
+        {
+          "Name": "Sukhadeipur"
+        },
+        {
+          "Name": "Badabalikuda"
+        },
+        {
+          "Name": "Janak"
+        },
+        {
+          "Name": "Ahammedpur"
+        },
+        {
+          "Name": "Badaghumuri"
+        },
+        {
+          "Name": "Bhubanpur"
+        },
+        {
+          "Name": "HC Badaghumuri"
+        },
+        {
+          "Name": "Harihansapatana"
+        },
+        {
+          "Name": "Kalyanpur"
+        },
+        {
+          "Name": "Maulanagar"
+        },
+        {
+          "Name": "Nuagaon"
+        },
+        {
+          "Name": "Paikarapur"
+        },
+        {
+          "Name": "Purusotampur"
+        },
+        {
+          "Name": "Rambhadeipur"
+        },
+        {
+          "Name": "Sakuntalapur"
+        },
+        {
+          "Name": "Udayanagarpat"
+        },
+        {
+          "Name": "Uluri-I"
+        },
+        {
+          "Name": "UluriI-II"
+        },
+        {
+          "Name": "Balichandrapur"
+        },
+        {
+          "Name": "Nanpur"
+        },
+        {
+          "Name": "Rukutipat"
+        },
+        {
+          "Name": "Balipadia"
+        },
+        {
+          "Name": "Dekudi"
+        },
+        {
+          "Name": "Tigiria"
+        },
+        {
+          "Name": "Bandalo"
+        },
+        {
+          "Name": "Bapatpada"
+        },
+        {
+          "Name": "Dihakaranda"
+        },
+        {
+          "Name": "Ganas"
+        },
+        {
+          "Name": "Hatakaranda"
+        },
+        {
+          "Name": "Jaganathpur"
+        },
+        {
+          "Name": "Jaipur"
+        },
+        {
+          "Name": "Mangarajpur"
+        },
+        {
+          "Name": "Olar"
+        },
+        {
+          "Name": "Ranipokhri"
+        },
+        {
+          "Name": "Satalanda"
+        },
+        {
+          "Name": "Bachhuribandha"
+        },
+        {
+          "Name": "Baghua"
+        },
+        {
+          "Name": "Bantala"
+        },
+        {
+          "Name": "Bari"
+        },
+        {
+          "Name": "Barimul"
+        },
+        {
+          "Name": "Kainthipokhari"
+        },
+        {
+          "Name": "Kapastikiri"
+        },
+        {
+          "Name": "Patayat"
+        },
+        {
+          "Name": "Thengada"
+        },
+        {
+          "Name": "Ubuka"
+        },
+        {
+          "Name": "Upulha"
+        },
+        {
+          "Name": "Barapada"
+        },
+        {
+          "Name": "Niali"
+        },
+        {
+          "Name": "Barchana"
+        },
+        {
+          "Name": "Sasan purusottampur"
+        },
+        {
+          "Name": "Barchana bazar"
+        },
+        {
+          "Name": "Kanjia"
+        },
+        {
+          "Name": "HC Barachana"
+        },
+        {
+          "Name": "HC Deulkur"
+        },
+        {
+          "Name": "Deulkur"
+        },
+        {
+          "Name": "Khaira"
+        },
+        {
+          "Name": "Digapokharihuda"
+        },
+        {
+          "Name": "Nuasasan"
+        },
+        {
+          "Name": "Kadei"
+        },
+        {
+          "Name": "Dagarpada"
+        },
+        {
+          "Name": "Bharatpur"
+        },
+        {
+          "Name": "Panasudha"
+        },
+        {
+          "Name": "Paripallei"
+        },
+        {
+          "Name": "Akabarabad"
+        },
+        {
+          "Name": "Bhusandpur"
+        },
+        {
+          "Name": "Khandiabandi"
+        },
+        {
+          "Name": "Khatuapada"
+        },
+        {
+          "Name": "Mahakhala"
+        },
+        {
+          "Name": "Nakhapasi"
+        },
+        {
+          "Name": "Ranibandi"
+        },
+        {
+          "Name": "Bikramtiran"
+        },
+        {
+          "Name": "Gobandiha"
+        },
+        {
+          "Name": "Matakatapur"
+        },
+        {
+          "Name": "Barada"
+        },
+        {
+          "Name": "Palei"
+        },
+        {
+          "Name": "Bandereswar"
+        },
+        {
+          "Name": "Kesaraipur"
+        },
+        {
+          "Name": "Bajamalia"
+        },
+        {
+          "Name": "Byree"
+        },
+        {
+          "Name": "Padmanavpur sasan"
+        },
+        {
+          "Name": "Baula"
+        },
+        {
+          "Name": "Champapur"
+        },
+        {
+          "Name": "Daulatpur"
+        },
+        {
+          "Name": "Gopinathapur"
+        },
+        {
+          "Name": "Hinjala"
+        },
+        {
+          "Name": "Nahara"
+        },
+        {
+          "Name": "Raghudaspur"
+        },
+        {
+          "Name": "Saboo"
+        },
+        {
+          "Name": "Sanabandalo"
+        },
+        {
+          "Name": "Sapanpur"
+        },
+        {
+          "Name": "Baghua"
+        },
+        {
+          "Name": "Batto"
+        },
+        {
+          "Name": "Baunsagadia"
+        },
+        {
+          "Name": "Chandital"
+        },
+        {
+          "Name": "Chaulathali"
+        },
+        {
+          "Name": "Harichandanpur"
+        },
+        {
+          "Name": "Jarabati"
+        },
+        {
+          "Name": "Khajuria"
+        },
+        {
+          "Name": "Palankakoligadia"
+        },
+        {
+          "Name": "Charinangal"
+        },
+        {
+          "Name": "Gaharanagar"
+        },
+        {
+          "Name": "Chhatia"
+        },
+        {
+          "Name": "Kampanibazar"
+        },
+        {
+          "Name": "Amarabatipatana"
+        },
+        {
+          "Name": "Ichanagarpatana"
+        },
+        {
+          "Name": "Nayapatana"
+        },
+        {
+          "Name": "Babuganjabazar"
+        },
+        {
+          "Name": "Bidyadharapur"
+        },
+        {
+          "Name": "Nelia"
+        },
+        {
+          "Name": "Dihasahi"
+        },
+        {
+          "Name": "Rangidaspur"
+        },
+        {
+          "Name": "Padmalabhapur"
+        },
+        {
+          "Name": "Sukhadeipur"
+        },
+        {
+          "Name": "Rampur"
+        },
+        {
+          "Name": "Gopalpur"
+        },
+        {
+          "Name": "Guljaranagar patana"
+        },
+        {
+          "Name": "Kolsahi"
+        },
+        {
+          "Name": "Kumborkhata"
+        },
+        {
+          "Name": "Debatasahi"
+        },
+        {
+          "Name": "Dhanmandal"
+        },
+        {
+          "Name": "Ramchandrapur"
+        },
+        {
+          "Name": "Sasansima"
+        },
+        {
+          "Name": "Gopalpur"
+        },
+        {
+          "Name": "Kalasri"
+        },
+        {
+          "Name": "Abhayapur"
+        },
+        {
+          "Name": "Baidehipur"
+        },
+        {
+          "Name": "Baranga"
+        },
+        {
+          "Name": "Bidyadharpur"
+        },
+        {
+          "Name": "Baijanga"
+        },
+        {
+          "Name": "Kaimatia"
+        },
+        {
+          "Name": "Mahisagotha"
+        },
+        {
+          "Name": "Nalida"
+        },
+        {
+          "Name": "Paida"
+        },
+        {
+          "Name": "Balikuda"
+        },
+        {
+          "Name": "Kolanagiri"
+        },
+        {
+          "Name": "Panasuapal"
+        },
+        {
+          "Name": "Gargali"
+        },
+        {
+          "Name": "Haripur"
+        },
+        {
+          "Name": "Kundala"
+        },
+        {
+          "Name": "Saika"
+        },
+        {
+          "Name": "Sanabarmani"
+        },
+        {
+          "Name": "Chandia"
+        },
+        {
+          "Name": "Majhipada"
+        },
+        {
+          "Name": "Bhakuda"
+        },
+        {
+          "Name": "Daulatpur"
+        },
+        {
+          "Name": "Krushnadaspur"
+        },
+        {
+          "Name": "Manduka"
+        },
+        {
+          "Name": "Makundapur"
+        },
+        {
+          "Name": "Padmalabhapur"
+        },
+        {
+          "Name": "Nalipur"
+        },
+        {
+          "Name": "Baujanga"
+        },
+        {
+          "Name": "Patarajpur"
+        },
+        {
+          "Name": "Ambasauri"
+        },
+        {
+          "Name": "Amiyajhar"
+        },
+        {
+          "Name": "Baragada"
+        },
+        {
+          "Name": "Barunia"
+        },
+        {
+          "Name": "Paria"
+        },
+        {
+          "Name": "Bangarguntha"
+        },
+        {
+          "Name": "Bidyadharapur"
+        },
+        {
+          "Name": "Bilikana"
+        },
+        {
+          "Name": "Damodarpur"
+        },
+        {
+          "Name": "Digambarpur"
+        },
+        {
+          "Name": "Jaganathpur"
+        },
+        {
+          "Name": "Kuanpur"
+        },
+        {
+          "Name": "Rashaeipur"
+        },
+        {
+          "Name": "Udayanagar"
+        },
+        {
+          "Name": "Raipur"
+        },
+        {
+          "Name": "Ramdaspur"
+        },
+        {
+          "Name": "Bandhapalli"
+        },
+        {
+          "Name": "Barpal"
+        },
+        {
+          "Name": "Baunsamuli"
+        },
+        {
+          "Name": "Endorpada"
+        },
+        {
+          "Name": "Gopalpur"
+        },
+        {
+          "Name": "Harantikiri"
+        },
+        {
+          "Name": "Jiagoda"
+        },
+        {
+          "Name": "Jhatiapada"
+        },
+        {
+          "Name": "Punia"
+        },
+        {
+          "Name": "Sailapada"
+        },
+        {
+          "Name": "Salapada"
+        },
+        {
+          "Name": "Tilapada"
+        },
+        {
+          "Name": "Champapur"
+        },
+        {
+          "Name": "Kolha"
+        },
+        {
+          "Name": "Raijar"
+        },
+        {
+          "Name": "Samia"
+        },
+        {
+          "Name": "Sataman"
+        },
+        {
+          "Name": "Baniari"
+        },
+        {
+          "Name": "Musatikiri"
+        },
+        {
+          "Name": "Saudia"
+        },
+        {
+          "Name": "Godimagura"
+        },
+        {
+          "Name": "Jaipur"
+        },
+        {
+          "Name": "Kampira"
+        },
+        {
+          "Name": "Kharmangi"
+        },
+        {
+          "Name": "Kochilagadia"
+        },
+        {
+          "Name": "Kolhasingh"
+        },
+        {
+          "Name": "Mangarajpur"
+        },
+        {
+          "Name": "Siha"
+        },
+        {
+          "Name": "Kambhei"
+        },
+        {
+          "Name": "Mulijhar"
+        },
+        {
+          "Name": "Paikerapur"
+        },
+        {
+          "Name": "Solar"
+        },
+        {
+          "Name": "Sunguda"
+        },
+        {
+          "Name": "Khasalipur"
+        },
+        {
+          "Name": "Nisimala"
+        },
+        {
+          "Name": "Naranpur"
+        },
+        {
+          "Name": "Santipur"
+        },
+        {
+          "Name": "Benapur"
+        },
+        {
+          "Name": "Khantapasi"
+        }
+      ]
+    },
+    {
+      "Name": "Binjharpur",
+      "Village": [
+        {
+          "Name": "Arei"
+        },
+        {
+          "Name": "Gopalpur"
+        },
+        {
+          "Name": "Jainmara"
+        },
+        {
+          "Name": "Murabil"
+        },
+        {
+          "Name": "Aunri"
+        },
+        {
+          "Name": "Baharkul"
+        },
+        {
+          "Name": "Balabhadrapur"
+        },
+        {
+          "Name": "Dihakula"
+        },
+        {
+          "Name": "Karapada"
+        },
+        {
+          "Name": "Kuanarpur"
+        },
+        {
+          "Name": "Matiakana"
+        },
+        {
+          "Name": "Sunapal"
+        },
+        {
+          "Name": "Bachhola"
+        },
+        {
+          "Name": "Dharmapur"
+        },
+        {
+          "Name": "Bangara"
+        },
+        {
+          "Name": "Chhotagara"
+        },
+        {
+          "Name": "Gunduripada"
+        },
+        {
+          "Name": "Kantitara"
+        },
+        {
+          "Name": "Kusunpur"
+        },
+        {
+          "Name": "Barapada"
+        },
+        {
+          "Name": "Bidapada"
+        },
+        {
+          "Name": "Nagapura"
+        },
+        {
+          "Name": "Ramachandrapur"
+        },
+        {
+          "Name": "Talabandha"
+        },
+        {
+          "Name": "Binjharpur"
+        },
+        {
+          "Name": "Sayedpur"
+        },
+        {
+          "Name": "Bitana"
+        },
+        {
+          "Name": "Balichandrapur"
+        },
+        {
+          "Name": "Khandahata"
+        },
+        {
+          "Name": "Puribindha"
+        },
+        {
+          "Name": "Purusottampur"
+        },
+        {
+          "Name": "Chandramu"
+        },
+        {
+          "Name": "Badamalipur"
+        },
+        {
+          "Name": "Banapur"
+        },
+        {
+          "Name": "Jagannathpur"
+        },
+        {
+          "Name": "Routara"
+        },
+        {
+          "Name": "Chikana"
+        },
+        {
+          "Name": "Brahmanigan"
+        },
+        {
+          "Name": "Diatikiri"
+        },
+        {
+          "Name": "Pairakha"
+        },
+        {
+          "Name": "Sasanpada"
+        },
+        {
+          "Name": "Fatepur"
+        },
+        {
+          "Name": "Guhali"
+        },
+        {
+          "Name": "Gobindapur"
+        },
+        {
+          "Name": "Karuna"
+        },
+        {
+          "Name": "Ghantiali"
+        },
+        {
+          "Name": "Injanpur"
+        },
+        {
+          "Name": "Lenkasahi"
+        },
+        {
+          "Name": "Baniapal"
+        },
+        {
+          "Name": "Badapal"
+        },
+        {
+          "Name": "Haladidiha"
+        },
+        {
+          "Name": "Andhalo"
+        },
+        {
+          "Name": "Champapala"
+        },
+        {
+          "Name": "Falapur"
+        },
+        {
+          "Name": "Guhali"
+        },
+        {
+          "Name": "Jari"
+        },
+        {
+          "Name": "Naubanka"
+        },
+        {
+          "Name": "Nemara"
+        },
+        {
+          "Name": "Kalyanpur"
+        },
+        {
+          "Name": "Kanhupur"
+        },
+        {
+          "Name": "Rudrapur"
+        },
+        {
+          "Name": "Samalpur"
+        },
+        {
+          "Name": "Kapila"
+        },
+        {
+          "Name": "Mandhatapatna"
+        },
+        {
+          "Name": "Ransa"
+        },
+        {
+          "Name": "Talukapada"
+        },
+        {
+          "Name": "Kaina"
+        },
+        {
+          "Name": "Bankipal"
+        },
+        {
+          "Name": "Mandhapur"
+        },
+        {
+          "Name": "Narua"
+        },
+        {
+          "Name": "Prahalladpur"
+        },
+        {
+          "Name": "Raghunathpur"
+        },
+        {
+          "Name": "Mansada"
+        },
+        {
+          "Name": "Alarpur"
+        },
+        {
+          "Name": "Dadhibamanpur"
+        },
+        {
+          "Name": "Goudasahi"
+        },
+        {
+          "Name": "Oleichandanpur"
+        },
+        {
+          "Name": "Pritipur"
+        },
+        {
+          "Name": "Nuagaon"
+        },
+        {
+          "Name": "Santipada"
+        },
+        {
+          "Name": "Ranapur"
+        },
+        {
+          "Name": "Bahadalapur"
+        },
+        {
+          "Name": "Kantipur"
+        },
+        {
+          "Name": "Naranpur"
+        },
+        {
+          "Name": "Sasanda"
+        },
+        {
+          "Name": "Baruna"
+        },
+        {
+          "Name": "Tauntara"
+        },
+        {
+          "Name": "Singhpur"
+        },
+        {
+          "Name": "Ibrahimpur"
+        },
+        {
+          "Name": "Tina"
+        },
+        {
+          "Name": "Sisirana"
+        },
+        {
+          "Name": "Udranga"
+        },
+        {
+          "Name": "Ajipur"
+        },
+        {
+          "Name": "Badasingha"
+        },
+        {
+          "Name": "Korei Praharajpur"
+        },
+        {
+          "Name": "Kurisahi"
+        },
+        {
+          "Name": "Saikul"
+        },
+        {
+          "Name": "Uttangara"
+        },
+        {
+          "Name": "Banamalipur"
+        },
+        {
+          "Name": "Dadhibabanpur"
+        },
+        {
+          "Name": "Raghunathpur"
+        },
+        {
+          "Name": "Ogarapada"
+        },
+        {
+          "Name": "Uttarkul"
+        },
+        {
+          "Name": "Barakoti"
+        },
+        {
+          "Name": "Nuabil"
+        },
+        {
+          "Name": "Paripada"
+        }
+      ]
+    },
+    {
+      "Name": "Danagadi",
+      "Village": [
+        {
+          "Name": "Bangarkota"
+        },
+        {
+          "Name": "Telibada"
+        },
+        {
+          "Name": "Diapal"
+        },
+        {
+          "Name": "Dahanigadia"
+        },
+        {
+          "Name": "Ampore"
+        },
+        {
+          "Name": "Kacherigoan"
+        },
+        {
+          "Name": "Chandia"
+        },
+        {
+          "Name": "Ankurapal"
+        },
+        {
+          "Name": "Bharadapasi"
+        },
+        {
+          "Name": "Golagaon"
+        },
+        {
+          "Name": "Chitri"
+        },
+        {
+          "Name": "Tolakani"
+        },
+        {
+          "Name": "Deulakana"
+        },
+        {
+          "Name": "Patabali"
+        },
+        {
+          "Name": "Nayabagapatia"
+        },
+        {
+          "Name": "Danakarisahi"
+        },
+        {
+          "Name": "Patharabandha"
+        },
+        {
+          "Name": "Dhapanki"
+        },
+        {
+          "Name": "Managobindapur"
+        },
+        {
+          "Name": "Dhuligarh"
+        },
+        {
+          "Name": "Gobardhanpur"
+        },
+        {
+          "Name": "Jemadeipur"
+        },
+        {
+          "Name": "Alekhapur"
+        },
+        {
+          "Name": "Gopapur"
+        },
+        {
+          "Name": "Fuljhar"
+        },
+        {
+          "Name": "Dhabahali"
+        },
+        {
+          "Name": "Manapur"
+        },
+        {
+          "Name": "Janar"
+        }
+      ]
+    },
+    {
+      "Name": "Dharmasala",
+      "Village": [
+        {
+          "Name": "x"
+        },
+        {
+          "Name": "y"
+        },
+        {
+          "Name": "z"
+        },
+        {
+          "Name": "x"
+        }
+      ]
+    },
+    {
+      "Name": "Jajpur",
+      "Village": [
+        {
+          "Name": "x"
+        },
+        {
+          "Name": "y"
+        },
+        {
+          "Name": "z"
+        },
+        {
+          "Name": "x"
+        }
+      ]
+    },
+    {
+      "Name": "Korei",
+      "Village": [
+        {
+          "Name": "x"
+        },
+        {
+          "Name": "y"
+        },
+        {
+          "Name": "z"
+        },
+        {
+          "Name": "x"
+        }
+      ]
+    },
+    {
+      "Name": "Rasulpur",
+      "Village": [
+        {
+          "Name": "Tarapur"
+        },
+        {
+          "Name": "Vikipur"
+        },
+        {
+          "Name": "Baliapasi"
+        },
+        {
+          "Name": "Krushnanagar"
+        },
+        {
+          "Name": "Radhanagar"
+        },
+        {
+          "Name": "Krushnagarpatana"
+        },
+        {
+          "Name": "Laxminagar"
+        },
+        {
+          "Name": "Pahanga"
+        },
+        {
+          "Name": "Routarapur"
+        },
+        {
+          "Name": "Jokadia"
+        },
+        {
+          "Name": "Tikarpada"
+        },
+        {
+          "Name": "Kujibar"
+        },
+        {
+          "Name": "Sribantapur"
+        },
+        {
+          "Name": "Berhampur"
+        },
+        {
+          "Name": "Jenapur"
+        },
+        {
+          "Name": "BhagatBhagaban"
+        },
+        {
+          "Name": "Dianchhaka"
+        },
+        {
+          "Name": "Kanhupur"
+        },
+        {
+          "Name": "Kandasara"
+        },
+        {
+          "Name": "Baralangi"
+        },
+        {
+          "Name": "Sarangapur"
+        },
+        {
+          "Name": "Bhagirathpur"
+        },
+        {
+          "Name": "Baunsantabada"
+        },
+        {
+          "Name": "Jabara"
+        },
+        {
+          "Name": "Manapur"
+        },
+        {
+          "Name": "Sukadeipur"
+        },
+        {
+          "Name": "Lachhamanpur(U.I.)"
+        },
+        {
+          "Name": "Kharikud(U.I)"
+        },
+        {
+          "Name": "Gopinarayanpur(U.I)"
+        },
+        {
+          "Name": "Birijanga"
+        },
+        {
+          "Name": "Nsthuabar"
+        },
+        {
+          "Name": "Adampur"
+        },
+        {
+          "Name": "Naguan"
+        },
+        {
+          "Name": "Krushnapada"
+        },
+        {
+          "Name": "Korakora"
+        },
+        {
+          "Name": "Kapali"
+        },
+        {
+          "Name": "Takuathenga"
+        },
+        {
+          "Name": "Badakainchi"
+        },
+        {
+          "Name": "Gopinathpur"
+        },
+        {
+          "Name": "Gordha"
+        },
+        {
+          "Name": "Garual"
+        },
+        {
+          "Name": "Odisso"
+        },
+        {
+          "Name": "Andeigoda"
+        },
+        {
+          "Name": "Manapur"
+        },
+        {
+          "Name": "Hatsinghpur"
+        },
+        {
+          "Name": "Nadialli"
+        },
+        {
+          "Name": "Artia Kusanapur"
+        },
+        {
+          "Name": "Karanjiary(Karanjia)"
+        },
+        {
+          "Name": "Melak"
+        },
+        {
+          "Name": "Bahabalpur"
+        },
+        {
+          "Name": "Mangarajpur(U.I)"
+        },
+        {
+          "Name": "Singhapur"
+        },
+        {
+          "Name": "Matiasasan"
+        },
+        {
+          "Name": "Gopinathpur(sasan)"
+        },
+        {
+          "Name": "Jagannathpur"
+        },
+        {
+          "Name": "Bamdevpur"
+        },
+        {
+          "Name": "Brahmanbad"
+        },
+        {
+          "Name": "Haridapal"
+        },
+        {
+          "Name": "Daneipur"
+        },
+        {
+          "Name": "Kalan"
+        },
+        {
+          "Name": "Kalanpaikarapur"
+        },
+        {
+          "Name": "Biswanathpur"
+        },
+        {
+          "Name": "Sulia"
+        },
+        {
+          "Name": "Sarabana"
+        },
+        {
+          "Name": "Nuahat"
+        },
+        {
+          "Name": "Belapada"
+        },
+        {
+          "Name": "Barabati"
+        },
+        {
+          "Name": "Fulladi"
+        },
+        {
+          "Name": "Manatiri"
+        },
+        {
+          "Name": "Odanga"
+        },
+        {
+          "Name": "Chikrakul"
+        },
+        {
+          "Name": "Barajpur"
+        },
+        {
+          "Name": "Betanda"
+        },
+        {
+          "Name": "Durgapur"
+        },
+        {
+          "Name": "Durgapurkuda"
+        },
+        {
+          "Name": "Bhagatpur"
+        },
+        {
+          "Name": "Prathamakhandi"
+        },
+        {
+          "Name": "Biswambarpur(UI)"
+        },
+        {
+          "Name": "Damodarpur"
+        },
+        {
+          "Name": "Kulakuransa"
+        },
+        {
+          "Name": "Suanpur"
+        },
+        {
+          "Name": "Chaka gopalpur"
+        },
+        {
+          "Name": "Sadamba"
+        },
+        {
+          "Name": "Pranarajpur( Palagopalpur UI)"
+        },
+        {
+          "Name": "Haribajpur"
+        },
+        {
+          "Name": "Rajendrapur"
+        },
+        {
+          "Name": "Hatasahi"
+        },
+        {
+          "Name": "Karajanga"
+        },
+        {
+          "Name": "Karajanga Chhak"
+        },
+        {
+          "Name": "Dialkhandi"
+        },
+        {
+          "Name": "Atalpur"
+        },
+        {
+          "Name": "Ganeshpatana"
+        },
+        {
+          "Name": "Sadakppur"
+        },
+        {
+          "Name": "Haripur"
+        },
+        {
+          "Name": "Narasinghpur"
+        },
+        {
+          "Name": "Jitipur"
+        },
+        {
+          "Name": "Nuamirzapur"
+        },
+        {
+          "Name": "Sanagobindapur"
+        },
+        {
+          "Name": "Badagobindapur"
+        },
+        {
+          "Name": "Gholapur"
+        },
+        {
+          "Name": "Koruan"
+        },
+        {
+          "Name": "Gourishyamapatana"
+        },
+        {
+          "Name": "Mugupal"
+        },
+        {
+          "Name": "Baransa"
+        },
+        {
+          "Name": "Khairabad"
+        },
+        {
+          "Name": "Sarangapur"
+        },
+        {
+          "Name": "Bahadalpur"
+        },
+        {
+          "Name": "Orali"
+        },
+        {
+          "Name": "Badaniranjanpur"
+        },
+        {
+          "Name": "Sarifabad"
+        },
+        {
+          "Name": "Mohammadpur"
+        },
+        {
+          "Name": "Ksmarpal"
+        },
+        {
+          "Name": "Paridapal"
+        },
+        {
+          "Name": "Kuakhia"
+        },
+        {
+          "Name": "Rasulpur"
+        },
+        {
+          "Name": "Chandipur"
+        },
+        {
+          "Name": "Kohosalpur"
+        },
+        {
+          "Name": "Sanatrilochanpur"
+        },
+        {
+          "Name": "Jaleswarpur"
+        },
+        {
+          "Name": "Suansahi"
+        },
+        {
+          "Name": "(Sana)Keutalaguan"
+        },
+        {
+          "Name": "Niamatapur(U.I)"
+        },
+        {
+          "Name": "Bhotka"
+        },
+        {
+          "Name": "Serapur"
+        },
+        {
+          "Name": "Bilipada"
+        },
+        {
+          "Name": "Arada"
+        },
+        {
+          "Name": "Sanarampei"
+        },
+        {
+          "Name": "Badarampei"
+        },
+        {
+          "Name": "Ichhapur"
+        },
+        {
+          "Name": "Bantara"
+        },
+        {
+          "Name": "Ektala"
+        },
+        {
+          "Name": "Gandhana"
+        },
+        {
+          "Name": "Parikainchi"
+        },
+        {
+          "Name": "Tulasipur"
+        },
+        {
+          "Name": "Brahman nrarsingh"
+        },
+        {
+          "Name": "Masurpur"
+        },
+        {
+          "Name": "Darkundi"
+        },
+        {
+          "Name": "Rahamba"
+        },
+        {
+          "Name": "Kolathala"
+        },
+        {
+          "Name": "Mirzapur"
+        },
+        {
+          "Name": "Dihakuransa"
+        },
+        {
+          "Name": "Sadanandapur"
+        },
+        {
+          "Name": "Arthanga"
+        },
+        {
+          "Name": "Kolthasahi"
+        },
+        {
+          "Name": "Alapua"
+        },
+        {
+          "Name": "Kripalpur"
+        },
+        {
+          "Name": "Torada"
+        },
+        {
+          "Name": "Badachapoi"
+        },
+        {
+          "Name": "Mangarajpur"
+        },
+        {
+          "Name": "Baliguda"
+        },
+        {
+          "Name": "Deuli"
+        },
+        {
+          "Name": "Lankaballisahi"
+        },
+        {
+          "Name": "Khandasa"
+        },
+        {
+          "Name": "Birabhanupur"
+        },
+        {
+          "Name": "Chambila(UI)"
+        },
+        {
+          "Name": "Naraharipur"
+        },
+        {
+          "Name": "Keshapur"
+        },
+        {
+          "Name": "Srichandanpur(UI)"
+        },
+        {
+          "Name": "Samantarapur"
+        },
+        {
+          "Name": "Mandarpur"
+        },
+        {
+          "Name": "Rasuna"
+        },
+        {
+          "Name": "Kulagoan - I (Chakulagoan) UI"
+        },
+        {
+          "Name": "Kulagoan - II"
+        },
+        {
+          "Name": "Routarapur"
+        },
+        {
+          "Name": "Ratapur"
+        },
+        {
+          "Name": "Maheswarpur"
+        },
+        {
+          "Name": "Chandapur"
+        },
+        {
+          "Name": "Brahmbarada"
+        },
+        {
+          "Name": "Bandhadiha"
+        },
+        {
+          "Name": "Sahapada"
+        },
+        {
+          "Name": "Jaisunguda"
+        },
+        {
+          "Name": "Mathasahi"
+        }
+      ]
+    },
+    {
+      "Name": "Sukinda",
+      "Village": [
+        {
+          "Name": "Ampolaba"
+        },
+        {
+          "Name": "Barapal"
+        },
+        {
+          "Name": "Jamupasi"
+        },
+        {
+          "Name": "Santarapur"
+        },
+        {
+          "Name": "Atta"
+        },
+        {
+          "Name": "Bandhagan"
+        },
+        {
+          "Name": "Kantapal"
+        },
+        {
+          "Name": "Koilo"
+        },
+        {
+          "Name": "Mantira"
+        },
+        {
+          "Name": "Rankia"
+        },
+        {
+          "Name": "Baragadia"
+        },
+        {
+          "Name": "Nuagan"
+        },
+        {
+          "Name": "Bahabalpur"
+        },
+        {
+          "Name": "Baratanda"
+        },
+        {
+          "Name": "Kantira"
+        },
+        {
+          "Name": "Solapur"
+        },
+        {
+          "Name": "Aradapal"
+        },
+        {
+          "Name": "Chigudipal"
+        },
+        {
+          "Name": "Deogan"
+        },
+        {
+          "Name": "Guhiasla"
+        },
+        {
+          "Name": "Nagada"
+        },
+        {
+          "Name": "Nator"
+        },
+        {
+          "Name": "Patana"
+        },
+        {
+          "Name": "Padagoda(Padama)"
+        },
+        {
+          "Name": "Ragada"
+        },
+        {
+          "Name": "Duburi"
+        },
+        {
+          "Name": "Saransua"
+        },
+        {
+          "Name": "Botalanda"
+        },
+        {
+          "Name": "Damodarpur"
+        },
+        {
+          "Name": "Dhdhujari"
+        },
+        {
+          "Name": "Kanchichua"
+        },
+        {
+          "Name": "Mangalpur"
+        },
+        {
+          "Name": "Pubala"
+        },
+        {
+          "Name": "Gobarghati"
+        },
+        {
+          "Name": "Hatimunda"
+        },
+        {
+          "Name": "Mirigichara"
+        },
+        {
+          "Name": "Balipasi"
+        },
+        {
+          "Name": "Godipatana"
+        },
+        {
+          "Name": "Haripur"
+        },
+        {
+          "Name": "Jemadeipur"
+        },
+        {
+          "Name": "Bairimal"
+        },
+        {
+          "Name": "Hatibari"
+        },
+        {
+          "Name": "Karadapasi"
+        },
+        {
+          "Name": "Gurujanga"
+        },
+        {
+          "Name": "Gurujangapal"
+        },
+        {
+          "Name": "Kaliapni"
+        },
+        {
+          "Name": "Sukarangi"
+        },
+        {
+          "Name": "Bhalukipatala"
+        },
+        {
+          "Name": "Gantayatkateni"
+        },
+        {
+          "Name": "Garamian"
+        },
+        {
+          "Name": "Giringamali"
+        },
+        {
+          "Name": "Kanduabani"
+        },
+        {
+          "Name": "Kakadapal"
+        },
+        {
+          "Name": "Karadagadia"
+        },
+        {
+          "Name": "Balipada"
+        },
+        {
+          "Name": "Kamarda"
+        },
+        {
+          "Name": "Kansa"
+        },
+        {
+          "Name": "Ostapal"
+        },
+        {
+          "Name": "Saruabila"
+        },
+        {
+          "Name": "Talangi"
+        },
+        {
+          "Name": "Ambasar"
+        },
+        {
+          "Name": "Baradi"
+        },
+        {
+          "Name": "Gunduchipasi"
+        },
+        {
+          "Name": "Kharadi"
+        },
+        {
+          "Name": "Bambilo"
+        },
+        {
+          "Name": "Gandhapal"
+        },
+        {
+          "Name": "Jemadeipur"
+        },
+        {
+          "Name": "Kuhika"
+        },
+        {
+          "Name": "Mulakhamba"
+        },
+        {
+          "Name": "Bethiahata"
+        },
+        {
+          "Name": "Kabata"
+        },
+        {
+          "Name": "Kanjiapal"
+        },
+        {
+          "Name": "Lembo"
+        },
+        {
+          "Name": "Santarapur"
+        },
+        {
+          "Name": "Singadia"
+        },
+        {
+          "Name": "Udayapur"
+        },
+        {
+          "Name": "Banja"
+        },
+        {
+          "Name": "Kumudisasan"
+        },
+        {
+          "Name": "Mangarajpur"
+        },
+        {
+          "Name": "Abhaypur"
+        },
+        {
+          "Name": "Olia"
+        },
+        {
+          "Name": "Sukaran"
+        },
+        {
+          "Name": "Ambapal"
+        },
+        {
+          "Name": "Arjunpur"
+        },
+        {
+          "Name": "Nuadhia"
+        },
+        {
+          "Name": "Pimpudia"
+        },
+        {
+          "Name": "Badapingal"
+        },
+        {
+          "Name": "Kaitha"
+        },
+        {
+          "Name": "Nimapali"
+        },
+        {
+          "Name": "Raitikir"
+        },
+        {
+          "Name": "Sanapingal"
+        },
+        {
+          "Name": "Baragaji"
+        },
+        {
+          "Name": "Kakudia"
+        },
+        {
+          "Name": "Kalarangiatta"
+        },
+        {
+          "Name": "Kusumundia"
+        },
+        {
+          "Name": "Moulkhal"
+        },
+        {
+          "Name": "Ransol"
+        },
+        {
+          "Name": "Patapur"
+        },
+        {
+          "Name": "Sansilo"
+        },
+        {
+          "Name": "Gadapur"
+        },
+        {
+          "Name": "Khurunti"
+        },
+        {
+          "Name": "Sarangapur"
+        },
+        {
+          "Name": "Madhapur"
+        },
+        {
+          "Name": "Nizigarh"
+        }
+      ]
+    }
+  ]
+}
