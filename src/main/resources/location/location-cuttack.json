@@ -1,0 +1,15 @@
+{
+  "State": "Odisha",
+  "District": [
+    {
+      "Name": "Cuttack",
+      "Block": [
+        {"Name" :  "Athagarh"},
+        {"Name" :  "Athagarh"},
+        {"Name" :  "Athagarh"},
+        {"Name" :  "Athagarh"}
+
+      ]
+    }
+  ]
+}
