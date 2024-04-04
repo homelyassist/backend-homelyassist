@@ -1,0 +1,15 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Mayurbhanj",
+      "block": [
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"}
+
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Kandhamal",
+      "block": [
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"}
+
+      ]
+    }
+  ]
+}

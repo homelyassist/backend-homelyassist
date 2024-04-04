@@ -1,0 +1,15 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Jagatsinghpur",
+      "block": [
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"}
+
+      ]
+    }
+  ]
+}

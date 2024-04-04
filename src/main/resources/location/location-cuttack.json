@@ -1,13 +1,13 @@
 {
-  "State": "Odisha",
-  "District": [
+  "state": "Odisha",
+  "district": [
     {
-      "Name": "Cuttack",
-      "Block": [
-        {"Name" :  "Athagarh"},
-        {"Name" :  "Athagarh"},
-        {"Name" :  "Athagarh"},
-        {"Name" :  "Athagarh"}
+      "name": "Cuttack",
+      "block": [
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"},
+        {"name" :  "Athagarh"}
 
       ]
     }
