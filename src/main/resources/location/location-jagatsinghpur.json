@@ -4,10 +4,14 @@
     {
       "name": "Jagatsinghpur",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
+        {"name" :  "Jagatsinghpur"},
+        {"name" :  "Biridi"},
+        {"name" :  "Balikuda"},
+        {"name" :  "Raghunathpur"},
+        {"name" :  "Tirtol"},
+        {"name" :  "Kujanga"},
+        {"name" :  "Erasama"},
+        {"name" :  "Naugaon"}
 
       ]
     }

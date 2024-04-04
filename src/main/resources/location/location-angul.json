@@ -4,10 +4,14 @@
     {
       "name": "Angul",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
+        {"name" :  "Angul"},
+        {"name" :  "Banarpal"},
+        {"name" :  "Chhendipada"},
+        {"name" :  "Athamallik"},
+        {"name" :  "Kishorenagar"},
+        {"name" :  "Pallahara"},
+        {"name" :  "Talcher"},
+        {"name" :  "Kaniha"}
 
       ]
     }

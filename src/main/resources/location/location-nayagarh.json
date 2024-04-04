@@ -4,11 +4,14 @@
     {
       "name": "Nayagarh",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Bhapur"},
+        {"name" :  "Dasapalla"},
+        {"name" :  "Gania"},
+        {"name" :  "Khandapara"},
+        {"name" :  "Nayagarh"},
+        {"name" :  "Nuagaon"},
+        {"name" :  "Odagaon"},
+        {"name" :  "Ranapur"}
       ]
     }
   ]

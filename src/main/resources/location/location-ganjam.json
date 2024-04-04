@@ -4,11 +4,28 @@
     {
       "name": "Ganjam",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Aska"},
+        {"name" :  "Beguniapada"},
+        {"name" :  "Bellaguntha"},
+        {"name" :  "Bhanjanagar"},
+        {"name" :  "Buguda"},
+        {"name" :  "Chatrapur"},
+        {"name" :  "Chikiti"},
+        {"name" :  "Dharakote"},
+        {"name" :  "Digapahandi"},
+        {"name" :  "Ganjam"},
+        {"name" :  "Hinjilicut"},
+        {"name" :  "Jagannathprasad"},
+        {"name" :  "Kabisuryanagar"},
+        {"name" :  "Khallikote"},
+        {"name" :  "Kukudakhandi"},
+        {"name" :  "Patrapur"},
+        {"name" :  "Polosara"},
+        {"name" :  "Purushottampur"},
+        {"name" :  "Rangeilunda"},
+        {"name" :  "Sanakhemundi"},
+        {"name" :  "Sheragada"},
+        {"name" :  "Surada"}
       ]
     }
   ]

@@ -4,11 +4,15 @@
     {
       "name": "Sambalpur",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Bamra"},
+        {"name" :  "Dhankauda"},
+        {"name" :  "Jamankira"},
+        {"name" :  "Jujomura"},
+        {"name" :  "Kuchinda"},
+        {"name" :  "Maneswar"},
+        {"name" :  "Naktideul"},
+        {"name" :  "Rairakhol"},
+        {"name" :  "Rengali"}
       ]
     }
   ]

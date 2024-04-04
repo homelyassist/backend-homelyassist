@@ -4,10 +4,16 @@
     {
       "name": "Khordha",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
+        {"name" :  "Balianta"},
+        {"name" :  "Balipatna"},
+        {"name" :  "Banapur"},
+        {"name" :  "Begunia"},
+        {"name" :  "Bhubaneswar"},
+        {"name" :  "Bolagarh"},
+        {"name" :  "Chilika"},
+        {"name" :  "Jatni"},
+        {"name" :  "Khordha"},
+        {"name" :  "Tangi"}
 
       ]
     }

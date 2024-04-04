@@ -4,11 +4,18 @@
     {
       "name": "Bargarh",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Ambabhona"},
+        {"name" :  "Attabira"},
+        {"name" :  "Bargarh"},
+        {"name" :  "Barpali"},
+        {"name" :  "Bhatli"},
+        {"name" :  "Bheden"},
+        {"name" :  "Bijepur"},
+        {"name" :  "Gaisilet"},
+        {"name" :  "Jharbandh"},
+        {"name" :  "Padampur"},
+        {"name" :  "Paikmal"},
+        {"name" :  "Sohella"}
       ]
     }
   ]

@@ -4,11 +4,32 @@
     {
       "name": "Mayurbhanj",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Badasahi"},
+        {"name" :  "Bahalda"},
+        {"name" :  "Bangriposi"},
+        {"name" :  "Baripada"},
+        {"name" :  "Betnoti"},
+        {"name" :  "Bijatala"},
+        {"name" :  "Bisoi"},
+        {"name" :  "Gopabandhunagar"},
+        {"name" :  "Jamda"},
+        {"name" :  "Joshipur"},
+        {"name" :  "Kaptipada"},
+        {"name" :  "Karanjia"},
+        {"name" :  "Khunta"},
+        {"name" :  "Kuliana"},
+        {"name" :  "Kusumi"},
+        {"name" :  "Morada"},
+        {"name" :  "Rairangpur"},
+        {"name" :  "Raruan"},
+        {"name" :  "Rasgovindpur"},
+        {"name" :  "Samakhunta"},
+        {"name" :  "Saraskana"},
+        {"name" :  "Sukruli"},
+        {"name" :  "Suliapada"},
+        {"name" :  "Thakurmunda"},
+        {"name" :  "Tiring"},
+        {"name" :  "Udala"}
       ]
     }
   ]

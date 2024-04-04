@@ -1,0 +1,20 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Kendrapada",
+      "block": [
+        {"name" :  "Aul"},
+        {"name" :  "Derabish"},
+        {"name" :  "Garadapur"},
+        {"name" :  "Kendrapada"},
+        {"name" :  "Mahakalapada"},
+        {"name" :  "Marsaghai"},
+        {"name" :  "Pattamundai"},
+        {"name" :  "Rajkanika"},
+        {"name" :  "Rajnagar"}
+
+      ]
+    }
+  ]
+}

@@ -4,11 +4,18 @@
     {
       "name": "Balasore",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Bahanaga"},
+        {"name" :  "Balasore"},
+        {"name" :  "Baliapal"},
+        {"name" :  "Basta"},
+        {"name" :  "Bhograi"},
+        {"name" :  "Jaleswar"},
+        {"name" :  "Khaira"},
+        {"name" :  "Nilgiri"},
+        {"name" :  "Oupada"},
+        {"name" :  "Remuna"},
+        {"name" :  "Simulia"},
+        {"name" :  "Soro"}
       ]
     }
   ]

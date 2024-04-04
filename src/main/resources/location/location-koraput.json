@@ -4,11 +4,20 @@
     {
       "name": "Koraput",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Bandhugaon"},
+        {"name" :  "Boipariguda"},
+        {"name" :  "Borigumma"},
+        {"name" :  "Dasamantapur"},
+        {"name" :  "Jeypore"},
+        {"name" :  "Koraput"},
+        {"name" :  "Kotpad"},
+        {"name" :  "Kundura"},
+        {"name" :  "Lamtaput"},
+        {"name" :  "Laxmipur"},
+        {"name" :  "Nandapur"},
+        {"name" :  "Narayan Patana"},
+        {"name" :  "Pottangi"},
+        {"name" :  "Semiliguda"}
       ]
     }
   ]

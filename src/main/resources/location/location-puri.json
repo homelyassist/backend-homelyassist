@@ -4,10 +4,18 @@
     {
       "name": "Puri",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
+        {"name" :  "Astarang"},
+        {"name" :  "Brahmagiri"},
+        {"name" :  "Delang"},
+        {"name" :  "Gop"},
+        {"name" :  "Kakatpur"},
+        {"name" :  "Kanas"},
+        {"name" :  "Krushnaprasad"},
+        {"name" :  "Nimapara"},
+        {"name" :  "Pipili"},
+        {"name" :  "Puri Sadar"},
+        {"name" :  "Satyabadi"}
+
 
       ]
     }

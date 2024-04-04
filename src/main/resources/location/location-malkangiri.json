@@ -4,11 +4,13 @@
     {
       "name": "Malkangiri",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Chitrakonda"},
+        {"name" :  "Kalimela"},
+        {"name" :  "Khairaput"},
+        {"name" :  "Korukonda"},
+        {"name" :  "Malkangiri"},
+        {"name" :  "Mathili"},
+        {"name" :  "Podia"}
       ]
     }
   ]

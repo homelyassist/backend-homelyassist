@@ -4,10 +4,11 @@
     {
       "name": "Nuapada",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
+        {"name" :  "Nuapada"},
+        {"name" :  "Komna"},
+        {"name" :  "Khariar"},
+        {"name" :  "Boden"},
+        {"name" :  "Sinapali"}
 
       ]
     }

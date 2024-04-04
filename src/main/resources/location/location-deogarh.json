@@ -4,11 +4,9 @@
     {
       "name": "Deogarh",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Barkote"},
+        {"name" :  "Reamal"},
+        {"name" :  "Tileibani"}
       ]
     }
   ]

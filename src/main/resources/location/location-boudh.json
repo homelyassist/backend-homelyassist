@@ -4,11 +4,9 @@
     {
       "name": "Boudh",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Boudh"},
+        {"name" :  "Harabhanga"},
+        {"name" :  "Kantamal"}
       ]
     }
   ]

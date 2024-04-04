@@ -4,11 +4,19 @@
     {
       "name": "Kalahandi",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Bhawanipatna"},
+        {"name" :  "Dharamagarh"},
+        {"name" :  "Golamunda"},
+        {"name" :  "Jayapatna"},
+        {"name" :  "Junagarh"},
+        {"name" :  "Kalampur"},
+        {"name" :  "Karlamunda"},
+        {"name" :  "Kesinga"},
+        {"name" :  "Kokasara"},
+        {"name" :  "Lanjigarh"},
+        {"name" :  "Madanpur Rampur"},
+        {"name" :  "Narala"},
+        {"name" :  "Thuamul Ram Pur"}
       ]
     }
   ]

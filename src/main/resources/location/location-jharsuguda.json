@@ -4,11 +4,11 @@
     {
       "name": "Jharsuguda",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Jharsuguda"},
+        {"name" :  "Kirmira"},
+        {"name" :  "Kolabira"},
+        {"name" :  "Laikera"},
+        {"name" :  "Lakhanpur"}
       ]
     }
   ]

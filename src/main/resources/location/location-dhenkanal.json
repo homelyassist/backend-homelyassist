@@ -4,11 +4,14 @@
     {
       "name": "Dhenkanal",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Dhenkanal Sadar"},
+        {"name" :  "Gondia"},
+        {"name" :  "Odapada"},
+        {"name" :  "Kamakhyanagar"},
+        {"name" :  "Bhuban"},
+        {"name" :  "Kankadahad"},
+        {"name" :  "Parjang"},
+        {"name" :  "Hindol"}
       ]
     }
   ]

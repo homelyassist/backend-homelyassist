@@ -4,11 +4,14 @@
     {
       "name": "Subarnapur",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Binika"},
+        {"name" :  "Biramaharajpur"},
+        {"name" :  "Dunguripali"},
+        {"name" :  "Rampur"},
+        {"name" :  "Sonapur"},
+        {"name" :  "Subalaya"},
+        {"name" :  "Tarbha"},
+        {"name" :  "Ulunda"}
       ]
     }
   ]

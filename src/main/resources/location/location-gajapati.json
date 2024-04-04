@@ -4,11 +4,13 @@
     {
       "name": "Gajapati",
       "block": [
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"},
-        {"name" :  "Athagarh"}
-
+        {"name" :  "Paralakhemundi(Gosani)"},
+        {"name" :  "R.Udayagiri"},
+        {"name" :  "Mohana"},
+        {"name" :  "Rayagada"},
+        {"name" :  "Kashinagar"},
+        {"name" :  "Nuagada"},
+        {"name" :  "Gumma"}
       ]
     }
   ]
