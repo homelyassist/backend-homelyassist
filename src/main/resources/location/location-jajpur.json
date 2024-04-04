@@ -1,3955 +1,3955 @@
 {
-  "State": "Odisha",
-  "District": [
+  "state": "Odisha",
+  "district": [
     {
-      "Name": "Jajpur",
-      "Block": [
+      "name": "Jajpur",
+      "block": [
         {
-          "Name": "Dasarathpur",
-          "Pin": 755006,
-          "Village": [
+          "name": "Dasarathpur",
+          "pin": 755006,
+          "village": [
             {
-              "Name": "Akarapada"
+              "name": "Akarapada"
             },
             {
-              "Name": "Andola"
+              "name": "Andola"
             },
             {
-              "Name": "Badadogada"
+              "name": "Badadogada"
             },
             {
-              "Name": "Bakuli"
+              "name": "Bakuli"
             },
             {
-              "Name": "Baruadi"
+              "name": "Baruadi"
             },
             {
-              "Name": "Bhelanga"
+              "name": "Bhelanga"
             },
             {
-              "Name": "Durgapur"
+              "name": "Durgapur"
             },
             {
-              "Name": "Jalasarpur"
+              "name": "Jalasarpur"
             },
             {
-              "Name": "Itachaiti"
+              "name": "Itachaiti"
             },
             {
-              "Name": "Itara"
+              "name": "Itara"
             },
             {
-              "Name": "Khurubil"
+              "name": "Khurubil"
             },
             {
-              "Name": "Malikapur"
+              "name": "Malikapur"
             },
             {
-              "Name": "Praharajpur Unit"
+              "name": "Praharajpur Unit"
             },
             {
-              "Name": "Sanadogada"
+              "name": "Sanadogada"
             },
             {
-              "Name": "Sridharapur"
+              "name": "Sridharapur"
             },
             {
-              "Name": "Asanpur"
+              "name": "Asanpur"
             },
             {
-              "Name": "Chatrapada"
+              "name": "Chatrapada"
             },
             {
-              "Name": "Keruna"
+              "name": "Keruna"
             },
             {
-              "Name": "Panchupur"
+              "name": "Panchupur"
             },
             {
-              "Name": "Rangas"
+              "name": "Rangas"
             },
             {
-              "Name": "Bihari"
+              "name": "Bihari"
             },
             {
-              "Name": "Palada"
+              "name": "Palada"
             },
             {
-              "Name": "Saundhi"
+              "name": "Saundhi"
             },
             {
-              "Name": "Rahasoi"
+              "name": "Rahasoi"
             },
             {
-              "Name": "Jaganathpur"
+              "name": "Jaganathpur"
             },
             {
-              "Name": "Brudabanpur"
+              "name": "Brudabanpur"
             },
             {
-              "Name": "Champa"
+              "name": "Champa"
             },
             {
-              "Name": "Barei"
+              "name": "Barei"
             },
             {
-              "Name": "Biripata"
+              "name": "Biripata"
             },
             {
-              "Name": "Charabatia"
+              "name": "Charabatia"
             },
             {
-              "Name": "Kuania"
+              "name": "Kuania"
             },
             {
-              "Name": "Narigaon"
+              "name": "Narigaon"
             },
             {
-              "Name": "Ranmbila"
+              "name": "Ranmbila"
             },
             {
-              "Name": "Bariana"
+              "name": "Bariana"
             },
             {
-              "Name": "Champeipal"
+              "name": "Champeipal"
             },
             {
-              "Name": "Kuanarapur"
+              "name": "Kuanarapur"
             },
             {
-              "Name": "Olei(Mangalpur)"
+              "name": "Olei(Mangalpur)"
             },
             {
-              "Name": "TarangaSagarpur"
+              "name": "TarangaSagarpur"
             },
             {
-              "Name": "Udayapur"
+              "name": "Udayapur"
             },
             {
-              "Name": "Botaldanga"
+              "name": "Botaldanga"
             },
             {
-              "Name": "Chasakhanda"
+              "name": "Chasakhanda"
             },
             {
-              "Name": "Karianga"
+              "name": "Karianga"
             },
             {
-              "Name": "Aruha"
+              "name": "Aruha"
             },
             {
-              "Name": "Chhanchina"
+              "name": "Chhanchina"
             },
             {
-              "Name": "Chhatish Atanpal"
+              "name": "Chhatish Atanpal"
             },
             {
-              "Name": "Chitalo"
+              "name": "Chitalo"
             },
             {
-              "Name": "Jhadagaon"
+              "name": "Jhadagaon"
             },
             {
-              "Name": "Kuruli"
+              "name": "Kuruli"
             },
             {
-              "Name": "Sanaindas"
+              "name": "Sanaindas"
             },
             {
-              "Name": "Dasarathpur"
+              "name": "Dasarathpur"
             },
             {
-              "Name": "Prakatpur"
+              "name": "Prakatpur"
             },
             {
-              "Name": "Balada"
+              "name": "Balada"
             },
             {
-              "Name": "Jayantara"
+              "name": "Jayantara"
             },
             {
-              "Name": "Shyamsundarpur"
+              "name": "Shyamsundarpur"
             },
             {
-              "Name": "Kuturia"
+              "name": "Kuturia"
             },
             {
-              "Name": "Chandakuda"
+              "name": "Chandakuda"
             },
             {
-              "Name": "Duduranta"
+              "name": "Duduranta"
             },
             {
-              "Name": "Kantapada"
+              "name": "Kantapada"
             },
             {
-              "Name": "Naranagocha"
+              "name": "Naranagocha"
             },
             {
-              "Name": "Gopalpur"
+              "name": "Gopalpur"
             },
             {
-              "Name": "Merdha"
+              "name": "Merdha"
             },
             {
-              "Name": "Bibhutipur"
+              "name": "Bibhutipur"
             },
             {
-              "Name": "Aindipur"
+              "name": "Aindipur"
             },
             {
-              "Name": "Dahanihata"
+              "name": "Dahanihata"
             },
             {
-              "Name": "Baunsabadi"
+              "name": "Baunsabadi"
             },
             {
-              "Name": "Depura"
+              "name": "Depura"
             },
             {
-              "Name": "Boulanga"
+              "name": "Boulanga"
             },
             {
-              "Name": "Tentulidia"
+              "name": "Tentulidia"
             },
             {
-              "Name": "Kuansa"
+              "name": "Kuansa"
             },
             {
-              "Name": "Gramanandipur"
+              "name": "Gramanandipur"
             },
             {
-              "Name": "Babalpur"
+              "name": "Babalpur"
             },
             {
-              "Name": "Mirjapur"
+              "name": "Mirjapur"
             },
             {
-              "Name": "Sripura"
+              "name": "Sripura"
             },
             {
-              "Name": "Biruan"
+              "name": "Biruan"
             },
             {
-              "Name": "Bhanara"
+              "name": "Bhanara"
             },
             {
-              "Name": "Dhoda"
+              "name": "Dhoda"
             },
             {
-              "Name": "Senanda"
+              "name": "Senanda"
             },
             {
-              "Name": "Pubasahi"
+              "name": "Pubasahi"
             },
             {
-              "Name": "Kamardihi"
+              "name": "Kamardihi"
             },
             {
-              "Name": "Kelanga"
+              "name": "Kelanga"
             },
             {
-              "Name": "Itapada"
+              "name": "Itapada"
             },
             {
-              "Name": "Saimada"
+              "name": "Saimada"
             },
             {
-              "Name": "Kanikapada"
+              "name": "Kanikapada"
             },
             {
-              "Name": "Madhupur"
+              "name": "Madhupur"
             },
             {
-              "Name": "Naranpal"
+              "name": "Naranpal"
             },
             {
-              "Name": "Kamalapur"
+              "name": "Kamalapur"
             },
             {
-              "Name": "Kasapa"
+              "name": "Kasapa"
             },
             {
-              "Name": "Katikata"
+              "name": "Katikata"
             },
             {
-              "Name": "Paniara sahi"
+              "name": "Paniara sahi"
             },
             {
-              "Name": "Bihipur"
+              "name": "Bihipur"
             },
             {
-              "Name": "Chandapur"
+              "name": "Chandapur"
             },
             {
-              "Name": "Hirapur"
+              "name": "Hirapur"
             },
             {
-              "Name": "Izapur"
+              "name": "Izapur"
             },
             {
-              "Name": "Mansada"
+              "name": "Mansada"
             },
             {
-              "Name": "Mansadabindha-I"
+              "name": "Mansadabindha-I"
             },
             {
-              "Name": "Mansadabindha-II"
+              "name": "Mansadabindha-II"
             },
             {
-              "Name": "Darava"
+              "name": "Darava"
             },
             {
-              "Name": "Gunthuni pada"
+              "name": "Gunthuni pada"
             },
             {
-              "Name": "Ichhapur"
+              "name": "Ichhapur"
             },
             {
-              "Name": "Kayan"
+              "name": "Kayan"
             },
             {
-              "Name": "Astapraharaipur"
+              "name": "Astapraharaipur"
             },
             {
-              "Name": "Balipada"
+              "name": "Balipada"
             },
             {
-              "Name": "Bilipur"
+              "name": "Bilipur"
             },
             {
-              "Name": "Dhamadhada"
+              "name": "Dhamadhada"
             },
             {
-              "Name": "Khandara"
+              "name": "Khandara"
             },
             {
-              "Name": "Indas"
+              "name": "Indas"
             },
             {
-              "Name": "Ranua"
+              "name": "Ranua"
             },
             {
-              "Name": "Sudgobinda"
+              "name": "Sudgobinda"
             },
             {
-              "Name": "Jundupur"
+              "name": "Jundupur"
             },
             {
-              "Name": "Khannagar"
+              "name": "Khannagar"
             },
             {
-              "Name": "Ahiyas"
+              "name": "Ahiyas"
             },
             {
-              "Name": "Mahanty Patana"
+              "name": "Mahanty Patana"
             },
             {
-              "Name": "Mallikapur"
+              "name": "Mallikapur"
             },
             {
-              "Name": "Bajarapat"
+              "name": "Bajarapat"
             },
             {
-              "Name": "Ismailpur"
+              "name": "Ismailpur"
             },
             {
-              "Name": "Mangalpur"
+              "name": "Mangalpur"
             },
             {
-              "Name": "Kotapur"
+              "name": "Kotapur"
             },
             {
-              "Name": "Nachhindrapur"
+              "name": "Nachhindrapur"
             },
             {
-              "Name": "Nizampur"
+              "name": "Nizampur"
             },
             {
-              "Name": "Rdhagan"
+              "name": "Rdhagan"
             },
             {
-              "Name": "Solpal"
+              "name": "Solpal"
             },
             {
-              "Name": "Palatpur"
+              "name": "Palatpur"
             },
             {
-              "Name": "Bindhanandipur"
+              "name": "Bindhanandipur"
             },
             {
-              "Name": "Muraripur"
+              "name": "Muraripur"
             },
             {
-              "Name": "Nilakanthapur"
+              "name": "Nilakanthapur"
             },
             {
-              "Name": "Sathipur"
+              "name": "Sathipur"
             },
             {
-              "Name": "Jafarpur"
+              "name": "Jafarpur"
             },
             {
-              "Name": "Chaulia"
+              "name": "Chaulia"
             },
             {
-              "Name": "Batitanki"
+              "name": "Batitanki"
             },
             {
-              "Name": "Garadiha"
+              "name": "Garadiha"
             },
             {
-              "Name": "Iswarpur"
+              "name": "Iswarpur"
             },
             {
-              "Name": "Susua"
+              "name": "Susua"
             },
             {
-              "Name": "Taliha"
+              "name": "Taliha"
             },
             {
-              "Name": "Sribachhapur"
+              "name": "Sribachhapur"
             },
             {
-              "Name": "Sidheswarpur"
+              "name": "Sidheswarpur"
             },
             {
-              "Name": "Sidheswar"
+              "name": "Sidheswar"
             },
             {
-              "Name": "Penthabad"
+              "name": "Penthabad"
             },
             {
-              "Name": "Garadeswar"
+              "name": "Garadeswar"
             },
             {
-              "Name": "Deulabad"
+              "name": "Deulabad"
             },
             {
-              "Name": "Daspur"
+              "name": "Daspur"
             },
             {
-              "Name": "Birajapur",
-              "Pin": 755014
+              "name": "Birajapur",
+              "pin": 755014
             },
             {
-              "Name": "Bamdebpur"
+              "name": "Bamdebpur"
             },
             {
-              "Name": "Barahata"
+              "name": "Barahata"
             },
             {
-              "Name": "Badaadampur"
+              "name": "Badaadampur"
             },
             {
-              "Name": "Dhobabil"
+              "name": "Dhobabil"
             },
             {
-              "Name": "Khosalpur"
+              "name": "Khosalpur"
             },
             {
-              "Name": "Thalkudi"
+              "name": "Thalkudi"
             },
             {
-              "Name": "Dahanipur"
+              "name": "Dahanipur"
             },
             {
-              "Name": "Thalkudi"
+              "name": "Thalkudi"
             },
             {
-              "Name": "Duttapur"
+              "name": "Duttapur"
             },
             {
-              "Name": "Naranapur"
+              "name": "Naranapur"
             }
           ]
         },
         {
-          "Name": "Bari",
-          "Village": [
+          "name": "Bari",
+          "village": [
             {
-              "Name": "Ratlanga"
+              "name": "Ratlanga"
             },
             {
-              "Name": "Bandhapada"
+              "name": "Bandhapada"
             },
             {
-              "Name": "Sadakpur(UI)"
+              "name": "Sadakpur(UI)"
             },
             {
-              "Name": "Udaynathpur"
+              "name": "Udaynathpur"
             },
             {
-              "Name": "Kaharaganda"
+              "name": "Kaharaganda"
             },
             {
-              "Name": "Bamdebpur"
+              "name": "Bamdebpur"
             },
             {
-              "Name": "Talakaipada"
+              "name": "Talakaipada"
             },
             {
-              "Name": "Badaadampur"
+              "name": "Badaadampur"
             },
             {
-              "Name": "Uperkaipada"
+              "name": "Uperkaipada"
             },
             {
-              "Name": "Kalamatia"
+              "name": "Kalamatia"
             },
             {
-              "Name": "Bidurpa"
+              "name": "Bidurpa"
             },
             {
-              "Name": "Anyasipur"
+              "name": "Anyasipur"
             },
             {
-              "Name": "Nuapada"
+              "name": "Nuapada"
             },
             {
-              "Name": "Bajapada"
+              "name": "Bajapada"
             },
             {
-              "Name": "Haladidiha(UI)"
+              "name": "Haladidiha(UI)"
             },
             {
-              "Name": "Kuanpur"
+              "name": "Kuanpur"
             },
             {
-              "Name": "Allipur"
+              "name": "Allipur"
             },
             {
-              "Name": "Ramachandrapur"
+              "name": "Ramachandrapur"
             },
             {
-              "Name": "Bhabanipur"
+              "name": "Bhabanipur"
             },
             {
-              "Name": "Badachandrasekharpur"
+              "name": "Badachandrasekharpur"
             },
             {
-              "Name": "Balibili"
+              "name": "Balibili"
             },
             {
-              "Name": "Khameswar"
+              "name": "Khameswar"
             },
             {
-              "Name": "Karadapipala"
+              "name": "Karadapipala"
             },
             {
-              "Name": "Kenkarada"
+              "name": "Kenkarada"
             },
             {
-              "Name": "Birajapur"
+              "name": "Birajapur"
             },
             {
-              "Name": "Gokhara(UI)"
+              "name": "Gokhara(UI)"
             },
             {
-              "Name": "Bhanra"
+              "name": "Bhanra"
             },
             {
-              "Name": "Badaadampur"
+              "name": "Badaadampur"
             },
             {
-              "Name": "Raipur"
+              "name": "Raipur"
             },
             {
-              "Name": "Chatumari"
+              "name": "Chatumari"
             },
             {
-              "Name": "Sangadeipur"
+              "name": "Sangadeipur"
             },
             {
-              "Name": "Bhurunga"
+              "name": "Bhurunga"
             },
             {
-              "Name": "Bodua"
+              "name": "Bodua"
             },
             {
-              "Name": "Kumbhuka"
+              "name": "Kumbhuka"
             },
             {
-              "Name": "Sarabera"
+              "name": "Sarabera"
             },
             {
-              "Name": "Kantia"
+              "name": "Kantia"
             },
             {
-              "Name": "Erada"
+              "name": "Erada"
             },
             {
-              "Name": "Rampa"
+              "name": "Rampa"
             },
             {
-              "Name": "Pagghira"
+              "name": "Pagghira"
             },
             {
-              "Name": "Neula"
+              "name": "Neula"
             },
             {
-              "Name": "Atira"
+              "name": "Atira"
             },
             {
-              "Name": "Arual"
+              "name": "Arual"
             },
             {
-              "Name": "Mahamadpur"
+              "name": "Mahamadpur"
             },
             {
-              "Name": "Kimbhiriapal"
+              "name": "Kimbhiriapal"
             },
             {
-              "Name": "Gobindabati"
+              "name": "Gobindabati"
             },
             {
-              "Name": "Malada"
+              "name": "Malada"
             },
             {
-              "Name": "Bholinuagan"
+              "name": "Bholinuagan"
             },
             {
-              "Name": "Udaypur"
+              "name": "Udaypur"
             },
             {
-              "Name": "Mililalpur"
+              "name": "Mililalpur"
             },
             {
-              "Name": "Bahadalpur"
+              "name": "Bahadalpur"
             },
             {
-              "Name": "Bainsiria"
+              "name": "Bainsiria"
             },
             {
-              "Name": "Sarangapur"
+              "name": "Sarangapur"
             },
             {
-              "Name": "Swainkhanda"
+              "name": "Swainkhanda"
             },
             {
-              "Name": "Jampada"
+              "name": "Jampada"
             },
             {
-              "Name": "Kalakhanda"
+              "name": "Kalakhanda"
             },
             {
-              "Name": "Golkunda"
+              "name": "Golkunda"
             },
             {
-              "Name": "Deulapada"
+              "name": "Deulapada"
             },
             {
-              "Name": "Katana"
+              "name": "Katana"
             },
             {
-              "Name": "Mandha"
+              "name": "Mandha"
             },
             {
-              "Name": "(Sasanda)Haripur"
+              "name": "(Sasanda)Haripur"
             },
             {
-              "Name": "Nurpur-I"
+              "name": "Nurpur-I"
             },
             {
-              "Name": "Nurpur-II"
+              "name": "Nurpur-II"
             },
             {
-              "Name": "Paramandapur"
+              "name": "Paramandapur"
             },
             {
-              "Name": "Balia"
+              "name": "Balia"
             },
             {
-              "Name": "Nahan-II"
+              "name": "Nahan-II"
             },
             {
-              "Name": "Nahan-I(UI)"
+              "name": "Nahan-I(UI)"
             },
             {
-              "Name": "Dharpur"
+              "name": "Dharpur"
             },
             {
-              "Name": "Nathpur"
+              "name": "Nathpur"
             },
             {
-              "Name": "Ishanpur"
+              "name": "Ishanpur"
             },
             {
-              "Name": "Sahupada"
+              "name": "Sahupada"
             },
             {
-              "Name": "Haladibasanta"
+              "name": "Haladibasanta"
             },
             {
-              "Name": "Arangabad"
+              "name": "Arangabad"
             },
             {
-              "Name": "Fullapur"
+              "name": "Fullapur"
             },
             {
-              "Name": "Rajapur"
+              "name": "Rajapur"
             },
             {
-              "Name": "Bari"
+              "name": "Bari"
             },
             {
-              "Name": "Madhusudanpur"
+              "name": "Madhusudanpur"
             },
             {
-              "Name": "Chakrapur"
+              "name": "Chakrapur"
             },
             {
-              "Name": "Sundarpur"
+              "name": "Sundarpur"
             },
             {
-              "Name": "Angalo"
+              "name": "Angalo"
             },
             {
-              "Name": "Arilo"
+              "name": "Arilo"
             },
             {
-              "Name": "Baringi"
+              "name": "Baringi"
             },
             {
-              "Name": "Bioitalupatana"
+              "name": "Bioitalupatana"
             },
             {
-              "Name": "Rampur"
+              "name": "Rampur"
             },
             {
-              "Name": "Sukala"
+              "name": "Sukala"
             },
             {
-              "Name": "Jagannathpur"
+              "name": "Jagannathpur"
             },
             {
-              "Name": "Chandanpur"
+              "name": "Chandanpur"
             },
             {
-              "Name": "Mirzapur"
+              "name": "Mirzapur"
             },
             {
-              "Name": "Mandari"
+              "name": "Mandari"
             },
             {
-              "Name": "Meduakula"
+              "name": "Meduakula"
             },
             {
-              "Name": "Barampur"
+              "name": "Barampur"
             },
             {
-              "Name": "Arikana"
+              "name": "Arikana"
             },
             {
-              "Name": "Banjarapur"
+              "name": "Banjarapur"
             },
             {
-              "Name": "Serapur"
+              "name": "Serapur"
             },
             {
-              "Name": "Srirampur"
+              "name": "Srirampur"
             },
             {
-              "Name": "Krushnapur"
+              "name": "Krushnapur"
             },
             {
-              "Name": "Gamu"
+              "name": "Gamu"
             },
             {
-              "Name": "Mahakalapda"
+              "name": "Mahakalapda"
             },
             {
-              "Name": "Dihapal"
+              "name": "Dihapal"
             },
             {
-              "Name": "Mitrasenpur"
+              "name": "Mitrasenpur"
             },
             {
-              "Name": "Nilapada"
+              "name": "Nilapada"
             },
             {
-              "Name": "Balikankara"
+              "name": "Balikankara"
             },
             {
-              "Name": "Basantapal(U.I)"
+              "name": "Basantapal(U.I)"
             },
             {
-              "Name": "Birehipur(UI)"
+              "name": "Birehipur(UI)"
             },
             {
-              "Name": "Batitanki(UI)"
+              "name": "Batitanki(UI)"
             },
             {
-              "Name": "Ratnagiri"
+              "name": "Ratnagiri"
             },
             {
-              "Name": "Aliabad"
+              "name": "Aliabad"
             },
             {
-              "Name": "Patna"
+              "name": "Patna"
             },
             {
-              "Name": "Khairimunda"
+              "name": "Khairimunda"
             },
             {
-              "Name": "Routasahi"
+              "name": "Routasahi"
             },
             {
-              "Name": "Malasahi"
+              "name": "Malasahi"
             },
             {
-              "Name": "Amathpur"
+              "name": "Amathpur"
             },
             {
-              "Name": "Kampagarh"
+              "name": "Kampagarh"
             },
             {
-              "Name": "Asaliur"
+              "name": "Asaliur"
             },
             {
-              "Name": "Palatpur"
+              "name": "Palatpur"
             }
           ]
         },
         {
-          "Name": "Jajpur Town"
+          "name": "Jajpur Town"
         },
         {
-          "Name": "Barchana",
-          "Village": [
+          "name": "Barchana",
+          "village": [
             {
-              "Name": "Achyutabasanta"
+              "name": "Achyutabasanta"
             },
             {
-              "Name": "Asia"
+              "name": "Asia"
             },
             {
-              "Name": "Gadjit"
+              "name": "Gadjit"
             },
             {
-              "Name": "Anaka"
+              "name": "Anaka"
             },
             {
-              "Name": "Bhulaka"
+              "name": "Bhulaka"
             },
             {
-              "Name": "Dakhinkul"
+              "name": "Dakhinkul"
             },
             {
-              "Name": "Khadianga"
+              "name": "Khadianga"
             },
             {
-              "Name": "Krushnapur sasan"
+              "name": "Krushnapur sasan"
             },
             {
-              "Name": "Mahadeipur"
+              "name": "Mahadeipur"
             },
             {
-              "Name": "Mahipur"
+              "name": "Mahipur"
             },
             {
-              "Name": "Raghunathpur"
+              "name": "Raghunathpur"
             },
             {
-              "Name": "Rahal"
+              "name": "Rahal"
             },
             {
-              "Name": "Arakhapur"
+              "name": "Arakhapur"
             },
             {
-              "Name": "Bandha"
+              "name": "Bandha"
             },
             {
-              "Name": "Barabati"
+              "name": "Barabati"
             },
             {
-              "Name": "Nilambarapur"
+              "name": "Nilambarapur"
             },
             {
-              "Name": "Padmanavpur"
+              "name": "Padmanavpur"
             },
             {
-              "Name": "Sukhadeipur"
+              "name": "Sukhadeipur"
             },
             {
-              "Name": "Badabalikuda"
+              "name": "Badabalikuda"
             },
             {
-              "Name": "Janak"
+              "name": "Janak"
             },
             {
-              "Name": "Ahammedpur"
+              "name": "Ahammedpur"
             },
             {
-              "Name": "Badaghumuri"
+              "name": "Badaghumuri"
             },
             {
-              "Name": "Bhubanpur"
+              "name": "Bhubanpur"
             },
             {
-              "Name": "HC Badaghumuri"
+              "name": "HC Badaghumuri"
             },
             {
-              "Name": "Harihansapatana"
+              "name": "Harihansapatana"
             },
             {
-              "Name": "Kalyanpur"
+              "name": "Kalyanpur"
             },
             {
-              "Name": "Maulanagar"
+              "name": "Maulanagar"
             },
             {
-              "Name": "Nuagaon"
+              "name": "Nuagaon"
             },
             {
-              "Name": "Paikarapur"
+              "name": "Paikarapur"
             },
             {
-              "Name": "Purusotampur"
+              "name": "Purusotampur"
             },
             {
-              "Name": "Rambhadeipur"
+              "name": "Rambhadeipur"
             },
             {
-              "Name": "Sakuntalapur"
+              "name": "Sakuntalapur"
             },
             {
-              "Name": "Udayanagarpat"
+              "name": "Udayanagarpat"
             },
             {
-              "Name": "Uluri-I"
+              "name": "Uluri-I"
             },
             {
-              "Name": "UluriI-II"
+              "name": "UluriI-II"
             },
             {
-              "Name": "Balichandrapur"
+              "name": "Balichandrapur"
             },
             {
-              "Name": "Nanpur"
+              "name": "Nanpur"
             },
             {
-              "Name": "Rukutipat"
+              "name": "Rukutipat"
             },
             {
-              "Name": "Balipadia"
+              "name": "Balipadia"
             },
             {
-              "Name": "Dekudi"
+              "name": "Dekudi"
             },
             {
-              "Name": "Tigiria"
+              "name": "Tigiria"
             },
             {
-              "Name": "Bandalo"
+              "name": "Bandalo"
             },
             {
-              "Name": "Bapatpada"
+              "name": "Bapatpada"
             },
             {
-              "Name": "Dihakaranda"
+              "name": "Dihakaranda"
             },
             {
-              "Name": "Ganas"
+              "name": "Ganas"
             },
             {
-              "Name": "Hatakaranda"
+              "name": "Hatakaranda"
             },
             {
-              "Name": "Jaganathpur"
+              "name": "Jaganathpur"
             },
             {
-              "Name": "Jaipur"
+              "name": "Jaipur"
             },
             {
-              "Name": "Mangarajpur"
+              "name": "Mangarajpur"
             },
             {
-              "Name": "Olar"
+              "name": "Olar"
             },
             {
-              "Name": "Ranipokhri"
+              "name": "Ranipokhri"
             },
             {
-              "Name": "Satalanda"
+              "name": "Satalanda"
             },
             {
-              "Name": "Bachhuribandha"
+              "name": "Bachhuribandha"
             },
             {
-              "Name": "Baghua"
+              "name": "Baghua"
             },
             {
-              "Name": "Bantala"
+              "name": "Bantala"
             },
             {
-              "Name": "Bari"
+              "name": "Bari"
             },
             {
-              "Name": "Barimul"
+              "name": "Barimul"
             },
             {
-              "Name": "Kainthipokhari"
+              "name": "Kainthipokhari"
             },
             {
-              "Name": "Kapastikiri"
+              "name": "Kapastikiri"
             },
             {
-              "Name": "Patayat"
+              "name": "Patayat"
             },
             {
-              "Name": "Thengada"
+              "name": "Thengada"
             },
             {
-              "Name": "Ubuka"
+              "name": "Ubuka"
             },
             {
-              "Name": "Upulha"
+              "name": "Upulha"
             },
             {
-              "Name": "Barapada"
+              "name": "Barapada"
             },
             {
-              "Name": "Niali"
+              "name": "Niali"
             },
             {
-              "Name": "Barchana"
+              "name": "Barchana"
             },
             {
-              "Name": "Sasan purusottampur"
+              "name": "Sasan purusottampur"
             },
             {
-              "Name": "Barchana bazar"
+              "name": "Barchana bazar"
             },
             {
-              "Name": "Kanjia"
+              "name": "Kanjia"
             },
             {
-              "Name": "HC Barachana"
+              "name": "HC Barachana"
             },
             {
-              "Name": "HC Deulkur"
+              "name": "HC Deulkur"
             },
             {
-              "Name": "Deulkur"
+              "name": "Deulkur"
             },
             {
-              "Name": "Khaira"
+              "name": "Khaira"
             },
             {
-              "Name": "Digapokharihuda"
+              "name": "Digapokharihuda"
             },
             {
-              "Name": "Nuasasan"
+              "name": "Nuasasan"
             },
             {
-              "Name": "Kadei"
+              "name": "Kadei"
             },
             {
-              "Name": "Dagarpada"
+              "name": "Dagarpada"
             },
             {
-              "Name": "Bharatpur"
+              "name": "Bharatpur"
             },
             {
-              "Name": "Panasudha"
+              "name": "Panasudha"
             },
             {
-              "Name": "Paripallei"
+              "name": "Paripallei"
             },
             {
-              "Name": "Akabarabad"
+              "name": "Akabarabad"
             },
             {
-              "Name": "Bhusandpur"
+              "name": "Bhusandpur"
             },
             {
-              "Name": "Khandiabandi"
+              "name": "Khandiabandi"
             },
             {
-              "Name": "Khatuapada"
+              "name": "Khatuapada"
             },
             {
-              "Name": "Mahakhala"
+              "name": "Mahakhala"
             },
             {
-              "Name": "Nakhapasi"
+              "name": "Nakhapasi"
             },
             {
-              "Name": "Ranibandi"
+              "name": "Ranibandi"
             },
             {
-              "Name": "Bikramtiran"
+              "name": "Bikramtiran"
             },
             {
-              "Name": "Gobandiha"
+              "name": "Gobandiha"
             },
             {
-              "Name": "Matakatapur"
+              "name": "Matakatapur"
             },
             {
-              "Name": "Barada"
+              "name": "Barada"
             },
             {
-              "Name": "Palei"
+              "name": "Palei"
             },
             {
-              "Name": "Bandereswar"
+              "name": "Bandereswar"
             },
             {
-              "Name": "Kesaraipur"
+              "name": "Kesaraipur"
             },
             {
-              "Name": "Bajamalia"
+              "name": "Bajamalia"
             },
             {
-              "Name": "Byree"
+              "name": "Byree"
             },
             {
-              "Name": "Padmanavpur sasan"
+              "name": "Padmanavpur sasan"
             },
             {
-              "Name": "Baula"
+              "name": "Baula"
             },
             {
-              "Name": "Champapur"
+              "name": "Champapur"
             },
             {
-              "Name": "Daulatpur"
+              "name": "Daulatpur"
             },
             {
-              "Name": "Gopinathapur"
+              "name": "Gopinathapur"
             },
             {
-              "Name": "Hinjala"
+              "name": "Hinjala"
             },
             {
-              "Name": "Nahara"
+              "name": "Nahara"
             },
             {
-              "Name": "Raghudaspur"
+              "name": "Raghudaspur"
             },
             {
-              "Name": "Saboo"
+              "name": "Saboo"
             },
             {
-              "Name": "Sanabandalo"
+              "name": "Sanabandalo"
             },
             {
-              "Name": "Sapanpur"
+              "name": "Sapanpur"
             },
             {
-              "Name": "Baghua"
+              "name": "Baghua"
             },
             {
-              "Name": "Batto"
+              "name": "Batto"
             },
             {
-              "Name": "Baunsagadia"
+              "name": "Baunsagadia"
             },
             {
-              "Name": "Chandital"
+              "name": "Chandital"
             },
             {
-              "Name": "Chaulathali"
+              "name": "Chaulathali"
             },
             {
-              "Name": "Harichandanpur"
+              "name": "Harichandanpur"
             },
             {
-              "Name": "Jarabati"
+              "name": "Jarabati"
             },
             {
-              "Name": "Khajuria"
+              "name": "Khajuria"
             },
             {
-              "Name": "Palankakoligadia"
+              "name": "Palankakoligadia"
             },
             {
-              "Name": "Charinangal"
+              "name": "Charinangal"
             },
             {
-              "Name": "Gaharanagar"
+              "name": "Gaharanagar"
             },
             {
-              "Name": "Chhatia"
+              "name": "Chhatia"
             },
             {
-              "Name": "Kampanibazar"
+              "name": "Kampanibazar"
             },
             {
-              "Name": "Amarabatipatana"
+              "name": "Amarabatipatana"
             },
             {
-              "Name": "Ichanagarpatana"
+              "name": "Ichanagarpatana"
             },
             {
-              "Name": "Nayapatana"
+              "name": "Nayapatana"
             },
             {
-              "Name": "Babuganjabazar"
+              "name": "Babuganjabazar"
             },
             {
-              "Name": "Bidyadharapur"
+              "name": "Bidyadharapur"
             },
             {
-              "Name": "Nelia"
+              "name": "Nelia"
             },
             {
-              "Name": "Dihasahi"
+              "name": "Dihasahi"
             },
             {
-              "Name": "Rangidaspur"
+              "name": "Rangidaspur"
             },
             {
-              "Name": "Padmalabhapur"
+              "name": "Padmalabhapur"
             },
             {
-              "Name": "Sukhadeipur"
+              "name": "Sukhadeipur"
             },
             {
-              "Name": "Rampur"
+              "name": "Rampur"
             },
             {
-              "Name": "Gopalpur"
+              "name": "Gopalpur"
             },
             {
-              "Name": "Guljaranagar patana"
+              "name": "Guljaranagar patana"
             },
             {
-              "Name": "Kolsahi"
+              "name": "Kolsahi"
             },
             {
-              "Name": "Kumborkhata"
+              "name": "Kumborkhata"
             },
             {
-              "Name": "Debatasahi"
+              "name": "Debatasahi"
             },
             {
-              "Name": "Dhanmandal"
+              "name": "Dhanmandal"
             },
             {
-              "Name": "Ramchandrapur"
+              "name": "Ramchandrapur"
             },
             {
-              "Name": "Sasansima"
+              "name": "Sasansima"
             },
             {
-              "Name": "Gopalpur"
+              "name": "Gopalpur"
             },
             {
-              "Name": "Kalasri"
+              "name": "Kalasri"
             },
             {
-              "Name": "Abhayapur"
+              "name": "Abhayapur"
             },
             {
-              "Name": "Baidehipur"
+              "name": "Baidehipur"
             },
             {
-              "Name": "Baranga"
+              "name": "Baranga"
             },
             {
-              "Name": "Bidyadharpur"
+              "name": "Bidyadharpur"
             },
             {
-              "Name": "Baijanga"
+              "name": "Baijanga"
             },
             {
-              "Name": "Kaimatia"
+              "name": "Kaimatia"
             },
             {
-              "Name": "Mahisagotha"
+              "name": "Mahisagotha"
             },
             {
-              "Name": "Nalida"
+              "name": "Nalida"
             },
             {
-              "Name": "Paida"
+              "name": "Paida"
             },
             {
-              "Name": "Balikuda"
+              "name": "Balikuda"
             },
             {
-              "Name": "Kolanagiri"
+              "name": "Kolanagiri"
             },
             {
-              "Name": "Panasuapal"
+              "name": "Panasuapal"
             },
             {
-              "Name": "Gargali"
+              "name": "Gargali"
             },
             {
-              "Name": "Haripur"
+              "name": "Haripur"
             },
             {
-              "Name": "Kundala"
+              "name": "Kundala"
             },
             {
-              "Name": "Saika"
+              "name": "Saika"
             },
             {
-              "Name": "Sanabarmani"
+              "name": "Sanabarmani"
             },
             {
-              "Name": "Chandia"
+              "name": "Chandia"
             },
             {
-              "Name": "Majhipada"
+              "name": "Majhipada"
             },
             {
-              "Name": "Bhakuda"
+              "name": "Bhakuda"
             },
             {
-              "Name": "Daulatpur"
+              "name": "Daulatpur"
             },
             {
-              "Name": "Krushnadaspur"
+              "name": "Krushnadaspur"
             },
             {
-              "Name": "Manduka"
+              "name": "Manduka"
             },
             {
-              "Name": "Makundapur"
+              "name": "Makundapur"
             },
             {
-              "Name": "Padmalabhapur"
+              "name": "Padmalabhapur"
             },
             {
-              "Name": "Nalipur"
+              "name": "Nalipur"
             },
             {
-              "Name": "Baujanga"
+              "name": "Baujanga"
             },
             {
-              "Name": "Patarajpur"
+              "name": "Patarajpur"
             },
             {
-              "Name": "Ambasauri"
+              "name": "Ambasauri"
             },
             {
-              "Name": "Amiyajhar"
+              "name": "Amiyajhar"
             },
             {
-              "Name": "Baragada"
+              "name": "Baragada"
             },
             {
-              "Name": "Barunia"
+              "name": "Barunia"
             },
             {
-              "Name": "Paria"
+              "name": "Paria"
             },
             {
-              "Name": "Bangarguntha"
+              "name": "Bangarguntha"
             },
             {
-              "Name": "Bidyadharapur"
+              "name": "Bidyadharapur"
             },
             {
-              "Name": "Bilikana"
+              "name": "Bilikana"
             },
             {
-              "Name": "Damodarpur"
+              "name": "Damodarpur"
             },
             {
-              "Name": "Digambarpur"
+              "name": "Digambarpur"
             },
             {
-              "Name": "Jaganathpur"
+              "name": "Jaganathpur"
             },
             {
-              "Name": "Kuanpur"
+              "name": "Kuanpur"
             },
             {
-              "Name": "Rashaeipur"
+              "name": "Rashaeipur"
             },
             {
-              "Name": "Udayanagar"
+              "name": "Udayanagar"
             },
             {
-              "Name": "Raipur"
+              "name": "Raipur"
             },
             {
-              "Name": "Ramdaspur"
+              "name": "Ramdaspur"
             },
             {
-              "Name": "Bandhapalli"
+              "name": "Bandhapalli"
             },
             {
-              "Name": "Barpal"
+              "name": "Barpal"
             },
             {
-              "Name": "Baunsamuli"
+              "name": "Baunsamuli"
             },
             {
-              "Name": "Endorpada"
+              "name": "Endorpada"
             },
             {
-              "Name": "Gopalpur"
+              "name": "Gopalpur"
             },
             {
-              "Name": "Harantikiri"
+              "name": "Harantikiri"
             },
             {
-              "Name": "Jiagoda"
+              "name": "Jiagoda"
             },
             {
-              "Name": "Jhatiapada"
+              "name": "Jhatiapada"
             },
             {
-              "Name": "Punia"
+              "name": "Punia"
             },
             {
-              "Name": "Sailapada"
+              "name": "Sailapada"
             },
             {
-              "Name": "Salapada"
+              "name": "Salapada"
             },
             {
-              "Name": "Tilapada"
+              "name": "Tilapada"
             },
             {
-              "Name": "Champapur"
+              "name": "Champapur"
             },
             {
-              "Name": "Kolha"
+              "name": "Kolha"
             },
             {
-              "Name": "Raijar"
+              "name": "Raijar"
             },
             {
-              "Name": "Samia"
+              "name": "Samia"
             },
             {
-              "Name": "Sataman"
+              "name": "Sataman"
             },
             {
-              "Name": "Baniari"
+              "name": "Baniari"
             },
             {
-              "Name": "Musatikiri"
+              "name": "Musatikiri"
             },
             {
-              "Name": "Saudia"
+              "name": "Saudia"
             },
             {
-              "Name": "Godimagura"
+              "name": "Godimagura"
             },
             {
-              "Name": "Jaipur"
+              "name": "Jaipur"
             },
             {
-              "Name": "Kampira"
+              "name": "Kampira"
             },
             {
-              "Name": "Kharmangi"
+              "name": "Kharmangi"
             },
             {
-              "Name": "Kochilagadia"
+              "name": "Kochilagadia"
             },
             {
-              "Name": "Kolhasingh"
+              "name": "Kolhasingh"
             },
             {
-              "Name": "Mangarajpur"
+              "name": "Mangarajpur"
             },
             {
-              "Name": "Siha"
+              "name": "Siha"
             },
             {
-              "Name": "Kambhei"
+              "name": "Kambhei"
             },
             {
-              "Name": "Mulijhar"
+              "name": "Mulijhar"
             },
             {
-              "Name": "Paikerapur"
+              "name": "Paikerapur"
             },
             {
-              "Name": "Solar"
+              "name": "Solar"
             },
             {
-              "Name": "Sunguda"
+              "name": "Sunguda"
             },
             {
-              "Name": "Khasalipur"
+              "name": "Khasalipur"
             },
             {
-              "Name": "Nisimala"
+              "name": "Nisimala"
             },
             {
-              "Name": "Naranpur"
+              "name": "Naranpur"
             },
             {
-              "Name": "Santipur"
+              "name": "Santipur"
             },
             {
-              "Name": "Benapur"
+              "name": "Benapur"
             },
             {
-              "Name": "Khantapasi"
+              "name": "Khantapasi"
             }
           ]
         },
         {
-          "Name": "Binjharpur",
-          "Village": [
+          "name": "Binjharpur",
+          "village": [
             {
-              "Name": "Arei"
+              "name": "Arei"
             },
             {
-              "Name": "Gopalpur"
+              "name": "Gopalpur"
             },
             {
-              "Name": "Jainmara"
+              "name": "Jainmara"
             },
             {
-              "Name": "Murabil"
+              "name": "Murabil"
             },
             {
-              "Name": "Aunri"
+              "name": "Aunri"
             },
             {
-              "Name": "Baharkul"
+              "name": "Baharkul"
             },
             {
-              "Name": "Balabhadrapur"
+              "name": "Balabhadrapur"
             },
             {
-              "Name": "Dihakula"
+              "name": "Dihakula"
             },
             {
-              "Name": "Karapada"
+              "name": "Karapada"
             },
             {
-              "Name": "Kuanarpur"
+              "name": "Kuanarpur"
             },
             {
-              "Name": "Matiakana"
+              "name": "Matiakana"
             },
             {
-              "Name": "Sunapal"
+              "name": "Sunapal"
             },
             {
-              "Name": "Bachhola"
+              "name": "Bachhola"
             },
             {
-              "Name": "Dharmapur"
+              "name": "Dharmapur"
             },
             {
-              "Name": "Bangara"
+              "name": "Bangara"
             },
             {
-              "Name": "Chhotagara"
+              "name": "Chhotagara"
             },
             {
-              "Name": "Gunduripada"
+              "name": "Gunduripada"
             },
             {
-              "Name": "Kantitara"
+              "name": "Kantitara"
             },
             {
-              "Name": "Kusunpur"
+              "name": "Kusunpur"
             },
             {
-              "Name": "Barapada"
+              "name": "Barapada"
             },
             {
-              "Name": "Bidapada"
+              "name": "Bidapada"
             },
             {
-              "Name": "Nagapura"
+              "name": "Nagapura"
             },
             {
-              "Name": "Ramachandrapur"
+              "name": "Ramachandrapur"
             },
             {
-              "Name": "Talabandha"
+              "name": "Talabandha"
             },
             {
-              "Name": "Binjharpur"
+              "name": "Binjharpur"
             },
             {
-              "Name": "Sayedpur"
+              "name": "Sayedpur"
             },
             {
-              "Name": "Bitana"
+              "name": "Bitana"
             },
             {
-              "Name": "Balichandrapur"
+              "name": "Balichandrapur"
             },
             {
-              "Name": "Khandahata"
+              "name": "Khandahata"
             },
             {
-              "Name": "Puribindha"
+              "name": "Puribindha"
             },
             {
-              "Name": "Purusottampur"
+              "name": "Purusottampur"
             },
             {
-              "Name": "Chandramu"
+              "name": "Chandramu"
             },
             {
-              "Name": "Badamalipur"
+              "name": "Badamalipur"
             },
             {
-              "Name": "Banapur"
+              "name": "Banapur"
             },
             {
-              "Name": "Jagannathpur"
+              "name": "Jagannathpur"
             },
             {
-              "Name": "Routara"
+              "name": "Routara"
             },
             {
-              "Name": "Chikana"
+              "name": "Chikana"
             },
             {
-              "Name": "Brahmanigan"
+              "name": "Brahmanigan"
             },
             {
-              "Name": "Diatikiri"
+              "name": "Diatikiri"
             },
             {
-              "Name": "Pairakha"
+              "name": "Pairakha"
             },
             {
-              "Name": "Sasanpada"
+              "name": "Sasanpada"
             },
             {
-              "Name": "Fatepur"
+              "name": "Fatepur"
             },
             {
-              "Name": "Guhali"
+              "name": "Guhali"
             },
             {
-              "Name": "Gobindapur"
+              "name": "Gobindapur"
             },
             {
-              "Name": "Karuna"
+              "name": "Karuna"
             },
             {
-              "Name": "Ghantiali"
+              "name": "Ghantiali"
             },
             {
-              "Name": "Injanpur"
+              "name": "Injanpur"
             },
             {
-              "Name": "Lenkasahi"
+              "name": "Lenkasahi"
             },
             {
-              "Name": "Baniapal"
+              "name": "Baniapal"
             },
             {
-              "Name": "Badapal"
+              "name": "Badapal"
             },
             {
-              "Name": "Haladidiha"
+              "name": "Haladidiha"
             },
             {
-              "Name": "Andhalo"
+              "name": "Andhalo"
             },
             {
-              "Name": "Champapala"
+              "name": "Champapala"
             },
             {
-              "Name": "Falapur"
+              "name": "Falapur"
             },
             {
-              "Name": "Guhali"
+              "name": "Guhali"
             },
             {
-              "Name": "Jari"
+              "name": "Jari"
             },
             {
-              "Name": "Naubanka"
+              "name": "Naubanka"
             },
             {
-              "Name": "Nemara"
+              "name": "Nemara"
             },
             {
-              "Name": "Kalyanpur"
+              "name": "Kalyanpur"
             },
             {
-              "Name": "Kanhupur"
+              "name": "Kanhupur"
             },
             {
-              "Name": "Rudrapur"
+              "name": "Rudrapur"
             },
             {
-              "Name": "Samalpur"
+              "name": "Samalpur"
             },
             {
-              "Name": "Kapila"
+              "name": "Kapila"
             },
             {
-              "Name": "Mandhatapatna"
+              "name": "Mandhatapatna"
             },
             {
-              "Name": "Ransa"
+              "name": "Ransa"
             },
             {
-              "Name": "Talukapada"
+              "name": "Talukapada"
             },
             {
-              "Name": "Kaina"
+              "name": "Kaina"
             },
             {
-              "Name": "Bankipal"
+              "name": "Bankipal"
             },
             {
-              "Name": "Mandhapur"
+              "name": "Mandhapur"
             },
             {
-              "Name": "Narua"
+              "name": "Narua"
             },
             {
-              "Name": "Prahalladpur"
+              "name": "Prahalladpur"
             },
             {
-              "Name": "Raghunathpur"
+              "name": "Raghunathpur"
             },
             {
-              "Name": "Mansada"
+              "name": "Mansada"
             },
             {
-              "Name": "Alarpur"
+              "name": "Alarpur"
             },
             {
-              "Name": "Dadhibamanpur"
+              "name": "Dadhibamanpur"
             },
             {
-              "Name": "Goudasahi"
+              "name": "Goudasahi"
             },
             {
-              "Name": "Oleichandanpur"
+              "name": "Oleichandanpur"
             },
             {
-              "Name": "Pritipur"
+              "name": "Pritipur"
             },
             {
-              "Name": "Nuagaon"
+              "name": "Nuagaon"
             },
             {
-              "Name": "Santipada"
+              "name": "Santipada"
             },
             {
-              "Name": "Ranapur"
+              "name": "Ranapur"
             },
             {
-              "Name": "Bahadalapur"
+              "name": "Bahadalapur"
             },
             {
-              "Name": "Kantipur"
+              "name": "Kantipur"
             },
             {
-              "Name": "Naranpur"
+              "name": "Naranpur"
             },
             {
-              "Name": "Sasanda"
+              "name": "Sasanda"
             },
             {
-              "Name": "Baruna"
+              "name": "Baruna"
             },
             {
-              "Name": "Tauntara"
+              "name": "Tauntara"
             },
             {
-              "Name": "Singhpur"
+              "name": "Singhpur"
             },
             {
-              "Name": "Ibrahimpur"
+              "name": "Ibrahimpur"
             },
             {
-              "Name": "Tina"
+              "name": "Tina"
             },
             {
-              "Name": "Sisirana"
+              "name": "Sisirana"
             },
             {
-              "Name": "Udranga"
+              "name": "Udranga"
             },
             {
-              "Name": "Ajipur"
+              "name": "Ajipur"
             },
             {
-              "Name": "Badasingha"
+              "name": "Badasingha"
             },
             {
-              "Name": "Korei Praharajpur"
+              "name": "Korei Praharajpur"
             },
             {
-              "Name": "Kurisahi"
+              "name": "Kurisahi"
             },
             {
-              "Name": "Saikul"
+              "name": "Saikul"
             },
             {
-              "Name": "Uttangara"
+              "name": "Uttangara"
             },
             {
-              "Name": "Banamalipur"
+              "name": "Banamalipur"
             },
             {
-              "Name": "Dadhibabanpur"
+              "name": "Dadhibabanpur"
             },
             {
-              "Name": "Raghunathpur"
+              "name": "Raghunathpur"
             },
             {
-              "Name": "Ogarapada"
+              "name": "Ogarapada"
             },
             {
-              "Name": "Uttarkul"
+              "name": "Uttarkul"
             },
             {
-              "Name": "Barakoti"
+              "name": "Barakoti"
             },
             {
-              "Name": "Nuabil"
+              "name": "Nuabil"
             },
             {
-              "Name": "Paripada"
+              "name": "Paripada"
             }
           ]
         },
         {
-          "Name": "Danagadi",
-          "Village": [
+          "name": "Danagadi",
+          "village": [
             {
-              "Name": "Bangarkota"
+              "name": "Bangarkota"
             },
             {
-              "Name": "Telibada"
+              "name": "Telibada"
             },
             {
-              "Name": "Diapal"
+              "name": "Diapal"
             },
             {
-              "Name": "Dahanigadia"
+              "name": "Dahanigadia"
             },
             {
-              "Name": "Ampore"
+              "name": "Ampore"
             },
             {
-              "Name": "Kacherigoan"
+              "name": "Kacherigoan"
             },
             {
-              "Name": "Chandia"
+              "name": "Chandia"
             },
             {
-              "Name": "Ankurapal"
+              "name": "Ankurapal"
             },
             {
-              "Name": "Bharadapasi"
+              "name": "Bharadapasi"
             },
             {
-              "Name": "Golagaon"
+              "name": "Golagaon"
             },
             {
-              "Name": "Chitri"
+              "name": "Chitri"
             },
             {
-              "Name": "Tolakani"
+              "name": "Tolakani"
             },
             {
-              "Name": "Deulakana"
+              "name": "Deulakana"
             },
             {
-              "Name": "Patabali"
+              "name": "Patabali"
             },
             {
-              "Name": "Nayabagapatia"
+              "name": "Nayabagapatia"
             },
             {
-              "Name": "Danakarisahi"
+              "name": "Danakarisahi"
             },
             {
-              "Name": "Patharabandha"
+              "name": "Patharabandha"
             },
             {
-              "Name": "Dhapanki"
+              "name": "Dhapanki"
             },
             {
-              "Name": "Managobindapur"
+              "name": "Managobindapur"
             },
             {
-              "Name": "Dhuligarh"
+              "name": "Dhuligarh"
             },
             {
-              "Name": "Gobardhanpur"
+              "name": "Gobardhanpur"
             },
             {
-              "Name": "Jemadeipur"
+              "name": "Jemadeipur"
             },
             {
-              "Name": "Alekhapur"
+              "name": "Alekhapur"
             },
             {
-              "Name": "Gopapur"
+              "name": "Gopapur"
             },
             {
-              "Name": "Fuljhar"
+              "name": "Fuljhar"
             },
             {
-              "Name": "Dhabahali"
+              "name": "Dhabahali"
             },
             {
-              "Name": "Manapur"
+              "name": "Manapur"
             },
             {
-              "Name": "Janar"
+              "name": "Janar"
             }
           ]
         },
         {
-          "Name": "Dharmasala",
-          "Village": [
+          "name": "Dharmasala",
+          "village": [
             {
-              "Name": "Abhayapur"
+              "name": "Abhayapur"
             },
             {
-              "Name": "Achhutapur"
+              "name": "Achhutapur"
             },
             {
-              "Name": "Digamberpur"
+              "name": "Digamberpur"
             },
             {
-              "Name": "Maharapari"
+              "name": "Maharapari"
             }
           ]
         },
         {
-          "Name": "Jajpur",
-          "Village": [
+          "name": "Jajpur",
+          "village": [
             {
-              "Name": "Badasuar"
+              "name": "Badasuar"
             },
             {
-              "Name": "Bandhamunda"
+              "name": "Bandhamunda"
             },
             {
-              "Name": "Basudevpur"
+              "name": "Basudevpur"
             },
             {
-              "Name": "Gobindapur"
+              "name": "Gobindapur"
             },
             {
-              "Name": "Jalapur"
+              "name": "Jalapur"
             },
             {
-              "Name": "Uasahi"
+              "name": "Uasahi"
             },
             {
-              "Name": "Ampor"
+              "name": "Ampor"
             },
             {
-              "Name": "Beruda"
+              "name": "Beruda"
             },
             {
-              "Name": "Chintapali"
+              "name": "Chintapali"
             },
             {
-              "Name": "Hasinpur"
+              "name": "Hasinpur"
             },
             {
-              "Name": "Iswarpur"
+              "name": "Iswarpur"
             },
             {
-              "Name": "Jagatpur"
+              "name": "Jagatpur"
             },
             {
-              "Name": "Jahala"
+              "name": "Jahala"
             },
             {
-              "Name": "Nityanandapur"
+              "name": "Nityanandapur"
             },
             {
-              "Name": "Nelipur"
+              "name": "Nelipur"
             },
             {
-              "Name": "Badabanksahi"
+              "name": "Badabanksahi"
             },
             {
-              "Name": "Bhubaneswarpur"
+              "name": "Bhubaneswarpur"
             },
             {
-              "Name": "Bhagatpur"
+              "name": "Bhagatpur"
             },
             {
-              "Name": "Jamuna"
+              "name": "Jamuna"
             },
             {
-              "Name": "Kalasadihi"
+              "name": "Kalasadihi"
             },
             {
-              "Name": "Khadipada"
+              "name": "Khadipada"
             },
             {
-              "Name": "Kolatha"
+              "name": "Kolatha"
             },
             {
-              "Name": "Kuninda"
+              "name": "Kuninda"
             },
             {
-              "Name": "Samsarpur"
+              "name": "Samsarpur"
             },
             {
-              "Name": "Sanabankasahi"
+              "name": "Sanabankasahi"
             },
             {
-              "Name": "Amarsinghpur"
+              "name": "Amarsinghpur"
             },
             {
-              "Name": "Afsarapur"
+              "name": "Afsarapur"
             },
             {
-              "Name": "Bhuinpur"
+              "name": "Bhuinpur"
             },
             {
-              "Name": "Gopalpur"
+              "name": "Gopalpur"
             },
             {
-              "Name": "Haripur"
+              "name": "Haripur"
             },
             {
-              "Name": "Kalyanpur"
+              "name": "Kalyanpur"
             },
             {
-              "Name": "Malapada"
+              "name": "Malapada"
             },
             {
-              "Name": "Mituani"
+              "name": "Mituani"
             },
             {
-              "Name": "Talagadia"
+              "name": "Talagadia"
             },
             {
-              "Name": "Abdalpur"
+              "name": "Abdalpur"
             },
             {
-              "Name": "Baidyarajpur"
+              "name": "Baidyarajpur"
             },
             {
-              "Name": "Banapur"
+              "name": "Banapur"
             },
             {
-              "Name": "Barabati"
+              "name": "Barabati"
             },
             {
-              "Name": "Bichitrapur"
+              "name": "Bichitrapur"
             },
             {
-              "Name": "Nuagobindapur"
+              "name": "Nuagobindapur"
             },
             {
-              "Name": "Bidyadharpur"
+              "name": "Bidyadharpur"
             },
             {
-              "Name": "Chainpur"
+              "name": "Chainpur"
             },
             {
-              "Name": "Ganeswarpur"
+              "name": "Ganeswarpur"
             },
             {
-              "Name": "Gopalpur"
+              "name": "Gopalpur"
             },
             {
-              "Name": "Gurudaspur"
+              "name": "Gurudaspur"
             },
             {
-              "Name": "Kamagarh"
+              "name": "Kamagarh"
             },
             {
-              "Name": "Laxmanpur"
+              "name": "Laxmanpur"
             },
             {
-              "Name": "Mokeipur"
+              "name": "Mokeipur"
             },
             {
-              "Name": "Sundarpur"
+              "name": "Sundarpur"
             },
             {
-              "Name": "Tipara"
+              "name": "Tipara"
             },
             {
-              "Name": "Biribarilo"
+              "name": "Biribarilo"
             },
             {
-              "Name": "Chatisdebil"
+              "name": "Chatisdebil"
             },
             {
-              "Name": "Hasanpur"
+              "name": "Hasanpur"
             },
             {
-              "Name": "Hatiabanka"
+              "name": "Hatiabanka"
             },
             {
-              "Name": "Mahamadjamapur"
+              "name": "Mahamadjamapur"
             },
             {
-              "Name": "Mahamadpur"
+              "name": "Mahamadpur"
             },
             {
-              "Name": "Rampur"
+              "name": "Rampur"
             },
             {
-              "Name": "Risipur"
+              "name": "Risipur"
             },
             {
-              "Name": "Sanabhubanpur"
+              "name": "Sanabhubanpur"
             },
             {
-              "Name": "Thiardebil-1"
+              "name": "Thiardebil-1"
             },
             {
-              "Name": "Thiardebil-2"
+              "name": "Thiardebil-2"
             },
             {
-              "Name": "Bankasahi"
+              "name": "Bankasahi"
             },
             {
-              "Name": "Brahmapur"
+              "name": "Brahmapur"
             },
             {
-              "Name": "Erabank"
+              "name": "Erabank"
             },
             {
-              "Name": "Hemantasinghapur"
+              "name": "Hemantasinghapur"
             },
             {
-              "Name": "Indori"
+              "name": "Indori"
             },
             {
-              "Name": "kanhupur"
+              "name": "kanhupur"
             },
             {
-              "Name": "Noupada"
+              "name": "Noupada"
             },
             {
-              "Name": "Raghunathpur"
+              "name": "Raghunathpur"
             },
             {
-              "Name": "Bachhiari"
+              "name": "Bachhiari"
             },
             {
-              "Name": "Bakhanpur"
+              "name": "Bakhanpur"
             },
             {
-              "Name": "Balimunduli"
+              "name": "Balimunduli"
             },
             {
-              "Name": "Dakhanabil"
+              "name": "Dakhanabil"
             },
             {
-              "Name": "Jahanpur"
+              "name": "Jahanpur"
             },
             {
-              "Name": "Kapilswar"
+              "name": "Kapilswar"
             },
             {
-              "Name": "Mirchandpur"
+              "name": "Mirchandpur"
             },
             {
-              "Name": "Mallikapur"
+              "name": "Mallikapur"
             },
             {
-              "Name": "Padini"
+              "name": "Padini"
             },
             {
-              "Name": "Paikula"
+              "name": "Paikula"
             },
             {
-              "Name": "Saidpur"
+              "name": "Saidpur"
             },
             {
-              "Name": "Sukadeitipaschimabil"
+              "name": "Sukadeitipaschimabil"
             },
             {
-              "Name": "Trilochanpur"
+              "name": "Trilochanpur"
             },
             {
-              "Name": "Jhalapada"
+              "name": "Jhalapada"
             },
             {
-              "Name": "Kakudikuda"
+              "name": "Kakudikuda"
             },
             {
-              "Name": "Nilakanthapur"
+              "name": "Nilakanthapur"
             },
             {
-              "Name": "Sanabagsahi"
+              "name": "Sanabagsahi"
             },
             {
-              "Name": "Khairabad"
+              "name": "Khairabad"
             },
             {
-              "Name": "Kalindrabada"
+              "name": "Kalindrabada"
             },
             {
-              "Name": "Purusottampur"
+              "name": "Purusottampur"
             },
             {
-              "Name": "Jafarpur"
+              "name": "Jafarpur"
             },
             {
-              "Name": "Badatrilchanapur"
+              "name": "Badatrilchanapur"
             },
             {
-              "Name": "Sanatrilochanpur"
+              "name": "Sanatrilochanpur"
             },
             {
-              "Name": "Sanajalahara"
+              "name": "Sanajalahara"
             },
             {
-              "Name": "Badajalahara"
+              "name": "Badajalahara"
             },
             {
-              "Name": "Saipur-1"
+              "name": "Saipur-1"
             },
             {
-              "Name": "Saipur-2"
+              "name": "Saipur-2"
             },
             {
-              "Name": "Saipur"
+              "name": "Saipur"
             },
             {
-              "Name": "Osanga-1"
+              "name": "Osanga-1"
             },
             {
-              "Name": "Osanga-2"
+              "name": "Osanga-2"
             },
             {
-              "Name": "Basantapur"
+              "name": "Basantapur"
             },
             {
-              "Name": "Benipur"
+              "name": "Benipur"
             },
             {
-              "Name": "Brahamanbachhapur"
+              "name": "Brahamanbachhapur"
             },
             {
-              "Name": "Gopinathapur"
+              "name": "Gopinathapur"
             },
             {
-              "Name": "Jagadispur"
+              "name": "Jagadispur"
             },
             {
-              "Name": "Jaypur"
+              "name": "Jaypur"
             },
             {
-              "Name": "Kabirpur"
+              "name": "Kabirpur"
             },
             {
-              "Name": "Maheswarpur"
+              "name": "Maheswarpur"
             },
             {
-              "Name": "Mirapatana"
+              "name": "Mirapatana"
             },
             {
-              "Name": "Nischinta"
+              "name": "Nischinta"
             },
             {
-              "Name": "Purusottampur"
+              "name": "Purusottampur"
             },
             {
-              "Name": "Bajarapada"
+              "name": "Bajarapada"
             },
             {
-              "Name": "Balarampur"
+              "name": "Balarampur"
             },
             {
-              "Name": "Balipasi"
+              "name": "Balipasi"
             },
             {
-              "Name": "Brajanagar"
+              "name": "Brajanagar"
             },
             {
-              "Name": "Kantigadia"
+              "name": "Kantigadia"
             },
             {
-              "Name": "Malaandapur"
+              "name": "Malaandapur"
             },
             {
-              "Name": "Matabaj"
+              "name": "Matabaj"
             },
             {
-              "Name": "Namtikiri"
+              "name": "Namtikiri"
             },
             {
-              "Name": "Rudhia"
+              "name": "Rudhia"
             },
             {
-              "Name": "Sathipur"
+              "name": "Sathipur"
             },
             {
-              "Name": "Dhanipur"
+              "name": "Dhanipur"
             },
             {
-              "Name": "Kamalpur"
+              "name": "Kamalpur"
             },
             {
-              "Name": "Markandapur"
+              "name": "Markandapur"
             },
             {
-              "Name": "Mogalpur"
+              "name": "Mogalpur"
             },
             {
-              "Name": "Adampur"
+              "name": "Adampur"
             },
             {
-              "Name": "Bahabalpur"
+              "name": "Bahabalpur"
             },
             {
-              "Name": "Nuapada"
+              "name": "Nuapada"
             },
             {
-              "Name": "Nathasahi"
+              "name": "Nathasahi"
             },
             {
-              "Name": "Rasalpur"
+              "name": "Rasalpur"
             },
             {
-              "Name": "Suninda"
+              "name": "Suninda"
             },
             {
-              "Name": "Ankula"
+              "name": "Ankula"
             },
             {
-              "Name": "Balipokhari"
+              "name": "Balipokhari"
             },
             {
-              "Name": "Bindhan"
+              "name": "Bindhan"
             },
             {
-              "Name": "Korakora"
+              "name": "Korakora"
             },
             {
-              "Name": "Kusi"
+              "name": "Kusi"
             },
             {
-              "Name": "Patapur"
+              "name": "Patapur"
             },
             {
-              "Name": "Panasa"
+              "name": "Panasa"
             },
             {
-              "Name": "Ragunathapur"
+              "name": "Ragunathapur"
             },
             {
-              "Name": "Badabaghasahi"
+              "name": "Badabaghasahi"
             },
             {
-              "Name": "Nunupur"
+              "name": "Nunupur"
             },
             {
-              "Name": "Riudrapur"
+              "name": "Riudrapur"
             },
             {
-              "Name": "Sithaloi"
+              "name": "Sithaloi"
             },
             {
-              "Name": "Badabhubanpur"
+              "name": "Badabhubanpur"
             },
             {
-              "Name": "Gobindapur"
+              "name": "Gobindapur"
             },
             {
-              "Name": "Sahaspur"
+              "name": "Sahaspur"
             },
             {
-              "Name": "Aradapada"
+              "name": "Aradapada"
             },
             {
-              "Name": "Baibhuin"
+              "name": "Baibhuin"
             },
             {
-              "Name": "Chhabati"
+              "name": "Chhabati"
             },
             {
-              "Name": "Kapasi"
+              "name": "Kapasi"
             },
             {
-              "Name": "Karimabada"
+              "name": "Karimabada"
             },
             {
-              "Name": "Sanasuara"
+              "name": "Sanasuara"
             },
             {
-              "Name": "Tartota"
+              "name": "Tartota"
             },
             {
-              "Name": "Badakujhala"
+              "name": "Badakujhala"
             },
             {
-              "Name": "Kalaspur"
+              "name": "Kalaspur"
             },
             {
-              "Name": "Madhuapur"
+              "name": "Madhuapur"
             },
             {
-              "Name": "Sayamadaspur"
+              "name": "Sayamadaspur"
             },
             {
-              "Name": "Badabanta"
+              "name": "Badabanta"
             },
             {
-              "Name": "Bulakipur"
+              "name": "Bulakipur"
             },
             {
-              "Name": "Chitahata"
+              "name": "Chitahata"
             },
             {
-              "Name": "Similia"
+              "name": "Similia"
             },
             {
-              "Name": "Durgapur"
+              "name": "Durgapur"
             },
             {
-              "Name": "Hasanpur"
+              "name": "Hasanpur"
             },
             {
-              "Name": "Kashipur"
+              "name": "Kashipur"
             },
             {
-              "Name": "Sujanpur"
+              "name": "Sujanpur"
             },
             {
-              "Name": "Uperbaruhan"
+              "name": "Uperbaruhan"
             },
             {
-              "Name": "Sanakujhala"
+              "name": "Sanakujhala"
             },
             {
-              "Name": "Kusunpur"
+              "name": "Kusunpur"
             },
             {
-              "Name": "Kacherigaon"
+              "name": "Kacherigaon"
             },
             {
-              "Name": "Jamdharpur"
+              "name": "Jamdharpur"
             },
             {
-              "Name": "Pandigopinathpur"
+              "name": "Pandigopinathpur"
             },
             {
-              "Name": "Rekabibazar"
+              "name": "Rekabibazar"
             },
             {
-              "Name": "Mahapur"
+              "name": "Mahapur"
             },
             {
-              "Name": "Swapneswarpur"
+              "name": "Swapneswarpur"
             }
           ]
         },
         {
-          "Name": "Korei",
-          "Village": [
+          "name": "Korei",
+          "village": [
             {
-              "Name": "Jhatia sahi"
+              "name": "Jhatia sahi"
             },
             {
-              "Name": "Hatapur-1"
+              "name": "Hatapur-1"
             },
             {
-              "Name": "Hatapur-2"
+              "name": "Hatapur-2"
             },
             {
-              "Name": "Badheijalanda"
+              "name": "Badheijalanda"
             },
             {
-              "Name": "Bhatasolapata"
+              "name": "Bhatasolapata"
             },
             {
-              "Name": "Amrutia"
+              "name": "Amrutia"
             },
             {
-              "Name": "Banahar-1"
+              "name": "Banahar-1"
             },
             {
-              "Name": "Banahar-2"
+              "name": "Banahar-2"
             },
             {
-              "Name": "Rangaranga"
+              "name": "Rangaranga"
             },
             {
-              "Name": "Bagiria"
+              "name": "Bagiria"
             },
             {
-              "Name": "Raghunathpur"
+              "name": "Raghunathpur"
             },
             {
-              "Name": "Ramkrushnapur"
+              "name": "Ramkrushnapur"
             },
             {
-              "Name": "Belada"
+              "name": "Belada"
             },
             {
-              "Name": "Asanjhar"
+              "name": "Asanjhar"
             },
             {
-              "Name": "Sunachara"
+              "name": "Sunachara"
             },
             {
-              "Name": "Bachhipur"
+              "name": "Bachhipur"
             },
             {
-              "Name": "Solabandi"
+              "name": "Solabandi"
             },
             {
-              "Name": "Andhari"
+              "name": "Andhari"
             },
             {
-              "Name": "Korabandi"
+              "name": "Korabandi"
             },
             {
-              "Name": "Ragadi"
+              "name": "Ragadi"
             },
             {
-              "Name": "Kiapada"
+              "name": "Kiapada"
             },
             {
-              "Name": "Badabiruhan"
+              "name": "Badabiruhan"
             },
             {
-              "Name": "Solapat"
+              "name": "Solapat"
             },
             {
-              "Name": "Banamalipur"
+              "name": "Banamalipur"
             },
             {
-              "Name": "Ambatola"
+              "name": "Ambatola"
             },
             {
-              "Name": "Bengamadhapur"
+              "name": "Bengamadhapur"
             },
             {
-              "Name": "Tandara"
+              "name": "Tandara"
             },
             {
-              "Name": "Barei"
+              "name": "Barei"
             },
             {
-              "Name": "Phirojabad"
+              "name": "Phirojabad"
             },
             {
-              "Name": "Baliapal"
+              "name": "Baliapal"
             },
             {
-              "Name": "Routapada"
+              "name": "Routapada"
             },
             {
-              "Name": "Gorakhapur"
+              "name": "Gorakhapur"
             },
             {
-              "Name": "Gahmaria"
+              "name": "Gahmaria"
             },
             {
-              "Name": "Bandalo"
+              "name": "Bandalo"
             },
             {
-              "Name": "Barundei"
+              "name": "Barundei"
             },
             {
-              "Name": "Uttarkhajira"
+              "name": "Uttarkhajira"
             },
             {
-              "Name": "Biruhanpada"
+              "name": "Biruhanpada"
             },
             {
-              "Name": "Khajirinalua"
+              "name": "Khajirinalua"
             },
             {
-              "Name": "Bangarkote"
+              "name": "Bangarkote"
             },
             {
-              "Name": "Khajuribidha"
+              "name": "Khajuribidha"
             },
             {
-              "Name": "Tarakote"
+              "name": "Tarakote"
             },
             {
-              "Name": "Tarpada"
+              "name": "Tarpada"
             },
             {
-              "Name": "Uttarkote"
+              "name": "Uttarkote"
             },
             {
-              "Name": "Santasahi"
+              "name": "Santasahi"
             },
             {
-              "Name": "Mrutunjaypur"
+              "name": "Mrutunjaypur"
             },
             {
-              "Name": "Dhaneswar"
+              "name": "Dhaneswar"
             },
             {
-              "Name": "Aladajaleswarpur"
+              "name": "Aladajaleswarpur"
             },
             {
-              "Name": "Dhanpur"
+              "name": "Dhanpur"
             },
             {
-              "Name": "Badapatuli"
+              "name": "Badapatuli"
             },
             {
-              "Name": "Ranasarpur"
+              "name": "Ranasarpur"
             },
             {
-              "Name": "Sanapatuli"
+              "name": "Sanapatuli"
             },
             {
-              "Name": "Chillipada"
+              "name": "Chillipada"
             },
             {
-              "Name": "Alia"
+              "name": "Alia"
             },
             {
-              "Name": "Begana"
+              "name": "Begana"
             },
             {
-              "Name": "Benapur"
+              "name": "Benapur"
             },
             {
-              "Name": "Ghikoili(UI)"
+              "name": "Ghikoili(UI)"
             },
             {
-              "Name": "Khajuri(UI)"
+              "name": "Khajuri(UI)"
             },
             {
-              "Name": "Salapada"
+              "name": "Salapada"
             },
             {
-              "Name": "Ramapursagadi"
+              "name": "Ramapursagadi"
             },
             {
-              "Name": "Sanabiruhan"
+              "name": "Sanabiruhan"
             },
             {
-              "Name": "Badatrilochanpur"
+              "name": "Badatrilochanpur"
             },
             {
-              "Name": "Goleipur"
+              "name": "Goleipur"
             },
             {
-              "Name": "Masudpur"
+              "name": "Masudpur"
             },
             {
-              "Name": "Sahapur"
+              "name": "Sahapur"
             },
             {
-              "Name": "Keutalanguan"
+              "name": "Keutalanguan"
             },
             {
-              "Name": "Mirzapur"
+              "name": "Mirzapur"
             },
             {
-              "Name": "Telia"
+              "name": "Telia"
             },
             {
-              "Name": "Soti"
+              "name": "Soti"
             },
             {
-              "Name": "Khandrapur"
+              "name": "Khandrapur"
             },
             {
-              "Name": "Sahaspur"
+              "name": "Sahaspur"
             },
             {
-              "Name": "Nayahatapatana"
+              "name": "Nayahatapatana"
             },
             {
-              "Name": "Mangalpur"
+              "name": "Mangalpur"
             },
             {
-              "Name": "Ichhapur"
+              "name": "Ichhapur"
             },
             {
-              "Name": "Gourapur"
+              "name": "Gourapur"
             },
             {
-              "Name": "Tulasipur"
+              "name": "Tulasipur"
             },
             {
-              "Name": "Jogala"
+              "name": "Jogala"
             },
             {
-              "Name": "Khusalpur"
+              "name": "Khusalpur"
             },
             {
-              "Name": "Talia"
+              "name": "Talia"
             },
             {
-              "Name": "Jaintara"
+              "name": "Jaintara"
             },
             {
-              "Name": "Bansipur"
+              "name": "Bansipur"
             },
             {
-              "Name": "Pandiapada"
+              "name": "Pandiapada"
             },
             {
-              "Name": "Chhanchaania"
+              "name": "Chhanchaania"
             },
             {
-              "Name": "Jugalkana"
+              "name": "Jugalkana"
             },
             {
-              "Name": "Matagadi"
+              "name": "Matagadi"
             },
             {
-              "Name": "Janha"
+              "name": "Janha"
             },
             {
-              "Name": "Chhotayapur"
+              "name": "Chhotayapur"
             },
             {
-              "Name": "Janhakana"
+              "name": "Janhakana"
             },
             {
-              "Name": "Talugaon"
+              "name": "Talugaon"
             },
             {
-              "Name": "Tulari"
+              "name": "Tulari"
             },
             {
-              "Name": "Khairabad"
+              "name": "Khairabad"
             },
             {
-              "Name": "Kurupada"
+              "name": "Kurupada"
             },
             {
-              "Name": "Brahmanabada"
+              "name": "Brahmanabada"
             },
             {
-              "Name": "Tailada"
+              "name": "Tailada"
             },
             {
-              "Name": "Fartipur"
+              "name": "Fartipur"
             },
             {
-              "Name": "Narapda"
+              "name": "Narapda"
             },
             {
-              "Name": "Motiram(UI)"
+              "name": "Motiram(UI)"
             },
             {
-              "Name": "Jahanra(UI)"
+              "name": "Jahanra(UI)"
             },
             {
-              "Name": "Dasagadia"
+              "name": "Dasagadia"
             },
             {
-              "Name": "Nahanda"
+              "name": "Nahanda"
             },
             {
-              "Name": "Naudpur"
+              "name": "Naudpur"
             },
             {
-              "Name": "Khamana"
+              "name": "Khamana"
             },
             {
-              "Name": "Badheitikara"
+              "name": "Badheitikara"
             },
             {
-              "Name": "Nuapatana"
+              "name": "Nuapatana"
             },
             {
-              "Name": "Thakurapatana"
+              "name": "Thakurapatana"
             },
             {
-              "Name": "Kantore"
+              "name": "Kantore"
             },
             {
-              "Name": "Purbakote"
+              "name": "Purbakote"
             },
             {
-              "Name": "Gajendrapur"
+              "name": "Gajendrapur"
             },
             {
-              "Name": "Sitalgobindapur"
+              "name": "Sitalgobindapur"
             },
             {
-              "Name": "Narendrabhoga"
+              "name": "Narendrabhoga"
             },
             {
-              "Name": "Jaranda"
+              "name": "Jaranda"
             },
             {
-              "Name": "Aranto"
+              "name": "Aranto"
             },
             {
-              "Name": "Barhmapatana"
+              "name": "Barhmapatana"
             },
             {
-              "Name": "Kacharasahi"
+              "name": "Kacharasahi"
             },
             {
-              "Name": "Asanagadia"
+              "name": "Asanagadia"
             },
             {
-              "Name": "Talagadia"
+              "name": "Talagadia"
             },
             {
-              "Name": "Shagaon"
+              "name": "Shagaon"
             },
             {
-              "Name": "Kayan"
+              "name": "Kayan"
             },
             {
-              "Name": "Routpada"
+              "name": "Routpada"
             },
             {
-              "Name": "Karada"
+              "name": "Karada"
             },
             {
-              "Name": "Ranigoda"
+              "name": "Ranigoda"
             },
             {
-              "Name": "Bartamana"
+              "name": "Bartamana"
             },
             {
-              "Name": "Bhkandari"
+              "name": "Bhkandari"
             },
             {
-              "Name": "Depada"
+              "name": "Depada"
             },
             {
-              "Name": "Baghanata"
+              "name": "Baghanata"
             },
             {
-              "Name": "Palasa"
+              "name": "Palasa"
             },
             {
-              "Name": "Jagulaigadia"
+              "name": "Jagulaigadia"
             },
             {
-              "Name": "Biridhi"
+              "name": "Biridhi"
             },
             {
-              "Name": "Jalapatipur"
+              "name": "Jalapatipur"
             },
             {
-              "Name": "Nisankapur"
+              "name": "Nisankapur"
             },
             {
-              "Name": "Solapatia"
+              "name": "Solapatia"
             },
             {
-              "Name": "Mathurapur"
+              "name": "Mathurapur"
             },
             {
-              "Name": "Mukundapur"
+              "name": "Mukundapur"
             },
             {
-              "Name": "Osala"
+              "name": "Osala"
             },
             {
-              "Name": "Mulapal"
+              "name": "Mulapal"
             },
             {
-              "Name": "Barapada"
+              "name": "Barapada"
             },
             {
-              "Name": "Ranapal"
+              "name": "Ranapal"
             },
             {
-              "Name": "Gobindapur"
+              "name": "Gobindapur"
             },
             {
-              "Name": "Dhantri"
+              "name": "Dhantri"
             },
             {
-              "Name": "Khiro"
+              "name": "Khiro"
             },
             {
-              "Name": "Sarasada"
+              "name": "Sarasada"
             },
             {
-              "Name": "Salaba"
+              "name": "Salaba"
             },
             {
-              "Name": "Pachhikote"
+              "name": "Pachhikote"
             },
             {
-              "Name": "Paramandapur"
+              "name": "Paramandapur"
             },
             {
-              "Name": "Patrakana"
+              "name": "Patrakana"
             },
             {
-              "Name": "Khamigan"
+              "name": "Khamigan"
             },
             {
-              "Name": "Godarapal"
+              "name": "Godarapal"
             },
             {
-              "Name": "Manjuri"
+              "name": "Manjuri"
             },
             {
-              "Name": "Gayadagadia"
+              "name": "Gayadagadia"
             },
             {
-              "Name": "Kadam"
+              "name": "Kadam"
             },
             {
-              "Name": "Panikoili"
+              "name": "Panikoili"
             },
             {
-              "Name": "Alatri"
+              "name": "Alatri"
             },
             {
-              "Name": "Manipur"
+              "name": "Manipur"
             },
             {
-              "Name": "Khajuripur"
+              "name": "Khajuripur"
             },
             {
-              "Name": "Patharapada"
+              "name": "Patharapada"
             },
             {
-              "Name": "Ochinda"
+              "name": "Ochinda"
             },
             {
-              "Name": "Mulari"
+              "name": "Mulari"
             },
             {
-              "Name": "Tazapur"
+              "name": "Tazapur"
             },
             {
-              "Name": "Khasagadia"
+              "name": "Khasagadia"
             },
             {
-              "Name": "Khosalpur"
+              "name": "Khosalpur"
             },
             {
-              "Name": "Badabarunipada"
+              "name": "Badabarunipada"
             },
             {
-              "Name": "Oupada"
+              "name": "Oupada"
             },
             {
-              "Name": "Naupada"
+              "name": "Naupada"
             },
             {
-              "Name": "MD.Zamalpur"
+              "name": "MD.Zamalpur"
             },
             {
-              "Name": "Damodarpur"
+              "name": "Damodarpur"
             },
             {
-              "Name": "Ranapur"
+              "name": "Ranapur"
             },
             {
-              "Name": "Sanalakantabanian"
+              "name": "Sanalakantabanian"
             },
             {
-              "Name": "Sayampur"
+              "name": "Sayampur"
             },
             {
-              "Name": "Mahulia"
+              "name": "Mahulia"
             },
             {
-              "Name": "Gopalpur"
+              "name": "Gopalpur"
             },
             {
-              "Name": "Chingulipur"
+              "name": "Chingulipur"
             },
             {
-              "Name": "Toranda"
+              "name": "Toranda"
             },
             {
-              "Name": "Sadakpur"
+              "name": "Sadakpur"
             },
             {
-              "Name": "Kharajabatira"
+              "name": "Kharajabatira"
             },
             {
-              "Name": "Barada"
+              "name": "Barada"
             },
             {
-              "Name": "Fazalpur"
+              "name": "Fazalpur"
             },
             {
-              "Name": "Charada"
+              "name": "Charada"
             },
             {
-              "Name": "Haladigadia"
+              "name": "Haladigadia"
             },
             {
-              "Name": "Padi"
+              "name": "Padi"
             },
             {
-              "Name": "Salakana"
+              "name": "Salakana"
             },
             {
-              "Name": "Bantala"
+              "name": "Bantala"
             },
             {
-              "Name": "Sisua"
+              "name": "Sisua"
             },
             {
-              "Name": "Khilipankha"
+              "name": "Khilipankha"
             },
             {
-              "Name": "Brahmananda"
+              "name": "Brahmananda"
             },
             {
-              "Name": "Taharpur"
+              "name": "Taharpur"
             },
             {
-              "Name": "Santarapur"
+              "name": "Santarapur"
             },
             {
-              "Name": "Kuanrada"
+              "name": "Kuanrada"
             },
             {
-              "Name": "Tentulikhunta"
+              "name": "Tentulikhunta"
             },
             {
-              "Name": "Mulisarada"
+              "name": "Mulisarada"
             },
             {
-              "Name": "Jaintara"
+              "name": "Jaintara"
             },
             {
-              "Name": "Adhagan"
+              "name": "Adhagan"
             },
             {
-              "Name": "Baladiha"
+              "name": "Baladiha"
             },
             {
-              "Name": "Pansua"
+              "name": "Pansua"
             },
             {
-              "Name": "Kankadagadia"
+              "name": "Kankadagadia"
             },
             {
-              "Name": "Talagarh"
+              "name": "Talagarh"
             },
             {
-              "Name": "Upulei"
+              "name": "Upulei"
             },
             {
-              "Name": "Gopinathpur"
+              "name": "Gopinathpur"
             },
             {
-              "Name": "Jhumpana"
+              "name": "Jhumpana"
             },
             {
-              "Name": "Harichandanpur"
+              "name": "Harichandanpur"
             },
             {
-              "Name": "Nuagan"
+              "name": "Nuagan"
             },
             {
-              "Name": "Nuagarh"
+              "name": "Nuagarh"
             },
             {
-              "Name": "Mangarjpur"
+              "name": "Mangarjpur"
             },
             {
-              "Name": "Pataranga"
+              "name": "Pataranga"
             },
             {
-              "Name": "Ashokjhar"
+              "name": "Ashokjhar"
             },
             {
-              "Name": "Gahiragadia"
+              "name": "Gahiragadia"
             },
             {
-              "Name": "Madanpada"
+              "name": "Madanpada"
             },
             {
-              "Name": "Uparagada"
+              "name": "Uparagada"
             },
             {
-              "Name": "Itapur"
+              "name": "Itapur"
             },
             {
-              "Name": "Fazalpur"
+              "name": "Fazalpur"
             },
             {
-              "Name": "Aranyamadan"
+              "name": "Aranyamadan"
             },
             {
-              "Name": "Gbargali"
+              "name": "Gbargali"
             },
             {
-              "Name": "Rahemanpur"
+              "name": "Rahemanpur"
             },
             {
-              "Name": "Sundarpokhari"
+              "name": "Sundarpokhari"
             },
             {
-              "Name": "Tulati"
+              "name": "Tulati"
             },
             {
-              "Name": "Akhanpur"
+              "name": "Akhanpur"
             },
             {
-              "Name": "Md. Khosalpur"
+              "name": "Md. Khosalpur"
             },
             {
-              "Name": "Kogan"
+              "name": "Kogan"
             },
             {
-              "Name": "Sainto"
+              "name": "Sainto"
             },
             {
-              "Name": "Khairabad"
+              "name": "Khairabad"
             },
             {
-              "Name": "Nigodha"
+              "name": "Nigodha"
             },
             {
-              "Name": "Khandaragadia"
+              "name": "Khandaragadia"
             },
             {
-              "Name": "Raghunathpur"
+              "name": "Raghunathpur"
             },
             {
-              "Name": "Pimpala"
+              "name": "Pimpala"
             }
           ]
         },
         {
-          "Name": "Rasulpur",
-          "Village": [
+          "name": "Rasulpur",
+          "village": [
             {
-              "Name": "Tarapur"
+              "name": "Tarapur"
             },
             {
-              "Name": "Vikipur"
+              "name": "Vikipur"
             },
             {
-              "Name": "Baliapasi"
+              "name": "Baliapasi"
             },
             {
-              "Name": "Krushnanagar"
+              "name": "Krushnanagar"
             },
             {
-              "Name": "Radhanagar"
+              "name": "Radhanagar"
             },
             {
-              "Name": "Krushnagarpatana"
+              "name": "Krushnagarpatana"
             },
             {
-              "Name": "Laxminagar"
+              "name": "Laxminagar"
             },
             {
-              "Name": "Pahanga"
+              "name": "Pahanga"
             },
             {
-              "Name": "Routarapur"
+              "name": "Routarapur"
             },
             {
-              "Name": "Jokadia"
+              "name": "Jokadia"
             },
             {
-              "Name": "Tikarpada"
+              "name": "Tikarpada"
             },
             {
-              "Name": "Kujibar"
+              "name": "Kujibar"
             },
             {
-              "Name": "Sribantapur"
+              "name": "Sribantapur"
             },
             {
-              "Name": "Berhampur"
+              "name": "Berhampur"
             },
             {
-              "Name": "Jenapur"
+              "name": "Jenapur"
             },
             {
-              "Name": "BhagatBhagaban"
+              "name": "BhagatBhagaban"
             },
             {
-              "Name": "Dianchhaka"
+              "name": "Dianchhaka"
             },
             {
-              "Name": "Kanhupur"
+              "name": "Kanhupur"
             },
             {
-              "Name": "Kandasara"
+              "name": "Kandasara"
             },
             {
-              "Name": "Baralangi"
+              "name": "Baralangi"
             },
             {
-              "Name": "Sarangapur"
+              "name": "Sarangapur"
             },
             {
-              "Name": "Bhagirathpur"
+              "name": "Bhagirathpur"
             },
             {
-              "Name": "Baunsantabada"
+              "name": "Baunsantabada"
             },
             {
-              "Name": "Jabara"
+              "name": "Jabara"
             },
             {
-              "Name": "Manapur"
+              "name": "Manapur"
             },
             {
-              "Name": "Sukadeipur"
+              "name": "Sukadeipur"
             },
             {
-              "Name": "Lachhamanpur(U.I.)"
+              "name": "Lachhamanpur(U.I.)"
             },
             {
-              "Name": "Kharikud(U.I)"
+              "name": "Kharikud(U.I)"
             },
             {
-              "Name": "Gopinarayanpur(U.I)"
+              "name": "Gopinarayanpur(U.I)"
             },
             {
-              "Name": "Birijanga"
+              "name": "Birijanga"
             },
             {
-              "Name": "Nsthuabar"
+              "name": "Nsthuabar"
             },
             {
-              "Name": "Adampur"
+              "name": "Adampur"
             },
             {
-              "Name": "Naguan"
+              "name": "Naguan"
             },
             {
-              "Name": "Krushnapada"
+              "name": "Krushnapada"
             },
             {
-              "Name": "Korakora"
+              "name": "Korakora"
             },
             {
-              "Name": "Kapali"
+              "name": "Kapali"
             },
             {
-              "Name": "Takuathenga"
+              "name": "Takuathenga"
             },
             {
-              "Name": "Badakainchi"
+              "name": "Badakainchi"
             },
             {
-              "Name": "Gopinathpur"
+              "name": "Gopinathpur"
             },
             {
-              "Name": "Gordha"
+              "name": "Gordha"
             },
             {
-              "Name": "Garual"
+              "name": "Garual"
             },
             {
-              "Name": "Odisso"
+              "name": "Odisso"
             },
             {
-              "Name": "Andeigoda"
+              "name": "Andeigoda"
             },
             {
-              "Name": "Manapur"
+              "name": "Manapur"
             },
             {
-              "Name": "Hatsinghpur"
+              "name": "Hatsinghpur"
             },
             {
-              "Name": "Nadialli"
+              "name": "Nadialli"
             },
             {
-              "Name": "Artia Kusanapur"
+              "name": "Artia Kusanapur"
             },
             {
-              "Name": "Karanjiary(Karanjia)"
+              "name": "Karanjiary(Karanjia)"
             },
             {
-              "Name": "Melak"
+              "name": "Melak"
             },
             {
-              "Name": "Bahabalpur"
+              "name": "Bahabalpur"
             },
             {
-              "Name": "Mangarajpur(U.I)"
+              "name": "Mangarajpur(U.I)"
             },
             {
-              "Name": "Singhapur"
+              "name": "Singhapur"
             },
             {
-              "Name": "Matiasasan"
+              "name": "Matiasasan"
             },
             {
-              "Name": "Gopinathpur(sasan)"
+              "name": "Gopinathpur(sasan)"
             },
             {
-              "Name": "Jagannathpur"
+              "name": "Jagannathpur"
             },
             {
-              "Name": "Bamdevpur"
+              "name": "Bamdevpur"
             },
             {
-              "Name": "Brahmanbad"
+              "name": "Brahmanbad"
             },
             {
-              "Name": "Haridapal"
+              "name": "Haridapal"
             },
             {
-              "Name": "Daneipur"
+              "name": "Daneipur"
             },
             {
-              "Name": "Kalan"
+              "name": "Kalan"
             },
             {
-              "Name": "Kalanpaikarapur"
+              "name": "Kalanpaikarapur"
             },
             {
-              "Name": "Biswanathpur"
+              "name": "Biswanathpur"
             },
             {
-              "Name": "Sulia"
+              "name": "Sulia"
             },
             {
-              "Name": "Sarabana"
+              "name": "Sarabana"
             },
             {
-              "Name": "Nuahat"
+              "name": "Nuahat"
             },
             {
-              "Name": "Belapada"
+              "name": "Belapada"
             },
             {
-              "Name": "Barabati"
+              "name": "Barabati"
             },
             {
-              "Name": "Fulladi"
+              "name": "Fulladi"
             },
             {
-              "Name": "Manatiri"
+              "name": "Manatiri"
             },
             {
-              "Name": "Odanga"
+              "name": "Odanga"
             },
             {
-              "Name": "Chikrakul"
+              "name": "Chikrakul"
             },
             {
-              "Name": "Barajpur"
+              "name": "Barajpur"
             },
             {
-              "Name": "Betanda"
+              "name": "Betanda"
             },
             {
-              "Name": "Durgapur"
+              "name": "Durgapur"
             },
             {
-              "Name": "Durgapurkuda"
+              "name": "Durgapurkuda"
             },
             {
-              "Name": "Bhagatpur"
+              "name": "Bhagatpur"
             },
             {
-              "Name": "Prathamakhandi"
+              "name": "Prathamakhandi"
             },
             {
-              "Name": "Biswambarpur(UI)"
+              "name": "Biswambarpur(UI)"
             },
             {
-              "Name": "Damodarpur"
+              "name": "Damodarpur"
             },
             {
-              "Name": "Kulakuransa"
+              "name": "Kulakuransa"
             },
             {
-              "Name": "Suanpur"
+              "name": "Suanpur"
             },
             {
-              "Name": "Chaka gopalpur"
+              "name": "Chaka gopalpur"
             },
             {
-              "Name": "Sadamba"
+              "name": "Sadamba"
             },
             {
-              "Name": "Pranarajpur( Palagopalpur UI)"
+              "name": "Pranarajpur( Palagopalpur UI)"
             },
             {
-              "Name": "Haribajpur"
+              "name": "Haribajpur"
             },
             {
-              "Name": "Rajendrapur"
+              "name": "Rajendrapur"
             },
             {
-              "Name": "Hatasahi"
+              "name": "Hatasahi"
             },
             {
-              "Name": "Karajanga"
+              "name": "Karajanga"
             },
             {
-              "Name": "Karajanga Chhak"
+              "name": "Karajanga Chhak"
             },
             {
-              "Name": "Dialkhandi"
+              "name": "Dialkhandi"
             },
             {
-              "Name": "Atalpur"
+              "name": "Atalpur"
             },
             {
-              "Name": "Ganeshpatana"
+              "name": "Ganeshpatana"
             },
             {
-              "Name": "Sadakppur"
+              "name": "Sadakppur"
             },
             {
-              "Name": "Haripur"
+              "name": "Haripur"
             },
             {
-              "Name": "Narasinghpur"
+              "name": "Narasinghpur"
             },
             {
-              "Name": "Jitipur"
+              "name": "Jitipur"
             },
             {
-              "Name": "Nuamirzapur"
+              "name": "Nuamirzapur"
             },
             {
-              "Name": "Sanagobindapur"
+              "name": "Sanagobindapur"
             },
             {
-              "Name": "Badagobindapur"
+              "name": "Badagobindapur"
             },
             {
-              "Name": "Gholapur"
+              "name": "Gholapur"
             },
             {
-              "Name": "Koruan"
+              "name": "Koruan"
             },
             {
-              "Name": "Gourishyamapatana"
+              "name": "Gourishyamapatana"
             },
             {
-              "Name": "Mugupal"
+              "name": "Mugupal"
             },
             {
-              "Name": "Baransa"
+              "name": "Baransa"
             },
             {
-              "Name": "Khairabad"
+              "name": "Khairabad"
             },
             {
-              "Name": "Sarangapur"
+              "name": "Sarangapur"
             },
             {
-              "Name": "Bahadalpur"
+              "name": "Bahadalpur"
             },
             {
-              "Name": "Orali"
+              "name": "Orali"
             },
             {
-              "Name": "Badaniranjanpur"
+              "name": "Badaniranjanpur"
             },
             {
-              "Name": "Sarifabad"
+              "name": "Sarifabad"
             },
             {
-              "Name": "Mohammadpur"
+              "name": "Mohammadpur"
             },
             {
-              "Name": "Ksmarpal"
+              "name": "Ksmarpal"
             },
             {
-              "Name": "Paridapal"
+              "name": "Paridapal"
             },
             {
-              "Name": "Kuakhia"
+              "name": "Kuakhia"
             },
             {
-              "Name": "Rasulpur"
+              "name": "Rasulpur"
             },
             {
-              "Name": "Chandipur"
+              "name": "Chandipur"
             },
             {
-              "Name": "Kohosalpur"
+              "name": "Kohosalpur"
             },
             {
-              "Name": "Sanatrilochanpur"
+              "name": "Sanatrilochanpur"
             },
             {
-              "Name": "Jaleswarpur"
+              "name": "Jaleswarpur"
             },
             {
-              "Name": "Suansahi"
+              "name": "Suansahi"
             },
             {
-              "Name": "(Sana)Keutalaguan"
+              "name": "(Sana)Keutalaguan"
             },
             {
-              "Name": "Niamatapur(U.I)"
+              "name": "Niamatapur(U.I)"
             },
             {
-              "Name": "Bhotka"
+              "name": "Bhotka"
             },
             {
-              "Name": "Serapur"
+              "name": "Serapur"
             },
             {
-              "Name": "Bilipada"
+              "name": "Bilipada"
             },
             {
-              "Name": "Arada"
+              "name": "Arada"
             },
             {
-              "Name": "Sanarampei"
+              "name": "Sanarampei"
             },
             {
-              "Name": "Badarampei"
+              "name": "Badarampei"
             },
             {
-              "Name": "Ichhapur"
+              "name": "Ichhapur"
             },
             {
-              "Name": "Bantara"
+              "name": "Bantara"
             },
             {
-              "Name": "Ektala"
+              "name": "Ektala"
             },
             {
-              "Name": "Gandhana"
+              "name": "Gandhana"
             },
             {
-              "Name": "Parikainchi"
+              "name": "Parikainchi"
             },
             {
-              "Name": "Tulasipur"
+              "name": "Tulasipur"
             },
             {
-              "Name": "Brahman nrarsingh"
+              "name": "Brahman nrarsingh"
             },
             {
-              "Name": "Masurpur"
+              "name": "Masurpur"
             },
             {
-              "Name": "Darkundi"
+              "name": "Darkundi"
             },
             {
-              "Name": "Rahamba"
+              "name": "Rahamba"
             },
             {
-              "Name": "Kolathala"
+              "name": "Kolathala"
             },
             {
-              "Name": "Mirzapur"
+              "name": "Mirzapur"
             },
             {
-              "Name": "Dihakuransa"
+              "name": "Dihakuransa"
             },
             {
-              "Name": "Sadanandapur"
+              "name": "Sadanandapur"
             },
             {
-              "Name": "Arthanga"
+              "name": "Arthanga"
             },
             {
-              "Name": "Kolthasahi"
+              "name": "Kolthasahi"
             },
             {
-              "Name": "Alapua"
+              "name": "Alapua"
             },
             {
-              "Name": "Kripalpur"
+              "name": "Kripalpur"
             },
             {
-              "Name": "Torada"
+              "name": "Torada"
             },
             {
-              "Name": "Badachapoi"
+              "name": "Badachapoi"
             },
             {
-              "Name": "Mangarajpur"
+              "name": "Mangarajpur"
             },
             {
-              "Name": "Baliguda"
+              "name": "Baliguda"
             },
             {
-              "Name": "Deuli"
+              "name": "Deuli"
             },
             {
-              "Name": "Lankaballisahi"
+              "name": "Lankaballisahi"
             },
             {
-              "Name": "Khandasa"
+              "name": "Khandasa"
             },
             {
-              "Name": "Birabhanupur"
+              "name": "Birabhanupur"
             },
             {
-              "Name": "Chambila(UI)"
+              "name": "Chambila(UI)"
             },
             {
-              "Name": "Naraharipur"
+              "name": "Naraharipur"
             },
             {
-              "Name": "Keshapur"
+              "name": "Keshapur"
             },
             {
-              "Name": "Srichandanpur(UI)"
+              "name": "Srichandanpur(UI)"
             },
             {
-              "Name": "Samantarapur"
+              "name": "Samantarapur"
             },
             {
-              "Name": "Mandarpur"
+              "name": "Mandarpur"
             },
             {
-              "Name": "Rasuna"
+              "name": "Rasuna"
             },
             {
-              "Name": "Kulagoan - I (Chakulagoan) UI"
+              "name": "Kulagoan - I (Chakulagoan) UI"
             },
             {
-              "Name": "Kulagoan - II"
+              "name": "Kulagoan - II"
             },
             {
-              "Name": "Routarapur"
+              "name": "Routarapur"
             },
             {
-              "Name": "Ratapur"
+              "name": "Ratapur"
             },
             {
-              "Name": "Maheswarpur"
+              "name": "Maheswarpur"
             },
             {
-              "Name": "Chandapur"
+              "name": "Chandapur"
             },
             {
-              "Name": "Brahmbarada"
+              "name": "Brahmbarada"
             },
             {
-              "Name": "Bandhadiha"
+              "name": "Bandhadiha"
             },
             {
-              "Name": "Sahapada"
+              "name": "Sahapada"
             },
             {
-              "Name": "Jaisunguda"
+              "name": "Jaisunguda"
             },
             {
-              "Name": "Mathasahi"
+              "name": "Mathasahi"
             }
           ]
         },
         {
-          "Name": "Sukinda",
-          "Village": [
+          "name": "Sukinda",
+          "village": [
             {
-              "Name": "Ampolaba"
+              "name": "Ampolaba"
             },
             {
-              "Name": "Barapal"
+              "name": "Barapal"
             },
             {
-              "Name": "Jamupasi"
+              "name": "Jamupasi"
             },
             {
-              "Name": "Santarapur"
+              "name": "Santarapur"
             },
             {
-              "Name": "Atta"
+              "name": "Atta"
             },
             {
-              "Name": "Bandhagan"
+              "name": "Bandhagan"
             },
             {
-              "Name": "Kantapal"
+              "name": "Kantapal"
             },
             {
-              "Name": "Koilo"
+              "name": "Koilo"
             },
             {
-              "Name": "Mantira"
+              "name": "Mantira"
             },
             {
-              "Name": "Rankia"
+              "name": "Rankia"
             },
             {
-              "Name": "Baragadia"
+              "name": "Baragadia"
             },
             {
-              "Name": "Nuagan"
+              "name": "Nuagan"
             },
             {
-              "Name": "Bahabalpur"
+              "name": "Bahabalpur"
             },
             {
-              "Name": "Baratanda"
+              "name": "Baratanda"
             },
             {
-              "Name": "Kantira"
+              "name": "Kantira"
             },
             {
-              "Name": "Solapur"
+              "name": "Solapur"
             },
             {
-              "Name": "Aradapal"
+              "name": "Aradapal"
             },
             {
-              "Name": "Chigudipal"
+              "name": "Chigudipal"
             },
             {
-              "Name": "Deogan"
+              "name": "Deogan"
             },
             {
-              "Name": "Guhiasla"
+              "name": "Guhiasla"
             },
             {
-              "Name": "Nagada"
+              "name": "Nagada"
             },
             {
-              "Name": "Nator"
+              "name": "Nator"
             },
             {
-              "Name": "Patana"
+              "name": "Patana"
             },
             {
-              "Name": "Padagoda(Padama)"
+              "name": "Padagoda(Padama)"
             },
             {
-              "Name": "Ragada"
+              "name": "Ragada"
             },
             {
-              "Name": "Duburi"
+              "name": "Duburi"
             },
             {
-              "Name": "Saransua"
+              "name": "Saransua"
             },
             {
-              "Name": "Botalanda"
+              "name": "Botalanda"
             },
             {
-              "Name": "Damodarpur"
+              "name": "Damodarpur"
             },
             {
-              "Name": "Dhdhujari"
+              "name": "Dhdhujari"
             },
             {
-              "Name": "Kanchichua"
+              "name": "Kanchichua"
             },
             {
-              "Name": "Mangalpur"
+              "name": "Mangalpur"
             },
             {
-              "Name": "Pubala"
+              "name": "Pubala"
             },
             {
-              "Name": "Gobarghati"
+              "name": "Gobarghati"
             },
             {
-              "Name": "Hatimunda"
+              "name": "Hatimunda"
             },
             {
-              "Name": "Mirigichara"
+              "name": "Mirigichara"
             },
             {
-              "Name": "Balipasi"
+              "name": "Balipasi"
             },
             {
-              "Name": "Godipatana"
+              "name": "Godipatana"
             },
             {
-              "Name": "Haripur"
+              "name": "Haripur"
             },
             {
-              "Name": "Jemadeipur"
+              "name": "Jemadeipur"
             },
             {
-              "Name": "Bairimal"
+              "name": "Bairimal"
             },
             {
-              "Name": "Hatibari"
+              "name": "Hatibari"
             },
             {
-              "Name": "Karadapasi"
+              "name": "Karadapasi"
             },
             {
-              "Name": "Gurujanga"
+              "name": "Gurujanga"
             },
             {
-              "Name": "Gurujangapal"
+              "name": "Gurujangapal"
             },
             {
-              "Name": "Kaliapni"
+              "name": "Kaliapni"
             },
             {
-              "Name": "Sukarangi"
+              "name": "Sukarangi"
             },
             {
-              "Name": "Bhalukipatala"
+              "name": "Bhalukipatala"
             },
             {
-              "Name": "Gantayatkateni"
+              "name": "Gantayatkateni"
             },
             {
-              "Name": "Garamian"
+              "name": "Garamian"
             },
             {
-              "Name": "Giringamali"
+              "name": "Giringamali"
             },
             {
-              "Name": "Kanduabani"
+              "name": "Kanduabani"
             },
             {
-              "Name": "Kakadapal"
+              "name": "Kakadapal"
             },
             {
-              "Name": "Karadagadia"
+              "name": "Karadagadia"
             },
             {
-              "Name": "Balipada"
+              "name": "Balipada"
             },
             {
-              "Name": "Kamarda"
+              "name": "Kamarda"
             },
             {
-              "Name": "Kansa"
+              "name": "Kansa"
             },
             {
-              "Name": "Ostapal"
+              "name": "Ostapal"
             },
             {
-              "Name": "Saruabila"
+              "name": "Saruabila"
             },
             {
-              "Name": "Talangi"
+              "name": "Talangi"
             },
             {
-              "Name": "Ambasar"
+              "name": "Ambasar"
             },
             {
-              "Name": "Baradi"
+              "name": "Baradi"
             },
             {
-              "Name": "Gunduchipasi"
+              "name": "Gunduchipasi"
             },
             {
-              "Name": "Kharadi"
+              "name": "Kharadi"
             },
             {
-              "Name": "Bambilo"
+              "name": "Bambilo"
             },
             {
-              "Name": "Gandhapal"
+              "name": "Gandhapal"
             },
             {
-              "Name": "Jemadeipur"
+              "name": "Jemadeipur"
             },
             {
-              "Name": "Kuhika"
+              "name": "Kuhika"
             },
             {
-              "Name": "Mulakhamba"
+              "name": "Mulakhamba"
             },
             {
-              "Name": "Bethiahata"
+              "name": "Bethiahata"
             },
             {
-              "Name": "Kabata"
+              "name": "Kabata"
             },
             {
-              "Name": "Kanjiapal"
+              "name": "Kanjiapal"
             },
             {
-              "Name": "Lembo"
+              "name": "Lembo"
             },
             {
-              "Name": "Santarapur"
+              "name": "Santarapur"
             },
             {
-              "Name": "Singadia"
+              "name": "Singadia"
             },
             {
-              "Name": "Udayapur"
+              "name": "Udayapur"
             },
             {
-              "Name": "Banja"
+              "name": "Banja"
             },
             {
-              "Name": "Kumudisasan"
+              "name": "Kumudisasan"
             },
             {
-              "Name": "Mangarajpur"
+              "name": "Mangarajpur"
             },
             {
-              "Name": "Abhaypur"
+              "name": "Abhaypur"
             },
             {
-              "Name": "Olia"
+              "name": "Olia"
             },
             {
-              "Name": "Sukaran"
+              "name": "Sukaran"
             },
             {
-              "Name": "Ambapal"
+              "name": "Ambapal"
             },
             {
-              "Name": "Arjunpur"
+              "name": "Arjunpur"
             },
             {
-              "Name": "Nuadhia"
+              "name": "Nuadhia"
             },
             {
-              "Name": "Pimpudia"
+              "name": "Pimpudia"
             },
             {
-              "Name": "Badapingal"
+              "name": "Badapingal"
             },
             {
-              "Name": "Kaitha"
+              "name": "Kaitha"
             },
             {
-              "Name": "Nimapali"
+              "name": "Nimapali"
             },
             {
-              "Name": "Raitikir"
+              "name": "Raitikir"
             },
             {
-              "Name": "Sanapingal"
+              "name": "Sanapingal"
             },
             {
-              "Name": "Baragaji"
+              "name": "Baragaji"
             },
             {
-              "Name": "Kakudia"
+              "name": "Kakudia"
             },
             {
-              "Name": "Kalarangiatta"
+              "name": "Kalarangiatta"
             },
             {
-              "Name": "Kusumundia"
+              "name": "Kusumundia"
             },
             {
-              "Name": "Moulkhal"
+              "name": "Moulkhal"
             },
             {
-              "Name": "Ransol"
+              "name": "Ransol"
             },
             {
-              "Name": "Patapur"
+              "name": "Patapur"
             },
             {
-              "Name": "Sansilo"
+              "name": "Sansilo"
             },
             {
-              "Name": "Gadapur"
+              "name": "Gadapur"
             },
             {
-              "Name": "Khurunti"
+              "name": "Khurunti"
             },
             {
-              "Name": "Sarangapur"
+              "name": "Sarangapur"
             },
             {
-              "Name": "Madhapur"
+              "name": "Madhapur"
             },
             {
-              "Name": "Nizigarh"
+              "name": "Nizigarh"
             }
           ]
         }
