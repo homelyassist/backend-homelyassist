@@ -33,30 +33,71 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: var(--font-default);
-  color: var(--color-default);
-  background-color: #000;
+  color: #000000; /* Changed text color to black */
+  background-color: #ffffff; /* Changed background color to white */
 }
 
 a {
-  color: var(--color-primary);
-  text-decoration: none;
+  color: #000000; /* Reset link color */
 }
 
 a:hover {
-  color: #32cf93;
-  text-decoration: none;
+  color: #32cf93; /* Reset link hover color */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-primary);
+/*--------------------------------------------------------------
+# Sections & Section Header
+--------------------------------------------------------------*/
+.section-header h2 {
+  color: rgba(0, 0, 0, 0.6); /* Changed text color to black */
 }
 
+.section-header p {
+  color: #000000; /* Changed text color to black */
+}
+
+/*--------------------------------------------------------------
+# Page Header
+--------------------------------------------------------------*/
+.page-header h2 {
+  color: #000000; /* Changed text color to black */
+}
+
+.page-header p {
+  color: rgba(0, 0, 0, 0.8); /* Changed text color to black */
+}
+
+.page-header .cta-btn {
+  color: #000000; /* Changed text color to black */
+  background: #ffffff; /* Changed button background to white */
+}
+
+.page-header .cta-btn:hover {
+  background: #2cbc85; /* Changed button hover background color */
+}
+
+/*--------------------------------------------------------------
+# Scroll top button
+--------------------------------------------------------------*/
+.scroll-top {
+  background: #ffffff; /* Changed button background to white */
+}
+
+.scroll-top i {
+  color: #000000; /* Changed text color to black */
+}
+
+.scroll-top:hover {
+  background: rgba(39, 167, 118, 0.8); /* Changed button hover background color */
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader:before,
+#preloader:after {
+  background-color: #161718; /* Changed preloader color */
+}
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -113,11 +154,12 @@ h6 {
 @media (max-width: 768px) {
   .page-header h2 {
     font-size: 36px;
+    color: #000000;
   }
 }
 
 .page-header p {
-  color: rgba(255, 255, 255, 0.8);
+  color: #000000;
 }
 
 .page-header .cta-btn {
@@ -130,7 +172,7 @@ h6 {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: 0.3s;
-  color: #fff;
+  color: #000000;
   background: var(--color-primary);
 }
 
@@ -282,11 +324,15 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
 .header {
   transition: all 0.5s;
   z-index: 997;
   padding: 30px 0;
-  background-color: #000;
+  background-color: #f5f5dc;
+  color: #000000; /* Changed text color to black */
 }
 
 .header .logo {
@@ -302,7 +348,7 @@ h6 {
   font-size: 32px;
   margin: 0;
   font-weight: 400;
-  color: #fff;
+  color: #000000; /* Changed text color to black */
   font-family: var(--font-secondary);
 }
 
@@ -323,11 +369,12 @@ h6 {
 }
 
 .header .header-social-links {
+  color: #000000;
   padding-right: 15px;
 }
 
 .header .header-social-links a {
-  color: rgba(255, 255, 255, 0.5);
+  color: #000000;
   padding-left: 15px;
   display: inline-block;
   line-height: 0px;
@@ -344,6 +391,7 @@ h6 {
     padding-left: 5px;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Desktop Navigation
@@ -1176,7 +1224,7 @@ h6 {
 .hero {
   width: 100%;
   min-height: 30vh;
-  background: #000;
+  background: #ffffff; /* Changed background color to white */
   background-size: cover;
   position: relative;
   padding: 140px 0 60px 0;
@@ -1184,9 +1232,9 @@ h6 {
 
 .hero h2 {
   margin: 0 0 10px 0;
-  font-size: 38px;
+  font-size: 60px;
   font-weight: 700;
-  color: #fff;
+  color: #000000; /* Changed text color to black */
   font-family: var(--font-secondary);
 }
 
@@ -1204,14 +1252,14 @@ h6 {
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--color-primary);
+  background: #27a776; /* Changed background color to primary color */
   z-index: -1;
 }
 
 .hero p {
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 30px;
-  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6); /* Changed text color to black */
+  margin-bottom: 35px;
+  color: #000000;
 }
 
 .hero .btn-get-started {
@@ -1224,19 +1272,14 @@ h6 {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: 0.3s;
-  color: #fff;
-  background: var(--color-primary);
+  color: #000000; /* Changed text color to black */
+  background: #27a776; /* Changed background color to primary color */
 }
 
 .hero .btn-get-started:hover {
-  background: #2cbc85;
+  background: #2cbc85; /* Changed button hover background color */
 }
 
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Footer
@@ -1246,6 +1289,8 @@ h6 {
   padding: 30px 0;
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
+  background: #f5f5dc; /* Change background color to blue */
+  color: #2000000; /* Change text color to white */
 }
 
 .footer .copyright {
@@ -1295,4 +1340,32 @@ h6 {
   width: 150px; /* Adjust the width as needed */
   white-space: nowrap;
 }
+/* Style for the image container */
+.image-container {
+    margin-top: 20px;
+}
+
+/* Style for the image boxes */
+.image-container img {
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px;
+    width: 100%; /* Ensure images fill their containers */
+    height: auto; /* Maintain aspect ratio */
+    padding: 5px; /* Add padding to create space between the borders */
+    box-sizing: border-box; /* Include padding in the total width/height */
+}
+
+/* Style for image description */
+.image-description {
+    text-align: center; /* Center align the text */
+    margin-top: 10px; /* Add margin to the top for spacing */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Set text color to a darker shade */
+    padding: 5px; /* Add padding for better readability */
+    background-color: rgba(255, 255, 255, 0.8); /* Set a semi-transparent background */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+
 

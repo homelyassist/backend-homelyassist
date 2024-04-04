@@ -27,70 +27,20 @@
     <!-- Template Main CSS File -->
     <link th:href="@{/assets/css/main.css}" rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: PhotoFolio
-    * Updated: Jan 29 2024 with Bootstrap v5.3.2
-    * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+    <!-- Custom CSS -->
     <style>
-        /* Style for the buttons */
-        .btn-get-started {
-            background-color: #6cb83a; /* Green theme */
-            color: #ffffff;
-            border: none;
-            border-radius: 20px;
-            padding: 10px 20px;
-            margin-top: 10px;
-            transition: background-color 0.3s ease;
+        #navbar ul li a {
+            color: black !important;
         }
 
-        .btn-get-started:hover {
-            background-color: #f5cb42; /* Yellow theme on hover */
-        }
-
-        /* Style for the text section */
-        #text {
-            background-color: #f7f7f7; /* Light gray background */
-            padding: 50px 20px; /* Adjust padding as needed */
-            border-radius: 10px;
-            margin-top: 30px; /* Add some space between sections */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-        }
-
-        #text h3 {
-            color: #333; /* Darker text color */
-            margin-bottom: 20px; /* Add space below the heading */
-        }
-
-        #text p {
-            color: #666; /* Slightly darker text color */
-            line-height: 1.6; /* Improve readability */
-            font-family: 'Open Sans', sans-serif; /* Font family */
-            font-size: 16px; /* Font size */
-        }
-
-        /* Apply font changes */
-        .hero-text,
-        .section-heading {
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 28px;
-            color: #3d6d36; /* Dark green */
-            text-align: center;
-            margin-top: 20px; /* Margin top for hero text */
-            margin-bottom: 30px; /* Margin bottom for section heading */
-        }
-        /* Change color for Agriculture Assist */
-        #categories a[href='#']:first-child a {
-        color: blue; /* Change color to red */
+        /* Footer text color */
+        .footer .copyright,
+        .footer .credits a {
+            color: black;
         }
     </style>
 </head>
-
 <body>
-
 <!-- ======= Header ======= -->
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -117,27 +67,12 @@
     </div>
 </header><!-- End Header -->
 
-<!-- ======= Search Assist Section ======= -->
+<!-- ======= Register Assist Section ======= -->
 <section id="register-assist" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-delay="1500">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
-                <p class="hero-text">Search for homelyAssist near your location</p>
-                <div class="btn-group">
-                    <a href="assist/search" class="btn-get-started" style="background-color: #3d6d36;width: 300px;">Search</a>
-                    <span class="separator"></span><!-- Invisible separator -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section><!-- End Search Assist Section -->
-
-<!-- ======= Register Assist Section ======= -->
-<section id="search-assist" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-delay="1500" style="padding-top: 20px;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 text-center">
-                <p class="hero-text">Be a homelyAssist by registering here</p>
+                <p class="hero-text" style="font-size: calc(1.3rem + .6vw);">Be a homelyAssist by Registering here (ଏଠାରେ ଜଣେ ସଦସ୍ୟ ହୁଅନ୍ତୁ)</p>
                 <div class="btn-group">
                     <a href="assist/register" class="btn-get-started">Register</a>
                     <span class="separator"></span><!-- Invisible separator -->
@@ -148,68 +83,55 @@
     </div>
 </section><!-- End Register Assist Section -->
 
-<!-- ======= Categories Section ======= -->
-<section id="categories" class="categories d-flex justify-content-center" data-aos="fade-up">
+<!-- ======= Image Section ======= -->
+<section id="new-section" class="d-flex justify-content-center" data-aos="fade-up">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <h3>Categories <span style="font-size: 14px; color:sea green;">(green color items are in service currently, we are working on others)</span></h3>
-                <div class="row justify-content-center">
-                    <div class="col-md-3 col-sm-6">
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="available">Agriculture Assist</a></li>
-                            <li><span class="under-development">Construction Assist</span></li>
-                            <li><span class="under-development">Electrical Assist</span></li>
-                            <li><span class="under-development">Repair Assist</span></li>
-                        </ul>
+            <div class="col-lg-12 text-center">
+                <h3 style="text-align: center; font-weight: bold;">What are you looking for? (କାହାକୁ ଦରକାର କରୁଛନ୍ତି?)</h3>
+                <div class="row justify-content-center image-container">
+                    <!-- Replace the placeholder content below with your images and descriptions -->
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                        <a href="assist/search"><img src="/assets/img/AgricultureAssist.jpg" alt="Image 1"></a>
+                        <div class="image-description">Agriculture Assist</div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <ul class="list-unstyled">
-                            <li><span class="under-development">Handcraft Assist</span></li>
-                            <li><span class="under-development">Cleaning Assist</span></li>
-                            <li><span class="under-development">Salon Assist</span></li>
-                            <li><span class="under-development">Laundry Assist</span></li>
-                        </ul>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                        <a href="assist/search"><img src="/assets/img/ElectricalAssist.jpg" alt="Image 1"></a>
+                        <div class="image-description">Electrical Assist</div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <ul class="list-unstyled">
-                            <li><span class="under-development">Education Assist</span></li>
-                            <li><span class="under-development">Health Assist</span></li>
-                            <li><span class="under-development">Maid Assist</span></li>
-                            <li><span class="under-development">Credit Assist</span></li>
-                        </ul>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                        <a href="assist/search"><img src="/assets/img/HealthAssist.jpg" alt="Image 1"></a>
+                        <div class="image-description">Health Assist</div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <ul class="list-unstyled">
-                            <li><span class="under-development">Transportation Assist</span></li>
-                            <li><span class="under-development">Local Shop Assist</span></li>
-                            <li><span class="under-development">SocialMedia/ Youtube Assist</span></li>
-                            <li><span class="under-development">Please write what you want as an assist</span></li>
-                        </ul>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                        <a href="assist/search"><img src="/assets/img/TransportationAssist.jpg" alt="Image 1"></a>
+                        <div class="image-description">Transportation Assist</div>
+                    </div>
+                    <!-- Repeat this for all 16 images -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Image Section -->
+
+
+<!-- ======= Download App Section ======= -->
+<section id="download-app" class="download-app">
+    <div class="container">
+        <div class="row align-items-center"> <!-- Align items vertically -->
+            <div class="col-lg-6 col-md-6 d-flex align-items-center"> <!-- Align items horizontally -->
+                <img src="assets/img/mobile.jpg" alt="Mobile App Icon" class="app-icon" style="max-width: 50px; height: auto;">
+                <div class="ms-3"> <!-- Add margin to the left for spacing -->
+                    <h3>Download Our Mobile App</h3>
+                    <p>Download our mobile app to access our services conveniently from your phone.</p>
+                    <div class="text-center">
+                        <a href="link-to-your-app-store" class="btn-download-app" target="_blank">Download Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section><!-- End Categories Section -->
-
-<!-- ======= Download App Section ======= -->
-<!--<section id="download-app" class="download-app">-->
-<!--    <div class="container">-->
-<!--        <div class="row align-items-center"> &lt;!&ndash; Align items vertically &ndash;&gt;-->
-<!--            <div class="col-lg-6 col-md-6 d-flex align-items-center"> &lt;!&ndash; Align items horizontally &ndash;&gt;-->
-<!--                <img src="assets/img/mobile.jpg" alt="Mobile App Icon" class="app-icon" style="max-width: 50px; height: auto;">-->
-<!--                <div class="ms-3"> &lt;!&ndash; Add margin to the left for spacing &ndash;&gt;-->
-<!--                    <h3>Download Our Mobile App</h3>-->
-<!--                    <p>Download our mobile app to access our services conveniently from your phone.</p>-->
-<!--                    <div class="text-center">-->
-<!--                        <a href="link-to-your-app-store" class="btn-download-app" target="_blank">Download Now</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>&lt;!&ndash; End Download App Section &ndash;&gt;-->
+</section><!-- ======= End of App Section ======= -->
 
 
 <!-- ======= Text Section ======= -->
@@ -244,7 +166,7 @@
                     &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
                 </div>
                 <div class="credits">
-                    Designed by <a href="/team">homelyAssistTeam</a>
+                    Designed by <a href="/team" style="color: black;">homelyAssistTeam</a>
                 </div>
             </div>
         </div>
