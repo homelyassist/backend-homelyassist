@@ -4006,12 +4006,6 @@ function populateDistricts(selectedState) {
     });
 }
 
-// Function to handle state selection change event
-function handleStateSelectionChange() {
-    const selectedState = document.getElementById("state").value;
-    populateDistricts(selectedState);
-}
-
 function populateBlocks(selectedDistrict) {
     const blockSelect = document.getElementById("block");
     // Clear existing options
@@ -4037,6 +4031,29 @@ document.getElementById("district").addEventListener("change", handleDistrictSel
 
 // Add event listener to the state dropdown
 document.getElementById("state").addEventListener("change", handleStateSelectionChange);
+
+$(document).ready(function() {
+    // Initialize Select2 for the village dropdown
+    $('#village').select2({
+        placeholder: "Select Village/Area",
+        allowClear: true,
+        minimumInputLength: 3, // Minimum input length to trigger autocomplete
+        data: [], // Initially, the dropdown will be empty
+    });
+
+    // Event listener for changing the block selection
+    $('#block').on('change', function() {
+        const selectedBlock = $(this).val();
+        // Get all villages for the selected block from the blockToVillageMap
+        const villages = getAllVillage(selectedBlock);
+        // Convert villages to Select2-compatible format
+        const formattedVillages = villages.map(village => {
+            return { id: village, text: village };
+        });
+        // Update Select2 data with the villages for the selected block
+        $('#village').empty().select2({ data: formattedVillages });
+    });
+});
 
 function getAllState() {
     return Object.keys(stateToDistrictMap);

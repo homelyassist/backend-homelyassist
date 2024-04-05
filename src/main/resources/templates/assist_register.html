@@ -17,6 +17,8 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <!-- Vendor CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
     <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
     <link th:href="@{/assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
     <link th:href="@{/assets/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
@@ -134,6 +136,23 @@
             padding: 10px 20px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
+        .select2-selection__arrow {
+            height: 48px; /* Match the height with select box */
+        }
+
+        /* Customizing Select2 Dropdown Arrow */
+        .select2-selection__arrow b {
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Hover effect for Select2 Dropdown */
+        .select2-container--default .select2-selection--single:hover {
+            border-color: #555;
+        }
+
+        .select2-selection__rendered {
+            line-height: 2; /* Adjust the line height as needed */
+        }
     </style>
 </head>
 
@@ -199,7 +218,9 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="village">Village/Area</label>
-                                <input type="text" name="village" class="form-control" id="village" placeholder="Village/Area" required>
+                                <select name="village" class="form-control" id="village" placeholder="Village/Area">
+                                    <option value="" selected disabled>Select Village/Area</option>
+                                </select>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="category">Category</label>
@@ -319,6 +340,8 @@
     <script src="/assets/js/otp.js"></script>
     <script src="/assets/js/assist.js"></script>
     <script src="/assets/js/utils.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script src="/assets/js/location.js"></script>
 
 </body>
