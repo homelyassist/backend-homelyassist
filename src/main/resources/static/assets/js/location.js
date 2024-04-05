@@ -4020,6 +4020,13 @@ function populateBlocks(selectedDistrict) {
     });
 }
 
+
+// Function to handle state selection change event
+function handleStateSelectionChange() {
+    const selectedState = document.getElementById("state").value;
+    populateDistricts(selectedState);
+}
+
 // Function to handle district selection change event
 function handleDistrictSelectionChange() {
     const selectedDistrict = document.getElementById("district").value;
