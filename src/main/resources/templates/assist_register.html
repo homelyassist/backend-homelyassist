@@ -181,18 +181,21 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="state">State</label>
-                                <input type="text" name="state" class="form-control" id="state"
-                                    placeholder="State" maxlength="50" required>
+                                <select name="state" class="form-control" id="state" required>
+                                    <option value="" selected disabled>Select State</option>
+                                </select>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="district">District</label>
-                                <input type="text" name="district" class="form-control" id="district"
-                                    placeholder="District">
+                                <select name="district" class="form-control" id="district" placeholder="District" required>
+                                    <option value="" selected disabled>Select District</option>
+                                </select>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="block">Block/Municipality</label>
-                                <input type="text" name="block" class="form-control" id="block"
-                                    placeholder="Block/Municipality" maxlength="22" required>
+                                <select name="block" class="form-control" id="block" placeholder="Block/Municipality" required>
+                                    <option value="" selected disabled>Select Block/Municipality</option>
+                                </select>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="village">Village/Area</label>
@@ -316,19 +319,7 @@
     <script src="/assets/js/otp.js"></script>
     <script src="/assets/js/assist.js"></script>
     <script src="/assets/js/utils.js"></script>
-    <script>
-        document.getElementById('pin').addEventListener('input', async function () {
-            const pincode = this.value;
-            try {
-                const data = await getInfoForPinCode(pincode);
-                document.getElementById('district').value = data.district;
-                document.getElementById('state').value = data.state;
-            } catch (error) {
-                document.getElementById('district').value = "";
-                document.getElementById('state').value = "";
-            }
-        });
-    </script>
+    <script src="/assets/js/location.js"></script>
 
 </body>
 
