@@ -31,10 +31,6 @@ public class User {
     @Column(name = "phone_number", nullable = false, unique = true)
     private String phoneNumber;
 
-    @JsonProperty("address")
-    @Column(name = "address", nullable = false)
-    private String address;
-
     @JsonProperty("state")
     @Column(name = "state", nullable = false)
     private String state;
@@ -43,17 +39,13 @@ public class User {
     @Column(name = "district", nullable = false)
     private String district;
 
-    @JsonProperty("pin_code")
-    @Column(name = "pin_code", nullable = false)
-    private String pinCode;
+    @JsonProperty("block")
+    @Column(name = "block", nullable = false)
+    private String block;
 
-    @JsonProperty("city_area")
-    @Column(name = "city_area", nullable = false)
-    private String cityArea;
-
-    @JsonProperty("landmark")
-    @Column(name = "landmark")
-    private String landMark;
+    @JsonProperty("village")
+    @Column(name = "village", nullable = false)
+    private String village;
 
     @JsonProperty("active")
     @Column(name = "active")
@@ -66,6 +58,10 @@ public class User {
     @JsonProperty("modified")
     @Column(name = "modified")
     private LocalDateTime modified;
+
+    @JsonProperty("password")
+    @Column(name = "password", nullable = false)
+    private String password;
 
     @Lob
     @Column(name = "image", columnDefinition = "MEDIUMBLOB")

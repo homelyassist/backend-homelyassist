@@ -17,10 +17,4 @@ public class SearchAssistRequestDto {
 
     @JsonProperty("assist_types")
     private List<AgriculturalAssistType> assistTypes;
-
-    @JsonProperty("city_area")
-    private String cityArea;
-
-    @JsonProperty("pin_code")
-    private String pinCode;
 }
