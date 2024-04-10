@@ -4,6 +4,7 @@ package com.homelyassist.service.otp;
 import com.homelyassist.model.db.OTPData;
 import com.homelyassist.model.db.UserMapping;
 import com.homelyassist.model.enums.OTPGenerateStatus;
+import com.homelyassist.model.rest.request.AssistLoginRequestDto;
 import com.homelyassist.model.rest.request.OTPRequestDto;
 import com.homelyassist.model.rest.response.AnonymousTokenResponseDto;
 import com.homelyassist.model.rest.response.AssistLoginResponseDto;
@@ -15,6 +16,7 @@ import com.homelyassist.repository.db.OneTimePasswordRepository;
 import com.homelyassist.repository.db.UserMappingRepository;
 import com.homelyassist.service.jwt.JWTService;
 import com.homelyassist.utils.AppConstant;
+import com.homelyassist.utils.BCryptUtils;
 import com.homelyassist.utils.BasicValidationHelper;
 import com.homelyassist.utils.OTPHelper;
 import lombok.extern.slf4j.Slf4j;
@@ -45,7 +47,7 @@ public class OTPService {
     public OTPResponseDto generateOTP(OTPRequestDto otpRequestDto) {
         String phoneNumber = otpRequestDto.getPhoneNumber();
         OTPData otpData = new OTPData();
-        if(!BasicValidationHelper.isValidIndianPhoneNumber(phoneNumber)) {
+        if (!BasicValidationHelper.isValidIndianPhoneNumber(phoneNumber)) {
             throw new IllegalArgumentException("Invalid phone number");
         }
         otpData.setPhoneNumber(phoneNumber);
@@ -86,28 +88,46 @@ public class OTPService {
         return otpVerifyResponseDto;
     }
 
-    public AssistLoginResponseDto login(OTPVerifyRequestDto otpVerifyDto) {
-        String phoneNumber = otpVerifyDto.getPhoneNumber();
-        OTPData otpData = oneTimePasswordRepository.findOtpByPhoneNumber(phoneNumber);
+    public AssistLoginResponseDto login(AssistLoginRequestDto assistLoginRequestDto) {
+        String phoneNumber = assistLoginRequestDto.getPhoneNumber();
+        UserMapping userMapping = userMappingRepository.findByPhoneNumber(phoneNumber);
         AssistLoginResponseDto assistLoginResponseDto = new AssistLoginResponseDto();
-        if (Objects.nonNull(otpData) && !otpData.isExpired() && otpData.getCode().equals(otpVerifyDto.getOtp())) {
-            log.info("OTP verification successful");
-            String token = jwtService.generateToken(otpData.getPhoneNumber());
-            assistLoginResponseDto.setToken(token);
-            UserMapping userMapping = userMappingRepository.findByPhoneNumber(phoneNumber);
-            if (userMapping == null) {
-                assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
-                assistLoginResponseDto.setError("User doesn't exist");
-            } else {
-                assistLoginResponseDto.setUuid(userMapping.getId());
-                assistLoginResponseDto.setAssistType(userMapping.getAssistType());
-                assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.SUCCESS);
-            }
-        } else {
-            log.info("Invalid OTP");
+        if (userMapping == null) {
             assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
-            assistLoginResponseDto.setError("Invalid OTP");
+            assistLoginResponseDto.setError("User doesn't exist");
+            return assistLoginResponseDto;
         }
+
+        if (!BCryptUtils.matchPassword(assistLoginRequestDto.getPassword(), userMapping.getPassword())) {
+            assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
+            assistLoginResponseDto.setError("Incorrect password. Please try again.");
+        }
+
+        String token = jwtService.generateToken(assistLoginRequestDto.getPhoneNumber());
+        assistLoginResponseDto.setToken(token);
+        assistLoginResponseDto.setUuid(userMapping.getId());
+        assistLoginResponseDto.setAssistType(userMapping.getAssistType());
+        assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.SUCCESS);
+
+//        if (Objects.nonNull(otpData) && !otpData.isExpired() && otpData.getCode().equals(otpVerifyDto.getOtp())) {
+//            log.info("OTP verification successful");
+//            String token = jwtService.generateToken(otpData.getPhoneNumber());
+//            assistLoginResponseDto.setToken(token);
+//            UserMapping userMapping = userMappingRepository.findByPhoneNumber(phoneNumber);
+//            if (userMapping == null) {
+//                assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
+//                assistLoginResponseDto.setError("User doesn't exist");
+//            } else {
+//                assistLoginResponseDto.setUuid(userMapping.getId());
+//                assistLoginResponseDto.setAssistType(userMapping.getAssistType());
+//                assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.SUCCESS);
+//            }
+//        } else {
+//            log.info("Invalid OTP");
+//            assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
+//            assistLoginResponseDto.setError("Invalid OTP");
+//        }
+
 
 //        if (Objects.nonNull(otpData)) {
 //            oneTimePasswordRepository.delete(otpData);

@@ -166,16 +166,16 @@ async function updateAvailabilityInfo() {
 
 async function assistLogin() {
     const mobile = document.getElementById("mobile").value;
-    const otp = document.getElementById("otp").value;
+    const password = document.getElementById("password").value;
 
-    if (!otp || !mobile) {
-        console.log("Please enter a valid moblie/otp");
+    if (!password || !mobile) {
+        console.log("Please enter a valid moblie/password");
         return;
     }
 
     var payload = {
         phone_number: mobile,
-        otp: otp,
+        password: password,
     };
 
     try {
@@ -188,7 +188,7 @@ async function assistLogin() {
         });
 
         if (!response.ok) {
-            throw new Error("Failed to validate OTP");
+            throw new Error("Login failed");
         }
         const data = await response.json();
 
@@ -202,7 +202,7 @@ async function assistLogin() {
         }
     } catch (error) {
         console.error("Error:", error);
-        alert("Invalid OTP. Please enter a valid OTP.");
+        alert("Login failed. Please check your phone number and password and try again.");
     }
 }
 

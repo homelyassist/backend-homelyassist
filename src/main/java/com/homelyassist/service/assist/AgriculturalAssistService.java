@@ -12,6 +12,7 @@ import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
 import com.homelyassist.model.rest.response.SearchAssistResponseDto;
 import com.homelyassist.repository.db.AgriculturalAssistRepository;
 import com.homelyassist.repository.db.UserMappingRepository;
+import com.homelyassist.utils.BCryptUtils;
 import com.homelyassist.utils.ErrorUtils;
 import com.homelyassist.utils.MemberHelper;
 import lombok.extern.slf4j.Slf4j;
@@ -47,10 +48,12 @@ public class AgriculturalAssistService {
             agriculturalAssist.setActive(Boolean.TRUE);
             agriculturalAssist.setCreated(LocalDateTime.now());
             agriculturalAssist.setId(UUID.randomUUID().toString());
+            agriculturalAssist.setPassword(BCryptUtils.encodePassword(agriculturalAssist.getPassword()));
             agriculturalAssistRepository.save(agriculturalAssist);
             UserMapping userMapping = UserMapping.builder()
                     .id(agriculturalAssist.getId())
                     .phoneNumber(agriculturalAssist.getPhoneNumber())
+                    .password(agriculturalAssist.getPassword())
                     .assistType(AssistType.AGRICULTURE)
                     .build();
             userMappingRepository.save(userMapping);

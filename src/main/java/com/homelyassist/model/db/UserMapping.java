@@ -31,6 +31,10 @@ public class UserMapping {
     @Column(name = "phone_number", nullable = false, unique = true)
     private String phoneNumber;
 
+    @JsonProperty("password")
+    @Column(name = "password", nullable = false)
+    private String password;
+
     @JsonProperty("assist_type")
     @Column(name = "assist_type", nullable = false)
     private AssistType assistType;
