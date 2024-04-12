@@ -3953,7 +3953,6 @@ const jajpur = {
         }
     ]
 };
-
 const balangir = {
     state: "Odisha",
     district: "Balangir",
@@ -3996,8 +3995,264 @@ const balangir = {
         }
     ]
 };
+const cuttack = {
+    state: "Odisha",
+    district: "Cuttack",
+    block: [
+        {
+            name: "Banki"
+        }
+    ]
+};
+const angul = {
+    state: "Odisha",
+    district: "Angul",
+    block: [
+        {
+            name: "Angul"
+        }
+    ]
+};
+const bargarh = {
+    state: "Odisha",
+    district: "Bargarh",
+    block: [
+        {
+            name: "Bargarh"
+        }
+    ]
+};
+const deogarh = {
+    state: "Odisha",
+    district: "Deogarh",
+    block: [
+        {
+            name: "Deogarh"
+        }
+    ]
+};
+const dhenkanal = {
+    state: "Odisha",
+    district: "Dhenkanal",
+    block: [
+        {
+            name: "Dhenkanal"
+        }
+    ]
+};
+const jharsuguda = {
+    state: "Odisha",
+    district: "Jharsuguda",
+    block: [
+        {
+            name: "Jharsuguda"
+        }
+    ]
+};
+const kendujhar = {
+    state: "Odisha",
+    district: "Kendujhar",
+    block: [
+        {
+            name: "Kendujhar"
+        }
+    ]
+};
+const sambalpur = {
+    state: "Odisha",
+    district: "Sambalpur",
+    block: [
+        {
+            name: "Sambalpur"
+        }
+    ]
+};
+const subarnapur = {
+    state: "Odisha",
+    district: "Subarnapur",
+    block: [
+        {
+            name: "Subarnapur"
+        }
+    ]
+};
+const sundargarh = {
+    state: "Odisha",
+    district: "Sundargarh",
+    block: [
+        {
+            name: "Sundargarh"
+        }
+    ]
+};
+const balasore = {
+    state: "Odisha",
+    district: "Balasore",
+    block: [
+        {
+            name: "Balasore"
+        }
+    ]
+};
+const bhadrak = {
+    state: "Odisha",
+    district: "Bhadrak",
+    block: [
+        {
+            name: "Bhadrak"
+        }
+    ]
+};
+const jagatsinghpur = {
+    state: "Odisha",
+    district: "Jagatsinghpur",
+    block: [
+        {
+            name: "Jagatsinghpur"
+        }
+    ]
+};
+const kendrapada = {
+    state: "Odisha",
+    district: "Kendrapada",
+    block: [
+        {
+            name: "Kendrapada"
+        }
+    ]
+};
+const khordha = {
+    state: "Odisha",
+    district: "Bhubaneswar",
+    block: [
+        {
+            name: "Bhubaneswar"
+        }
+    ]
+};
+const mayurbhanj = {
+    state: "Odisha",
+    district: "Mayurbhanj",
+    block: [
+        {
+            name: "Mayurbhanj"
+        }
+    ]
+};
+const nayagarh = {
+    state: "Odisha",
+    district: "Nayagarh",
+    block: [
+        {
+            name: "Nayagarh"
+        }
+    ]
+};
+const puri = {
+    state: "Odisha",
+    district: "Puri",
+    block: [
+        {
+            name: "Puri"
+        }
+    ]
+};
+const boudh = {
+    state: "Odisha",
+    district: "Boudh",
+    block: [
+        {
+            name: "Boudh"
+        }
+    ]
+};
+const gajapati = {
+    state: "Odisha",
+    district: "Gajapati",
+    block: [
+        {
+            name: "Gajapati"
+        }
+    ]
+};
+const ganjam = {
+    state: "Odisha",
+    district: "Ganjam",
+    block: [
+        {
+            name: "Ganjam"
+        }
+    ]
+};
+const kalahandi = {
+    state: "Odisha",
+    district: "Kalahandi",
+    block: [
+        {
+            name: "Kalahandi"
+        }
+    ]
+};
+const kandhamal = {
+    state: "Odisha",
+    district: "Kandhamal",
+    block: [
+        {
+            name: "Kandhamal"
+        }
+    ]
+};
+const koraput = {
+    state: "Odisha",
+    district: "Koraput",
+    block: [
+        {
+            name: "Koraput"
+        }
+    ]
+};
+const malkangiri = {
+    state: "Odisha",
+    district: "Malkangiri",
+    block: [
+        {
+            name: "Malkangiri"
+        }
+    ]
+};
+const nabarangpur = {
+    state: "Odisha",
+    district: "Nabarangpur",
+    block: [
+        {
+            name: "Nabarangpur"
+        }
+    ]
+};
+const nuapada = {
+    state: "Odisha",
+    district: "Nuapada",
+    block: [
+        {
+            name: "Nuapada"
+        }
+    ]
+};
+const rayagada = {
+    state: "Odisha",
+    district: "Rayagada",
+    block: [
+        {
+            name: "Rayagada"
+        }
+    ]
+};
 
-const dataList = [jajpur, balangir];
+
+const dataList = [angul, balangir, bargarh, deogarh, dhenkanal, jharsuguda, kendujhar, sambalpur,subarnapur, sundargarh,
+balasore, bhadrak, cuttack, jagatsinghpur, jajpur, kendrapada, khordha, mayurbhanj, nayagarh, puri,
+boudh, gajapati, ganjam, kalahandi, kandhamal, koraput, malkangiri, nabarangpur, nuapada, rayagada];
+
 const stateToDistrictMap = {};
 const districtToBlockMap = {};
 const blockToVillageMap = {};
