@@ -15,6 +15,18 @@ import java.util.List;
 @NoArgsConstructor
 public class SearchAssistRequestDto {
 
+    @JsonProperty("state")
+    private String state;
+
+    @JsonProperty("district")
+    private String district;
+
+    @JsonProperty("block")
+    private String block;
+
+    @JsonProperty("village")
+    private String village;
+
     @JsonProperty("assist_types")
     private List<AgriculturalAssistType> assistTypes;
 }

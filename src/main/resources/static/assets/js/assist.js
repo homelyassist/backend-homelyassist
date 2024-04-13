@@ -23,6 +23,10 @@ async function registerAssist() {
     };
 
     for (const key in payload) {
+        if (key == "village") {
+            continue;
+        }
+
         if (payload.hasOwnProperty(key)) {
             const value = payload[key];
             if (!value) {
@@ -35,6 +39,11 @@ async function registerAssist() {
     if (payload.state != "Odisha") {
         alert("Only Odisha state registration is allowed");
         return;
+    }
+
+    if (payload.password.length < 6) {
+        alert("Password should be longer (6+ chars).")
+        return
     }
 
     const experience = parseInt(payload.experience)
@@ -214,8 +223,10 @@ async function searchAssist() {
     container.appendChild(addLoadingIcon());
 
     var payload = {
-        pin_code: document.getElementById("pin").value,
-        city_area: document.getElementById("village").value,
+        state: document.getElementById("state").value,
+        district: document.getElementById("district").value,
+        block: document.getElementById("block").value,
+        village: document.getElementById("village").value,
         assist_types: getSelectedAssistTypes()
     }
 

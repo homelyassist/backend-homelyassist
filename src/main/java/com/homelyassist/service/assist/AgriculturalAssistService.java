@@ -3,13 +3,13 @@ package com.homelyassist.service.assist;
 import com.homelyassist.exception.MemberAlreadyExistException;
 import com.homelyassist.model.db.AgriculturalAssist;
 import com.homelyassist.model.db.UserMapping;
-import com.homelyassist.model.enums.AgriculturalAssistType;
-import com.homelyassist.model.enums.AssistType;
 import com.homelyassist.model.enums.AssistRegistrationStatus;
+import com.homelyassist.model.enums.AssistType;
 import com.homelyassist.model.rest.request.AvailabilityRequestDto;
 import com.homelyassist.model.rest.request.SearchAssistRequestDto;
 import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
 import com.homelyassist.model.rest.response.SearchAssistResponseDto;
+import com.homelyassist.query.AgriculturalAssistSpecifications;
 import com.homelyassist.repository.db.AgriculturalAssistRepository;
 import com.homelyassist.repository.db.UserMappingRepository;
 import com.homelyassist.utils.BCryptUtils;
@@ -87,9 +87,7 @@ public class AgriculturalAssistService {
     }
 
     public SearchAssistResponseDto searchAssist(SearchAssistRequestDto searchAssistRequestDto) {
-        List<AgriculturalAssistType> assistTypes = searchAssistRequestDto.getAssistTypes();
-
-        List<AgriculturalAssist> assist = agriculturalAssistRepository.findDistinctTop50ByAgriculturalAssistTypesInAndActiveIsTrue(assistTypes);
+        List<AgriculturalAssist> assist = agriculturalAssistRepository.findAll(AgriculturalAssistSpecifications.findBySearchParams(searchAssistRequestDto));
         return new SearchAssistResponseDto(assist);
     }
 

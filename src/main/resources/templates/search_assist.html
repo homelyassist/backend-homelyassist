@@ -27,6 +27,7 @@
 
     <!-- Template Main CSS File -->
     <link th:href="@{/assets/css/main.css}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
     <style>
@@ -220,6 +221,42 @@
             font-weight: bold;
             color: #2e8b57; /* Green color */
             margin-bottom: 30px;
+        }
+
+        .select2-selection__arrow {
+            height: 48px; /* Match the height with select box */
+        }
+
+        /* Customizing Select2 Dropdown Arrow */
+        .select2-selection__arrow b {
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Hover effect for Select2 Dropdown */
+        .select2-container--default .select2-selection--single:hover {
+            border-color: #555;
+        }
+
+        .select2-selection__rendered {
+            line-height: 2; /* Adjust the line height as needed */
+        }
+        .select2-dropdown.select2-dropdown--below{
+              width: 100%;
+        }
+        .select2-container--default .select2-selection--single{
+            padding:6px;
+            height: 45px;
+            width: 100%;
+            position: relative;
+        }
+        .select2-selection__arrow {
+            color: #6cb83a;
+            top: 50% !important;
+            transform: translateY(-50%);
+        }
+        .select2-container--default .select2-selection--single {
+            border-radius: 15px;
+        }
     </style>
 </head>
 
@@ -289,20 +326,27 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="state">State</label>
-                                <input type="text" name="State" class="form-control" id="State"
-                                    placeholder="State"  maxlength="22" required>
+                                <select name="state" class="form-control" id="state" required>
+                                    <option value="" selected disabled>Select State</option>
+                                </select>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="district">District</label>
-                                <input type="text" name="district" class="form-control" id="district" placeholder="District" required>
+                                <select name="district" class="form-control" id="district" placeholder="District" required>
+                                    <option value="" selected disabled>Select District</option>
+                                </select>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="block">Block/Municipality</label>
-                                <input type="text" name="block" class="form-control" id="block" placeholder="Block/Municipality" required>
+                                <select name="block" class="form-control" id="block" placeholder="Block/Municipality" required>
+                                    <option value="" selected disabled>Select Block/Municipality</option>
+                                </select>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="village">Village/Area</label>
-                                <input type="text" name="village" class="form-control" id="village" placeholder="Village/Area" required>
+                                <select name="village" class="form-control" id="village" placeholder="Village/Area">
+                                    <option value="" selected disabled>Select Village/Area</option>
+                                </select>
                             </div>
                             <div class="col-md-12 btn-container">
                                 <button type="button" class="btn btn-success" onclick="searchAssist()">Search</button>
@@ -358,7 +402,9 @@
     <script src="/assets/js/assist.js"></script>
     <script src="/assets/js/utils.js"></script>
     <script src="/assets/js/otp.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="/assets/js/location.js"></script>
     <!-- Template Main JS File -->
     <script src="/assets/js/main.js"></script>
     <!-- ======= Footer ======= -->
