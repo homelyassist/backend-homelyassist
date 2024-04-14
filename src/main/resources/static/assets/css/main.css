@@ -672,6 +672,19 @@ a:hover {
     color: #333; /* Change heading color */
 }
 
+ a {
+    text-decoration: none; /* Remove underline from links */
+}
+#navbar ul li a {
+    color: #2E8B57 !important;
+}
+
+/* Footer text color */
+.footer .copyright,
+.footer .credits a {
+    color: black;
+}
+
 
 
 
