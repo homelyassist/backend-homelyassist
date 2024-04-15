@@ -230,6 +230,16 @@ async function searchAssist() {
         assist_types: getSelectedAssistTypes()
     }
 
+    if (payload.assist_types.length === 0) {
+        alert("Please select at least one Sub-Category.");
+        return;
+    }
+
+    if (payload.state == "") {
+        alert("Please select a state from the dropdown menu.");
+        return;
+    }
+
     try {
         const response = await fetch("/api/assist/agriculture/search", { // make this generic as per category
             method: "POST",
