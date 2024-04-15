@@ -218,10 +218,6 @@ async function assistLogin() {
 
 async function searchAssist() {
 
-    const container = document.getElementById('assistContainer');
-    container.innerHTML = '';
-    container.appendChild(addLoadingIcon());
-
     var payload = {
         state: document.getElementById("state").value,
         district: document.getElementById("district").value,
@@ -239,6 +235,10 @@ async function searchAssist() {
         alert("Please select a state from the dropdown menu.");
         return;
     }
+
+    const container = document.getElementById('assistContainer');
+    container.innerHTML = '';
+    container.appendChild(addLoadingIcon());
 
     try {
         const response = await fetch("/api/assist/agriculture/search", { // make this generic as per category
