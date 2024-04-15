@@ -28,11 +28,10 @@ public class AgriculturalAssistSpecifications {
                 predicates.add(cb.equal(root.get("village"), requestDto.getVillage()));
             }
             if (requestDto.getAssistTypes() != null && !requestDto.getAssistTypes().isEmpty()) {
-                for (AgriculturalAssistType assistType : requestDto.getAssistTypes()) {
-                    predicates.add(cb.isMember(assistType, root.get("agriculturalAssistTypes")));
-                }
+                predicates.add(root.join("agriculturalAssistTypes").in(requestDto.getAssistTypes()));
             }
 
+            predicates.add(cb.isTrue(root.get("active")));
             return cb.and(predicates.toArray(new Predicate[0]));
         };
     }
