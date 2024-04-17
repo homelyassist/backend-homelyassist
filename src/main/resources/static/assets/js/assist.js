@@ -261,7 +261,9 @@ async function searchAssist() {
 
                 assistCard.innerHTML = `
                     <div class="assist-card">
-                        <img src="${generateBase64String(imageData, gender)}" alt="${item.name}">
+                        <div class="image-container">
+                            <img src="${generateBase64String(imageData, gender)}" alt="${item.name}">
+                        </div>
                         <h3>${item.name}</h3>
                         <p>${item.description}</p>
                         <button class="btn btn-request" data-uuid="${item.id}" id="${item.id}_btn" onclick="openPopup(event)">Request Mobile Number</button>

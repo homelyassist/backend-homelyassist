@@ -43,13 +43,19 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             /* Add a subtle shadow */
         }
+
         #form {
-            margin-top: 100px; /* Adjust this value based on the height of your header */
+            margin-top: 100px;
+            /* Adjust this value based on the height of your header */
         }
-         #form h3 {
-            color: #2e8b57; /* Green theme */
-            font-weight: bold; /* Make the text bold */
-            font-size: 31px; /* Adjust font size if needed */
+
+        #form h3 {
+            color: #2e8b57;
+            /* Green theme */
+            font-weight: bold;
+            /* Make the text bold */
+            font-size: 31px;
+            /* Adjust font size if needed */
         }
 
         #search-form h3 {
@@ -156,6 +162,7 @@
             background-color: #f5cb42;
             /* Yellow theme on hover */
         }
+
         #popup {
             display: none;
             background-color: rgba(0, 0, 0, 0.5);
@@ -167,7 +174,7 @@
             z-index: 9999;
         }
 
-        #popup > div {
+        #popup>div {
             background-color: #fff;
             max-width: 400px;
             margin: 50px auto;
@@ -201,19 +208,22 @@
             margin: 5px;
         }
 
-        #timer, #otpDisplay {
+        #timer,
+        #otpDisplay {
             color: black;
         }
 
         .section-title h2 {
             font-size: 32px;
             font-weight: bold;
-            color: #2e8b57; /* Green color */
+            color: #2e8b57;
+            /* Green color */
             margin-bottom: 30px;
         }
 
         .select2-selection__arrow {
-            height: 48px; /* Match the height with select box */
+            height: 48px;
+            /* Match the height with select box */
         }
 
         /* Customizing Select2 Dropdown Arrow */
@@ -227,40 +237,58 @@
         }
 
         .select2-selection__rendered {
-            line-height: 2; /* Adjust the line height as needed */
+            line-height: 2;
+            /* Adjust the line height as needed */
         }
-        .select2-dropdown.select2-dropdown--below{
-              width: 100%;
+
+        .select2-dropdown.select2-dropdown--below {
+            width: 100%;
         }
-        .select2-container--default .select2-selection--single{
-            padding:6px;
+
+        .select2-container--default .select2-selection--single {
+            padding: 6px;
             height: 45px;
             width: 100%;
             position: relative;
         }
+
         .select2-selection__arrow {
             color: #6cb83a;
             top: 50% !important;
             transform: translateY(-50%);
         }
+
         .select2-container--default .select2-selection--single {
             border-radius: 15px;
         }
+
+        .image-container {
+            width: 300px; /* Adjust the width to your desired size */
+            height: 300px; /* Match the width to ensure square dimensions */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
     </style>
 </head>
 
 <body>
 
-<!-- ======= Header ======= -->
-<header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-        <a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <img src="/assets/img/homelyAssistlogo.jpeg" alt="">
-            <h1>homelyAssist</h1>
-        </a>
-    </div>
-</header><!-- End Header -->
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <img src="/assets/img/homelyAssistlogo.jpeg" alt="">
+                <h1>homelyAssist</h1>
+            </a>
+        </div>
+    </header><!-- End Header -->
 
     <div class="container">
         <section id="form" class="form">
@@ -316,13 +344,15 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="district">District</label>
-                                <select name="district" class="form-control" id="district" placeholder="District" required>
+                                <select name="district" class="form-control" id="district" placeholder="District"
+                                    required>
                                     <option value="" selected disabled>Select District</option>
                                 </select>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for="block">Block/Municipality</label>
-                                <select name="block" class="form-control" id="block" placeholder="Block/Municipality" required>
+                                <select name="block" class="form-control" id="block" placeholder="Block/Municipality"
+                                    required>
                                     <option value="" selected disabled>Select Block/Municipality</option>
                                 </select>
                             </div>
@@ -364,11 +394,13 @@
                             <input type="text" id="otp" placeholder="OTP" required><br><br>
                             <span id="otpDisplay"></span>
                             <div class="button-group">
-                                <button type="button" class="btn btn-primary" id="otpButton" onclick="generateOtp()">Generate OTP</button>
+                                <button type="button" class="btn btn-primary" id="otpButton"
+                                    onclick="generateOtp()">Generate OTP</button>
                                 <span id="timer"></span>
                             </div>
                             <div class="button-group">
-                                <button type="button" class="btn btn-success" id="popUpSubmitButton" onclick="requestMobileNumber(event)">Submit</button>
+                                <button type="button" class="btn btn-success" id="popUpSubmitButton"
+                                    onclick="requestMobileNumber(event)">Submit</button>
                                 <button type="button" class="btn btn-danger" onclick="closePopup()">Close</button>
                             </div>
                         </form>
@@ -391,21 +423,21 @@
     <script src="/assets/js/location.js"></script>
     <!-- Template Main JS File -->
     <script src="/assets/js/main.js"></script>
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="copyright">
-                    &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-                    Designed by <a href="/team" style="color: #2E8B57;">homelyAssistTeam</a>
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        Designed by <a href="/team" style="color: #2E8B57;">homelyAssistTeam</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer><!-- End Footer -->
+    </footer><!-- End Footer -->
 
 </body>
 
