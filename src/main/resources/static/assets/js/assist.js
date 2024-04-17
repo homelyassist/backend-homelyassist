@@ -163,12 +163,7 @@ async function updateAvailabilityInfo() {
         throw new Error("Failed to update Availability");
     }
 
-    $('#notificationToast').toast('show');
-
-    // Hide notification after 2 seconds
-    setTimeout(function () {
-        $('#notificationToast').toast('hide');
-    }, 2000);
+   showPopupNotification('Your update was successful!');
 }
 
 

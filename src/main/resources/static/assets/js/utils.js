@@ -14,35 +14,21 @@ function logout() {
     window.location.assign("/");
 }
 
-async function getInfoForPinCode(pincode) {
-    const response = await fetch(`https://api.postalpincode.in/pincode/${pincode}`);
+function showPopupNotification(message) {
+    // Create notification div
+    var notificationDiv = document.createElement('div');
+    notificationDiv.className = 'popup-notification';
+    var toastBody = document.createElement('div');
+    toastBody.className = 'toast-body bg-secondary text-white';
+    toastBody.textContent = message;
+    notificationDiv.appendChild(toastBody);
 
-    if (!response.ok) {
-        throw new Error("Unable to fetch details with pincode: " + pincode);
-    }
+    // Add notification to container
+    document.body.appendChild(notificationDiv);
 
-    const data = await response.json();
-
-    if (data && data.length > 0 && data[0].PostOffice && data[0].PostOffice.length > 0) {
-        const firstPostOffice = data[0].PostOffice[0];
-        const country = firstPostOffice.Country;
-        const pincode = firstPostOffice.Pincode;
-        const state = firstPostOffice.State;
-        const district = firstPostOffice.District;
-    
-        console.log("Country:", country);
-        console.log("Pincode:", pincode);
-        console.log("State:", state);
-        console.log("District:", district);
-
-        return {
-            country: country,
-            pincode: pincode,
-            state: state,
-            district: district
-        }
-      } else {
-        console.error("No data found with pincode: " + pincode);
-        throw new Error("Unable to fetch details with pincode: " + pincode);
-      }
+    // Automatically remove notification after 5 seconds
+    setTimeout(function() {
+        notificationDiv.parentNode.removeChild(notificationDiv);
+    }, 1500);
 }
+
