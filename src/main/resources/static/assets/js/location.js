@@ -1898,7 +1898,253 @@ const jajpur = {
                 },
                 {
                     name: "Janar"
-                }
+                },
+                {
+            name: "Jakhapura"
+        },
+        {
+            name: "Balungabandi"
+        },
+        {
+            name: "Khapurapada"
+        },
+        {
+            name: "Chakua"
+        },
+        {
+            name: "Jalaka"
+        },
+        {
+            name: "Brahmanigaon"
+        },
+        {
+            name: "Marthapur"
+        },
+        {
+            name: "Sorishapat(UI)"
+        },
+        {
+            name: "Gotatha(UI)"
+        },
+        {
+            name: "Kiajhar"
+        },
+        {
+            name: "Janindapal"
+        },
+        {
+            name: "Panubahali"
+        },
+        {
+            name: "Champajhar"
+        },
+        {
+            name: "Tungeisuni"
+        },
+        {
+            name: "Kumbhirigadia"
+        },
+        {
+            name: "Marutikara"
+        },
+        {
+            name: "Radhannagar"
+        },
+        {
+            name: "Hatagadia"
+        },
+        {
+            name: "Chhatrakana"
+        },
+        {
+            name: "Jagadiha"
+        },
+        {
+            name: "Nabanga(UI)"
+        },
+        {
+            name: "Dasamania"
+        },
+        {
+            name: "Rabana"
+        },
+        {
+            name: "Mantira"
+        },
+        {
+            name: "Nachhipura"
+        },
+        {
+            name: "Dhabahali"
+        },
+        {
+            name: "Kabitra"
+        },
+        {
+            name: "Kharadabandi"
+        },
+            {
+                    name: "Nadiabhanga"
+                },
+                {
+                    name: "Dhanjayapur"
+                },
+                {
+                    name: "Jamupasi"
+                },
+                {
+                    name: "Khandara"
+                },
+                {
+                    name: "Dhamangadia"
+                },
+                {
+                    name: "Ollala"
+                },
+                {
+                    name: "Godigotha"
+                },
+                {
+                    name: "Rampilo"
+                },
+                {
+                    name: "Kantipur"
+                },
+                {
+                    name: "Ostapal"
+                },
+                {
+                    name: "Nipania"
+                },
+                {
+                    name: "Sobara"
+                },
+                {
+                    name: "Sainkula"
+                },
+                {
+                    name: "Majhipal"
+                },
+                {
+                    name: "Paikalibagapatia"
+                },
+                {
+                    name: "Harikansa"
+                },
+                {
+                    name: "Manatiri"
+                },
+                {
+                    name: "Nukhuripal"
+                },
+                {
+                    name: "Manoharpur"
+                },
+                {
+                    name: "Nilamanideipur"
+                },
+                {
+                    name: "Badasulidiha"
+                },
+                {
+                    name: "Panchabatia"
+                },
+                {
+                    name: "Rachhipur"
+                },
+                {
+                    name: "Daniabar"
+                },
+                {
+                    name: "Solagadia(UI)"
+                },
+                {
+                    name: "Ranipada"
+                },
+                {
+                    name: "Mulasara"
+                },
+                {
+                    name: "Kankadajhar"
+                },
+                {
+                                    name: "Kaliapal"
+                                },
+                                {
+                                    name: "Goliachanda"
+                                },
+                                {
+                                    name: "Gahirapatuli"
+                                },
+                                {
+                                    name: "Nandakishorepur"
+                                },
+                                {
+                                    name: "Baigidha"
+                                },
+                                {
+                                    name: "Ransgundi"
+                                },
+                                {
+                                    name: "Barakhai"
+                                },
+                                {
+                                    name: "Ragada"
+                                },
+                                {
+                                    name: "Sulia"
+                                },
+                                {
+                                    name: "Mandapada"
+                                },
+                                {
+                                    name: "Salijanga"
+                                },
+                                {
+                                    name: "Baliapal"
+                                },
+                                {
+                                    name: "Baghuapal"
+                                },
+                                {
+                                    name: "Trijanga"
+                                },
+                                {
+                                                                    name: "Managalpur"
+                                                                },
+                                                                {
+                                                                    name: "Kharadi"
+                                                                },
+                                                                {
+                                                                    name: "Nuagan"
+                                                                },
+                                                                {
+                                                                    name: "Satbainsia"
+                                                                },
+                                                                {
+                                                                    name: "Uchhabali"
+                                                                },
+                {
+                                                                                    name: "Karadapasi"
+                                                                                },
+                                                                                {
+                                                                                    name: "Kumbhanagar"
+                                                                                },
+                                                                                {
+                                                                                    name: "Tarailo"
+                                                                                },
+                                                                                {
+                                                                                    name: "Tura"
+                                                                                },
+                                                                                {
+                                                                                    name: "Badabili"
+                                                                                },
+                                                                                {
+                                                                                                                                                                    name: "Goudabahali"
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    name: "Santaragadia"
+                                                                                                                                                                }
             ]
         },
         {
