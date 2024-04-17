@@ -163,7 +163,7 @@ async function updateAvailabilityInfo() {
         throw new Error("Failed to update Availability");
     }
 
-   showPopupNotification('Your update was successful!');
+    showPopupNotification('Your update was successful!');
 }
 
 
@@ -375,9 +375,9 @@ function viewAssistPhoneNumber(data, assist_id) {
 async function requestMobileNumber(event) {
     const assist_uuid = event.target.dataset.uuid;
     generateAnonymousToken()
-    closePopup();
     const data = await getAssistDetails(assist_uuid);
     viewAssistPhoneNumber(data, assist_uuid)
+    closePopup();
 }
 
 function tokenIsPresntAndValid() {
@@ -401,6 +401,8 @@ async function openPopup(event) {
 
 function closePopup() {
     document.getElementById('otpButton').textContent = 'Generate OTP';
+    document.getElementById('otpButton').disabled = false;
+    document.getElementById('timer').textContent = '';
     document.getElementById('otpDisplay').innerText = "";
     document.getElementById("mobile").value = "";
     document.getElementById("otp").value = "";

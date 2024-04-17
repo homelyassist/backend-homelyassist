@@ -27,7 +27,7 @@ async function generateOtp() {
     document.getElementById('otpButton').textContent = 'Resend OTP';
     document.getElementById('otpButton').disabled = true;
     var otpDisplay = document.getElementById('otpDisplay')
-    if(otpDisplay) {
+    if (otpDisplay) {
         document.getElementById('otpDisplay').innerText = "Your OTP is: " + data.code;
     }
     resendOptTimer();
@@ -35,7 +35,7 @@ async function generateOtp() {
 
 async function validateOtp() {
     mobile = document.getElementById("mobile").value;
-    otp =  document.getElementById("otp").value;
+    otp = document.getElementById("otp").value;
 
     if (!otp || !mobile) {
         console.log("Please enter a valid moblie/otp");
@@ -77,7 +77,7 @@ async function validateOtp() {
 
 async function generateAnonymousToken() {
     const mobile = document.getElementById("mobile").value;
-    const otp =  document.getElementById("otp").value;
+    const otp = document.getElementById("otp").value;
 
     if (!otp || !mobile) {
         console.log("Please enter a valid moblie/otp");
@@ -121,13 +121,18 @@ function resendOptTimer() {
     var timerElement = document.getElementById('timer');
     timerElement.textContent = countdown + 's';
 
-    var countdownInterval = setInterval(function() {
+    var countdownInterval = setInterval(function () {
         countdown--;
-        timerElement.textContent = countdown + 's';
+        var otpButton = document.getElementById('otpButton')
+
+        if (otpButton.disabled == true) {
+            timerElement.textContent = countdown + 's';
+        }
+
         if (countdown <= 0) {
             clearInterval(countdownInterval);
-            document.getElementById('otpButton').disabled = false;
-            timerElement.textContent = ''; 
+            otpButton.disabled = false;
+            timerElement.textContent = '';
         }
     }, 1000);
 }
