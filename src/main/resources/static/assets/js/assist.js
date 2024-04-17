@@ -137,11 +137,11 @@ async function fetchAssistInfo() {
 
 
 function updateAvailabilitySelect(active) {
-    const availabilitySelect = document.getElementById("availability");
+    const availabilitySelect = $('#availability');
     if (active) {
-        availabilitySelect.value = "yes";
+        availabilitySelect.val('yes').trigger('change');
     } else {
-        availabilitySelect.value = "no";
+        availabilitySelect.val('no').trigger('change');
     }
 }
 
