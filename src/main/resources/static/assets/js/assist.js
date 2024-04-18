@@ -376,7 +376,7 @@ function viewAssistPhoneNumber(data, assist_id) {
 
 async function requestMobileNumber(event) {
     const assist_uuid = event.target.dataset.uuid;
-    generateAnonymousToken()
+    await generateAnonymousToken();
     const data = await getAssistDetails(assist_uuid);
     viewAssistPhoneNumber(data, assist_uuid)
     closePopup();
