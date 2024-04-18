@@ -1,0 +1,18 @@
+{
+  "state": "Odisha",
+  "district": "Balangir",
+  "block": [
+    {"name" :  "Balangir"},
+    {"name" :  "Bangomunda"},
+    {"name" :  "Belpara"},
+    {"name" :  "Kantabanji"},
+    {"name" :  "Khaprakhol"},
+    {"name" :  "Loisinga"},
+    {"name" :  "Patnagarh"},
+    {"name" :  "Saintala"},
+    {"name" :  "Sindhekela"},
+    {"name" :  "Titlagarh"},
+    {"name" :  "Turekela"},
+    {"name" :  "Tushura"}
+  ]
+}

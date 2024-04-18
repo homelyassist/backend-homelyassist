@@ -1,0 +1,25 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Cuttack",
+      "block": [
+        {"name" :  "Athagarh"},
+        {"name" :  "Badamba"},
+        {"name" :  "Narasinghpur"},
+        {"name" :  "Tigiria"},
+        {"name" :  "Banki"},
+        {"name" :  "Dampada"},
+        {"name" :  "Baranga"},
+        {"name" :  "Cuttack Sadar"},
+        {"name" :  "Kantapada"},
+        {"name" :  "Mahanga"},
+        {"name" :  "Niali"},
+        {"name" :  "Nischintakoili"},
+        {"name" :  "Salepur"},
+        {"name" :  "Tangi-Choudwar"},
+        {"name" :  "Cuttack"}
+      ]
+    }
+  ]
+}

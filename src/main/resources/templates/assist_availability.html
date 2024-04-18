@@ -10,7 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link th:href="@{/assets/img/homelyAssistlogo.jpg}" rel="icon">
+    <link th:href="@{/assets/img/homelyAssistlogo.jpeg}" rel="icon">
     <link th:href="@{/assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -27,6 +27,7 @@
 
     <!-- Template Main CSS File -->
     <link th:href="@{/assets/css/main.css}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
     <style>
@@ -72,7 +73,7 @@
         .section-title h2 {
             font-size: 32px;
             font-weight: bold;
-            color: #6cb83a;
+            color: #2E8B57;
             margin-bottom: 30px;
         }
 
@@ -101,10 +102,83 @@
             background-color: transparent;
             padding: 10px 20px;
         }
+        #availability-form {
+            padding-top: 100px; /* Adjust the value as needed */
+        }
+        .popup-notification {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 20px;
+            z-index: 1000; /* You might adjust the z-index based on your needs */
+        }
+
+        .popup-notification .toast-body {
+            background-color: #333; /* Change background color as desired */
+            color: #fff; /* Change text color as desired */
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Media query for mobile devices */
+        @media only screen and (max-width: 768px) {
+            .popup-notification {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .select2-selection__arrow {
+            height: 48px; /* Match the height with select box */
+        }
+
+        /* Customizing Select2 Dropdown Arrow */
+        .select2-selection__arrow b {
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Hover effect for Select2 Dropdown */
+        .select2-container--default .select2-selection--single:hover {
+            border-color: #555;
+        }
+
+        .select2-selection__rendered {
+            line-height: 2; /* Adjust the line height as needed */
+        }
+        .select2-dropdown.select2-dropdown--below{
+              width: 100%;
+        }
+        .select2-container--default .select2-selection--single{
+            padding:6px;
+            height: 45px;
+            width: 100%;
+            position: relative;
+        }
+        .select2-selection__arrow {
+            color: #6cb83a;
+            top: 50% !important;
+            transform: translateY(-50%);
+        }
+        .select2-container--default .select2-selection--single {
+            border-radius: 15px;
+        }
     </style>
 </head>
 
 <body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="/assets/img/homelyAssistlogo.jpeg" alt="">
+            <h1>homelyAssist</h1>
+        </a>
+    </div>
+</header><!-- End Header -->
 
 <!-- ======= Availability Form Section ======= -->
 <section id="availability-form" class="availability-form">
@@ -118,7 +192,7 @@
                     <div class="row">
                         <div class="col-md-12 form-group">
                             <label for="availability">Ensure Your Availability:</label>
-                            <select name="availability" id="availability" class="form-control" required>
+                            <select name="availability" id="availability" class="form-control select2" required>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </select>
@@ -132,21 +206,7 @@
                         </div>
                     </div>
                 </form>
-<!--                <div class="toast" id="notificationToast" style="position: absolute; top: 0; right: 0; margin: 20px;">-->
-<!--                    <div class="toast-header">-->
-<!--                        <strong class="mr-auto">Notification</strong>-->
-<!--                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>-->
-<!--                    </div>-->
-<!--                    <div class="toast-body" id="notificationMessage">Save successful!</div>-->
-<!--                </div>-->
-                <div class="toast" id="notificationToast" style="position: absolute; top: 0; right: 0; margin: 20px;">
-                    <div class="toast-header bg-dark text-white">
-                        <strong class="mr-auto">Notification</strong>
-                    </div>
-                    <div class="toast-body bg-secondary text-white">
-                        Your update was successful!
-                    </div>
-                </div>
+                <div id="popupNotificationContainer"></div>
             </div>
         </div>
     </div>
@@ -161,7 +221,7 @@
                     &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
                 </div>
                 <div class="credits">
-                    Designed by <a href="/team">homelyAssistTeam</a>
+                    Designed by <a href="/team" style="color: #2E8B57;">homelyAssistTeam</a>
                 </div>
             </div>
         </div>
@@ -187,11 +247,15 @@
 <script src="/assets/js/assist.js"></script>
 <script src="/assets/js/utils.js"></script>
 <script src="/assets/js/token_validator.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        validateToken();
         fetchAssistInfo();
+        $(document).ready(function() {
+            $('.select2').select2();
+        });
     });
 </script>
 

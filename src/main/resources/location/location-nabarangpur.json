@@ -1,0 +1,20 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Nabarangpur",
+      "block": [
+        {"name" :  "Chandahandi"},
+        {"name" :  "Dabugam"},
+        {"name" :  "Jharigam"},
+        {"name" :  "Kosagumuda"},
+        {"name" :  "Nabarangpur"},
+        {"name" :  "Nandahandi"},
+        {"name" :  "Papadahandi"},
+        {"name" :  "Raighar"},
+        {"name" :  "Tentulikhunti"},
+        {"name" :  "Umerkote"}
+      ]
+    }
+  ]
+}

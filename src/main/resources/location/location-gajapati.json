@@ -1,0 +1,17 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Gajapati",
+      "block": [
+        {"name" :  "Paralakhemundi(Gosani)"},
+        {"name" :  "R.Udayagiri"},
+        {"name" :  "Mohana"},
+        {"name" :  "Rayagada"},
+        {"name" :  "Kashinagar"},
+        {"name" :  "Nuagada"},
+        {"name" :  "Gumma"}
+      ]
+    }
+  ]
+}

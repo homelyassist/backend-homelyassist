@@ -1,0 +1,17 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Malkangiri",
+      "block": [
+        {"name" :  "Chitrakonda"},
+        {"name" :  "Kalimela"},
+        {"name" :  "Khairaput"},
+        {"name" :  "Korukonda"},
+        {"name" :  "Malkangiri"},
+        {"name" :  "Mathili"},
+        {"name" :  "Podia"}
+      ]
+    }
+  ]
+}

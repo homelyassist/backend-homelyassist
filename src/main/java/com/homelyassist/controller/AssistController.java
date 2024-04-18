@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import static com.homelyassist.utils.AppConstant.HTMLPage.ASSIST;
 import static com.homelyassist.utils.AppConstant.HTMLPage.ASSIST_AVAILABILITY;
 import static com.homelyassist.utils.AppConstant.HTMLPage.ASSIST_LOGIN;
 import static com.homelyassist.utils.AppConstant.HTMLPage.ASSIST_REGISTER;
@@ -31,5 +32,10 @@ public class AssistController {
     @GetMapping("/search")
     public String search() {
         return SEARCH_ASSIST;
+    }
+
+    @GetMapping
+    public String assist() {
+        return ASSIST;
     }
 }

@@ -1,0 +1,22 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Bargarh",
+      "block": [
+        {"name" :  "Ambabhona"},
+        {"name" :  "Attabira"},
+        {"name" :  "Bargarh"},
+        {"name" :  "Barpali"},
+        {"name" :  "Bhatli"},
+        {"name" :  "Bheden"},
+        {"name" :  "Bijepur"},
+        {"name" :  "Gaisilet"},
+        {"name" :  "Jharbandh"},
+        {"name" :  "Padampur"},
+        {"name" :  "Paikmal"},
+        {"name" :  "Sohella"}
+      ]
+    }
+  ]
+}

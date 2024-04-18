@@ -1,0 +1,13 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Deogarh",
+      "block": [
+        {"name" :  "Barkote"},
+        {"name" :  "Reamal"},
+        {"name" :  "Tileibani"}
+      ]
+    }
+  ]
+}

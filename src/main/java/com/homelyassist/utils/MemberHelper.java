@@ -15,11 +15,8 @@ public class MemberHelper {
 
         String name = user.getName();
         String phoneNumber = user.getPhoneNumber();
-        String address = user.getAddress();
         String state = user.getState();
         String district = user.getDistrict();
-        String pinCode = user.getPinCode();
-        String cityArea = user.getCityArea();
 
         if(Objects.isNull(name) || name.isBlank()) {
             throw new MemberRegistrationValidationFailed("name");
@@ -33,9 +30,9 @@ public class MemberHelper {
             throw new MemberRegistrationValidationFailed("phone_number", phoneNumber);
         }
 
-        if(Objects.isNull(address) || address.isBlank()) {
-            throw new MemberRegistrationValidationFailed("address");
-        }
+//        if(Objects.isNull(address) || address.isBlank()) {
+//            throw new MemberRegistrationValidationFailed("address");
+//        }
 
         if(Objects.isNull(state) || state.isBlank()) {
             throw new MemberRegistrationValidationFailed("state");
@@ -45,12 +42,12 @@ public class MemberHelper {
             throw new MemberRegistrationValidationFailed("district");
         }
 
-        if(Objects.isNull(pinCode) || !BasicValidationHelper.isValidPinCode(pinCode)) {
-            throw new MemberRegistrationValidationFailed("pin_code", pinCode);
-        }
+//        if(Objects.isNull(pinCode) || !BasicValidationHelper.isValidPinCode(pinCode)) {
+//            throw new MemberRegistrationValidationFailed("pin_code", pinCode);
+//        }
 
-        if(Objects.isNull(cityArea) || cityArea.isBlank() ) {
-            throw new MemberRegistrationValidationFailed("city_area");
-        }
+//        if(Objects.isNull(cityArea) || cityArea.isBlank() ) {
+//            throw new MemberRegistrationValidationFailed("city_area");
+//        }
     }
 }

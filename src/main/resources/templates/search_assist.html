@@ -10,7 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link th:href="@{/assets/img/homelyAssistlogo.jpg}" rel="icon">
+    <link th:href="@{/assets/img/homelyAssistlogo.jpeg}" rel="icon">
     <link th:href="@{/assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -27,6 +27,7 @@
 
     <!-- Template Main CSS File -->
     <link th:href="@{/assets/css/main.css}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
     <style>
@@ -43,18 +44,18 @@
             /* Add a subtle shadow */
         }
 
-        #header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000; /* Ensure the header is above other content */
-            padding: 10px 20px; /* Adjust the padding as needed */
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for visual separation */
+        #form {
+            margin-top: 100px;
+            /* Adjust this value based on the height of your header */
         }
 
-        #form {
-            margin-top: 100px; /* Adjust this value based on the height of your header */
+        #form h3 {
+            color: #2e8b57;
+            /* Green theme */
+            font-weight: bold;
+            /* Make the text bold */
+            font-size: 31px;
+            /* Adjust font size if needed */
         }
 
         #search-form h3 {
@@ -95,7 +96,7 @@
 
         /* Style for the section title */
         .section-title h2 {
-            color: #6cb83a;
+            color: #2e8b57;
             /* Green theme */
         }
 
@@ -146,7 +147,7 @@
 
         .assist-card .btn-details,
         .assist-card .btn-request {
-            background-color: #6cb83a;
+            background-color: #2E8B57;
             /* Green theme */
             color: #ffffff;
             border: none;
@@ -161,6 +162,7 @@
             background-color: #f5cb42;
             /* Yellow theme on hover */
         }
+
         #popup {
             display: none;
             background-color: rgba(0, 0, 0, 0.5);
@@ -172,7 +174,7 @@
             z-index: 9999;
         }
 
-        #popup > div {
+        #popup>div {
             background-color: #fff;
             max-width: 400px;
             margin: 50px auto;
@@ -206,36 +208,94 @@
             margin: 5px;
         }
 
-        #timer, #otpDisplay {
+        #timer,
+        #otpDisplay {
             color: black;
         }
+
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2e8b57;
+            /* Green color */
+            margin-bottom: 30px;
+        }
+
+        .select2-selection__arrow {
+            height: 48px;
+            /* Match the height with select box */
+        }
+
+        /* Customizing Select2 Dropdown Arrow */
+        .select2-selection__arrow b {
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Hover effect for Select2 Dropdown */
+        .select2-container--default .select2-selection--single:hover {
+            border-color: #555;
+        }
+
+        .select2-selection__rendered {
+            line-height: 2;
+            /* Adjust the line height as needed */
+        }
+
+        .select2-dropdown.select2-dropdown--below {
+            width: 100%;
+        }
+
+        .select2-container--default .select2-selection--single {
+            padding: 6px;
+            height: 45px;
+            width: 100%;
+            position: relative;
+        }
+
+        .select2-selection__arrow {
+            color: #6cb83a;
+            top: 50% !important;
+            transform: translateY(-50%);
+        }
+
+        .select2-container--default .select2-selection--single {
+            border-radius: 15px;
+        }
+
+        .image-container {
+            width: 300px; /* Adjust the width to your desired size */
+            height: 300px; /* Match the width to ensure square dimensions */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
     </style>
 </head>
 
 <body>
 
-<header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-        <a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <img src="/assets/img/homelyAssistlogo.jpg" alt="">
-            <h1>homelyAssist</h1>
-        </a>
-        <div class="header-social-links">
-            <a href="https://twitter.com/homelyAssist" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/test-automation-factory/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <img src="/assets/img/homelyAssistlogo.jpeg" alt="">
+                <h1>homelyAssist</h1>
+            </a>
         </div>
-    </div>
-</header><!-- End Header -->
+    </header><!-- End Header -->
 
     <div class="container">
         <section id="form" class="form">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6" data-aos="fade-up">
-                        <h3>Enter Below Details to Complete Your Search</h3>
+                        <h3>Enter Details to Complete Your Search</h3>
                     </div>
                     <form action="searchresults.html" method="get" role="form" class="php-email-form"
                         data-aos="fade-up">
@@ -252,7 +312,7 @@
                                     <div class="checkbox-item">
                                         <input type="checkbox" id="agriculture" name="assist_type" value="agriculture"
                                             checked>
-                                        <label for="agriculture">Agriculture</label>
+                                        <label for="agriculture">Farming</label>
                                     </div>
                                     <div class="checkbox-item">
                                         <input type="checkbox" id="farm_land_maintenance" name="assist_type"
@@ -277,13 +337,30 @@
                                 </div>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label for="village">Village/Area/City</label>
-                                <input type="text" name="village" class="form-control" id="village"
-                                    placeholder="Village/Area/City"  maxlength="22" required>
+                                <label for="state">State</label>
+                                <select name="state" class="form-control" id="state" required>
+                                    <option value="" selected disabled>Select State</option>
+                                </select>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label for="pin">Pin</label>
-                                <input type="text" name="pin" class="form-control" id="pin" placeholder="Pin" required>
+                                <label for="district">District</label>
+                                <select name="district" class="form-control" id="district" placeholder="District"
+                                    required>
+                                    <option value="" selected disabled>Select District</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="block">Block/Municipality</label>
+                                <select name="block" class="form-control" id="block" placeholder="Block/Municipality"
+                                    required>
+                                    <option value="" selected disabled>Select Block/Municipality</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="village">Village/Area</label>
+                                <select name="village" class="form-control" id="village" placeholder="Village/Area">
+                                    <option value="" selected disabled>Select Village/Area</option>
+                                </select>
                             </div>
                             <div class="col-md-12 btn-container">
                                 <button type="button" class="btn btn-success" onclick="searchAssist()">Search</button>
@@ -317,11 +394,13 @@
                             <input type="text" id="otp" placeholder="OTP" required><br><br>
                             <span id="otpDisplay"></span>
                             <div class="button-group">
-                                <button type="button" class="btn btn-primary" id="otpButton" onclick="generateOtp()">Generate OTP</button>
+                                <button type="button" class="btn btn-primary" id="otpButton"
+                                    onclick="generateOtp()">Generate OTP</button>
                                 <span id="timer"></span>
                             </div>
                             <div class="button-group">
-                                <button type="button" class="btn btn-success" id="popUpSubmitButton" onclick="requestMobileNumber(event)">Submit</button>
+                                <button type="button" class="btn btn-success" id="popUpSubmitButton"
+                                    onclick="requestMobileNumber(event)">Submit</button>
                                 <button type="button" class="btn btn-danger" onclick="closePopup()">Close</button>
                             </div>
                         </form>
@@ -339,7 +418,9 @@
     <script src="/assets/js/assist.js"></script>
     <script src="/assets/js/utils.js"></script>
     <script src="/assets/js/otp.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="/assets/js/location.js"></script>
     <!-- Template Main JS File -->
     <script src="/assets/js/main.js"></script>
     <!-- ======= Footer ======= -->
@@ -351,7 +432,7 @@
                         &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
                     </div>
                     <div class="credits">
-                        Designed by <a href="/team">homelyAssistTeam</a>
+                        Designed by <a href="/team" style="color: #2E8B57;">homelyAssistTeam</a>
                     </div>
                 </div>
             </div>

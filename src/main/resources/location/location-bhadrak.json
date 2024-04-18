@@ -1,0 +1,22 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Bhadrak",
+      "block": [
+        {"name" :  "Bhadrak Rural"},
+        {"name" :  "Tihidi"},
+        {"name" :  "Basudebpur"},
+        {"name" :  "Bansada"},
+        {"name" :  "Dhusuri"},
+        {"name" :  "Dhamanagar"},
+        {"name" :  "Bhandari Pokhari"},
+        {"name" :  "Chandabali"},
+        {"name" :  "Naikanidihi"},
+        {"name" :  "Bant"},
+        {"name" :  "Agarpada"},
+        {"name" :  "Dhamara Marine"}
+      ]
+    }
+  ]
+}

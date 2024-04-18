@@ -1,0 +1,19 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Sambalpur",
+      "block": [
+        {"name" :  "Bamra"},
+        {"name" :  "Dhankauda"},
+        {"name" :  "Jamankira"},
+        {"name" :  "Jujomura"},
+        {"name" :  "Kuchinda"},
+        {"name" :  "Maneswar"},
+        {"name" :  "Naktideul"},
+        {"name" :  "Rairakhol"},
+        {"name" :  "Rengali"}
+      ]
+    }
+  ]
+}

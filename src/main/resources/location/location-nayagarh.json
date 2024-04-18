@@ -1,0 +1,18 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Nayagarh",
+      "block": [
+        {"name" :  "Bhapur"},
+        {"name" :  "Dasapalla"},
+        {"name" :  "Gania"},
+        {"name" :  "Khandapara"},
+        {"name" :  "Nayagarh"},
+        {"name" :  "Nuagaon"},
+        {"name" :  "Odagaon"},
+        {"name" :  "Ranapur"}
+      ]
+    }
+  ]
+}

@@ -3,15 +3,16 @@ package com.homelyassist.service.assist;
 import com.homelyassist.exception.MemberAlreadyExistException;
 import com.homelyassist.model.db.AgriculturalAssist;
 import com.homelyassist.model.db.UserMapping;
-import com.homelyassist.model.enums.AgriculturalAssistType;
-import com.homelyassist.model.enums.AssistType;
 import com.homelyassist.model.enums.AssistRegistrationStatus;
+import com.homelyassist.model.enums.AssistType;
 import com.homelyassist.model.rest.request.AvailabilityRequestDto;
 import com.homelyassist.model.rest.request.SearchAssistRequestDto;
 import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
 import com.homelyassist.model.rest.response.SearchAssistResponseDto;
+import com.homelyassist.query.AgriculturalAssistSpecifications;
 import com.homelyassist.repository.db.AgriculturalAssistRepository;
 import com.homelyassist.repository.db.UserMappingRepository;
+import com.homelyassist.utils.BCryptUtils;
 import com.homelyassist.utils.ErrorUtils;
 import com.homelyassist.utils.MemberHelper;
 import lombok.extern.slf4j.Slf4j;
@@ -47,10 +48,12 @@ public class AgriculturalAssistService {
             agriculturalAssist.setActive(Boolean.TRUE);
             agriculturalAssist.setCreated(LocalDateTime.now());
             agriculturalAssist.setId(UUID.randomUUID().toString());
+            agriculturalAssist.setPassword(BCryptUtils.encodePassword(agriculturalAssist.getPassword()));
             agriculturalAssistRepository.save(agriculturalAssist);
             UserMapping userMapping = UserMapping.builder()
                     .id(agriculturalAssist.getId())
                     .phoneNumber(agriculturalAssist.getPhoneNumber())
+                    .password(agriculturalAssist.getPassword())
                     .assistType(AssistType.AGRICULTURE)
                     .build();
             userMappingRepository.save(userMapping);
@@ -84,11 +87,7 @@ public class AgriculturalAssistService {
     }
 
     public SearchAssistResponseDto searchAssist(SearchAssistRequestDto searchAssistRequestDto) {
-        String area = searchAssistRequestDto.getCityArea();
-        String pinCode = searchAssistRequestDto.getPinCode();
-        List<AgriculturalAssistType> assistTypes = searchAssistRequestDto.getAssistTypes();
-
-        List<AgriculturalAssist> assist = agriculturalAssistRepository.findDistinctTop50ByPinCodeAndAgriculturalAssistTypesInAndCityAreaIgnoreCaseStartingWithAndActiveIsTrue(pinCode, assistTypes, area);
+        List<AgriculturalAssist> assist = agriculturalAssistRepository.findAll(AgriculturalAssistSpecifications.findBySearchParams(searchAssistRequestDto));
         return new SearchAssistResponseDto(assist);
     }
 

@@ -1,0 +1,22 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Kandhamal",
+      "block": [
+        {"name" :  "Baliguda"},
+        {"name" :  "Chakapad"},
+        {"name" :  "Daringibadi"},
+        {"name" :  "G.udayagiri"},
+        {"name" :  "K.nuagan"},
+        {"name" :  "Khajuripada"},
+        {"name" :  "Kotagarh"},
+        {"name" :  "Phiringia"},
+        {"name" :  "Phulbani"},
+        {"name" :  "Raikia"},
+        {"name" :  "Tikabali"},
+        {"name" :  "Tumudibandh"}
+      ]
+    }
+  ]
+}

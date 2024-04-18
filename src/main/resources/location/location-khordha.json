@@ -1,0 +1,21 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Khordha",
+      "block": [
+        {"name" :  "Balianta"},
+        {"name" :  "Balipatna"},
+        {"name" :  "Banapur"},
+        {"name" :  "Begunia"},
+        {"name" :  "Bhubaneswar"},
+        {"name" :  "Bolagarh"},
+        {"name" :  "Chilika"},
+        {"name" :  "Jatni"},
+        {"name" :  "Khordha"},
+        {"name" :  "Tangi"}
+
+      ]
+    }
+  ]
+}

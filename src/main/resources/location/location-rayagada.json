@@ -1,0 +1,22 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Rayagada",
+      "block": [
+        {"name" :  "Bissamcuttack"},
+        {"name" :  "Chandrapur"},
+        {"name" :  "Gudari"},
+        {"name" :  "Gunupur"},
+        {"name" :  "Kalyansingpur"},
+        {"name" :  "Kasipur"},
+        {"name" :  "Kolnara"},
+        {"name" :  "Muniguda"},
+        {"name" :  "Padmapur"},
+        {"name" :  "Ramanaguda"},
+        {"name" :  "Rayagada"},
+        {"name" :  "Athagarh"}
+      ]
+    }
+  ]
+}

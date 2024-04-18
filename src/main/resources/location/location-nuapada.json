@@ -1,0 +1,16 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Nuapada",
+      "block": [
+        {"name" :  "Nuapada"},
+        {"name" :  "Komna"},
+        {"name" :  "Khariar"},
+        {"name" :  "Boden"},
+        {"name" :  "Sinapali"}
+
+      ]
+    }
+  ]
+}

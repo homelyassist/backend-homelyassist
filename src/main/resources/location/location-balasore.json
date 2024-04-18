@@ -1,0 +1,22 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Balasore",
+      "block": [
+        {"name" :  "Bahanaga"},
+        {"name" :  "Balasore"},
+        {"name" :  "Baliapal"},
+        {"name" :  "Basta"},
+        {"name" :  "Bhograi"},
+        {"name" :  "Jaleswar"},
+        {"name" :  "Khaira"},
+        {"name" :  "Nilgiri"},
+        {"name" :  "Oupada"},
+        {"name" :  "Remuna"},
+        {"name" :  "Simulia"},
+        {"name" :  "Soro"}
+      ]
+    }
+  ]
+}

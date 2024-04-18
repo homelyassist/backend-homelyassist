@@ -1,0 +1,27 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Sundargarh",
+      "block": [
+        {"name" :  "Balisankara"},
+        {"name" :  "Bargaon"},
+        {"name" :  "Bisra"},
+        {"name" :  "Bonai"},
+        {"name" :  "Gurundia"},
+        {"name" :  "Hemgir"},
+        {"name" :  "Koida"},
+        {"name" :  "Kuarmunda"},
+        {"name" :  "Kutra"},
+        {"name" :  "Lahunipada"},
+        {"name" :  "Lathikata"},
+        {"name" :  "Lephripada"},
+        {"name" :  "Nuagaon"},
+        {"name" :  "Rajgangpur"},
+        {"name" :  "Subdega"},
+        {"name" :  "Sundargarh"},
+        {"name" :  "Tangarpali"}
+      ]
+    }
+  ]
+}

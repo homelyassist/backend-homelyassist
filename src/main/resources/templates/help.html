@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/homelyAssistlogo.jpg" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link th:href="@{/assets/img/homelyAssistlogo.jpeg}" rel="icon">
+    <link th:href="@{/assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,25 +28,8 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    /* Custom CSS */
     <style>
-        /* Footer Styling */
-        footer {
-          background-color: #f8f9fa;
-          padding: 30px 0;
-          text-align: center;
-        }
-
-        .footer-content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .footer-section {
-          margin-bottom: 20px;
-        }
-
         .terms-list {
           list-style-type: none;
           padding: 0;
@@ -68,6 +51,7 @@
         .whatsapp-icon {
           width: 50px;
           cursor: pointer;
+          margin-top: 50px; /* Adjust the margin as needed */
         }
 
         /* WhatsApp Pop-up Styling */
@@ -91,35 +75,53 @@
           cursor: pointer;
         }
     </style>
+
+    </style>
 </head>
 
 <body>
 
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
-    <div class="container footer-content">
-        <div class="footer-section contact-us">
-            <p>Contact us: homeconnecteasy@gmail.com</p>
-            <!-- WhatsApp Icon -->
-            <img src="assets/img/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon" onclick="openWhatsAppPopup()">
-            <!-- WhatsApp Pop-up -->
-            <div id="whatsapp-popup" class="whatsapp-popup">
-                <span class="close-btn" onclick="closeWhatsAppPopup()">X</span> <!-- Close button -->
-                Send your details to our team and we will register you on your behalf. <br>
-                WhatsApp: <a href="https://api.whatsapp.com/send?phone=8951386744&text=Send%20your%20details%20to%20our%20team%20and%20we%20will%20register%20you%20on%20your%20behalf" target="_blank">+ 91 8951386744</a>
+<!-- ======= Header ======= -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="/assets/img/homelyAssistlogo.jpeg" alt="">
+            <h1>homelyAssist</h1>
+        </a>
+    </div>
+</header><!-- End Header -->
+
+<!-- ======= Help ======= -->
+<section id="help" class="help">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-section contact-us">
+                    <p>Contact us: homeconnecteasy@gmail.com</p>
+                    <!-- WhatsApp Icon -->
+                    <img src="assets/img/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon" onclick="openWhatsAppPopup()">
+                    <!-- WhatsApp Pop-up -->
+                    <div id="whatsapp-popup" class="whatsapp-popup">
+                        <span class="close-btn" onclick="closeWhatsAppPopup()">X</span> <!-- Close button -->
+                        Send your details to our team and we will register you on your behalf. <br>
+                        WhatsApp: <a href="https://api.whatsapp.com/send?phone=8951386744&text=Send%20your%20details%20to%20our%20team%20and%20we%20will%20register%20you%20on%20your%20behalf" target="_blank">+ 91 8951386744</a>
+                    </div>
+                </div>
+                <div class="terms-conditions">
+                    <h3>Terms and Conditions</h3>
+                    <ul class="terms-list">
+                        <li>User data is collected only with the explicit consent of the user.</li>
+                        <li>Data will be promptly deleted upon the user's request.</li>
+                        <li>The company bears no responsibility for any misuse of data by users.</li>
+                        <li>Stringent security measures are implemented to safeguard the privacy of users' data.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="footer-section">
-            <h3>Terms and Conditions</h3>
-            <ul class="terms-list">
-                <li>User data is collected only with the explicit consent of the user.</li>
-                <li>Data will be promptly deleted upon the user's request.</li>
-                <li>The company bears no responsibility for any misuse of data by users.</li>
-                <li>Stringent security measures are implemented to safeguard the privacy of users' data.</li>
-            </ul>
-        </div>
     </div>
-</footer><!-- End Footer -->
+</section><!-- End Help -->
+
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -144,6 +146,22 @@
       popup.style.display = 'none';
     }
 </script>
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="/team" style="color: #2E8B57;">homelyAssistTeam</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- End Footer -->
 
 </body>
 

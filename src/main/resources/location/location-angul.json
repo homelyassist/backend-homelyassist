@@ -1,0 +1,19 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Angul",
+      "block": [
+        {"name" :  "Angul"},
+        {"name" :  "Banarpal"},
+        {"name" :  "Chhendipada"},
+        {"name" :  "Athamallik"},
+        {"name" :  "Kishorenagar"},
+        {"name" :  "Pallahara"},
+        {"name" :  "Talcher"},
+        {"name" :  "Kaniha"}
+
+      ]
+    }
+  ]
+}

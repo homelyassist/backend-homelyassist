@@ -1,0 +1,24 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Kendujhar",
+      "block": [
+        {"name" :  "Anandapur"},
+        {"name" :  "Bansapal"},
+        {"name" :  "Champua"},
+        {"name" :  "Ghasipura"},
+        {"name" :  "Ghatgaon"},
+        {"name" :  "Harichadanpur"},
+        {"name" :  "Hatadihi"},
+        {"name" :  "Jhumpura"},
+        {"name" :  "Joda"},
+        {"name" :  "Kendujhar Sadar"},
+        {"name" :  "Patana"},
+        {"name" :  "Saharapada"},
+        {"name" :  "Telkoi"}
+
+      ]
+    }
+  ]
+}

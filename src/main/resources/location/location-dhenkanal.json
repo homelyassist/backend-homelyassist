@@ -1,0 +1,18 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Dhenkanal",
+      "block": [
+        {"name" :  "Dhenkanal Sadar"},
+        {"name" :  "Gondia"},
+        {"name" :  "Odapada"},
+        {"name" :  "Kamakhyanagar"},
+        {"name" :  "Bhuban"},
+        {"name" :  "Kankadahad"},
+        {"name" :  "Parjang"},
+        {"name" :  "Hindol"}
+      ]
+    }
+  ]
+}

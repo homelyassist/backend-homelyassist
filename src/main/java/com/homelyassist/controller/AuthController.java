@@ -1,5 +1,6 @@
 package com.homelyassist.controller;
 
+import com.homelyassist.model.rest.request.AssistLoginRequestDto;
 import com.homelyassist.model.rest.request.OTPRequestDto;
 import com.homelyassist.model.rest.request.OTPVerifyRequestDto;
 import com.homelyassist.model.rest.response.AnonymousTokenResponseDto;
@@ -38,8 +39,8 @@ public class AuthController {
     }
 
     @PostMapping("/assist/login")
-    public AssistLoginResponseDto login(@RequestBody OTPVerifyRequestDto otpVerifyDto) {
-        return otpService.login(otpVerifyDto);
+    public AssistLoginResponseDto login(@RequestBody AssistLoginRequestDto assistLoginRequestDto) {
+        return otpService.login(assistLoginRequestDto);
     }
 
     @GetMapping("/validate")

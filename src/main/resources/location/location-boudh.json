@@ -1,0 +1,13 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Boudh",
+      "block": [
+        {"name" :  "Boudh"},
+        {"name" :  "Harabhanga"},
+        {"name" :  "Kantamal"}
+      ]
+    }
+  ]
+}

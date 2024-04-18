@@ -1,0 +1,18 @@
+{
+  "state": "Odisha",
+  "district": [
+    {
+      "name": "Subarnapur",
+      "block": [
+        {"name" :  "Binika"},
+        {"name" :  "Biramaharajpur"},
+        {"name" :  "Dunguripali"},
+        {"name" :  "Rampur"},
+        {"name" :  "Sonapur"},
+        {"name" :  "Subalaya"},
+        {"name" :  "Tarbha"},
+        {"name" :  "Ulunda"}
+      ]
+    }
+  ]
+}

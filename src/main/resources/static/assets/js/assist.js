@@ -11,22 +11,22 @@ async function registerAssist() {
     var payload = {
         name: document.getElementById("fullname").value,
         phone_number: document.getElementById("mobile").value,
-        address: document.getElementById("address").value,
-        state: document.getElementById("state").value, 
+        state: document.getElementById("state").value,
         district: document.getElementById("district").value,
-        pin_code: document.getElementById("pin").value,
-        city_area: document.getElementById("village").value,
-        landmark: document.getElementById("landmark").value,
+        block: document.getElementById("block").value,
+        village: document.getElementById("village").value,
         experience: document.getElementById("experience").value,
         description: document.getElementById("description").value,
         gender: document.getElementById("gender").value,
+        password: document.getElementById("password").value,
         assist_types: getSelectedAssistTypes()
     };
 
     for (const key in payload) {
-        if(key == "landmark") {
+        if (key == "village") {
             continue;
         }
+
         if (payload.hasOwnProperty(key)) {
             const value = payload[key];
             if (!value) {
@@ -36,11 +36,16 @@ async function registerAssist() {
         }
     }
 
-    if(payload.state != "Odisha") {
+    if (payload.state != "Odisha") {
         alert("Only Odisha state registration is allowed");
         return;
     }
-    
+
+    if (payload.password.length < 6) {
+        alert("Password should be longer (6+ chars).")
+        return
+    }
+
     const experience = parseInt(payload.experience)
 
     if (Number.isNaN(experience) || experience < 0 || experience > 30) {
@@ -48,14 +53,14 @@ async function registerAssist() {
         return;
     }
 
-    if(payload.assist_types.length === 0) {
+    if (payload.assist_types.length === 0) {
         alert("Please select at least one Sub-Category.");
         return;
     }
 
     const validOpt = await validateOtp();
 
-    if(!validOpt) {
+    if (!validOpt) {
         return;
     }
 
@@ -74,13 +79,13 @@ async function registerAssist() {
 
     const data = await response.json();
 
-    if(data.status == "error") {
+    if (data.status == "error") {
         console.log(data.error)
         alert(data.error)
         throw new Error("Failed to register");
     }
 
-    const uuid = data.uuid; 
+    const uuid = data.uuid;
     const formData = new FormData();
     const compressedBlob = await compressImage(file, 50 * 1024);
     formData.append('file', compressedBlob);
@@ -104,7 +109,7 @@ async function registerAssist() {
 
 async function getAssistData() {
     const uuid = localStorage.getItem('uuid')
-    if(!uuid) {
+    if (!uuid) {
         console.log("uuid is null");
         window.location.assign("/");
     }
@@ -132,11 +137,11 @@ async function fetchAssistInfo() {
 
 
 function updateAvailabilitySelect(active) {
-    const availabilitySelect = document.getElementById("availability");
+    const availabilitySelect = $('#availability');
     if (active) {
-        availabilitySelect.value = "yes";
+        availabilitySelect.val('yes').trigger('change');
     } else {
-        availabilitySelect.value = "no";
+        availabilitySelect.val('no').trigger('change');
     }
 }
 
@@ -158,28 +163,23 @@ async function updateAvailabilityInfo() {
         throw new Error("Failed to update Availability");
     }
 
-    $('#notificationToast').toast('show');
-
-    // Hide notification after 2 seconds
-    setTimeout(function() {
-        $('#notificationToast').toast('hide');
-    }, 2000);
+    showPopupNotification('Your update was successful!');
 }
 
 
 
 async function assistLogin() {
     const mobile = document.getElementById("mobile").value;
-    const otp =  document.getElementById("otp").value;
+    const password = document.getElementById("password").value;
 
-    if (!otp || !mobile) {
-        console.log("Please enter a valid moblie/otp");
+    if (!password || !mobile) {
+        console.log("Please enter a valid moblie/password");
         return;
     }
 
     var payload = {
         phone_number: mobile,
-        otp: otp,
+        password: password,
     };
 
     try {
@@ -192,7 +192,7 @@ async function assistLogin() {
         });
 
         if (!response.ok) {
-            throw new Error("Failed to validate OTP");
+            throw new Error("Login failed");
         }
         const data = await response.json();
 
@@ -206,22 +206,34 @@ async function assistLogin() {
         }
     } catch (error) {
         console.error("Error:", error);
-        alert("Invalid OTP. Please enter a valid OTP.");
+        alert("Login failed. Please check your phone number and password and try again.");
     }
 }
 
 
 async function searchAssist() {
 
+    var payload = {
+        state: document.getElementById("state").value,
+        district: document.getElementById("district").value,
+        block: document.getElementById("block").value,
+        village: document.getElementById("village").value,
+        assist_types: getSelectedAssistTypes()
+    }
+
+    if (payload.assist_types.length === 0) {
+        alert("Please select at least one Sub-Category.");
+        return;
+    }
+
+    if (payload.state == "") {
+        alert("Please select a state from the dropdown menu.");
+        return;
+    }
+
     const container = document.getElementById('assistContainer');
     container.innerHTML = '';
     container.appendChild(addLoadingIcon());
-
-    var payload = {
-        pin_code: document.getElementById("pin").value,
-        city_area: document.getElementById("village").value,
-        assist_types: getSelectedAssistTypes()
-    }
 
     try {
         const response = await fetch("/api/assist/agriculture/search", { // make this generic as per category
@@ -246,17 +258,19 @@ async function searchAssist() {
                 assistCard.setAttribute('data-aos-delay', '100');
                 const imageData = item.image;
                 const gender = item.gender ? item.gender : 'male';
-        
+
                 assistCard.innerHTML = `
                     <div class="assist-card">
-                        <img src="${generateBase64String(imageData, gender)}" alt="${item.name}">
+                        <div class="image-container">
+                            <img src="${generateBase64String(imageData, gender)}" alt="${item.name}">
+                        </div>
                         <h3>${item.name}</h3>
                         <p>${item.description}</p>
                         <button class="btn btn-request" data-uuid="${item.id}" id="${item.id}_btn" onclick="openPopup(event)">Request Mobile Number</button>
                         <p id="${item.id}"></p>
                     </div>
                 `;
-        
+
                 container.appendChild(assistCard);
             });
         } else {
@@ -279,7 +293,7 @@ function getSelectedAssistTypes() {
     // Get all checkbox elements with name 'assist_type'
     var checkboxes = document.querySelectorAll('input[name="assist_type"]');
     // Iterate over each checkbox
-    checkboxes.forEach(function(checkbox) {
+    checkboxes.forEach(function (checkbox) {
         // Check if checkbox is checked
         if (checkbox.checked) {
             // Add the value of the checkbox to the selectedAssistTypes array
@@ -290,9 +304,9 @@ function getSelectedAssistTypes() {
 }
 
 function generateBase64String(buffer, gender) {
-    
+
     // image is not present
-    if(!buffer) {
+    if (!buffer) {
         return "/assets/img/" + gender + ".png"
     }
 
@@ -304,10 +318,10 @@ function generateBase64String(buffer, gender) {
 async function compressImage(file, maxSizeInBytes) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
-        reader.onload = async function(event) {
+        reader.onload = async function (event) {
             const img = new Image();
             img.src = event.target.result;
-            img.onload = function() {
+            img.onload = function () {
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
                 canvas.width = img.width;
@@ -317,11 +331,11 @@ async function compressImage(file, maxSizeInBytes) {
                     resolve(blob);
                 }, 'image/jpeg', 0.7); // Adjust quality here (0.7 means 70% quality)
             };
-            img.onerror = function(error) {
+            img.onerror = function (error) {
                 reject(error);
             };
         };
-        reader.onerror = function(error) {
+        reader.onerror = function (error) {
             reject(error);
         };
         reader.readAsDataURL(file);
@@ -362,10 +376,10 @@ function viewAssistPhoneNumber(data, assist_id) {
 
 async function requestMobileNumber(event) {
     const assist_uuid = event.target.dataset.uuid;
-    generateAnonymousToken()
-    closePopup();
+    await generateAnonymousToken();
     const data = await getAssistDetails(assist_uuid);
     viewAssistPhoneNumber(data, assist_uuid)
+    closePopup();
 }
 
 function tokenIsPresntAndValid() {
@@ -377,7 +391,7 @@ function tokenIsPresntAndValid() {
 
 async function openPopup(event) {
     const uuid = event.target.dataset.uuid;
-    if(tokenIsPresntAndValid()) {
+    if (tokenIsPresntAndValid()) {
         const data = await getAssistDetails(uuid);
         viewAssistPhoneNumber(data, uuid)
         return;
@@ -389,6 +403,8 @@ async function openPopup(event) {
 
 function closePopup() {
     document.getElementById('otpButton').textContent = 'Generate OTP';
+    document.getElementById('otpButton').disabled = false;
+    document.getElementById('timer').textContent = '';
     document.getElementById('otpDisplay').innerText = "";
     document.getElementById("mobile").value = "";
     document.getElementById("otp").value = "";
