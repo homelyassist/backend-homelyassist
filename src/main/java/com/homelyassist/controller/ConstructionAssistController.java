@@ -28,10 +28,9 @@ public class ConstructionAssistController {
         this.constructionAssistService = constructionAssistService;
     }
 
-
     @PostMapping("/register")
     public AssistRegistrationResponseDto register(@RequestBody ConstructionAssist constructionAssist) {
-        return null;
+        return constructionAssistService.register(constructionAssist);
     }
 
     @PostMapping("/{uuid}/image/upload")
@@ -41,7 +40,7 @@ public class ConstructionAssistController {
 
     @GetMapping("/{uuid}")
     public ConstructionAssist getDetails(@PathVariable("uuid") String id) {
-        return null;
+        return constructionAssistService.fetchById(id);
     }
 
     @PostMapping("/{uuid}/availability")
