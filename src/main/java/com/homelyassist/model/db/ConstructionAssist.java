@@ -21,7 +21,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(indexes = { @Index(name = "phone_number", columnList = "phone_number")})
-public class ConstructionAssist {
+public class ConstructionAssist extends User {
 
     @Id
     @JsonProperty("id")
