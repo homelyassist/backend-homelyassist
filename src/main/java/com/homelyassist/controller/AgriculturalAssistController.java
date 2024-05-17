@@ -50,7 +50,7 @@ public class AgriculturalAssistController {
     }
 
     @PostMapping("/search")
-    public SearchAssistResponseDto searchAssist(@RequestBody SearchAssistRequestDto searchAssistRequestDto) {
+    public SearchAssistResponseDto<AgriculturalAssist> searchAssist(@RequestBody SearchAssistRequestDto searchAssistRequestDto) {
         return agriculturalAssistService.searchAssist(searchAssistRequestDto);
     }
 }

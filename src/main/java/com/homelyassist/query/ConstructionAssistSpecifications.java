@@ -1,6 +1,6 @@
 package com.homelyassist.query;
 
-import com.homelyassist.model.db.AgriculturalAssist;
+import com.homelyassist.model.db.ConstructionAssist;
 import com.homelyassist.model.rest.request.SearchAssistRequestDto;
 import jakarta.persistence.criteria.Predicate;
 import org.springframework.data.jpa.domain.Specification;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ConstructionAssistSpecifications {
 
-    public static Specification<AgriculturalAssist> findBySearchParams(SearchAssistRequestDto requestDto) {
+    public static Specification<ConstructionAssist> findBySearchParams(SearchAssistRequestDto requestDto) {
         return (root, query, cb) -> {
             List<Predicate> predicates = new ArrayList<>();
 

@@ -86,9 +86,9 @@ public class AgriculturalAssistService {
         return agriculturalAssistRepository.save(agriculturalAssist);
     }
 
-    public SearchAssistResponseDto searchAssist(SearchAssistRequestDto searchAssistRequestDto) {
+    public SearchAssistResponseDto<AgriculturalAssist> searchAssist(SearchAssistRequestDto searchAssistRequestDto) {
         List<AgriculturalAssist> assist = agriculturalAssistRepository.findAll(AgriculturalAssistSpecifications.findBySearchParams(searchAssistRequestDto));
-        return new SearchAssistResponseDto(assist);
+        return new SearchAssistResponseDto<>(assist);
     }
 
     private void validate(AgriculturalAssist agriculturalAssist) {

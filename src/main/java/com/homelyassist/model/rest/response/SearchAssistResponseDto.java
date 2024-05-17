@@ -1,7 +1,6 @@
 package com.homelyassist.model.rest.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.homelyassist.model.db.AgriculturalAssist;
 import com.homelyassist.model.db.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,8 +13,8 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SearchAssistResponseDto {
+public class SearchAssistResponseDto<T extends User> {
 
     @JsonProperty("assist")
-    private List<AgriculturalAssist> assist;
+    private List<T> assist;
 }

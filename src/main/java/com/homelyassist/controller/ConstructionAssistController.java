@@ -35,7 +35,7 @@ public class ConstructionAssistController {
 
     @PostMapping("/{uuid}/image/upload")
     public ResponseEntity<String> uploadImage(@PathVariable("uuid") String id, @RequestParam("file") MultipartFile file) {
-        return null;
+        return constructionAssistService.uploadImage(id, file);
     }
 
     @GetMapping("/{uuid}")
@@ -45,11 +45,11 @@ public class ConstructionAssistController {
 
     @PostMapping("/{uuid}/availability")
     public ConstructionAssist updateAvailability(@PathVariable("uuid") String id, @RequestBody AvailabilityRequestDto availabilityRequestDto) {
-        return null;
+        return constructionAssistService.updateAvailability(id, availabilityRequestDto);
     }
 
     @PostMapping("/search")
-    public SearchAssistResponseDto searchAssist(@RequestBody SearchAssistRequestDto searchAssistRequestDto) {
-        return null;
+    public SearchAssistResponseDto<ConstructionAssist> searchAssist(@RequestBody SearchAssistRequestDto searchAssistRequestDto) {
+        return constructionAssistService.searchAssist(searchAssistRequestDto);
     }
 }
