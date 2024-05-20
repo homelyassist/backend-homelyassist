@@ -233,6 +233,8 @@ async function searchAssist() {
         assist_types: getSelectedAssistTypes()
     }
 
+    const category = category_map[document.getElementById("category").value];
+
     if (payload.assist_types.length === 0) {
         alert("Please select at least one Sub-Category.");
         return;
@@ -248,7 +250,7 @@ async function searchAssist() {
     container.appendChild(addLoadingIcon());
 
     try {
-        const response = await fetch("/api/assist/agriculture/search", { // make this generic as per category
+        const response = await fetch(`/api/assist/${category}/search`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

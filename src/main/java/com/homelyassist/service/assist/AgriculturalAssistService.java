@@ -3,6 +3,7 @@ package com.homelyassist.service.assist;
 import com.homelyassist.exception.MemberAlreadyExistException;
 import com.homelyassist.model.db.AgriculturalAssist;
 import com.homelyassist.model.db.UserMapping;
+import com.homelyassist.model.enums.AgriculturalAssistType;
 import com.homelyassist.model.enums.AssistRegistrationStatus;
 import com.homelyassist.model.enums.AssistType;
 import com.homelyassist.model.rest.request.AvailabilityRequestDto;
@@ -86,7 +87,7 @@ public class AgriculturalAssistService {
         return agriculturalAssistRepository.save(agriculturalAssist);
     }
 
-    public SearchAssistResponseDto<AgriculturalAssist> searchAssist(SearchAssistRequestDto searchAssistRequestDto) {
+    public SearchAssistResponseDto<AgriculturalAssist> searchAssist(SearchAssistRequestDto<AgriculturalAssistType> searchAssistRequestDto) {
         List<AgriculturalAssist> assist = agriculturalAssistRepository.findAll(AgriculturalAssistSpecifications.findBySearchParams(searchAssistRequestDto));
         return new SearchAssistResponseDto<>(assist);
     }

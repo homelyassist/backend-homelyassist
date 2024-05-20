@@ -6,6 +6,7 @@ import com.homelyassist.model.db.ConstructionAssist;
 import com.homelyassist.model.db.UserMapping;
 import com.homelyassist.model.enums.AssistRegistrationStatus;
 import com.homelyassist.model.enums.AssistType;
+import com.homelyassist.model.enums.ConstructionAssistType;
 import com.homelyassist.model.rest.request.AvailabilityRequestDto;
 import com.homelyassist.model.rest.request.SearchAssistRequestDto;
 import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
@@ -111,7 +112,7 @@ public class ConstructionAssistService {
         return constructionAssistRepository.save(constructionAssist);
     }
 
-    public SearchAssistResponseDto<ConstructionAssist> searchAssist(SearchAssistRequestDto searchAssistRequestDto) {
+    public SearchAssistResponseDto<ConstructionAssist> searchAssist(SearchAssistRequestDto<ConstructionAssistType> searchAssistRequestDto) {
         List<ConstructionAssist> assist = constructionAssistRepository.findAll(ConstructionAssistSpecifications.findBySearchParams(searchAssistRequestDto));
         return new SearchAssistResponseDto<>(assist);
     }

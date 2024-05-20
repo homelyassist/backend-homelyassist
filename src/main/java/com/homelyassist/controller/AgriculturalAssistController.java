@@ -1,6 +1,7 @@
 package com.homelyassist.controller;
 
 import com.homelyassist.model.db.AgriculturalAssist;
+import com.homelyassist.model.enums.AgriculturalAssistType;
 import com.homelyassist.model.rest.request.AvailabilityRequestDto;
 import com.homelyassist.model.rest.request.SearchAssistRequestDto;
 import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
@@ -50,7 +51,7 @@ public class AgriculturalAssistController {
     }
 
     @PostMapping("/search")
-    public SearchAssistResponseDto<AgriculturalAssist> searchAssist(@RequestBody SearchAssistRequestDto searchAssistRequestDto) {
+    public SearchAssistResponseDto<AgriculturalAssist> searchAssist(@RequestBody SearchAssistRequestDto<AgriculturalAssistType> searchAssistRequestDto) {
         return agriculturalAssistService.searchAssist(searchAssistRequestDto);
     }
 }
