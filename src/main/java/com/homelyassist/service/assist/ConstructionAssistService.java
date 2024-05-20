@@ -56,7 +56,7 @@ public class ConstructionAssistService {
                     .id(constructionAssist.getId())
                     .phoneNumber(constructionAssist.getPhoneNumber())
                     .password(constructionAssist.getPassword())
-                    .assistType(AssistType.AGRICULTURE)
+                    .assistType(AssistType.CONSTRUCTION)
                     .build();
             userMappingRepository.save(userMapping);
             response.setUuid(constructionAssist.getId());

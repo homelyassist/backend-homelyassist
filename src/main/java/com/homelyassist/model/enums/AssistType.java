@@ -5,5 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public enum AssistType {
 
     @JsonProperty("agriculture")
-    AGRICULTURE
+    AGRICULTURE,
+
+    @JsonProperty("construction")
+    CONSTRUCTION
 }
