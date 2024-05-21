@@ -2,8 +2,10 @@ package com.homelyassist.controller;
 
 import com.homelyassist.model.db.ConstructionAssist;
 import com.homelyassist.model.enums.ConstructionAssistType;
+import com.homelyassist.model.rest.request.AssistDetailRequestDTO;
 import com.homelyassist.model.rest.request.AvailabilityRequestDto;
 import com.homelyassist.model.rest.request.SearchAssistRequestDto;
+import com.homelyassist.model.rest.response.AssistDetailResponseDto;
 import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
 import com.homelyassist.model.rest.response.SearchAssistResponseDto;
 import com.homelyassist.service.assist.ConstructionAssistService;
@@ -52,5 +54,10 @@ public class ConstructionAssistController {
     @PostMapping("/search")
     public SearchAssistResponseDto<ConstructionAssist> searchAssist(@RequestBody SearchAssistRequestDto<ConstructionAssistType> searchAssistRequestDto) {
         return constructionAssistService.searchAssist(searchAssistRequestDto);
+    }
+
+    @PostMapping("/detail")
+    public AssistDetailResponseDto getAssistDetails(@RequestBody AssistDetailRequestDTO assistDetailRequestDTO) {
+        return constructionAssistService.getAssistDetails(assistDetailRequestDTO);
     }
 }

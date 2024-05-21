@@ -6,8 +6,10 @@ import com.homelyassist.model.db.UserMapping;
 import com.homelyassist.model.enums.AgriculturalAssistType;
 import com.homelyassist.model.enums.AssistRegistrationStatus;
 import com.homelyassist.model.enums.AssistType;
+import com.homelyassist.model.rest.request.AssistDetailRequestDTO;
 import com.homelyassist.model.rest.request.AvailabilityRequestDto;
 import com.homelyassist.model.rest.request.SearchAssistRequestDto;
+import com.homelyassist.model.rest.response.AssistDetailResponseDto;
 import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
 import com.homelyassist.model.rest.response.SearchAssistResponseDto;
 import com.homelyassist.query.AgriculturalAssistSpecifications;
@@ -90,6 +92,15 @@ public class AgriculturalAssistService {
     public SearchAssistResponseDto<AgriculturalAssist> searchAssist(SearchAssistRequestDto<AgriculturalAssistType> searchAssistRequestDto) {
         List<AgriculturalAssist> assist = agriculturalAssistRepository.findAll(AgriculturalAssistSpecifications.findBySearchParams(searchAssistRequestDto));
         return new SearchAssistResponseDto<>(assist);
+    }
+
+    public AssistDetailResponseDto getAssistDetails(AssistDetailRequestDTO assistDetailRequestDTO) {
+        String assistId = assistDetailRequestDTO.getAssistId();
+        AgriculturalAssist agriculturalAssist = agriculturalAssistRepository.findById(assistId).orElseThrow(() -> new RuntimeException(String.format("Assist with id: %s not present", assistId)));
+        AssistDetailResponseDto assistDetailResponseDto = new AssistDetailResponseDto();
+        assistDetailResponseDto.setName(agriculturalAssist.getName());
+        assistDetailResponseDto.setPhoneNumber(agriculturalAssist.getPhoneNumber());
+        return assistDetailResponseDto;
     }
 
     private void validate(AgriculturalAssist agriculturalAssist) {

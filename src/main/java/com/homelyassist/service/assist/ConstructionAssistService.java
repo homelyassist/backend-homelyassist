@@ -7,8 +7,10 @@ import com.homelyassist.model.db.UserMapping;
 import com.homelyassist.model.enums.AssistRegistrationStatus;
 import com.homelyassist.model.enums.AssistType;
 import com.homelyassist.model.enums.ConstructionAssistType;
+import com.homelyassist.model.rest.request.AssistDetailRequestDTO;
 import com.homelyassist.model.rest.request.AvailabilityRequestDto;
 import com.homelyassist.model.rest.request.SearchAssistRequestDto;
+import com.homelyassist.model.rest.response.AssistDetailResponseDto;
 import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
 import com.homelyassist.model.rest.response.SearchAssistResponseDto;
 import com.homelyassist.query.ConstructionAssistSpecifications;
@@ -115,6 +117,15 @@ public class ConstructionAssistService {
     public SearchAssistResponseDto<ConstructionAssist> searchAssist(SearchAssistRequestDto<ConstructionAssistType> searchAssistRequestDto) {
         List<ConstructionAssist> assist = constructionAssistRepository.findAll(ConstructionAssistSpecifications.findBySearchParams(searchAssistRequestDto));
         return new SearchAssistResponseDto<>(assist);
+    }
+
+    public AssistDetailResponseDto getAssistDetails(AssistDetailRequestDTO assistDetailRequestDTO) {
+        String assistId = assistDetailRequestDTO.getAssistId();
+        ConstructionAssist constructionAssist = constructionAssistRepository.findById(assistId).orElseThrow(() -> new RuntimeException(String.format("Assist with id: %s not present", assistId)));
+        AssistDetailResponseDto assistDetailResponseDto = new AssistDetailResponseDto();
+        assistDetailResponseDto.setName(constructionAssist.getName());
+        assistDetailResponseDto.setPhoneNumber(constructionAssist.getPhoneNumber());
+        return assistDetailResponseDto;
     }
 
 

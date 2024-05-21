@@ -280,7 +280,7 @@ async function searchAssist() {
                         </div>
                         <h3>${item.name}</h3>
                         <p>${item.description}</p>
-                        <button class="btn btn-request" data-uuid="${item.id}" id="${item.id}_btn" onclick="openPopup(event)">Request Mobile Number</button>
+                        <button class="btn btn-request" data-uuid="${item.id}" data-category="${category}" id="${item.id}_btn" onclick="openPopup(event)">Request Mobile Number</button>
                         <p id="${item.id}"></p>
                     </div>
                 `;
@@ -356,15 +356,16 @@ async function compressImage(file, maxSizeInBytes) {
     });
 }
 
-async function getAssistDetails(assistId) {
+async function getAssistDetails(assistId, category) {
     const m_vid = localStorage.getItem('m_vid');
+
 
     var payload = {
         assist_id: assistId,
         vid: m_vid
     };
 
-    const response = await fetch("/member/assist/detail", {
+    const response = await fetch(`/api/assist/${category}/detail`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -390,8 +391,9 @@ function viewAssistPhoneNumber(data, assist_id) {
 
 async function requestMobileNumber(event) {
     const assist_uuid = event.target.dataset.uuid;
+    const category = event.target.dataset.category;
     await generateAnonymousToken();
-    const data = await getAssistDetails(assist_uuid);
+    const data = await getAssistDetails(assist_uuid, category);
     viewAssistPhoneNumber(data, assist_uuid)
     closePopup();
 }
@@ -405,13 +407,15 @@ function tokenIsPresntAndValid() {
 
 async function openPopup(event) {
     const uuid = event.target.dataset.uuid;
+    const category = event.target.dataset.category;
     if (tokenIsPresntAndValid()) {
-        const data = await getAssistDetails(uuid);
+        const data = await getAssistDetails(uuid, category);
         viewAssistPhoneNumber(data, uuid)
         return;
     }
     const submitButton = document.getElementById('popUpSubmitButton');
     submitButton.setAttribute('data-uuid', uuid);
+    submitButton.setAttribute('data-category', category);
     document.getElementById("popup").style.display = "block";
 }
 
