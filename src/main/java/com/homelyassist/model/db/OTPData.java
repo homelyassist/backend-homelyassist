@@ -35,4 +35,8 @@ public class OTPData {
     public Boolean isExpired() {
         return LocalDateTime.now().isAfter(expirationTime);
     }
+
+    public String getPhoneNumberWithCountryCode() {
+        return "91" + phoneNumber;
+    }
 }

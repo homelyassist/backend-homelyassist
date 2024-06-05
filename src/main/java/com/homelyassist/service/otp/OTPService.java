@@ -1,6 +1,7 @@
 package com.homelyassist.service.otp;
 
 
+import com.homelyassist.model.MSG91OtpData;
 import com.homelyassist.model.db.OTPData;
 import com.homelyassist.model.db.UserMapping;
 import com.homelyassist.model.enums.OTPGenerateStatus;
@@ -33,15 +34,16 @@ public class OTPService {
 
     private final OneTimePasswordRepository oneTimePasswordRepository;
     private final UserMappingRepository userMappingRepository;
-    private final TwilioService twilioService;
     private final JWTService jwtService;
 
+    private final MSG91OtpService msg91OtpService;
+
     @Autowired
-    public OTPService(OneTimePasswordRepository oneTimePasswordRepository, UserMappingRepository userMappingRepository, TwilioService twilioService, JWTService jwtService) {
+    public OTPService(OneTimePasswordRepository oneTimePasswordRepository, UserMappingRepository userMappingRepository, JWTService jwtService, MSG91OtpService msg91OtpService) {
         this.oneTimePasswordRepository = oneTimePasswordRepository;
         this.userMappingRepository = userMappingRepository;
-        this.twilioService = twilioService;
         this.jwtService = jwtService;
+        this.msg91OtpService = msg91OtpService;
     }
 
     public OTPResponseDto generateOTP(OTPRequestDto otpRequestDto) {
@@ -57,6 +59,7 @@ public class OTPService {
         OTPResponseDto otpResponseDto = new OTPResponseDto();
         try {
             // TODO: uncomment this once we've premium account
+            msg91OtpService.send(new MSG91OtpData(otpData.getPhoneNumberWithCountryCode(), new MSG91OtpData.OTP(otpData.getCode())));
             //twilioService.sendOtp(new TwilioOtpData(otpData.getPhoneNumberWithCountryCode(), "Testing otp: " + otpData.getCode()));
             oneTimePasswordRepository.save(otpData);
             otpResponseDto.setCode(otpData.getCode());
