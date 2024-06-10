@@ -59,7 +59,7 @@ public class OTPService {
         OTPResponseDto otpResponseDto = new OTPResponseDto();
         try {
             // TODO: uncomment this once we've premium account
-            msg91OtpService.send(new MSG91OtpData(otpData.getPhoneNumberWithCountryCode(), new MSG91OtpData.OTP(otpData.getCode())));
+            //msg91OtpService.send(new MSG91OtpData(otpData.getPhoneNumberWithCountryCode(), new MSG91OtpData.OTP(otpData.getCode())));
             //twilioService.sendOtp(new TwilioOtpData(otpData.getPhoneNumberWithCountryCode(), "Testing otp: " + otpData.getCode()));
             oneTimePasswordRepository.save(otpData);
             otpResponseDto.setCode(otpData.getCode());
