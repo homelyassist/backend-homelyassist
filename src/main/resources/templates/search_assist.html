@@ -400,10 +400,10 @@
 
             $('#category').on('change', function () {
                 const category = $(this).val();
-                updateSubcategories(category);
+                updateSubcategories(category, true);
             });
 
-            updateSubcategories(document.getElementById('category').value);
+            updateSubcategories(document.getElementById('category').value, true);
         });
     </script>
 

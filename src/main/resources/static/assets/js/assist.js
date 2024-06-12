@@ -462,7 +462,7 @@ const subcategories = {
     ]
 };
 
-function updateSubcategories(category) {
+function updateSubcategories(category, checked = false) {
     const container = document.getElementById('subcategory-container');
     container.innerHTML = ''; // Clear existing subcategories
     subcategories[category].forEach(subcategory => {
@@ -474,7 +474,7 @@ function updateSubcategories(category) {
         checkbox.id = subcategory.id;
         checkbox.name = 'assist_type';
         checkbox.value = subcategory.value;
-        checkbox.checked = true;
+        checkbox.checked = checked;
 
         const label = document.createElement('label');
         label.htmlFor = subcategory.id;
