@@ -8,5 +8,8 @@ public enum AssistType {
     AGRICULTURE,
 
     @JsonProperty("construction")
-    CONSTRUCTION
+    CONSTRUCTION,
+
+    @JsonProperty("electrical")
+    ELECTRICAL
 }
