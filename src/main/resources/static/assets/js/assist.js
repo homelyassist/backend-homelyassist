@@ -61,7 +61,7 @@ async function registerAssist() {
         return;
     }
 
-    if (payload.assist_types.length === 0) {
+    if (payload.assist_types.length === 0 && category != category_map['electrical_assist']) {
         alert("Please select at least one Sub-Category.");
         return;
     }
