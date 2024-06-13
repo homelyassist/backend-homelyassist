@@ -18,7 +18,4 @@ public class OTPRequestDto {
     @JsonProperty("phone_number")
     private String phoneNumber;
 
-    public String getPhoneNumberWithCountryCode() {
-        return String.format("%s %s", countryCode, phoneNumber);
-    }
 }
