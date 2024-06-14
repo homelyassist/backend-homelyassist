@@ -1,4 +1,4 @@
-async function generateOtp() {
+async function generateOtp(uiOtp = false) {
     var mobileNumber = document.getElementById("mobile").value;
     if (!mobileNumber) {
         alert("Please enter a mobile number");
@@ -9,7 +9,9 @@ async function generateOtp() {
         phone_number: mobileNumber,
     };
 
-    const response = await fetch("/api/auth/otp/generate", {
+    const path = '/api/auth/otp/generate' + (uiOtp == true ? "/ui" : "");
+
+    const response = await fetch(path, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

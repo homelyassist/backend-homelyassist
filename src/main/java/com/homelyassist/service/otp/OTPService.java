@@ -46,7 +46,7 @@ public class OTPService {
         this.msg91OtpService = msg91OtpService;
     }
 
-    public OTPResponseDto generateOTP(OTPRequestDto otpRequestDto) {
+    public OTPResponseDto generateOTP(OTPRequestDto otpRequestDto, boolean isUiOtp) {
         String phoneNumber = otpRequestDto.getPhoneNumber();
         OTPData otpData = new OTPData();
         if (!BasicValidationHelper.isValidIndianPhoneNumber(phoneNumber)) {
@@ -55,12 +55,16 @@ public class OTPService {
         otpData.setPhoneNumber(phoneNumber);
         otpData.setCode(OTPHelper.createRandomOneTimePassword().get());
         otpData.setExpirationTime(LocalDateTime.now().plusMinutes(AppConstant.OTP.EXPIRY_INTERVAL));
-        log.info("Sending opt with twilio with Opt Data: {}", otpData);
+        log.info("Sending opt with msg91 with Opt Data: {}", otpData);
         OTPResponseDto otpResponseDto = new OTPResponseDto();
         try {
-            msg91OtpService.send(new MSG91OtpData(otpData.getPhoneNumberWithCountryCode(), new MSG91OtpData.OTP(otpData.getCode())));
+            if(Boolean.FALSE == isUiOtp) {
+                msg91OtpService.send(new MSG91OtpData(otpData.getPhoneNumberWithCountryCode(), new MSG91OtpData.OTP(otpData.getCode())));
+            }
             oneTimePasswordRepository.save(otpData);
-            otpResponseDto.setCode(otpData.getCode());
+            if(Boolean.TRUE == isUiOtp) {
+                otpResponseDto.setCode(otpData.getCode());
+            }
             otpResponseDto.setOtpGenerateStatus(OTPGenerateStatus.COMPLETED);
         } catch (Exception e) {
             log.error("error processing otp generation", e);

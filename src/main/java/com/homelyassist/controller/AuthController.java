@@ -30,7 +30,12 @@ public class AuthController {
 
     @PostMapping("/otp/generate")
     public OTPResponseDto generateOtp(@RequestBody OTPRequestDto otpRequestDto) {
-        return otpService.generateOTP(otpRequestDto);
+        return otpService.generateOTP(otpRequestDto, false);
+    }
+
+    @PostMapping("/otp/generate/ui")
+    public OTPResponseDto generateOtpForUI(@RequestBody OTPRequestDto otpRequestDto) {
+        return otpService.generateOTP(otpRequestDto, true);
     }
 
     @PostMapping("/otp/verify")
