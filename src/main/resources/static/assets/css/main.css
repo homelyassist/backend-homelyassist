@@ -684,6 +684,37 @@ a:hover {
 .footer .credits a {
     color: black;
 }
+.img-responsive {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Adjust this value as needed */
+}
+
+.image-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+/* Specific border colors for each image */
+.image-container.agriculture img {
+    border: 3px solid green;
+}
+
+.image-container.construction img {
+    border: 3px solid orange;
+}
+
+.image-container.electrical img {
+    border: 3px solid blue;
+}
+
 
 
 
