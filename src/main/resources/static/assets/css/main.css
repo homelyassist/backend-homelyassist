@@ -689,6 +689,15 @@ a:hover {
     height: auto; /* Maintain aspect ratio */
     max-height: 150px; /* Adjust this value as needed */
 }
+.image-container {
+    padding: 10px; /* Add padding around the image container */
+    box-sizing: border-box; /* Ensure padding is included in the container's total width */
+}
+
+.image-container img {
+    width: 100%; /* Make image responsive */
+    display: block; /* Remove bottom margin/gap */
+}
 
 .image-description {
     position: absolute;
@@ -700,6 +709,7 @@ a:hover {
     font-size: 14px;
     font-weight: bold;
     padding: 5px 0;
+    box-sizing: border-box; /* Ensure padding is included in the description's total width */
 }
 
 /* Specific border colors for each image */
