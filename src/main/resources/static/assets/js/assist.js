@@ -236,7 +236,7 @@ async function searchAssist() {
 
     const category = category_map[document.getElementById("category").value];
 
-    if (payload.assist_types.length === 0) {
+    if (payload.assist_types.length === 0 && category != category_map['electrical_assist']) {
         alert("Please select at least one Sub-Category.");
         return;
     }
@@ -466,24 +466,35 @@ const subcategories = {
 
 function updateSubcategories(category, checked = false) {
     const container = document.getElementById('subcategory-container');
-    container.innerHTML = ''; // Clear existing subcategories
-    subcategories[category].forEach(subcategory => {
-        const checkboxItem = document.createElement('div');
-        checkboxItem.className = 'checkbox-item';
+    const subcategoryLabel = document.querySelector('label[for="subcategory"]');
 
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.id = subcategory.id;
-        checkbox.name = 'assist_type';
-        checkbox.value = subcategory.value;
-        checkbox.checked = checked;
+    container.innerHTML = '';
 
-        const label = document.createElement('label');
-        label.htmlFor = subcategory.id;
-        label.textContent = subcategory.label;
+    if (subcategories[category].length === 0) {
+        subcategoryLabel.style.display = 'none';
+        container.style.display = 'none';
+    } else {
+        subcategoryLabel.style.display = 'block';
+        container.style.display = 'block';
+        subcategories[category].forEach(subcategory => {
+            const checkboxItem = document.createElement('div');
+            checkboxItem.className = 'checkbox-item';
 
-        checkboxItem.appendChild(checkbox);
-        checkboxItem.appendChild(label);
-        container.appendChild(checkboxItem);
-    });
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.id = subcategory.id;
+            checkbox.name = 'assist_type';
+            checkbox.value = subcategory.value;
+            checkbox.checked = checked;
+
+            const label = document.createElement('label');
+            label.htmlFor = subcategory.id;
+            label.textContent = subcategory.label;
+
+            checkboxItem.appendChild(checkbox);
+            checkboxItem.appendChild(label);
+            container.appendChild(checkboxItem);
+        });
+    }
 }
+
