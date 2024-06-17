@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Confirm Mobile Number</title>
+    <title>Password Reset</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <!-- Favicons -->
@@ -24,10 +24,9 @@
     <link th:href="@{/assets/css/main.css}" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
-        /* Style for the buttons */
+        /* Custom styles */
         .btn-get-started {
             background-color: #6cb83a;
-            /* Green theme */
             color: #ffffff;
             border: none;
             border-radius: 20px;
@@ -38,39 +37,36 @@
 
         .btn-get-started:hover {
             background-color: #f5cb42;
-            /* Yellow theme on hover */
         }
 
-        /* Adjust button layout */
         .btn-container {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
         }
 
-        /* Center the form */
-        #confirm-form {
+        #confirm-form,
+        #forgot-password-form,
+        #otp-verification-form {
             margin-top: 80px;
             text-align: center;
         }
 
-        /* Adjust form layout */
-        #confirm-form .form-group {
+        .form-group {
             margin-bottom: 15px;
             text-align: left;
         }
 
-        #confirm-form label {
+        label {
             font-weight: bold;
         }
 
-        /* Style form inputs */
         .form-control {
             border-radius: 20px;
             padding: 12px 20px;
             font-size: 16px;
         }
-        /* Header */
+
         #header {
             position: fixed;
             top: 0;
@@ -80,12 +76,36 @@
             padding: 10px 20px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .section-title h2 {
             font-size: 32px;
             font-weight: bold;
             color: #2e8b57;
             margin-bottom: 30px;
-}
+        }
+
+        .forgot-password-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #007bff;
+            cursor: pointer;
+            text-align: left;
+            width: auto;
+        }
+
+        .forgot-password-link:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-password-container {
+            display: flex;
+            justify-content: flex-start; /* Align the link to the left */
+            margin-top: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -95,14 +115,13 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid d-flex align-items-center justify-content-between">
         <a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
             <img src="/assets/img/homelyAssistlogo.jpeg" alt="">
             <h1>homelyAssist</h1>
         </a>
     </div>
 </header><!-- End Header -->
 
-<!-- ======= Confirm Form Section ======= -->
+<!-- ======= Login Form Section ======= -->
 <section id="confirm-form" class="confirm-form">
     <div class="container">
         <div class="row justify-content-center">
@@ -120,6 +139,9 @@
                             <label for="password">Password</label>
                             <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
                         </div>
+                        <div class="col-md-12 forgot-password-container">
+                            <a href="#" class="forgot-password-link" onclick="showForgotPasswordForm()">Forgot Password?</a>
+                        </div>
                         <div class="col-md-12 btn-container">
                             <button type="button" class="btn btn-success" onclick="assistLogin()">Login</button>
                         </div>
@@ -129,8 +151,61 @@
         </div>
     </div>
 </section>
-<!-- End Confirm Form Section -->
+<!-- End Login Form Section -->
 
+<!-- ======= Forgot Password Form Section ======= -->
+<section id="forgot-password-form" class="confirm-form hidden">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Reset Your Password</h2>
+                </div>
+                <form action="#" role="form" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="reset-mobile">Enter Your Mobile Number</label>
+                            <input type="tel" name="reset-mobile" class="form-control" id="reset-mobile" placeholder="Mobile Number" required maxlength="10">
+                        </div>
+                        <div class="col-md-12 btn-container">
+                            <button type="button" class="btn btn-success" onclick="sendOTP()">Send OTP</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Forgot Password Form Section -->
+
+<!-- ======= OTP Verification Form Section ======= -->
+<section id="otp-verification-form" class="confirm-form hidden">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Verify OTP and Reset Password</h2>
+                </div>
+                <form action="#" role="form" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="otp">Enter OTP</label>
+                            <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP" required maxlength="6">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" name="new-password" class="form-control" id="new-password" placeholder="New Password" required>
+                        </div>
+                        <div class="col-md-12 btn-container">
+                            <button type="button" class="btn btn-success" onclick="verifyOTP()">Verify OTP and Reset Password</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End OTP Verification Form Section -->
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
@@ -164,6 +239,26 @@
 <script src="/assets/js/assist.js"></script>
 <script src="/assets/js/utils.js"></script>
 <script src="/assets/js/token_validator.js"></script>
+
+<script>
+    function showForgotPasswordForm() {
+        document.getElementById('confirm-form').classList.add('hidden');
+        document.getElementById('forgot-password-form').classList.remove('hidden');
+    }
+
+    function sendOTP() {
+        // Implement OTP sending logic here
+        alert('OTP sent to your mobile number');
+        document.getElementById('forgot-password-form').classList.add('hidden');
+        document.getElementById('otp-verification-form').classList.remove('hidden');
+    }
+
+    function verifyOTP() {
+        // Implement OTP verification logic here
+        alert('OTP verified and password reset successfully');
+        // Redirect or show a success message
+    }
+</script>
 
 </body>
 
