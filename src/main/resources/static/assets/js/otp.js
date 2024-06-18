@@ -26,13 +26,17 @@ async function generateOtp(uiOtp = false) {
 
     const data = await response.json();
 
-    document.getElementById('otpButton').textContent = 'Resend OTP';
-    document.getElementById('otpButton').disabled = true;
-    var otpDisplay = document.getElementById('otpDisplay')
-    if (otpDisplay) {
-        document.getElementById('otpDisplay').innerText = "Your OTP is: " + data.code;
+    var otpButton = document.getElementById('otpButton')
+
+    if (otpButton) {
+        document.getElementById('otpButton').textContent = 'Resend OTP';
+        document.getElementById('otpButton').disabled = true;
+        var otpDisplay = document.getElementById('otpDisplay')
+        if (otpDisplay) {
+            document.getElementById('otpDisplay').innerText = "Your OTP is: " + data.code;
+        }
+        resendOptTimer();
     }
-    resendOptTimer();
 }
 
 async function validateOtp() {
@@ -76,6 +80,54 @@ async function validateOtp() {
         return false;
     }
 }
+
+async function verifyOtpAndPasswordReset() {
+    try {
+        // Get the values from the form
+        const phoneNumber = document.getElementById('mobile').value;
+        const newPassword = document.getElementById('new-password').value;
+        const otp = document.getElementById('otp').value;
+
+        // Prepare the data for the request
+        const requestData = {
+            phone_number: phoneNumber,
+            password: newPassword,
+            otp: otp
+        };
+
+        // Send a POST request to the reset-password endpoint
+        const response = await fetch('/api/auth/assist/reset-password', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestData)
+        });
+
+        // Check if the response is successful
+        if (response.ok) {
+            alert('OTP verified and password reset successful.');
+            window.location.href = '/assist/login';
+        } else {
+            const errorData = await response.json();
+            alert('Failed to reset password: ' + errorData.message || response.statusText);
+        }
+    } catch (error) {
+        console.error('Error verifying OTP:', error);
+        alert('Failed to verify OTP. Please try again.');
+    }
+}
+
+async function generateForgotPasswordOtp() {
+    try {
+        await generateOtp();
+        document.getElementById('forgot-password-form').classList.add('hidden');
+        document.getElementById('otp-verification-form').classList.remove('hidden');
+    } catch (error) {
+        console.error('Failed to send forgot password otp:', error);
+    }
+}
+
 
 async function generateAnonymousToken() {
     const mobile = document.getElementById("mobile").value;

@@ -1,6 +1,7 @@
 package com.homelyassist.controller;
 
 import com.homelyassist.model.rest.request.AssistLoginRequestDto;
+import com.homelyassist.model.rest.request.AssistResetPasswordRequestDto;
 import com.homelyassist.model.rest.request.OTPRequestDto;
 import com.homelyassist.model.rest.request.OTPVerifyRequestDto;
 import com.homelyassist.model.rest.response.AnonymousTokenResponseDto;
@@ -41,6 +42,11 @@ public class AuthController {
     @PostMapping("/otp/verify")
     public OTPVerifyResponseDto verifyOtp(@RequestBody OTPVerifyRequestDto otpVerifyDto) {
         return otpService.validateOTP(otpVerifyDto);
+    }
+
+    @PostMapping("/assist/reset-password")
+    public void resetPassword(@RequestBody AssistResetPasswordRequestDto passwordRequestDto) {
+        otpService.resetPassword(passwordRequestDto);
     }
 
     @PostMapping("/assist/login")

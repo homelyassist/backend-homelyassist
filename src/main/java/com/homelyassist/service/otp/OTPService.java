@@ -6,6 +6,7 @@ import com.homelyassist.model.db.OTPData;
 import com.homelyassist.model.db.UserMapping;
 import com.homelyassist.model.enums.OTPGenerateStatus;
 import com.homelyassist.model.rest.request.AssistLoginRequestDto;
+import com.homelyassist.model.rest.request.AssistResetPasswordRequestDto;
 import com.homelyassist.model.rest.request.OTPRequestDto;
 import com.homelyassist.model.rest.response.AnonymousTokenResponseDto;
 import com.homelyassist.model.rest.response.AssistLoginResponseDto;
@@ -162,5 +163,16 @@ public class OTPService {
             oneTimePasswordRepository.delete(otpData);
         }
         return anonymousTokenResponseDto;
+    }
+
+    public void resetPassword(AssistResetPasswordRequestDto passwordRequestDto) {
+        String phoneNumber = passwordRequestDto.getPhoneNumber();
+        OTPVerifyResponseDto otpVerifyResponseDto = validateOTP(new OTPVerifyRequestDto(phoneNumber, passwordRequestDto.getOtp()));
+        if(otpVerifyResponseDto.getOtpVerifyStatus().equals(OTPVerifyStatus.ERROR)) {
+            throw new RuntimeException(otpVerifyResponseDto.getOtpVerifyStatus().toString());
+        }
+        UserMapping userMapping = userMappingRepository.findByPhoneNumber(phoneNumber);
+        userMapping.setPassword(BCryptUtils.encodePassword(passwordRequestDto.getPassword()));
+        userMappingRepository.save(userMapping);
     }
 }
