@@ -22,4 +22,7 @@ public class OTPResponseDto {
 
     @JsonProperty("status")
     private OTPGenerateStatus otpGenerateStatus;
+
+    @JsonProperty("error")
+    private String error;
 }

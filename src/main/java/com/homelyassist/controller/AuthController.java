@@ -44,6 +44,11 @@ public class AuthController {
         return otpService.validateOTP(otpVerifyDto);
     }
 
+    @PostMapping("/otp/generate/reset-password")
+    public OTPResponseDto resetPasswordOtpGenerate(@RequestBody OTPRequestDto otpRequestDto) {
+        return otpService.resetPasswordOtpGenerate(otpRequestDto);
+    }
+
     @PostMapping("/assist/reset-password")
     public void resetPassword(@RequestBody AssistResetPasswordRequestDto passwordRequestDto) {
         otpService.resetPassword(passwordRequestDto);

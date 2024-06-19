@@ -120,7 +120,38 @@ async function verifyOtpAndPasswordReset() {
 
 async function generateForgotPasswordOtp() {
     try {
-        await generateOtp();
+        var mobileNumber = document.getElementById("mobile").value;
+        if (!mobileNumber) {
+            alert("Please enter a mobile number");
+            return;
+        }
+
+        var formData = {
+            phone_number: mobileNumber,
+        };
+
+        const path = '/api/auth/otp/generate/reset-password';
+
+        const response = await fetch(path, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (!response.ok) {
+            alert("Failed to generate OTP. Please try again.");
+            throw new Error("Failed to generate OTP. Please try again.");
+        }
+
+        const data = await response.json();
+
+        if (data.status == 'FAILED') {
+            alert(data.error);
+            return;
+        }
+
         document.getElementById('forgot-password-form').classList.add('hidden');
         document.getElementById('otp-verification-form').classList.remove('hidden');
     } catch (error) {
