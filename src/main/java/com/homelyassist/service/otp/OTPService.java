@@ -107,6 +107,7 @@ public class OTPService {
         if (!BCryptUtils.matchPassword(assistLoginRequestDto.getPassword(), userMapping.getPassword())) {
             assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
             assistLoginResponseDto.setError("Incorrect password. Please try again.");
+            return assistLoginResponseDto;
         }
 
         String token = jwtService.generateToken(assistLoginRequestDto.getPhoneNumber());
