@@ -49,8 +49,7 @@ async function registerAssist() {
         return;
     }
 
-    if (payload.password.length < 6) {
-        alert("Password should be longer (6+ chars).")
+    if (!validatePassword(payload.password)) {
         return
     }
 

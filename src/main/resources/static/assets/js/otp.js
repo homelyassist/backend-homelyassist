@@ -88,6 +88,10 @@ async function verifyOtpAndPasswordReset() {
         const newPassword = document.getElementById('new-password').value;
         const otp = document.getElementById('otp').value;
 
+        if (!validatePassword(newPassword)) {
+            return
+        }
+
         // Prepare the data for the request
         const requestData = {
             phone_number: phoneNumber,
