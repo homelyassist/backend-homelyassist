@@ -714,16 +714,34 @@ a:hover {
 
 /* Specific border colors for each image */
 .image-container.agriculture img {
-    border: 3px solid green;
+    border: 3px solid #4CAF50; /* Green */
 }
 
 .image-container.construction img {
-    border: 3px solid orange;
+    border: 3px solid #FF9800; /* Orange */
 }
 
 .image-container.electrical img {
-    border: 3px solid blue;
+    border: 3px solid #2196F3; /* Blue */
 }
+
+.image-container.education img {
+    border: 3px solid #9C27B0; /* Purple */
+}
+
+.image-container.maid img {
+    border: 3px solid #E91E63; /* Pink */
+}
+
+.image-container.health img {
+    border: 3px solid #F44336; /* Red */
+}
+
+.image-container.laundry img {
+    border: 3px solid #00BCD4; /* Cyan */
+}
+
+
 
 
 
