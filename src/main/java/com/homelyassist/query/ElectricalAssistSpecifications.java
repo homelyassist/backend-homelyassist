@@ -1,16 +1,16 @@
 package com.homelyassist.query;
 
-import com.homelyassist.model.db.AgriculturalAssist;
-import com.homelyassist.model.enums.AgriculturalAssistType;
+import com.homelyassist.model.db.ElectricalAssist;
 import com.homelyassist.model.rest.request.SearchAssistRequestDto;
 import jakarta.persistence.criteria.Predicate;
 import org.springframework.data.jpa.domain.Specification;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class AgriculturalAssistSpecifications {
+public class ElectricalAssistSpecifications {
 
-    public static Specification<AgriculturalAssist> findBySearchParams(SearchAssistRequestDto<AgriculturalAssistType> requestDto) {
+    public static Specification<ElectricalAssist> findBySearchParams(SearchAssistRequestDto<ElectricalAssist> requestDto) {
         return (root, query, cb) -> {
             List<Predicate> predicates = new ArrayList<>();
 
@@ -26,9 +26,6 @@ public class AgriculturalAssistSpecifications {
             }
             if (requestDto.getVillage() != null && !requestDto.getVillage().isBlank()) {
                 predicates.add(cb.equal(root.get("village"), requestDto.getVillage()));
-            }
-            if (requestDto.getAssistTypes() != null && !requestDto.getAssistTypes().isEmpty()) {
-                predicates.add(root.join("agriculturalAssistTypes").in(requestDto.getAssistTypes()));
             }
 
             predicates.add(cb.isTrue(root.get("active")));

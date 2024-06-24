@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@ToString
 public class OTPData {
 
     @Id
@@ -34,5 +36,9 @@ public class OTPData {
 
     public Boolean isExpired() {
         return LocalDateTime.now().isAfter(expirationTime);
+    }
+
+    public String getPhoneNumberWithCountryCode() {
+        return "91" + phoneNumber;
     }
 }

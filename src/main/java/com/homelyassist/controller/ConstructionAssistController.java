@@ -1,14 +1,14 @@
 package com.homelyassist.controller;
 
-import com.homelyassist.model.db.AgriculturalAssist;
-import com.homelyassist.model.enums.AgriculturalAssistType;
+import com.homelyassist.model.db.ConstructionAssist;
+import com.homelyassist.model.enums.ConstructionAssistType;
 import com.homelyassist.model.rest.request.AssistDetailRequestDTO;
 import com.homelyassist.model.rest.request.AvailabilityRequestDto;
 import com.homelyassist.model.rest.request.SearchAssistRequestDto;
 import com.homelyassist.model.rest.response.AssistDetailResponseDto;
 import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
 import com.homelyassist.model.rest.response.SearchAssistResponseDto;
-import com.homelyassist.service.assist.AgriculturalAssistService;
+import com.homelyassist.service.assist.ConstructionAssistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,44 +21,43 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("/api/assist/agriculture")
-public class AgriculturalAssistController {
+@RequestMapping("/api/assist/construction")
+public class ConstructionAssistController {
 
-    private final AgriculturalAssistService agriculturalAssistService;
+    private final ConstructionAssistService constructionAssistService;
 
     @Autowired
-    public AgriculturalAssistController(AgriculturalAssistService agriculturalAssistService) {
-        this.agriculturalAssistService = agriculturalAssistService;
+    public ConstructionAssistController(ConstructionAssistService constructionAssistService) {
+        this.constructionAssistService = constructionAssistService;
     }
 
-
     @PostMapping("/register")
-    public AssistRegistrationResponseDto register(@RequestBody AgriculturalAssist agriculturalAssist) {
-        return agriculturalAssistService.register(agriculturalAssist);
+    public AssistRegistrationResponseDto register(@RequestBody ConstructionAssist constructionAssist) {
+        return constructionAssistService.register(constructionAssist);
     }
 
     @PostMapping("/{uuid}/image/upload")
     public ResponseEntity<String> uploadImage(@PathVariable("uuid") String id, @RequestParam("file") MultipartFile file) {
-        return agriculturalAssistService.uploadImage(id, file);
+        return constructionAssistService.uploadImage(id, file);
     }
 
     @GetMapping("/{uuid}")
-    public AgriculturalAssist getDetails(@PathVariable("uuid") String id) {
-        return agriculturalAssistService.fetchById(id);
+    public ConstructionAssist getDetails(@PathVariable("uuid") String id) {
+        return constructionAssistService.fetchById(id);
     }
 
     @PostMapping("/{uuid}/availability")
-    public AgriculturalAssist updateAvailability(@PathVariable("uuid") String id, @RequestBody AvailabilityRequestDto availabilityRequestDto) {
-        return agriculturalAssistService.updateAvailability(id, availabilityRequestDto);
+    public ConstructionAssist updateAvailability(@PathVariable("uuid") String id, @RequestBody AvailabilityRequestDto availabilityRequestDto) {
+        return constructionAssistService.updateAvailability(id, availabilityRequestDto);
     }
 
     @PostMapping("/search")
-    public SearchAssistResponseDto<AgriculturalAssist> searchAssist(@RequestBody SearchAssistRequestDto<AgriculturalAssistType> searchAssistRequestDto) {
-        return agriculturalAssistService.searchAssist(searchAssistRequestDto);
+    public SearchAssistResponseDto<ConstructionAssist> searchAssist(@RequestBody SearchAssistRequestDto<ConstructionAssistType> searchAssistRequestDto) {
+        return constructionAssistService.searchAssist(searchAssistRequestDto);
     }
 
     @PostMapping("/detail")
     public AssistDetailResponseDto getAssistDetails(@RequestBody AssistDetailRequestDTO assistDetailRequestDTO) {
-        return agriculturalAssistService.getAssistDetails(assistDetailRequestDTO);
+        return constructionAssistService.getAssistDetails(assistDetailRequestDTO);
     }
 }

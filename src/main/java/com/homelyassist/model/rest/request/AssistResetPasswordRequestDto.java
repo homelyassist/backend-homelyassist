@@ -1,6 +1,5 @@
 package com.homelyassist.model.rest.request;
 
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,11 +10,14 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OTPRequestDto {
-
-    private final String countryCode = "+91";
+public class AssistResetPasswordRequestDto {
 
     @JsonProperty("phone_number")
     private String phoneNumber;
 
+    @JsonProperty("password")
+    private String password;
+
+    @JsonProperty("otp")
+    private String otp;
 }

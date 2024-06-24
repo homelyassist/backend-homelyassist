@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-@Profile("local")
+@Profile("prod")
 @Configuration
 @EnableAutoConfiguration(exclude = { SecurityAutoConfiguration.class })
 public class SecurityConfigLocal {

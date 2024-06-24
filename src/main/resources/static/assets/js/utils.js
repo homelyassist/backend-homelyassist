@@ -27,8 +27,17 @@ function showPopupNotification(message) {
     document.body.appendChild(notificationDiv);
 
     // Automatically remove notification after 5 seconds
-    setTimeout(function() {
+    setTimeout(function () {
         notificationDiv.parentNode.removeChild(notificationDiv);
     }, 1500);
 }
 
+
+function validatePassword(password) {
+    if (password != null && password.length < 6) {
+        alert("Password should be longer (6+ chars).")
+        return false;
+    }
+
+    return true;
+}

@@ -1,14 +1,13 @@
 package com.homelyassist.controller;
 
-import com.homelyassist.model.db.AgriculturalAssist;
-import com.homelyassist.model.enums.AgriculturalAssistType;
+import com.homelyassist.model.db.ElectricalAssist;
 import com.homelyassist.model.rest.request.AssistDetailRequestDTO;
 import com.homelyassist.model.rest.request.AvailabilityRequestDto;
 import com.homelyassist.model.rest.request.SearchAssistRequestDto;
 import com.homelyassist.model.rest.response.AssistDetailResponseDto;
 import com.homelyassist.model.rest.response.AssistRegistrationResponseDto;
 import com.homelyassist.model.rest.response.SearchAssistResponseDto;
-import com.homelyassist.service.assist.AgriculturalAssistService;
+import com.homelyassist.service.assist.ElectricalAssistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,44 +20,43 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("/api/assist/agriculture")
-public class AgriculturalAssistController {
+@RequestMapping("/api/assist/electrical")
+public class ElectricalAssistController {
 
-    private final AgriculturalAssistService agriculturalAssistService;
+    private final ElectricalAssistService electricalAssistService;
 
     @Autowired
-    public AgriculturalAssistController(AgriculturalAssistService agriculturalAssistService) {
-        this.agriculturalAssistService = agriculturalAssistService;
+    public ElectricalAssistController(ElectricalAssistService electricalAssistService) {
+        this.electricalAssistService = electricalAssistService;
     }
 
-
     @PostMapping("/register")
-    public AssistRegistrationResponseDto register(@RequestBody AgriculturalAssist agriculturalAssist) {
-        return agriculturalAssistService.register(agriculturalAssist);
+    public AssistRegistrationResponseDto register(@RequestBody ElectricalAssist electricalAssist) {
+        return electricalAssistService.register(electricalAssist);
     }
 
     @PostMapping("/{uuid}/image/upload")
     public ResponseEntity<String> uploadImage(@PathVariable("uuid") String id, @RequestParam("file") MultipartFile file) {
-        return agriculturalAssistService.uploadImage(id, file);
+        return electricalAssistService.uploadImage(id, file);
     }
 
     @GetMapping("/{uuid}")
-    public AgriculturalAssist getDetails(@PathVariable("uuid") String id) {
-        return agriculturalAssistService.fetchById(id);
+    public ElectricalAssist getDetails(@PathVariable("uuid") String id) {
+        return electricalAssistService.fetchById(id);
     }
 
     @PostMapping("/{uuid}/availability")
-    public AgriculturalAssist updateAvailability(@PathVariable("uuid") String id, @RequestBody AvailabilityRequestDto availabilityRequestDto) {
-        return agriculturalAssistService.updateAvailability(id, availabilityRequestDto);
+    public ElectricalAssist updateAvailability(@PathVariable("uuid") String id, @RequestBody AvailabilityRequestDto availabilityRequestDto) {
+        return electricalAssistService.updateAvailability(id, availabilityRequestDto);
     }
 
     @PostMapping("/search")
-    public SearchAssistResponseDto<AgriculturalAssist> searchAssist(@RequestBody SearchAssistRequestDto<AgriculturalAssistType> searchAssistRequestDto) {
-        return agriculturalAssistService.searchAssist(searchAssistRequestDto);
+    public SearchAssistResponseDto<ElectricalAssist> searchAssist(@RequestBody SearchAssistRequestDto<ElectricalAssist> searchAssistRequestDto) {
+        return electricalAssistService.searchAssist(searchAssistRequestDto);
     }
 
     @PostMapping("/detail")
     public AssistDetailResponseDto getAssistDetails(@RequestBody AssistDetailRequestDTO assistDetailRequestDTO) {
-        return agriculturalAssistService.getAssistDetails(assistDetailRequestDTO);
+        return electricalAssistService.getAssistDetails(assistDetailRequestDTO);
     }
 }

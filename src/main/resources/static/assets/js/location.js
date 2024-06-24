@@ -4208,99 +4208,99 @@ const balangir = {
     block: [
         {
             name: "Balangir",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bangomunda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Belpara",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kantabanji",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Khaprakhol",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Loisinga",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Patnagarh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Saintala",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Sindhekela",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Titlagarh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Turekela",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tushura",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -4311,115 +4311,115 @@ const cuttack = {
 
         {
             name: "Athagad",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Badamba",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Narasinghpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tigiria",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Banki",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Dampada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Baranga",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Cuttack Sadar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kantapada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Mahanga",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Niali",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Nischintakoili",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Salepur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tangi-Choudwar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Cuttack (Municipal Corporation)"

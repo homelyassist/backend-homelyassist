@@ -1,3 +1,9 @@
+const category_map = {
+    'agriculture_assist': 'agriculture',
+    'construction_assist': 'construction',
+    'electrical_assist': 'electrical'
+}
+
 async function registerAssist() {
     const fileInput = document.getElementById('photo');
     const file = fileInput.files[0];
@@ -22,6 +28,8 @@ async function registerAssist() {
         assist_types: getSelectedAssistTypes()
     };
 
+    const category = category_map[document.getElementById("category").value];
+
     for (const key in payload) {
         if (key == "village") {
             continue;
@@ -41,8 +49,7 @@ async function registerAssist() {
         return;
     }
 
-    if (payload.password.length < 6) {
-        alert("Password should be longer (6+ chars).")
+    if (!validatePassword(payload.password)) {
         return
     }
 
@@ -53,7 +60,7 @@ async function registerAssist() {
         return;
     }
 
-    if (payload.assist_types.length === 0) {
+    if (payload.assist_types.length === 0 && category != category_map['electrical_assist']) {
         alert("Please select at least one Sub-Category.");
         return;
     }
@@ -64,7 +71,7 @@ async function registerAssist() {
         return;
     }
 
-    const response = await fetch("/api/assist/agriculture/register", { // make this generic as per category
+    const response = await fetch(`/api/assist/${category}/register`, { // make this generic as per category
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -90,7 +97,9 @@ async function registerAssist() {
     const compressedBlob = await compressImage(file, 50 * 1024);
     formData.append('file', compressedBlob);
 
-    const imageResponse = await fetch(`/api/assist/agriculture/${uuid}/image/upload`, { // make this generic as per category
+    localStorage.setItem("assist_type", category);
+
+    const imageResponse = await fetch(`/api/assist/${category}/${uuid}/image/upload`, { // make this generic as per category
         method: "POST",
         headers: {
             "Authorization": getBearerToken()
@@ -109,12 +118,13 @@ async function registerAssist() {
 
 async function getAssistData() {
     const uuid = localStorage.getItem('uuid')
+    const category = localStorage.getItem('assist_type')
     if (!uuid) {
         console.log("uuid is null");
         window.location.assign("/");
     }
 
-    const response = await fetch(`/api/assist/agriculture/${uuid}`, { // make this generic as per category
+    const response = await fetch(`/api/assist/${category}/${uuid}`, { // make this generic as per category
         method: "GET",
         headers: {
             "Authorization": getBearerToken()
@@ -148,8 +158,9 @@ function updateAvailabilitySelect(active) {
 
 async function updateAvailabilityInfo() {
     const uuid = localStorage.getItem('uuid')
+    const category = localStorage.getItem('assist_type')
     const availability = document.getElementById("availability").value === "yes";
-    const response = await fetch(`/api/assist/agriculture/${uuid}/availability`, {
+    const response = await fetch(`/api/assist/${category}/${uuid}/availability`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -199,6 +210,7 @@ async function assistLogin() {
         if (data.status === "SUCCESS" && data.token) {
             localStorage.setItem("token", data.token);
             localStorage.setItem("uuid", data.uuid);
+            localStorage.setItem("assist_type", data.type);
             window.location.assign("/assist/availability");
         } else {
             console.error("Error login to server")
@@ -221,7 +233,9 @@ async function searchAssist() {
         assist_types: getSelectedAssistTypes()
     }
 
-    if (payload.assist_types.length === 0) {
+    const category = category_map[document.getElementById("category").value];
+
+    if (payload.assist_types.length === 0 && category != category_map['electrical_assist']) {
         alert("Please select at least one Sub-Category.");
         return;
     }
@@ -236,7 +250,7 @@ async function searchAssist() {
     container.appendChild(addLoadingIcon());
 
     try {
-        const response = await fetch("/api/assist/agriculture/search", { // make this generic as per category
+        const response = await fetch(`/api/assist/${category}/search`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -266,7 +280,7 @@ async function searchAssist() {
                         </div>
                         <h3>${item.name}</h3>
                         <p>${item.description}</p>
-                        <button class="btn btn-request" data-uuid="${item.id}" id="${item.id}_btn" onclick="openPopup(event)">Request Mobile Number</button>
+                        <button class="btn btn-request" data-uuid="${item.id}" data-category="${category}" id="${item.id}_btn" onclick="openPopup(event)">Request Mobile Number</button>
                         <p id="${item.id}"></p>
                     </div>
                 `;
@@ -342,15 +356,16 @@ async function compressImage(file, maxSizeInBytes) {
     });
 }
 
-async function getAssistDetails(assistId) {
+async function getAssistDetails(assistId, category) {
     const m_vid = localStorage.getItem('m_vid');
+
 
     var payload = {
         assist_id: assistId,
         vid: m_vid
     };
 
-    const response = await fetch("/member/assist/detail", {
+    const response = await fetch(`/api/assist/${category}/detail`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -376,8 +391,9 @@ function viewAssistPhoneNumber(data, assist_id) {
 
 async function requestMobileNumber(event) {
     const assist_uuid = event.target.dataset.uuid;
+    const category = event.target.dataset.category;
     await generateAnonymousToken();
-    const data = await getAssistDetails(assist_uuid);
+    const data = await getAssistDetails(assist_uuid, category);
     viewAssistPhoneNumber(data, assist_uuid)
     closePopup();
 }
@@ -391,13 +407,15 @@ function tokenIsPresntAndValid() {
 
 async function openPopup(event) {
     const uuid = event.target.dataset.uuid;
+    const category = event.target.dataset.category;
     if (tokenIsPresntAndValid()) {
-        const data = await getAssistDetails(uuid);
+        const data = await getAssistDetails(uuid, category);
         viewAssistPhoneNumber(data, uuid)
         return;
     }
     const submitButton = document.getElementById('popUpSubmitButton');
     submitButton.setAttribute('data-uuid', uuid);
+    submitButton.setAttribute('data-category', category);
     document.getElementById("popup").style.display = "block";
 }
 
@@ -425,3 +443,57 @@ function hideLoadingSpinner() {
     // Hide the loading spinner
     document.getElementById('loading-spinner').style.display = 'none';
 }
+
+const subcategories = {
+    agriculture_assist: [
+        { id: 'agriculture', value: 'agriculture', label: 'Farming' },
+        { id: 'farm_land_maintenance', value: 'farm_land_maintenance', label: 'Farm Land Maintenance' },
+        { id: 'wood_cutting', value: 'wood_cutting', label: 'Wood Cutting' },
+        { id: 'tractor_power_tiller', value: 'tractor_power_tiller', label: 'Tractor/Power Tiller rent' },
+        { id: 'animal_selling', value: 'animal_selling', label: 'Animal Selling' }
+    ],
+    construction_assist: [
+        { id: 'home_construction', value: 'home_construction', label: 'Home Construction' },
+        { id: 'home_repair', value: 'home_repair', label: 'Home Repair' },
+        { id: 'carpenter', value: 'carpenter', label: 'Carpenter' },
+        { id: 'plumber', value: 'plumber', label: 'Plumber' },
+        { id: 'painting', value: 'painting', label: 'Painting' },
+        { id: 'fitting', value: 'fitting', label: 'Fitting' }
+    ],
+    electrical_assist: []
+};
+
+function updateSubcategories(category, checked = false) {
+    const container = document.getElementById('subcategory-container');
+    const subcategoryLabel = document.querySelector('label[for="subcategory"]');
+
+    container.innerHTML = '';
+
+    if (subcategories[category].length === 0) {
+        subcategoryLabel.style.display = 'none';
+        container.style.display = 'none';
+    } else {
+        subcategoryLabel.style.display = 'block';
+        container.style.display = 'block';
+        subcategories[category].forEach(subcategory => {
+            const checkboxItem = document.createElement('div');
+            checkboxItem.className = 'checkbox-item';
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.id = subcategory.id;
+            checkbox.name = 'assist_type';
+            checkbox.value = subcategory.value;
+            checkbox.checked = checked;
+
+            const label = document.createElement('label');
+            label.htmlFor = subcategory.id;
+            label.textContent = subcategory.label;
+
+            checkboxItem.appendChild(checkbox);
+            checkboxItem.appendChild(label);
+            container.appendChild(checkboxItem);
+        });
+    }
+}
+
