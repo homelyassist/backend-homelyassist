@@ -22,6 +22,12 @@ public class AppConstant {
 
         public static final String ASSIST_OTP_VERIFICATION = "otp_verification";
 
+        public static final String SEARCH_AGRICULTURE_ASSIST = "search_agriculture_assist";
+
+        public static final String SEARCH_CONSTRUCTION_ASSIST = "search_construction_assist";
+
+        public static final String SEARCH_ELECTRICAL_ASSIST = "search_electrical_assist";
+
         public static final String ASSIST = "assist";
     }
 

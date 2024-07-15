@@ -223,7 +223,7 @@ async function assistLogin() {
 }
 
 
-async function searchAssist() {
+async function searchAssist(categoryValue) {
 
     var payload = {
         state: document.getElementById("state").value,
@@ -233,7 +233,7 @@ async function searchAssist() {
         assist_types: getSelectedAssistTypes()
     }
 
-    const category = category_map[document.getElementById("category").value];
+    const category = category_map[categoryValue];
 
     if (payload.assist_types.length === 0 && category != category_map['electrical_assist']) {
         alert("Please select at least one Sub-Category.");
