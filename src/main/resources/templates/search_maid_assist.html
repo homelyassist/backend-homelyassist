@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Login to Find an Assist - homelyAssist</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link th:href="@{/assets/img/homelyAssistlogo.jpeg}" rel="icon">
+    <link th:href="@{/assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link th:href="@{/assets/css/main.css}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <style>
+        /* Style for the form */
+        #search-form {
+            background-color: #f7f7f7;
+            /* Light gray background */
+            padding: 30px;
+            /* Adjust padding as needed */
+            border-radius: 10px;
+            margin-top: 50px;
+            /* Add some space between sections */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* Add a subtle shadow */
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 6px;
+        }
+
+        #form {
+            margin-top: 100px;
+            /* Adjust this value based on the height of your header */
+        }
+
+        #form h3 {
+            color: #2e8b57;
+            /* Green theme */
+            font-weight: bold;
+            /* Make the text bold */
+            font-size: 31px;
+            /* Adjust font size if needed */
+        }
+
+        #search-form h3 {
+            color: #6cb83a;
+            /* Green theme */
+            margin-bottom: 20px;
+            /* Add space below the heading */
+            text-align: center;
+            /* Center align the heading */
+            font-size: 24px;
+            /* Increase font size */
+            font-family: 'Roboto', sans-serif;
+            /* Use Roboto font */
+        }
+
+        #search-form label {
+            color: #333;
+            /* Darker text color */
+            margin-bottom: 5px;
+            /* Add space below the labels */
+            font-size: 18px;
+            /* Adjust font size */
+            font-family: 'Roboto', sans-serif;
+            /* Use Roboto font */
+        }
+
+        #search-form input,
+        #search-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            /* Use Roboto font */
+        }
+
+        /* Style for the section title */
+        .section-title h2 {
+            color: #2e8b57;
+            /* Green theme */
+        }
+
+        /* Center align the button */
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+            /* Adjust margin to move the button down */
+        }
+
+        /* Style for the assists */
+        .assist-card {
+            background-color: #f7f7f7;
+            /* Light gray background */
+            padding: 20px;
+            /* Adjust padding as needed */
+            border-radius: 10px;
+            margin-top: 30px;
+            /* Add some space between cards */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* Add a subtle shadow */
+            text-align: center;
+            /* Center align the content */
+        }
+
+        .assist-card h3 {
+            color: #333;
+            /* Darker text color */
+            margin-bottom: 10px;
+            /* Add space below the heading */
+        }
+
+        .assist-card p {
+            color: #666;
+            /* Slightly darker text color */
+            margin-bottom: 10px;
+            /* Add space below the description */
+        }
+
+        .assist-card img {
+            width: 100%;
+            /* Ensure image fills the container */
+            border-radius: 10px;
+            /* Apply border-radius to image */
+            margin-bottom: 10px;
+            /* Add space below the image */
+        }
+
+        .assist-card .btn-details,
+        .assist-card .btn-request {
+            background-color: #2E8B57;
+            /* Green theme */
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .assist-card .btn-details:hover,
+        .assist-card .btn-request:hover {
+            background-color: #f5cb42;
+            /* Yellow theme on hover */
+        }
+
+        #popup {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+        }
+
+        #popup>div {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #popup h2 {
+            text-align: center;
+            color: black;
+        }
+
+        #popup input[type="text"] {
+            display: block;
+            width: calc(100% - 20px);
+            margin: 10px auto;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button-group button {
+            margin: 5px;
+        }
+
+        #timer,
+        #otpDisplay {
+            color: black;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2e8b57;
+            /* Green color */
+            margin-bottom: 30px;
+        }
+
+        .select2-selection__arrow {
+            height: 48px;
+            /* Match the height with select box */
+        }
+
+        /* Customizing Select2 Dropdown Arrow */
+        .select2-selection__arrow b {
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Hover effect for Select2 Dropdown */
+        .select2-container--default .select2-selection--single:hover {
+            border-color: #555;
+        }
+
+        .select2-selection__rendered {
+            line-height: 2;
+            /* Adjust the line height as needed */
+        }
+
+        .select2-dropdown.select2-dropdown--below {
+            width: 100%;
+        }
+
+        .select2-container--default .select2-selection--single {
+            padding: 6px;
+            height: 45px;
+            width: 100%;
+            position: relative;
+        }
+
+        .select2-selection__arrow {
+            color: #6cb83a;
+            top: 50% !important;
+            transform: translateY(-50%);
+        }
+
+        .select2-container--default .select2-selection--single {
+            border-radius: 15px;
+        }
+
+        .image-container {
+            width: 300px; /* Adjust the width to your desired size */
+            height: 300px; /* Match the width to ensure square dimensions */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="/assets/img/homelyAssistlogo.jpeg" alt="">
+            <h1>homelyAssist</h1>
+        </a>
+    </div>
+</header><!-- End Header -->
+
+<div class="container">
+    <section id="form" class="form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <h3>Enter Details to Complete Your Search</h3>
+                </div>
+                <form action="#" method="get" role="form" class="php-email-form"
+                      data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="subcategory">Sub-Category</label>
+                            <div id="subcategory-container" class="checkbox-container">
+                                <!-- Subcategories will be inserted here -->
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="state">State</label>
+                            <select name="state" class="form-control" id="state" required>
+                                <option value="" selected disabled>Select State</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="district">District</label>
+                            <select name="district" class="form-control" id="district" placeholder="District"
+                                    required>
+                                <option value="" selected disabled>Select District</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="block">Block/Municipality</label>
+                            <select name="block" class="form-control" id="block" placeholder="Block/Municipality"
+                                    required>
+                                <option value="" selected disabled>Select Block/Municipality</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="village">Village/Area</label>
+                            <select name="village" class="form-control" id="village" placeholder="Village/Area">
+                                <option value="" selected disabled>Select Village/Area</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 btn-container">
+                            <button type="button" class="btn btn-success" onclick="searchAssist('maid_assist')">Search</button>
+                        </div>
+                        <hr class="my-4">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="assists" class="assists">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>Available Maid Assists in Your Locality</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" id="assistContainer">
+            </div>
+            <div id="loading-spinner" class="spinner-border text-primary" role="status" style="display: none;">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div id="popup">
+                <div>
+                    <h2>Enter Your Mobile Number and OTP</h2>
+                    <form id="mobileOTPForm">
+                        <input type="text" id="mobile" placeholder="Mobile Number" required><br><br>
+                        <input type="text" id="otp" placeholder="OTP" required><br><br>
+                        <span id="otpDisplay"></span>
+                        <div class="button-group">
+                            <button type="button" class="btn btn-primary" id="otpButton"
+                                    onclick="generateOtp(true)">Generate OTP</button>
+                            <span id="timer"></span>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="btn btn-success" id="popUpSubmitButton"
+                                    onclick="requestMobileNumber(event)">Submit</button>
+                            <button type="button" class="btn btn-danger" onclick="closePopup()">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+         updateSubcategories('maid_assist', true);
+    });
+</script>
+
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+<script src="/assets/js/assist.js"></script>
+<script src="/assets/js/utils.js"></script>
+<script src="/assets/js/otp.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="/assets/js/location.js"></script>
+<!-- Template Main JS File -->
+<script src="/assets/js/main.js"></script>
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>homelyAssist</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="/team" style="color: #2E8B57;">homelyAssistTeam</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+</body>
+
+</html>

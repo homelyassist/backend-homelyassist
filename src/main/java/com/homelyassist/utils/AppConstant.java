@@ -28,6 +28,8 @@ public class AppConstant {
 
         public static final String SEARCH_ELECTRICAL_ASSIST = "search_electrical_assist";
 
+        public static final String SEARCH_MAID_ASSIST = "search_maid_assist";
+
         public static final String ASSIST = "assist";
     }
 

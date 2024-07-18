@@ -30,6 +30,7 @@ public class SecurityConfig {
                         .requestMatchers("/assist/agriculture/search").permitAll()
                         .requestMatchers("/assist/electrical/search").permitAll()
                         .requestMatchers("/assist/construction/search").permitAll()
+                        .requestMatchers("/assist/maid/search").permitAll()
                         .requestMatchers("/assets/**").permitAll()
                         .requestMatchers("/api/auth/validate").authenticated()
                         .requestMatchers("/api/assist/agriculture/search").permitAll()

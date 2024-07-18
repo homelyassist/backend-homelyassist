@@ -13,6 +13,7 @@ import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_AGRICULTURE_ASS
 import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_ASSIST;
 import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_CONSTRUCTION_ASSIST;
 import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_ELECTRICAL_ASSIST;
+import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_MAID_ASSIST;
 
 @Controller
 @RequestMapping("/assist")
@@ -56,6 +57,11 @@ public class AssistController {
     @GetMapping("/electrical/search")
     public String searchElectricalAssist() {
         return SEARCH_ELECTRICAL_ASSIST;
+    }
+
+    @GetMapping("/maid/search")
+    public String searchMaidAssist() {
+        return SEARCH_MAID_ASSIST;
     }
 
     @GetMapping

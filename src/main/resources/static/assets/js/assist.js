@@ -1,7 +1,8 @@
 const category_map = {
     'agriculture_assist': 'agriculture',
     'construction_assist': 'construction',
-    'electrical_assist': 'electrical'
+    'electrical_assist': 'electrical',
+    'maid_assist': 'maid'
 }
 
 async function registerAssist() {
@@ -460,7 +461,12 @@ const subcategories = {
         { id: 'painting', value: 'painting', label: 'Painting' },
         { id: 'fitting', value: 'fitting', label: 'Fitting' }
     ],
-    electrical_assist: []
+    electrical_assist: [],
+    maid_assist: [
+        { id: 'cook', value: 'cook', label: 'Cook' },
+        { id: 'maid', value: 'maid', label: 'Maid' },
+        { id: 'tiffin_service', value: 'tiffin_service', label: 'Tiffin Service' },
+    ]
 };
 
 function updateSubcategories(category, checked = false) {
