@@ -305,18 +305,18 @@ async function searchAssist(categoryValue) {
 
 function getSelectedAssistTypes() {
     var selectedAssistTypes = [];
-    // Get all checkbox elements with name 'assist_type'
-    var checkboxes = document.querySelectorAll('input[name="assist_type"]');
-    // Iterate over each checkbox
-    checkboxes.forEach(function (checkbox) {
-        // Check if checkbox is checked
-        if (checkbox.checked) {
-            // Add the value of the checkbox to the selectedAssistTypes array
-            selectedAssistTypes.push(checkbox.value);
-        }
-    });
+    // Get the select element
+    var selectElement = document.getElementById('subcategory-container');
+    // Get all selected options
+    var selectedOptions = selectElement.selectedOptions;
+    // Iterate over each selected option
+    for (var i = 0; i < selectedOptions.length; i++) {
+        // Add the value of the selected option to the selectedAssistTypes array
+        selectedAssistTypes.push(selectedOptions[i].value);
+    }
     return selectedAssistTypes;
 }
+
 
 function generateBase64String(buffer, gender) {
 
@@ -482,23 +482,19 @@ function updateSubcategories(category, checked = false) {
         subcategoryLabel.style.display = 'block';
         container.style.display = 'block';
         subcategories[category].forEach(subcategory => {
-            const checkboxItem = document.createElement('div');
-            checkboxItem.className = 'checkbox-item';
+            const option = document.createElement('option');
+            option.value = subcategory.value;
+            option.text = subcategory.label;
+            option.name = 'assist_type'
+            if (checked) {
+                option.selected = true;
+            }
+            container.appendChild(option);
+        });
 
-            const checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            checkbox.id = subcategory.id;
-            checkbox.name = 'assist_type';
-            checkbox.value = subcategory.value;
-            checkbox.checked = checked;
 
-            const label = document.createElement('label');
-            label.htmlFor = subcategory.id;
-            label.textContent = subcategory.label;
-
-            checkboxItem.appendChild(checkbox);
-            checkboxItem.appendChild(label);
-            container.appendChild(checkboxItem);
+        $(container).select2({
+            placeholder: "Select subcategories"
         });
     }
 }
