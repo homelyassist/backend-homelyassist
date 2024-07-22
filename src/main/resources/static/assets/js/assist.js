@@ -5,72 +5,17 @@ const category_map = {
     'maid_assist': 'maid'
 }
 
-async function registerAssist() {
-    const fileInput = document.getElementById('photo');
-    const file = fileInput.files[0];
-
-    if (!file) {
-        console.error('No file selected.');
-        alert("Please select photo");
-        return;
-    }
-
-    var payload = {
-        name: document.getElementById("fullname").value,
-        phone_number: document.getElementById("mobile").value,
-        state: document.getElementById("state").value,
-        district: document.getElementById("district").value,
-        block: document.getElementById("block").value,
-        village: document.getElementById("village").value,
-        experience: document.getElementById("experience").value,
-        description: document.getElementById("description").value,
-        gender: document.getElementById("gender").value,
-        password: document.getElementById("password").value,
-        assist_types: getSelectedAssistTypes()
-    };
-
-    const category = category_map[document.getElementById("category").value];
-
-    for (const key in payload) {
-        if (key == "village") {
-            continue;
-        }
-
-        if (payload.hasOwnProperty(key)) {
-            const value = payload[key];
-            if (!value) {
-                alert(`Please fill in the ${key.replace('_', ' ')} field.`);
-                return false;
-            }
-        }
-    }
-
-    if (payload.state != "Odisha") {
-        alert("Only Odisha state registration is allowed");
-        return;
-    }
-
-    if (!validatePassword(payload.password)) {
-        return
-    }
-
-    const experience = parseInt(payload.experience)
-
-    if (Number.isNaN(experience) || experience < 0 || experience > 30) {
-        alert("Please provide a valid value for Experience between 0 and 30");
-        return;
-    }
-
-    if (payload.assist_types.length === 0 && category != category_map['electrical_assist']) {
-        alert("Please select at least one Sub-Category.");
-        return;
-    }
+async function verifyAndRegisterAssist() {
+    await validate();
 
     const validOpt = await validateOtp();
 
     if (!validOpt) {
         return;
     }
+
+    var payload = await extractPayload()
+    const category = category_map[document.getElementById("category").value];
 
     const response = await fetch(`/api/assist/${category}/register`, { // make this generic as per category
         method: "POST",
@@ -95,6 +40,8 @@ async function registerAssist() {
 
     const uuid = data.uuid;
     const formData = new FormData();
+    const fileInput = document.getElementById('photo');
+    const file = fileInput.files[0];
     const compressedBlob = await compressImage(file, 50 * 1024);
     formData.append('file', compressedBlob);
 
@@ -115,6 +62,103 @@ async function registerAssist() {
 
     localStorage.setItem('uuid', data.uuid);
     window.location.assign("/assist/availability");
+}
+
+async function validateAndGenerateOtp() {
+    var isValid = await validate();
+    if (!isValid) {
+        return;
+    }
+    await generateOtp();
+    showOtpModal()
+}
+
+async function extractPayload() {
+    return {
+        name: document.getElementById("fullname").value,
+        phone_number: document.getElementById("mobile").value,
+        state: document.getElementById("state").value,
+        district: document.getElementById("district").value,
+        block: document.getElementById("block").value,
+        village: document.getElementById("village").value,
+        experience: document.getElementById("experience").value,
+        description: document.getElementById("description").value,
+        gender: document.getElementById("gender").value,
+        password: document.getElementById("password").value,
+        assist_types: getSelectedAssistTypes()
+    };
+
+}
+
+async function validate() {
+    const fileInput = document.getElementById('photo');
+    const file = fileInput.files[0];
+
+    if (!file) {
+        console.error('No file selected.');
+        alert("Please select photo");
+        return false;
+    }
+
+    var payload = await extractPayload()
+
+    const category = category_map[document.getElementById("category").value];
+
+    for (const key in payload) {
+        if (key == "village") {
+            continue;
+        }
+
+        if (payload.hasOwnProperty(key)) {
+            const value = payload[key];
+            if (!value) {
+                alert(`Please fill in the ${key.replace('_', ' ')} field.`);
+                return false;
+            }
+        }
+    }
+
+    if (payload.state != "Odisha") {
+        alert("Only Odisha state registration is allowed");
+        return false;
+    }
+
+    if (!validatePassword(payload.password)) {
+        return false;
+    }
+
+    const experience = parseInt(payload.experience)
+
+    if (Number.isNaN(experience) || experience < 0 || experience > 30) {
+        alert("Please provide a valid value for Experience between 0 and 30");
+        return false;
+    }
+
+    if (payload.assist_types.length === 0 && category != category_map['electrical_assist']) {
+        alert("Please select at least one Sub-Category.");
+        return false;
+    }
+
+    return true;
+}
+
+function showOtpModal() {
+    const otpModal = document.getElementById('otpModal');
+    otpModal.style.display = 'block';
+    otpModal.classList.add('show');
+    otpModal.setAttribute('aria-modal', 'true');
+    otpModal.setAttribute('role', 'dialog');
+    const statusMessage = document.getElementById('otp-status-message');
+    statusMessage.textContent = 'OTP sent successfully. Resend after 60 seconds.';
+}
+
+
+function closeOtpModal() {
+    const otpModal = document.getElementById('otpModal');
+    otpModal.style.display = 'none';
+    otpModal.classList.remove('show');
+    otpModal.removeAttribute('aria-modal');
+    otpModal.removeAttribute('role');
 }
 
 async function getAssistData() {

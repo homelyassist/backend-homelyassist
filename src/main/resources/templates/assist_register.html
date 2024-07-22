@@ -181,6 +181,16 @@
         .select2-container--default .select2-selection--single {
             border-radius: 15px;
         }
+
+        .modal-dialog {
+            transform: translateY(-20%) !important;
+        }
+
+        .modal-content {
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
     </style>
 </head>
 
@@ -205,7 +215,7 @@
                     <div class="section-title" data-aos="fade-up">
                         <h2>Fill below details to Register</h2>
                     </div>
-                    <form action="#" method="post" role="form" class="php-email-form" data-aos="fade-up">
+                    <form role="form" data-aos="fade-up">
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <label for="fullname">Full Name</label>
@@ -286,23 +296,51 @@
                                 <input type="tel" name="mobile" class="form-control" id="mobile"
                                     placeholder="Mobile Number" required maxlength="10">
                             </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP"
-                                    required>
-                            </div>
+<!--                            <div class="col-md-12 form-group">-->
+<!--                                <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP"-->
+<!--                                    required>-->
+<!--                            </div>-->
                             <!-- <div class="col-md-12 form-group">
                                 <div>
                                     <span id="otpDisplay"></span>
                                 </div>
                             </div> -->
-                            <div class="col-md-12 form-group">
-                                <button type="button" class="btn btn-primary" id="otpButton"
-                                    onclick="generateOtp()">Generate OTP</button>
-                                <span id="timer"></span>
-                            </div>
+<!--                            <div class="col-md-12 form-group">-->
+<!--                                <button type="button" class="btn btn-primary" id="otpButton"-->
+<!--                                    onclick="generateOtp()">Generate OTP</button>-->
+<!--                                <span id="timer"></span>-->
+<!--                            </div>-->
                             <div class="col-md-12 btn-container">
-                                <button type="submit" class="btn btn-success" onclick="registerAssist()">Save</button>
+                                <button type="button" class="btn btn-success" onclick="validateAndGenerateOtp()">Submit</button>
                             </div>
+
+                            <!-- OTP Modal -->
+                            <div class="modal fade" id="otpModal" tabindex="-1" role="dialog"
+                                 aria-labelledby="otpModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="otpModalLabel">Enter OTP</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeOtpModal()">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label for="otp">OTP</label>
+                                                <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP">
+                                            </div>
+                                            <span id="otp-status-message" class="d-block mt-2"></span>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <span id="timer"></span>
+                                            <button type="button" id="otpButton" class="btn btn-secondary" onclick="generateOtp()">Resend OTP</button>
+                                            <button type="button" id="validate-otp-btn" class="btn btn-primary" onclick="verifyAndRegisterAssist()">Validate OTP</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </form>
                 </div>
@@ -353,7 +391,6 @@
     <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="/assets/vendor/aos/aos.js"></script>
-    <script src="/assets/vendor/php-email-form/validate.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/otp.js"></script>
     <script src="/assets/js/assist.js"></script>
