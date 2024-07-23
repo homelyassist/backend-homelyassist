@@ -205,12 +205,19 @@ async function generateAnonymousToken() {
     // put this in local stroage
 }
 
+var countdownInterval;
+
 function resendOptTimer() {
+
+    if (countdownInterval) {
+        clearInterval(countdownInterval);
+    }
+
     var countdown = 60;
     var timerElement = document.getElementById('timer');
     timerElement.textContent = countdown + 's';
 
-    var countdownInterval = setInterval(function () {
+    countdownInterval = setInterval(function () {
         countdown--;
         var otpButton = document.getElementById('otpButton')
 

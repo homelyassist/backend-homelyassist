@@ -352,11 +352,13 @@ function getSelectedAssistTypes() {
     // Get the select element
     var selectElement = document.getElementById('subcategory-container');
     // Get all selected options
-    var selectedOptions = selectElement.selectedOptions;
-    // Iterate over each selected option
-    for (var i = 0; i < selectedOptions.length; i++) {
-        // Add the value of the selected option to the selectedAssistTypes array
-        selectedAssistTypes.push(selectedOptions[i].value);
+    if (selectElement) {
+        var selectedOptions = selectElement.selectedOptions;
+        // Iterate over each selected option
+        for (var i = 0; i < selectedOptions.length; i++) {
+            // Add the value of the selected option to the selectedAssistTypes array
+            selectedAssistTypes.push(selectedOptions[i].value);
+        }
     }
     return selectedAssistTypes;
 }
@@ -514,17 +516,20 @@ const subcategories = {
 };
 
 function updateSubcategories(category, checked = false) {
-    const container = document.getElementById('subcategory-container');
+    const wrapper = document.getElementById('subcategory-container-wrapper');
     const subcategoryLabel = document.querySelector('label[for="subcategory"]');
 
-    container.innerHTML = '';
+    wrapper.innerHTML = '';
 
     if (subcategories[category].length === 0) {
         subcategoryLabel.style.display = 'none';
-        container.style.display = 'none';
     } else {
         subcategoryLabel.style.display = 'block';
-        container.style.display = 'block';
+        // Create the select element
+        const select = document.createElement('select');
+        select.id = 'subcategory-container';
+        select.className = 'form-control';
+        select.multiple = true;
         subcategories[category].forEach(subcategory => {
             const option = document.createElement('option');
             option.value = subcategory.value;
@@ -533,11 +538,12 @@ function updateSubcategories(category, checked = false) {
             if (checked) {
                 option.selected = true;
             }
-            container.appendChild(option);
+            select.appendChild(option);
         });
 
+        wrapper.appendChild(select);
 
-        $(container).select2({
+        $(select).select2({
             placeholder: "Select subcategories"
         });
     }
