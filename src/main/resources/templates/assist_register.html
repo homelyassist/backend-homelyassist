@@ -181,6 +181,17 @@
         .select2-container--default .select2-selection--single {
             border-radius: 15px;
         }
+        .select2-container--default .select2-selection--multiple {
+            border-radius: 15px;
+            padding: 6px;
+            height: auto; /* Adjust height if necessary */
+            width: 100%;
+            position: relative;
+        }
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            border-radius: 15px; /* Add rounded corners to selected items */
+            margin: 1px 2px; /* Adjust margin as needed */
+        }
 
         .modal-dialog {
             transform: translateY(-20%) !important;
