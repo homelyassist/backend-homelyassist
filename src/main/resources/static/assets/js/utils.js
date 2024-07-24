@@ -34,7 +34,7 @@ function showPopupNotification(message) {
 
 
 function validatePassword(password) {
-    if (password != null && password.length < 6 && password.length > 10) {
+    if (password != null && (password.length < 6 || password.length > 10)) {
         alert("Password must be between 6 and 10 characters long.");
         return false;
     }
