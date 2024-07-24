@@ -4442,67 +4442,67 @@ const angul = {
     block: [
         {
             name: "Angul",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Banarpal",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Chhendipada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Athamallik",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kishorenagar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Pallahara",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Talcher",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kaniha",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -4512,99 +4512,99 @@ const bargarh = {
     block: [
         {
             name: "Ambabhona",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Attabira",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bargarh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Barpali",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bhatli",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bheden",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bijepur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Gaisilet",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Jharbandh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Padampur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Paikmal",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Sohella",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -4614,27 +4614,27 @@ const deogarh = {
     block: [
         {
             name: "Barkote",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Reamal",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tileibani",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -4644,67 +4644,67 @@ const dhenkanal = {
     block: [
         {
             name: "Dhenkanal Sadar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Gondia",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Odapada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kamakhyanagar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bhuban",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kankadahad",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Parjang",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Hindol",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -4714,43 +4714,43 @@ const jharsuguda = {
     block: [
         {
             name: "Jharsuguda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kirmira",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kolabira",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Laikera",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Lakhanpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -4760,107 +4760,107 @@ const kendujhar = {
     block: [
         {
             name: "Anandapur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bansapal",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Champua",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Ghasipura",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Ghatgaon",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Harichadanpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Hatadihi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Jhumpura",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Joda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kendujhar Sadar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Patana",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Saharapada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Telkoi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -4870,75 +4870,75 @@ const sambalpur = {
     block: [
         {
             name: "Bamra",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Dhankauda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Jamankira",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Jujomura",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kuchinda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Maneswar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Naktideul",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rairakhol",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rengali",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Sambalpur (Municipal Corporation)"
@@ -4957,67 +4957,67 @@ const subarnapur = {
     block: [
         {
             name: "Binika",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Biramaharajpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Dunguripali",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rampur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Sonapur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Subalaya",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tarbha",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Ulunda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -5027,139 +5027,139 @@ const sundargarh = {
     block: [
         {
             name: "Balisankara",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bargaon",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bisra",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bonai",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Gurundia",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Hemgir",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Koida",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kuarmunda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kutra",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Lahunipada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Lathikata",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Lephripada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Nuagaon",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rajgangpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Subdega",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Sundargarh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tangarpali",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rourkela (Municipal Corporation)"
@@ -5181,100 +5181,100 @@ const balasore = {
     block: [
         {
             name: "Bahanaga",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Balasore",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Baliapal",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
 
         },
         {
             name: "Basta",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bhograi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Jaleswar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Khaira",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Nilgiri",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Oupada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Remuna",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Simulia",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Soro",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -5284,99 +5284,99 @@ const bhadrak = {
     block: [
         {
             name: "Bhadrak Rural",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tihidi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Basudebpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bansada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Dhusuri",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Dhamanagar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bhandari Pokhari",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Chandabali",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Naikanidihi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bant",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Agarpada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Dhamara Marine",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -5386,67 +5386,67 @@ const jagatsinghpur = {
     block: [
         {
             name: "Jagatsinghpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Biridi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Balikuda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Raghunathpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tirtol",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kujanga",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Erasama",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Naugaon",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -5456,75 +5456,75 @@ const kendrapada = {
     block: [
         {
             name: "Aul",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Derabish",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Garadapur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kendrapada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Mahakalapada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Marsaghai",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Pattamundai",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rajkanika",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rajnagar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -5534,35 +5534,35 @@ const khordha = {
     block: [
         {
             name: "Balianta",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Balipatna",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Banapur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Begunia",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bhubaneswar",
@@ -5721,43 +5721,43 @@ const khordha = {
         },
         {
             name: "Bolagarh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Chilika",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Jatni",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Khordha",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tangi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bhubaneswar (Municipal Corporation)"
@@ -5784,211 +5784,211 @@ const mayurbhanj = {
     block: [
         {
             name: "Badasahi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bahalda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bangriposi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Baripada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Betnoti",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bijatala",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bisoi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Gopabandhunagar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Jamda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Joshipur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kaptipada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Karanjia",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Khunta",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kuliana",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kusumi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Morada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rairangpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Raruan",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rasgovindpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Samakhunta",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Saraskana",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Sukruli",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Suliapada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Thakurmunda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tiring",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Udala",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -5998,67 +5998,67 @@ const nayagarh = {
     block: [
         {
             name: "Bhapur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Dasapalla",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Gania",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Khandapara",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Nayagarh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Nuagaon",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Odagaon",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Ranapur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -6068,91 +6068,91 @@ const puri = {
     block: [
         {
             name: "Astarang",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Brahmagiri",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Delang",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Gop",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kakatpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kanas",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Krushnaprasad",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Nimapara",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Pipili",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Puri Sadar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Satyabadi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -6162,27 +6162,27 @@ const boudh = {
     block: [
         {
             name: "Boudh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Harabhanga",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kantamal",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -6192,59 +6192,59 @@ const gajapati = {
     block: [
         {
             name: "Paralakhemundi(Gosani)",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "R.Udayagiri",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Mohana",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rayagada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kashinagar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Nuagada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Gumma",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -6254,179 +6254,179 @@ const ganjam = {
     block: [
         {
             name: "Aska",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Beguniapada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bellaguntha",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Bhanjanagar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Buguda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Chatrapur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Chikiti",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Dharakote",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Digapahandi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Ganjam",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Hinjilicut",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Jagannathprasad",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kabisuryanagar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Khallikote",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kukudakhandi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Patrapur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Polosara",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Purushottampur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rangeilunda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Sanakhemundi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Sheragada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Surada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Berhampur (Municipal Corporation)"
@@ -6440,107 +6440,107 @@ const kalahandi = {
     block: [
         {
             name: "Bhawanipatna",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Dharamagarh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Golamunda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Jayapatna",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Junagarh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kalampur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Karlamunda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kesinga",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kokasara",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Lanjigarh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Madanpur Rampur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Narala",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Thuamul Ram Pur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -6550,99 +6550,99 @@ const kandhamal = {
     block: [
         {
             name: "Baliguda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Chakapad",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Daringibadi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "G.udayagiri",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "K.nuagan",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Khajuripada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kotagarh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Phiringia",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Phulbani",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Raikia",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tikabali",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tumudibandh",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -6652,115 +6652,115 @@ const koraput = {
     block: [
         {
             name: "Bandhugaon",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Boipariguda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Borigumma",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Dasamantapur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Jeypore",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Koraput",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kotpad",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kundura",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Lamtaput",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Laxmipur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Nandapur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Narayan Patana",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Pottangi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Semiliguda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -6770,59 +6770,59 @@ const malkangiri = {
     block: [
         {
             name: "Chitrakonda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kalimela",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Khairaput",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Korukonda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Malkangiri",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Mathili",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Podia",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -6832,83 +6832,83 @@ const nabarangpur = {
     block: [
         {
             name: "Chandahandi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Dabugam",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Jharigam",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kosagumuda",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Nabarangpur",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Nandahandi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Papadahandi",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Raighar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Tentulikhunti",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Umerkote",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         }
     ]
 };
@@ -6918,43 +6918,43 @@ const nuapada = {
     block: [
         {
             name: "Nuapada",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Komna",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Khariar",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Boden",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Sinapali",
-            village: [
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Khariar NAC",
@@ -7126,170 +7126,170 @@ const rayagada = {
         },
         {
             name: "Chandrapur",
-            village: [
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Gudari",
-            village: [
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Gunupur",
-            village: [
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kalyansingpur",
-            village: [
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kasipur",
-            village: [
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Kolnara",
-            village: [
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Muniguda",
-            village: [
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Padmapur",
-            village: [
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Ramanaguda",
-            village: [
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rayagada",
-            village: [
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                },
-                {
-                    name: "x"
-                }
-            ]
+//            village: [
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                },
+//                {
+//                    name: "x"
+//                }
+//            ]
         },
         {
             name: "Rayagada Municipality"
