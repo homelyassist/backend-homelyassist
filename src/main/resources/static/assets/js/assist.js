@@ -77,10 +77,10 @@ async function extractPayload() {
     return {
         name: document.getElementById("fullname").value,
         phone_number: document.getElementById("mobile").value,
-        state: document.getElementById("state").value,
-        district: document.getElementById("district").value,
-        block: document.getElementById("block").value,
-        village: document.getElementById("village").value,
+        state: returnNullIfNA(document.getElementById("state").value),
+        district: returnNullIfNA(document.getElementById("district").value),
+        block: returnNullIfNA(document.getElementById("block").value),
+        village: returnNullIfNA(document.getElementById("village").value),
         experience: document.getElementById("experience").value,
         description: document.getElementById("description").value,
         gender: document.getElementById("gender").value,
@@ -267,14 +267,17 @@ async function assistLogin() {
     }
 }
 
+function returnNullIfNA(value) {
+    return value == 'NA' ? null : value
+}
 
 async function searchAssist(categoryValue) {
 
     var payload = {
-        state: document.getElementById("state").value,
-        district: document.getElementById("district").value,
-        block: document.getElementById("block").value,
-        village: document.getElementById("village").value,
+        state: returnNullIfNA(document.getElementById("state").value),
+        district: returnNullIfNA(document.getElementById("district").value),
+        block: returnNullIfNA(document.getElementById("block").value),
+        village: returnNullIfNA(document.getElementById("village").value),
         assist_types: getSelectedAssistTypes()
     }
 

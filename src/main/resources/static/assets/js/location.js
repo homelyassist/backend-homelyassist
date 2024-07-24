@@ -4208,99 +4208,99 @@ const balangir = {
     block: [
         {
             name: "Balangir",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Bangomunda",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Belpara",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Kantabanji",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Khaprakhol",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Loisinga",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Patnagarh",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Saintala",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Sindhekela",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Titlagarh",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Turekela",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Tushura",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         }
     ]
 };
@@ -4311,115 +4311,115 @@ const cuttack = {
 
         {
             name: "Athagad",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Badamba",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Narasinghpur",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Tigiria",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Banki",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Dampada",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Baranga",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Cuttack Sadar",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Kantapada",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Mahanga",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Niali",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Nischintakoili",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Salepur",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Tangi-Choudwar",
-//            village: [
-//                {
-//                    name: "x"
-//                }
-//            ]
+            //            village: [
+            //                {
+            //                    name: "x"
+            //                }
+            //            ]
         },
         {
             name: "Cuttack (Municipal Corporation)"
@@ -4941,13 +4941,13 @@ const sambalpur = {
             ]
         },
         {
-            name: "Sambalpur (Municipal Corporation)"  
+            name: "Sambalpur (Municipal Corporation)"
         },
         {
-            name: "Kuchinda (NAC)"  
+            name: "Kuchinda (NAC)"
         },
         {
-            name: "Redhakhol (NAC)"  
+            name: "Redhakhol (NAC)"
         }
     ]
 };
@@ -7331,66 +7331,6 @@ dataList.forEach(data => {
     });
 });
 
-// function populateStates() {
-//     const stateSelect = document.getElementById("state");
-//     // Clear existing options
-//     stateSelect.innerHTML = '<option value="" selected disabled>Select State</option>';
-//     // Populate options based on stateToDistrictMap
-//     getAllState().forEach(state => {
-//         const option = document.createElement("option");
-//         option.value = state;
-//         option.textContent = state;
-//         stateSelect.appendChild(option);
-//     });
-// }
-
-// function populateDistricts(selectedState) {
-//     const districtSelect = document.getElementById("district");
-//     // Clear existing options
-//     districtSelect.innerHTML = '<option value="" selected disabled>Select District</option>';
-//     // Populate options based on the selected state
-//     const districts = getAllDistrict(selectedState) || [];
-//     districts.forEach(district => {
-//         const option = document.createElement("option");
-//         option.value = district;
-//         option.textContent = district;
-//         districtSelect.appendChild(option);
-//     });
-// }
-
-// function populateBlocks(selectedDistrict) {
-//     const blockSelect = document.getElementById("block");
-//     // Clear existing options
-//     blockSelect.innerHTML = '<option value="" selected disabled>Select Block/Municipality</option>';
-//     // Populate options based on the selected district
-//     const blocks = getAllBlock(selectedDistrict) || [];
-//     blocks.forEach(block => {
-//         const option = document.createElement("option");
-//         option.value = block;
-//         option.textContent = block;
-//         blockSelect.appendChild(option);
-//     });
-// }
-
-
-// Function to handle state selection change event
-// function handleStateSelectionChange() {
-//     const selectedState = document.getElementById("state").value;
-//     populateDistricts(selectedState);
-// }
-
-// Function to handle district selection change event
-// function handleDistrictSelectionChange() {
-//     const selectedDistrict = document.getElementById("district").value;
-//     populateBlocks(selectedDistrict);
-// }
-
-// Add event listener to the district dropdown
-//document.getElementById("district").addEventListener("change", handleDistrictSelectionChange);
-
-// Add event listener to the state dropdown
-//document.getElementById("state").addEventListener("change", handleStateSelectionChange);
-
 
 function getAllState() {
     return Object.keys(stateToDistrictMap);
@@ -7454,47 +7394,68 @@ $(document).ready(function () {
     });
 
 
-    $('#block').on('change', function () {
-        const selectedBlock = $(this).val();
-        const villages = getAllVillage(selectedBlock);
-        const formattedVillages = villages.map(village => {
-            return { id: village, text: village };
-        });
-        $('#village').empty().select2({ data: formattedVillages });
-    });
+    // $('#block').on('change', function () {
+    //     const selectedBlock = $(this).val();
+    //     const villages = getAllVillage(selectedBlock);
+    //     if (villages != null && villages.length != 0) {
+    //         const formattedVillages = villages.map(village => {
+    //             return { id: village, text: village };
+    //         });
+    //         $('#village').empty().select2({ data: formattedVillages });
+    //     } else {
+    //         $('#village').prop('disabled', true);
+    //     }
+    // });
 
 
     $('#state').on('change', function () {
         const selectedState = $(this).val();
-        $('#district').prop('disabled', false);
-        let formattedDistricts = [{ id: '', text: 'Select District' }];
-        const districts = getAllDistrict(selectedState);
-        formattedDistricts = formattedDistricts.concat(districts.map(district => {
-            return { id: district, text: district };
-        }));
+        let formattedDistricts = [{ id: 'NA', text: 'Select District' }];
+        if (selectedState != 'NA') {
+            $('#district').prop('disabled', false);
+            const districts = getAllDistrict(selectedState);
+            formattedDistricts = formattedDistricts.concat(districts.map(district => {
+                return { id: district, text: district };
+            }));
+        } else {
+            $('#district').prop('disabled', true);
+            $('#block').prop('disabled', true);
+            $('#village').prop('disabled', true);
+        }
         $('#district').empty().select2({ data: formattedDistricts });
     });
 
 
     $('#district').on('change', function () {
         const selectedDistrict = $(this).val();
-        $('#block').prop('disabled', false);
-        let formattedBlocks = [{ id: '', text: 'Select Block/Municipality' }];
-        const blocks = getAllBlock(selectedDistrict);
-        formattedBlocks = formattedBlocks.concat(blocks.map(blocks => {
-            return { id: blocks, text: blocks };
-        }));
+        let formattedBlocks = [{ id: 'NA', text: 'Select Block/Municipality' }];
+        if (selectedDistrict != 'NA') {
+            $('#block').prop('disabled', false);
+            const blocks = getAllBlock(selectedDistrict);
+            formattedBlocks = formattedBlocks.concat(blocks.map(blocks => {
+                return { id: blocks, text: blocks };
+            }));
+        } else {
+            $('#block').prop('disabled', true);
+        }
+        let formattedVillages = [{ id: 'NA', text: 'Select Village/Area' }];
+        $('#village').empty().select2({ data: formattedVillages });
+        $('#village').prop('disabled', true);
         $('#block').empty().select2({ data: formattedBlocks });
     });
 
     $('#block').on('change', function () {
         const selectedBlock = $(this).val();
-        $('#village').prop('disabled', false);
-        let formattedVillages = [{ id: '', text: 'Select Village/Area' }];
+        let formattedVillages = [{ id: 'NA', text: 'Select Village/Area' }];
         const villages = getAllVillage(selectedBlock);
-        formattedVillages = formattedVillages.concat(villages.map(village => {
-            return { id: village, text: village };
-        }));
+        if (villages != null && villages.length != 0) {
+            $('#village').prop('disabled', false);
+            formattedVillages = formattedVillages.concat(villages.map(village => {
+                return { id: village, text: village };
+            }));
+        } else {
+            $('#village').prop('disabled', true);
+        }
         $('#village').empty().select2({ data: formattedVillages });
     });
 });
