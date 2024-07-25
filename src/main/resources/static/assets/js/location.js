@@ -5530,7 +5530,7 @@ const kendrapada = {
 };
 const khordha = {
     state: "Odisha",
-    district: "Bhubaneswar",
+    district: "Khordha",
     block: [
         {
             name: "Balianta",
