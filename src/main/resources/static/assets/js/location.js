@@ -7393,21 +7393,6 @@ $(document).ready(function () {
         disabled: true
     });
 
-
-    // $('#block').on('change', function () {
-    //     const selectedBlock = $(this).val();
-    //     const villages = getAllVillage(selectedBlock);
-    //     if (villages != null && villages.length != 0) {
-    //         const formattedVillages = villages.map(village => {
-    //             return { id: village, text: village };
-    //         });
-    //         $('#village').empty().select2({ data: formattedVillages });
-    //     } else {
-    //         $('#village').prop('disabled', true);
-    //     }
-    // });
-
-
     $('#state').on('change', function () {
         const selectedState = $(this).val();
         let formattedDistricts = [{ id: 'NA', text: 'Select District' }];
