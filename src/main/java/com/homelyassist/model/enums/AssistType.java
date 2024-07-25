@@ -11,5 +11,8 @@ public enum AssistType {
     CONSTRUCTION,
 
     @JsonProperty("electrical")
-    ELECTRICAL
+    ELECTRICAL,
+
+    @JsonProperty("maid")
+    MAID
 }

@@ -57,7 +57,7 @@ public class MaidAssistService {
                     .id(maidAssist.getId())
                     .phoneNumber(maidAssist.getPhoneNumber())
                     .password(maidAssist.getPassword())
-                    .assistType(AssistType.AGRICULTURE)
+                    .assistType(AssistType.MAID)
                     .build();
             userMappingRepository.save(userMapping);
             response.setUuid(maidAssist.getId());
