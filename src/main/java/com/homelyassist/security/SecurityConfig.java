@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
-@Profile("prod")
+@Profile("local")
 public class SecurityConfig {
 
     @Bean
@@ -27,12 +27,20 @@ public class SecurityConfig {
                         .requestMatchers("/assist/availability").permitAll()
                         .requestMatchers("/assist").permitAll()
                         .requestMatchers("/assist/search").permitAll()
+                        .requestMatchers("/assist/agriculture/search").permitAll()
+                        .requestMatchers("/assist/electrical/search").permitAll()
+                        .requestMatchers("/assist/construction/search").permitAll()
+                        .requestMatchers("/assist/maid/search").permitAll()
                         .requestMatchers("/assets/**").permitAll()
                         .requestMatchers("/api/auth/validate").authenticated()
                         .requestMatchers("/api/assist/agriculture/search").permitAll()
+                        .requestMatchers("/api/assist/maid/search").permitAll()
+                        .requestMatchers("/api/assist/electrical/search").permitAll()
+                        .requestMatchers("/api/assist/construction/search").permitAll()
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/assist/register").permitAll()
                         .requestMatchers("/assist/login").permitAll()
+                        .requestMatchers("/assist/forgot-password").permitAll()
                         .requestMatchers("/help").permitAll()
                         .requestMatchers("/team").permitAll()
                         .anyRequest().authenticated()

@@ -15,7 +15,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@400;600&display=swap"
+          rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
@@ -44,47 +45,83 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a href="assist" class="active">Be An Assist(REGISTER/LOGIN)</a></li>
-<!--                <li><a href="assist/search">Find Assist</a></li>-->
+                <!--                <li><a href="assist/search">Find Assist</a></li>-->
                 <li><a href="/help">Help</a></li>
             </ul>
         </nav><!-- .navbar -->
         <div class="header-social-links">
             <a href="https://twitter.com/homelyAssist" class="twitter"><i class="bi bi-twitter"></i></a>
-<!--            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>-->
+            <!--            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>-->
             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/test-automation-factory/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.linkedin.com/company/test-automation-factory/" class="linkedin"><i
+                    class="bi bi-linkedin"></i></a>
         </div>
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     </div>
 </header><!-- End Header -->
 <!-- ======= Image Section ======= -->
-<section id="new-section" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
+<section id="new-section" class="hero d-flex flex-column justify-content-center align-items-center">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12 text-center">
-                <p class="hero-text" style="font-size: calc(1.3rem + .6vw);font-weight: bold;">Who are you looking for? <br>(କାହାକୁ ଦରକାର କରୁଛନ୍ତି?)</p>
+                <p class="hero-text" style="font-size: calc(1.3rem + .6vw);font-weight: bold;">Who are you looking for?
+                    <br>(କାହାକୁ ଦରକାର କରୁଛନ୍ତି?)</p>
                 <div class="row justify-content-center image-container">
                     <!-- Replace the placeholder content below with your images and descriptions -->
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="position: relative;">
-                        <a href="assist/search">
-                            <img src="/assets/img/AgricultureAssist.jpeg" alt="Image 1" style="width: 100%;">
-                            <div class="image-description" style="position: absolute; bottom: 0; left: 0; width: 100%; background-color: rgba(255, 255, 255, 0.7); text-align: center; font-size: 14px; font-weight: bold;">Agriculture Assist</div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 image-container agriculture"
+                         style="position: relative;">
+                        <a href="assist/agriculture/search">
+                            <img src="/assets/img/agricultureAssist.png" alt="Agriculture Assist"
+                                 class="img-responsive">
+                            <div class="image-description">Agriculture (କୃଷି ସହାୟକ)</div>
                         </a>
                     </div>
-                    <!--                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">-->
-<!--                        <a href="assist/search"><img src="/assets/img/ElectricityAssist.jpeg" alt="Image 2"></a>-->
-<!--                        <div class="image-description" style="font-size: 14px; font-weight: bold;">Electrical Assist</div>-->
-<!--                    </div>-->
-<!--                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">-->
-<!--                        <a href="assist/search"><img src="/assets/img/HealthAssist.jpeg" alt="Image 3"></a>-->
-<!--                        <div class="image-description" style="font-size: 14px; font-weight: bold;">Health Assist</div>-->
-<!--                    </div>-->
-<!--                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">-->
-<!--                        <a href="assist/search"><img src="/assets/img/TransportationAssist.jpeg" alt="Image 4"></a>-->
-<!--                        <div class="image-description" style="font-size: 14px; font-weight: bold;">Transportation Assist</div>-->
-<!--                    </div>-->
-                    <!-- Repeat this for all 16 images -->
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 image-container construction"
+                         style="position: relative;">
+                        <a href="assist/construction/search">
+                            <img src="/assets/img/constructionAssist.png" alt="Construction Assist"
+                                 class="img-responsive">
+                            <div class="image-description">Construction (ନିର୍ମାଣ ସହାୟକ)</div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 image-container electrical"
+                         style="position: relative;">
+                        <a href="assist/electrical/search">
+                            <img src="/assets/img/electricalAssist.png" alt="Electrical Assist" class="img-responsive">
+                            <div class="image-description">Electrical (ବିଦ୍ୟୁତ ସହାୟକ)</div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 image-container maid"
+                         style="position: relative;">
+                        <a href="assist/maid/search">
+                            <img src="/assets/img/MaidAssist.jpg" alt="Maid Assist" class="img-responsive">
+                            <div class="image-description">Maid (ଗୃହ ସହାୟକ)</div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 image-container education"
+                         style="position: relative;">
+                        <a href="assist/education/search">
+                            <img src="/assets/img/EducationAssist.jpg" alt="Education Assist" class="img-responsive">
+                            <div class="image-description">Education (coming soon)</div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 image-container health"
+                         style="position: relative;">
+                        <a href="assist/health/search">
+                            <img src="/assets/img/HealthAssist.jpg" alt="Health Assist" class="img-responsive">
+                            <div class="image-description">Health (coming soon)</div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 image-container laundry"
+                         style="position: relative;">
+                        <a href="assist/laundry/search">
+                            <img src="/assets/img/LaundryAssist.jpg" alt="Laundry Assist" class="img-responsive">
+                            <div class="image-description">Laundry (coming soon)</div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,8 +134,10 @@
         <div class="row justify-content-start"> <!-- Align content to the left -->
             <div class="col-lg-8">
                 <a href="assist" style="display: inline-block;"> <!-- Set display to inline-block -->
-                    <img src="/assets/img/assist.jpeg" alt="Icon" style="width: 40px; height: auto; margin-right: 10px;">
-                    <p style="color: seagreen; font-weight: bold; display: inline-block;">Start Assisting Today / Sign up or Log in now</p>
+                    <img src="/assets/img/assist.jpeg" alt="Icon"
+                         style="width: 40px; height: auto; margin-right: 10px;">
+                    <p style="color: seagreen; font-weight: bold; display: inline-block;">Start Assisting Today / Sign
+                        up or Log in now</p>
                 </a>
             </div>
         </div>
@@ -112,7 +151,8 @@
     <div class="container">
         <div class="row align-items-center"> <!-- Align items vertically -->
             <div class="col-lg-6 col-md-6 d-flex align-items-center"> <!-- Align items horizontally -->
-                <img src="assets/img/mobile.jpg" alt="Mobile App Icon" class="app-icon" style="max-width: 50px; height: auto;">
+                <img src="assets/img/mobile.jpg" alt="Mobile App Icon" class="app-icon"
+                     style="max-width: 50px; height: auto;">
                 <div class="ms-3"> <!-- Add margin to the left for spacing -->
                     <h3>Download Our Mobile App</h3>
                     <p>Download our mobile app to access our services conveniently from your phone.</p>
@@ -129,19 +169,28 @@
 <section id="text" class="text" style="background-color: #eaf7ea; padding: 50px;">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12" data-aos="fade-up">
+            <div class="col-lg-12" >
                 <h3>Why Choose Our Organization?</h3>
                 <p>
-                    Our organization strives to empower workers in the unorganized sector by providing them with opportunities in their localities, eliminating the need for migration. We believe that everyone deserves fair compensation and the chance to lead a fulfilling life in their own community.
+                    Our organization strives to empower workers in the unorganized sector by providing them with
+                    opportunities in their localities, eliminating the need for migration. We believe that everyone
+                    deserves fair compensation and the chance to lead a fulfilling life in their own community.
                 </p>
                 <p>
-                    We are committed to ensuring that individuals living in small cities, towns, and villages have access to reliable services whenever they require assistance. By connecting workers with local residents, we aim to create seamless and undisturbed service experiences.
+                    We are committed to ensuring that individuals living in small cities, towns, and villages have
+                    access to reliable services whenever they require assistance. By connecting workers with local
+                    residents, we aim to create seamless and undisturbed service experiences.
                 </p>
                 <p>
-                    Our organization adheres to the minimum wage standards set by the Government of India, thereby preventing exploitation and ensuring fair compensation for workers. We also provide essential benefits such as timely payments, bank accounts, credit support, pensions, health insurance, and accident insurance.
+                    Our organization adheres to the minimum wage standards set by the Government of India, thereby
+                    preventing exploitation and ensuring fair compensation for workers. We also provide essential
+                    benefits such as timely payments, bank accounts, credit support, pensions, health insurance, and
+                    accident insurance.
                 </p>
                 <p>
-                    Furthermore, we support various vital sectors including agriculture, construction, food, health, transportation, and education. Our goal is to contribute to the well-being and prosperity of communities across different regions.
+                    Furthermore, we support various vital sectors including agriculture, construction, food, health,
+                    transportation, and education. Our goal is to contribute to the well-being and prosperity of
+                    communities across different regions.
                 </p>
             </div>
         </div>

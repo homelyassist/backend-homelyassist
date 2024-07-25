@@ -44,7 +44,7 @@ public class User {
     private String block;
 
     @JsonProperty("village")
-    @Column(name = "village", nullable = false)
+    @Column(name = "village")
     private String village;
 
     @JsonProperty("active")

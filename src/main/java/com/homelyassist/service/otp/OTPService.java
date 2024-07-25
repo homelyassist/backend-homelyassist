@@ -1,17 +1,19 @@
 package com.homelyassist.service.otp;
 
 
+import com.homelyassist.model.MSG91OtpData;
 import com.homelyassist.model.db.OTPData;
 import com.homelyassist.model.db.UserMapping;
 import com.homelyassist.model.enums.OTPGenerateStatus;
+import com.homelyassist.model.enums.OTPVerifyStatus;
 import com.homelyassist.model.rest.request.AssistLoginRequestDto;
+import com.homelyassist.model.rest.request.AssistResetPasswordRequestDto;
 import com.homelyassist.model.rest.request.OTPRequestDto;
+import com.homelyassist.model.rest.request.OTPVerifyRequestDto;
 import com.homelyassist.model.rest.response.AnonymousTokenResponseDto;
 import com.homelyassist.model.rest.response.AssistLoginResponseDto;
 import com.homelyassist.model.rest.response.OTPResponseDto;
-import com.homelyassist.model.rest.request.OTPVerifyRequestDto;
 import com.homelyassist.model.rest.response.OTPVerifyResponseDto;
-import com.homelyassist.model.enums.OTPVerifyStatus;
 import com.homelyassist.repository.db.OneTimePasswordRepository;
 import com.homelyassist.repository.db.UserMappingRepository;
 import com.homelyassist.service.jwt.JWTService;
@@ -33,18 +35,19 @@ public class OTPService {
 
     private final OneTimePasswordRepository oneTimePasswordRepository;
     private final UserMappingRepository userMappingRepository;
-    private final TwilioService twilioService;
     private final JWTService jwtService;
 
+    private final MSG91OtpService msg91OtpService;
+
     @Autowired
-    public OTPService(OneTimePasswordRepository oneTimePasswordRepository, UserMappingRepository userMappingRepository, TwilioService twilioService, JWTService jwtService) {
+    public OTPService(OneTimePasswordRepository oneTimePasswordRepository, UserMappingRepository userMappingRepository, JWTService jwtService, MSG91OtpService msg91OtpService) {
         this.oneTimePasswordRepository = oneTimePasswordRepository;
         this.userMappingRepository = userMappingRepository;
-        this.twilioService = twilioService;
         this.jwtService = jwtService;
+        this.msg91OtpService = msg91OtpService;
     }
 
-    public OTPResponseDto generateOTP(OTPRequestDto otpRequestDto) {
+    public OTPResponseDto generateOTP(OTPRequestDto otpRequestDto, boolean isUiOtp) {
         String phoneNumber = otpRequestDto.getPhoneNumber();
         OTPData otpData = new OTPData();
         if (!BasicValidationHelper.isValidIndianPhoneNumber(phoneNumber)) {
@@ -53,13 +56,16 @@ public class OTPService {
         otpData.setPhoneNumber(phoneNumber);
         otpData.setCode(OTPHelper.createRandomOneTimePassword().get());
         otpData.setExpirationTime(LocalDateTime.now().plusMinutes(AppConstant.OTP.EXPIRY_INTERVAL));
-        log.info("Sending opt with twilio with Opt Data: {}", otpData);
+        log.info("Sending opt with msg91 with Opt Data: {}", otpData);
         OTPResponseDto otpResponseDto = new OTPResponseDto();
         try {
-            // TODO: uncomment this once we've premium account
-            //twilioService.sendOtp(new TwilioOtpData(otpData.getPhoneNumberWithCountryCode(), "Testing otp: " + otpData.getCode()));
+            if (Boolean.FALSE == isUiOtp) {
+                msg91OtpService.send(new MSG91OtpData(otpData.getPhoneNumberWithCountryCode(), new MSG91OtpData.OTP(otpData.getCode())));
+            }
             oneTimePasswordRepository.save(otpData);
-            otpResponseDto.setCode(otpData.getCode());
+            if (Boolean.TRUE == isUiOtp) {
+                otpResponseDto.setCode(otpData.getCode());
+            }
             otpResponseDto.setOtpGenerateStatus(OTPGenerateStatus.COMPLETED);
         } catch (Exception e) {
             log.error("error processing otp generation", e);
@@ -82,9 +88,9 @@ public class OTPService {
             otpVerifyResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
         }
 
-        if (Objects.nonNull(otpData)) {
-            oneTimePasswordRepository.delete(otpData);
-        }
+//        if (Objects.nonNull(otpData)) {
+//            oneTimePasswordRepository.delete(otpData);
+//        }
         return otpVerifyResponseDto;
     }
 
@@ -101,6 +107,7 @@ public class OTPService {
         if (!BCryptUtils.matchPassword(assistLoginRequestDto.getPassword(), userMapping.getPassword())) {
             assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
             assistLoginResponseDto.setError("Incorrect password. Please try again.");
+            return assistLoginResponseDto;
         }
 
         String token = jwtService.generateToken(assistLoginRequestDto.getPhoneNumber());
@@ -108,30 +115,6 @@ public class OTPService {
         assistLoginResponseDto.setUuid(userMapping.getId());
         assistLoginResponseDto.setAssistType(userMapping.getAssistType());
         assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.SUCCESS);
-
-//        if (Objects.nonNull(otpData) && !otpData.isExpired() && otpData.getCode().equals(otpVerifyDto.getOtp())) {
-//            log.info("OTP verification successful");
-//            String token = jwtService.generateToken(otpData.getPhoneNumber());
-//            assistLoginResponseDto.setToken(token);
-//            UserMapping userMapping = userMappingRepository.findByPhoneNumber(phoneNumber);
-//            if (userMapping == null) {
-//                assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
-//                assistLoginResponseDto.setError("User doesn't exist");
-//            } else {
-//                assistLoginResponseDto.setUuid(userMapping.getId());
-//                assistLoginResponseDto.setAssistType(userMapping.getAssistType());
-//                assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.SUCCESS);
-//            }
-//        } else {
-//            log.info("Invalid OTP");
-//            assistLoginResponseDto.setOtpVerifyStatus(OTPVerifyStatus.ERROR);
-//            assistLoginResponseDto.setError("Invalid OTP");
-//        }
-
-
-//        if (Objects.nonNull(otpData)) {
-//            oneTimePasswordRepository.delete(otpData);
-//        }
 
         return assistLoginResponseDto;
     }
@@ -157,5 +140,28 @@ public class OTPService {
             oneTimePasswordRepository.delete(otpData);
         }
         return anonymousTokenResponseDto;
+    }
+
+    public void resetPassword(AssistResetPasswordRequestDto passwordRequestDto) {
+        String phoneNumber = passwordRequestDto.getPhoneNumber();
+        OTPVerifyResponseDto otpVerifyResponseDto = validateOTP(new OTPVerifyRequestDto(phoneNumber, passwordRequestDto.getOtp()));
+        if (otpVerifyResponseDto.getOtpVerifyStatus().equals(OTPVerifyStatus.ERROR)) {
+            throw new RuntimeException(otpVerifyResponseDto.getOtpVerifyStatus().toString());
+        }
+        UserMapping userMapping = userMappingRepository.findByPhoneNumber(phoneNumber);
+        userMapping.setPassword(BCryptUtils.encodePassword(passwordRequestDto.getPassword()));
+        userMappingRepository.save(userMapping);
+    }
+
+    public OTPResponseDto resetPasswordOtpGenerate(OTPRequestDto otpRequestDto) {
+        UserMapping userMapping = userMappingRepository.findByPhoneNumber(otpRequestDto.getPhoneNumber());
+        OTPResponseDto otpResponseDto = new OTPResponseDto();
+        if (userMapping == null) {
+            otpResponseDto.setOtpGenerateStatus(OTPGenerateStatus.FAILED);
+            otpResponseDto.setError("Assist With Mobile No: " + otpRequestDto.getPhoneNumber() + " doesn't exist");
+            return otpResponseDto;
+        }
+
+        return generateOTP(otpRequestDto, false);
     }
 }

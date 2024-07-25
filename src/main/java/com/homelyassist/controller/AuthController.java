@@ -1,6 +1,7 @@
 package com.homelyassist.controller;
 
 import com.homelyassist.model.rest.request.AssistLoginRequestDto;
+import com.homelyassist.model.rest.request.AssistResetPasswordRequestDto;
 import com.homelyassist.model.rest.request.OTPRequestDto;
 import com.homelyassist.model.rest.request.OTPVerifyRequestDto;
 import com.homelyassist.model.rest.response.AnonymousTokenResponseDto;
@@ -30,12 +31,27 @@ public class AuthController {
 
     @PostMapping("/otp/generate")
     public OTPResponseDto generateOtp(@RequestBody OTPRequestDto otpRequestDto) {
-        return otpService.generateOTP(otpRequestDto);
+        return otpService.generateOTP(otpRequestDto, false);
+    }
+
+    @PostMapping("/otp/generate/ui")
+    public OTPResponseDto generateOtpForUI(@RequestBody OTPRequestDto otpRequestDto) {
+        return otpService.generateOTP(otpRequestDto, true);
     }
 
     @PostMapping("/otp/verify")
     public OTPVerifyResponseDto verifyOtp(@RequestBody OTPVerifyRequestDto otpVerifyDto) {
         return otpService.validateOTP(otpVerifyDto);
+    }
+
+    @PostMapping("/otp/generate/reset-password")
+    public OTPResponseDto resetPasswordOtpGenerate(@RequestBody OTPRequestDto otpRequestDto) {
+        return otpService.resetPasswordOtpGenerate(otpRequestDto);
+    }
+
+    @PostMapping("/assist/reset-password")
+    public void resetPassword(@RequestBody AssistResetPasswordRequestDto passwordRequestDto) {
+        otpService.resetPassword(passwordRequestDto);
     }
 
     @PostMapping("/assist/login")

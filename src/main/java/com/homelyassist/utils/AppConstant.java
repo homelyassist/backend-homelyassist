@@ -18,6 +18,18 @@ public class AppConstant {
 
         public static final String ASSIST_LOGIN = "assist_login";
 
+        public static final String ASSIST_FORGOT_PASSWORD = "forgot_password";
+
+        public static final String ASSIST_OTP_VERIFICATION = "otp_verification";
+
+        public static final String SEARCH_AGRICULTURE_ASSIST = "search_agriculture_assist";
+
+        public static final String SEARCH_CONSTRUCTION_ASSIST = "search_construction_assist";
+
+        public static final String SEARCH_ELECTRICAL_ASSIST = "search_electrical_assist";
+
+        public static final String SEARCH_MAID_ASSIST = "search_maid_assist";
+
         public static final String ASSIST = "assist";
     }
 

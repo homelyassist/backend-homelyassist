@@ -1,4 +1,4 @@
-async function generateOtp() {
+async function generateOtp(uiOtp = false) {
     var mobileNumber = document.getElementById("mobile").value;
     if (!mobileNumber) {
         alert("Please enter a mobile number");
@@ -9,7 +9,9 @@ async function generateOtp() {
         phone_number: mobileNumber,
     };
 
-    const response = await fetch("/api/auth/otp/generate", {
+    const path = '/api/auth/otp/generate' + (uiOtp == true ? "/ui" : "");
+
+    const response = await fetch(path, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -24,13 +26,17 @@ async function generateOtp() {
 
     const data = await response.json();
 
-    document.getElementById('otpButton').textContent = 'Resend OTP';
-    document.getElementById('otpButton').disabled = true;
-    var otpDisplay = document.getElementById('otpDisplay')
-    if (otpDisplay) {
-        document.getElementById('otpDisplay').innerText = "Your OTP is: " + data.code;
+    var otpButton = document.getElementById('otpButton')
+
+    if (otpButton) {
+        document.getElementById('otpButton').textContent = 'Resend OTP';
+        document.getElementById('otpButton').disabled = true;
+        var otpDisplay = document.getElementById('otpDisplay')
+        if (otpDisplay) {
+            document.getElementById('otpDisplay').innerText = "Your OTP is: " + data.code;
+        }
+        resendOptTimer();
     }
-    resendOptTimer();
 }
 
 async function validateOtp() {
@@ -75,6 +81,89 @@ async function validateOtp() {
     }
 }
 
+async function verifyOtpAndPasswordReset() {
+    try {
+        // Get the values from the form
+        const phoneNumber = document.getElementById('mobile').value;
+        const newPassword = document.getElementById('new-password').value;
+        const otp = document.getElementById('otp').value;
+
+        if (!validatePassword(newPassword)) {
+            return
+        }
+
+        // Prepare the data for the request
+        const requestData = {
+            phone_number: phoneNumber,
+            password: newPassword,
+            otp: otp
+        };
+
+        // Send a POST request to the reset-password endpoint
+        const response = await fetch('/api/auth/assist/reset-password', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestData)
+        });
+
+        // Check if the response is successful
+        if (response.ok) {
+            alert('OTP verified and password reset successful.');
+            window.location.href = '/assist/login';
+        } else {
+            const errorData = await response.json();
+            alert('Failed to reset password: ' + errorData.message || response.statusText);
+        }
+    } catch (error) {
+        console.error('Error verifying OTP:', error);
+        alert('Failed to verify OTP. Please try again.');
+    }
+}
+
+async function generateForgotPasswordOtp() {
+    try {
+        var mobileNumber = document.getElementById("mobile").value;
+        if (!mobileNumber) {
+            alert("Please enter a mobile number");
+            return;
+        }
+
+        var formData = {
+            phone_number: mobileNumber,
+        };
+
+        const path = '/api/auth/otp/generate/reset-password';
+
+        const response = await fetch(path, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (!response.ok) {
+            alert("Failed to generate OTP. Please try again.");
+            throw new Error("Failed to generate OTP. Please try again.");
+        }
+
+        const data = await response.json();
+
+        if (data.status == 'FAILED') {
+            alert(data.error);
+            return;
+        }
+
+        document.getElementById('forgot-password-form').classList.add('hidden');
+        document.getElementById('otp-verification-form').classList.remove('hidden');
+    } catch (error) {
+        console.error('Failed to send forgot password otp:', error);
+    }
+}
+
+
 async function generateAnonymousToken() {
     const mobile = document.getElementById("mobile").value;
     const otp = document.getElementById("otp").value;
@@ -116,12 +205,19 @@ async function generateAnonymousToken() {
     // put this in local stroage
 }
 
+var countdownInterval;
+
 function resendOptTimer() {
+
+    if (countdownInterval) {
+        clearInterval(countdownInterval);
+    }
+
     var countdown = 60;
     var timerElement = document.getElementById('timer');
     timerElement.textContent = countdown + 's';
 
-    var countdownInterval = setInterval(function () {
+    countdownInterval = setInterval(function () {
         countdown--;
         var otpButton = document.getElementById('otpButton')
 

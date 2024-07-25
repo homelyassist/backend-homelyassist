@@ -1,7 +1,6 @@
 package com.homelyassist.model.rest.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.homelyassist.model.enums.AgriculturalAssistType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +12,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SearchAssistRequestDto {
+public class SearchAssistRequestDto<T> {
 
     @JsonProperty("state")
     private String state;
@@ -28,5 +27,5 @@ public class SearchAssistRequestDto {
     private String village;
 
     @JsonProperty("assist_types")
-    private List<AgriculturalAssistType> assistTypes;
+    private List<T> assistTypes;
 }

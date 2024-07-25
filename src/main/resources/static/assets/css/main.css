@@ -684,6 +684,65 @@ a:hover {
 .footer .credits a {
     color: black;
 }
+.img-responsive {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Adjust this value as needed */
+}
+.image-container {
+    padding: 10px; /* Add padding around the image container */
+    box-sizing: border-box; /* Ensure padding is included in the container's total width */
+}
+
+.image-container img {
+    width: 100%; /* Make image responsive */
+    display: block; /* Remove bottom margin/gap */
+}
+
+.image-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+    box-sizing: border-box; /* Ensure padding is included in the description's total width */
+}
+
+/* Specific border colors for each image */
+.image-container.agriculture img {
+    border: 3px solid #4CAF50; /* Green */
+}
+
+.image-container.construction img {
+    border: 3px solid #FF9800; /* Orange */
+}
+
+.image-container.electrical img {
+    border: 3px solid #2196F3; /* Blue */
+}
+
+.image-container.education img {
+    border: 3px solid #9C27B0; /* Purple */
+}
+
+.image-container.maid img {
+    border: 3px solid #E91E63; /* Pink */
+}
+
+.image-container.health img {
+    border: 3px solid #F44336; /* Red */
+}
+
+.image-container.laundry img {
+    border: 3px solid #00BCD4; /* Cyan */
+}
+
+
+
 
 
 

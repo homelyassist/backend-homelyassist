@@ -1,62 +1,12 @@
-async function registerAssist() {
-    const fileInput = document.getElementById('photo');
-    const file = fileInput.files[0];
+const category_map = {
+    'agriculture_assist': 'agriculture',
+    'construction_assist': 'construction',
+    'electrical_assist': 'electrical',
+    'maid_assist': 'maid'
+}
 
-    if (!file) {
-        console.error('No file selected.');
-        alert("Please select photo");
-        return;
-    }
-
-    var payload = {
-        name: document.getElementById("fullname").value,
-        phone_number: document.getElementById("mobile").value,
-        state: document.getElementById("state").value,
-        district: document.getElementById("district").value,
-        block: document.getElementById("block").value,
-        village: document.getElementById("village").value,
-        experience: document.getElementById("experience").value,
-        description: document.getElementById("description").value,
-        gender: document.getElementById("gender").value,
-        password: document.getElementById("password").value,
-        assist_types: getSelectedAssistTypes()
-    };
-
-    for (const key in payload) {
-        if (key == "village") {
-            continue;
-        }
-
-        if (payload.hasOwnProperty(key)) {
-            const value = payload[key];
-            if (!value) {
-                alert(`Please fill in the ${key.replace('_', ' ')} field.`);
-                return false;
-            }
-        }
-    }
-
-    if (payload.state != "Odisha") {
-        alert("Only Odisha state registration is allowed");
-        return;
-    }
-
-    if (payload.password.length < 6) {
-        alert("Password should be longer (6+ chars).")
-        return
-    }
-
-    const experience = parseInt(payload.experience)
-
-    if (Number.isNaN(experience) || experience < 0 || experience > 30) {
-        alert("Please provide a valid value for Experience between 0 and 30");
-        return;
-    }
-
-    if (payload.assist_types.length === 0) {
-        alert("Please select at least one Sub-Category.");
-        return;
-    }
+async function verifyAndRegisterAssist() {
+    await validate();
 
     const validOpt = await validateOtp();
 
@@ -64,7 +14,10 @@ async function registerAssist() {
         return;
     }
 
-    const response = await fetch("/api/assist/agriculture/register", { // make this generic as per category
+    var payload = await extractPayload()
+    const category = category_map[document.getElementById("category").value];
+
+    const response = await fetch(`/api/assist/${category}/register`, { // make this generic as per category
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -87,10 +40,14 @@ async function registerAssist() {
 
     const uuid = data.uuid;
     const formData = new FormData();
+    const fileInput = document.getElementById('photo');
+    const file = fileInput.files[0];
     const compressedBlob = await compressImage(file, 50 * 1024);
     formData.append('file', compressedBlob);
 
-    const imageResponse = await fetch(`/api/assist/agriculture/${uuid}/image/upload`, { // make this generic as per category
+    localStorage.setItem("assist_type", category);
+
+    const imageResponse = await fetch(`/api/assist/${category}/${uuid}/image/upload`, { // make this generic as per category
         method: "POST",
         headers: {
             "Authorization": getBearerToken()
@@ -107,14 +64,112 @@ async function registerAssist() {
     window.location.assign("/assist/availability");
 }
 
+async function validateAndGenerateOtp() {
+    var isValid = await validate();
+    if (!isValid) {
+        return;
+    }
+    await generateOtp();
+    showOtpModal()
+}
+
+async function extractPayload() {
+    return {
+        name: document.getElementById("fullname").value,
+        phone_number: document.getElementById("mobile").value,
+        state: returnNullIfNA(document.getElementById("state").value),
+        district: returnNullIfNA(document.getElementById("district").value),
+        block: returnNullIfNA(document.getElementById("block").value),
+        village: returnNullIfNA(document.getElementById("village").value),
+        experience: document.getElementById("experience").value,
+        description: document.getElementById("description").value,
+        gender: document.getElementById("gender").value,
+        password: document.getElementById("password").value,
+        assist_types: getSelectedAssistTypes()
+    };
+
+}
+
+async function validate() {
+    const fileInput = document.getElementById('photo');
+    const file = fileInput.files[0];
+
+    if (!file) {
+        console.error('No file selected.');
+        alert("Please select photo");
+        return false;
+    }
+
+    var payload = await extractPayload()
+
+    const category = category_map[document.getElementById("category").value];
+
+    for (const key in payload) {
+        if (key == "village") {
+            continue;
+        }
+
+        if (payload.hasOwnProperty(key)) {
+            const value = payload[key];
+            if (!value) {
+                alert(`Please fill in the ${key.replace('_', ' ')} field.`);
+                return false;
+            }
+        }
+    }
+
+    if (payload.state != "Odisha") {
+        alert("Only Odisha state registration is allowed");
+        return false;
+    }
+
+    if (!validatePassword(payload.password)) {
+        return false;
+    }
+
+    const experience = parseInt(payload.experience)
+
+    if (Number.isNaN(experience) || experience < 0 || experience > 30) {
+        alert("Please provide a valid value for Experience between 0 and 30");
+        return false;
+    }
+
+    if (payload.assist_types.length === 0 && category != category_map['electrical_assist']) {
+        alert("Please select at least one Sub-Category.");
+        return false;
+    }
+
+    return true;
+}
+
+function showOtpModal() {
+    const otpModal = document.getElementById('otpModal');
+    otpModal.style.display = 'block';
+    otpModal.classList.add('show');
+    otpModal.setAttribute('aria-modal', 'true');
+    otpModal.setAttribute('role', 'dialog');
+    const statusMessage = document.getElementById('otp-status-message');
+    statusMessage.textContent = 'OTP sent successfully. Resend after 60 seconds.';
+}
+
+
+function closeOtpModal() {
+    const otpModal = document.getElementById('otpModal');
+    otpModal.style.display = 'none';
+    otpModal.classList.remove('show');
+    otpModal.removeAttribute('aria-modal');
+    otpModal.removeAttribute('role');
+}
+
 async function getAssistData() {
     const uuid = localStorage.getItem('uuid')
+    const category = localStorage.getItem('assist_type')
     if (!uuid) {
         console.log("uuid is null");
         window.location.assign("/");
     }
 
-    const response = await fetch(`/api/assist/agriculture/${uuid}`, { // make this generic as per category
+    const response = await fetch(`/api/assist/${category}/${uuid}`, { // make this generic as per category
         method: "GET",
         headers: {
             "Authorization": getBearerToken()
@@ -148,8 +203,9 @@ function updateAvailabilitySelect(active) {
 
 async function updateAvailabilityInfo() {
     const uuid = localStorage.getItem('uuid')
+    const category = localStorage.getItem('assist_type')
     const availability = document.getElementById("availability").value === "yes";
-    const response = await fetch(`/api/assist/agriculture/${uuid}/availability`, {
+    const response = await fetch(`/api/assist/${category}/${uuid}/availability`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -199,6 +255,7 @@ async function assistLogin() {
         if (data.status === "SUCCESS" && data.token) {
             localStorage.setItem("token", data.token);
             localStorage.setItem("uuid", data.uuid);
+            localStorage.setItem("assist_type", data.type);
             window.location.assign("/assist/availability");
         } else {
             console.error("Error login to server")
@@ -210,18 +267,23 @@ async function assistLogin() {
     }
 }
 
+function returnNullIfNA(value) {
+    return value == 'NA' ? null : value
+}
 
-async function searchAssist() {
+async function searchAssist(categoryValue) {
 
     var payload = {
-        state: document.getElementById("state").value,
-        district: document.getElementById("district").value,
-        block: document.getElementById("block").value,
-        village: document.getElementById("village").value,
+        state: returnNullIfNA(document.getElementById("state").value),
+        district: returnNullIfNA(document.getElementById("district").value),
+        block: returnNullIfNA(document.getElementById("block").value),
+        village: returnNullIfNA(document.getElementById("village").value),
         assist_types: getSelectedAssistTypes()
     }
 
-    if (payload.assist_types.length === 0) {
+    const category = category_map[categoryValue];
+
+    if (payload.assist_types.length === 0 && category != category_map['electrical_assist']) {
         alert("Please select at least one Sub-Category.");
         return;
     }
@@ -236,7 +298,7 @@ async function searchAssist() {
     container.appendChild(addLoadingIcon());
 
     try {
-        const response = await fetch("/api/assist/agriculture/search", { // make this generic as per category
+        const response = await fetch(`/api/assist/${category}/search`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -266,7 +328,7 @@ async function searchAssist() {
                         </div>
                         <h3>${item.name}</h3>
                         <p>${item.description}</p>
-                        <button class="btn btn-request" data-uuid="${item.id}" id="${item.id}_btn" onclick="openPopup(event)">Request Mobile Number</button>
+                        <button class="btn btn-request" data-uuid="${item.id}" data-category="${category}" id="${item.id}_btn" onclick="openPopup(event)">Request Mobile Number</button>
                         <p id="${item.id}"></p>
                     </div>
                 `;
@@ -290,18 +352,20 @@ async function searchAssist() {
 
 function getSelectedAssistTypes() {
     var selectedAssistTypes = [];
-    // Get all checkbox elements with name 'assist_type'
-    var checkboxes = document.querySelectorAll('input[name="assist_type"]');
-    // Iterate over each checkbox
-    checkboxes.forEach(function (checkbox) {
-        // Check if checkbox is checked
-        if (checkbox.checked) {
-            // Add the value of the checkbox to the selectedAssistTypes array
-            selectedAssistTypes.push(checkbox.value);
+    // Get the select element
+    var selectElement = document.getElementById('subcategory-container');
+    // Get all selected options
+    if (selectElement) {
+        var selectedOptions = selectElement.selectedOptions;
+        // Iterate over each selected option
+        for (var i = 0; i < selectedOptions.length; i++) {
+            // Add the value of the selected option to the selectedAssistTypes array
+            selectedAssistTypes.push(selectedOptions[i].value);
         }
-    });
+    }
     return selectedAssistTypes;
 }
+
 
 function generateBase64String(buffer, gender) {
 
@@ -342,15 +406,16 @@ async function compressImage(file, maxSizeInBytes) {
     });
 }
 
-async function getAssistDetails(assistId) {
+async function getAssistDetails(assistId, category) {
     const m_vid = localStorage.getItem('m_vid');
+
 
     var payload = {
         assist_id: assistId,
         vid: m_vid
     };
 
-    const response = await fetch("/member/assist/detail", {
+    const response = await fetch(`/api/assist/${category}/detail`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -376,8 +441,9 @@ function viewAssistPhoneNumber(data, assist_id) {
 
 async function requestMobileNumber(event) {
     const assist_uuid = event.target.dataset.uuid;
+    const category = event.target.dataset.category;
     await generateAnonymousToken();
-    const data = await getAssistDetails(assist_uuid);
+    const data = await getAssistDetails(assist_uuid, category);
     viewAssistPhoneNumber(data, assist_uuid)
     closePopup();
 }
@@ -391,13 +457,15 @@ function tokenIsPresntAndValid() {
 
 async function openPopup(event) {
     const uuid = event.target.dataset.uuid;
+    const category = event.target.dataset.category;
     if (tokenIsPresntAndValid()) {
-        const data = await getAssistDetails(uuid);
+        const data = await getAssistDetails(uuid, category);
         viewAssistPhoneNumber(data, uuid)
         return;
     }
     const submitButton = document.getElementById('popUpSubmitButton');
     submitButton.setAttribute('data-uuid', uuid);
+    submitButton.setAttribute('data-category', category);
     document.getElementById("popup").style.display = "block";
 }
 
@@ -425,3 +493,62 @@ function hideLoadingSpinner() {
     // Hide the loading spinner
     document.getElementById('loading-spinner').style.display = 'none';
 }
+
+const subcategories = {
+    agriculture_assist: [
+        { id: 'agriculture', value: 'agriculture', label: 'Farming' },
+        { id: 'farm_land_maintenance', value: 'farm_land_maintenance', label: 'Farm Land Maintenance' },
+        { id: 'wood_cutting', value: 'wood_cutting', label: 'Wood Cutting' },
+        { id: 'tractor_power_tiller', value: 'tractor_power_tiller', label: 'Tractor/Power Tiller rent' },
+        { id: 'animal_selling', value: 'animal_selling', label: 'Animal Selling' }
+    ],
+    construction_assist: [
+        { id: 'home_construction', value: 'home_construction', label: 'Home Construction' },
+        { id: 'home_repair', value: 'home_repair', label: 'Home Repair' },
+        { id: 'carpenter', value: 'carpenter', label: 'Carpenter' },
+        { id: 'plumber', value: 'plumber', label: 'Plumber' },
+        { id: 'painting', value: 'painting', label: 'Painting' },
+        { id: 'fitting', value: 'fitting', label: 'Fitting' }
+    ],
+    electrical_assist: [],
+    maid_assist: [
+        { id: 'cook', value: 'cook', label: 'Cook' },
+        { id: 'maid', value: 'maid', label: 'Maid' },
+        { id: 'tiffin_service', value: 'tiffin_service', label: 'Tiffin Service' },
+    ]
+};
+
+function updateSubcategories(category, checked = false) {
+    const wrapper = document.getElementById('subcategory-container-wrapper');
+    const subcategoryLabel = document.querySelector('label[for="subcategory"]');
+
+    wrapper.innerHTML = '';
+
+    if (subcategories[category].length === 0) {
+        subcategoryLabel.style.display = 'none';
+    } else {
+        subcategoryLabel.style.display = 'block';
+        // Create the select element
+        const select = document.createElement('select');
+        select.id = 'subcategory-container';
+        select.className = 'form-control';
+        select.multiple = true;
+        subcategories[category].forEach(subcategory => {
+            const option = document.createElement('option');
+            option.value = subcategory.value;
+            option.text = subcategory.label;
+            option.name = 'assist_type'
+            if (checked) {
+                option.selected = true;
+            }
+            select.appendChild(option);
+        });
+
+        wrapper.appendChild(select);
+
+        $(select).select2({
+            placeholder: "Select subcategories"
+        });
+    }
+}
+

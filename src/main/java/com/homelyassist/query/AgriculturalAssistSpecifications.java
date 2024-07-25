@@ -10,7 +10,7 @@ import java.util.List;
 
 public class AgriculturalAssistSpecifications {
 
-    public static Specification<AgriculturalAssist> findBySearchParams(SearchAssistRequestDto requestDto) {
+    public static Specification<AgriculturalAssist> findBySearchParams(SearchAssistRequestDto<AgriculturalAssistType> requestDto) {
         return (root, query, cb) -> {
             List<Predicate> predicates = new ArrayList<>();
 
