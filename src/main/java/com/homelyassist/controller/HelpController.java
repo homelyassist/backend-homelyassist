@@ -8,4 +8,9 @@ public class HelpController {
     public String help(){
         return "help";
     }
+
+    @GetMapping("/app/help")
+    public String appHelp(){
+        return "help_app";
+    }
 }
