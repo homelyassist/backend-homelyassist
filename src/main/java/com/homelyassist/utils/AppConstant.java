@@ -33,5 +33,9 @@ public class AppConstant {
         public static final String ASSIST = "assist";
     }
 
+    public static class AppHTMLPage {
+        public static final String ASSIST = "assist_app";
+    }
+
     public static final String VALID_TOKEN = "OK";
 }

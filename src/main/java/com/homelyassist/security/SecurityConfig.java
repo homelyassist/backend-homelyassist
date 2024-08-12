@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
-@Profile("local")
+@Profile("prod")
 public class SecurityConfig {
 
     @Bean
