@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Registration Form</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link th:href="@{/assets/img/homelyAssistlogo.jpeg}" rel="icon">
+    <link th:href="@{/assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+    <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link th:href="@{/assets/css/main.css}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Style for buttons */
+        .btn-get-started {
+            background-color: #6cb83a;
+            /* Green theme */
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-get-started:hover {
+            background-color: #f5cb42;
+            /* Yellow theme on hover */
+        }
+
+        .btn-otp {
+            color: #6cb83a;
+            /* Green theme */
+            font-weight: bold;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .btn-otp:hover {
+            color: #f5cb42;
+            /* Yellow theme on hover */
+        }
+
+        /* Adjust button layout */
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        /* Center the form */
+        #registration-form {
+            text-align: center;
+            padding: 50px 0;
+            margin-top: 80px;
+        }
+
+        /* Adjust form layout */
+        #registration-form .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        #registration-form label {
+            font-weight: bold;
+        }
+
+        /* Style section title */
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2e8b57;
+            margin-bottom: 30px;
+        }
+
+        /* Style form inputs */
+        .form-control {
+            border-radius: 20px;
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+
+        /* Style form select */
+        select.form-control {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%236cb83a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M12 16l-6-6h12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 20px;
+            padding-right: 40px;
+        }
+
+        /* Style file input */
+        input[type="file"].form-control {
+            border: 1px solid #ced4da;
+            background-color: transparent;
+            padding: 10px 20px;
+        }
+
+        /* Style checkboxes */
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-item {
+            margin-right: 20px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 6px;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 10px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .select2-selection__arrow {
+            height: 48px;
+            /* Match the height with select box */
+        }
+
+        /* Customizing Select2 Dropdown Arrow */
+        .select2-selection__arrow b {
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Hover effect for Select2 Dropdown */
+        .select2-container--default .select2-selection--single:hover {
+            border-color: #555;
+        }
+
+        .select2-selection__rendered {
+            line-height: 2;
+            /* Adjust the line height as needed */
+        }
+
+        .select2-dropdown.select2-dropdown--below {
+            width: 100%;
+        }
+
+        .select2-container--default .select2-selection--single {
+            padding: 6px;
+            height: 45px;
+            width: 100%;
+            position: relative;
+        }
+
+        .select2-selection__arrow {
+            color: #6cb83a;
+            top: 50% !important;
+            transform: translateY(-50%);
+        }
+
+        .select2-container--default .select2-selection--single {
+            border-radius: 15px;
+        }
+        .select2-container--default .select2-selection--multiple {
+            border-radius: 15px;
+            padding: 6px;
+            height: auto;
+            width: 100%;
+            position: relative;
+        }
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            border-radius: 15px;
+            margin: 1px 2px;
+        }
+
+        .modal-dialog {
+            transform: translateY(-20%) !important;
+        }
+
+        .modal-content {
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- ======= Registration Form Section ======= -->
+    <section id="registration-form" class="registration-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title" >
+                        <h2>Fill below details to Register</h2>
+                    </div>
+                    <form role="form" >
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" name="fullname" class="form-control" id="fullname"
+                                    placeholder="Full Name" maxlength="22" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="gender">Gender</label>
+                                <select name="gender" id="gender" class="form-control" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="state">State</label>
+                                <select name="state" class="form-control" id="state" required>
+                                    <option value="" selected disabled>Select State</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="district">District</label>
+                                <select name="district" class="form-control" id="district" placeholder="District"
+                                    required>
+                                    <option value="" selected disabled>Select District</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="block">Block/Municipality</label>
+                                <select name="block" class="form-control" id="block" placeholder="Block/Municipality"
+                                    required>
+                                    <option value="" selected disabled>Select Block/Municipality</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="village">Village/Area</label>
+                                <select name="village" class="form-control" id="village" placeholder="Village/Area">
+                                    <option value="" selected disabled>Select Village/Area</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="category">Category</label>
+                                <select name="category" id="category" class="form-control" required>
+                                    <option value="agriculture_assist">Agriculture Assist</option>
+                                    <option value="construction_assist">Construction Assist</option>
+                                    <option value="electrical_assist">Electrical Assist</option>
+                                    <option value="maid_assist">Maid Assist</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="subcategory">Sub-Category</label>
+                                <div id="subcategory-container-wrapper"></div>
+                            </div>
+
+                            <div class="col-md-6 form-group">
+                                <label for="description">Description</label>
+                                <textarea name="description" class="form-control" id="description"
+                                    placeholder="Description" maxlength="70" required></textarea>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="experience">Experience</label>
+                                <input type="number" name="experience" class="form-control" id="experience"
+                                    placeholder="Experience" required min="0" max="30">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" class="form-control" id="password"
+                                    placeholder="Password" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="photo">Photo</label>
+                                <input type="file" name="photo" class="form-control" id="photo" placeholder="Photo"
+                                    accept="image/*" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label for="mobile">Mobile Number</label>
+                                <input type="tel" name="mobile" class="form-control" id="mobile"
+                                    placeholder="Mobile Number" required maxlength="10">
+                            </div>
+<!--                            <div class="col-md-12 form-group">-->
+<!--                                <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP"-->
+<!--                                    required>-->
+<!--                            </div>-->
+                            <!-- <div class="col-md-12 form-group">
+                                <div>
+                                    <span id="otpDisplay"></span>
+                                </div>
+                            </div> -->
+<!--                            <div class="col-md-12 form-group">-->
+<!--                                <button type="button" class="btn btn-primary" id="otpButton"-->
+<!--                                    onclick="generateOtp()">Generate OTP</button>-->
+<!--                                <span id="timer"></span>-->
+<!--                            </div>-->
+                            <div class="col-md-12 btn-container">
+                                <button type="button" class="btn btn-success" onclick="validateAndGenerateOtp()">Submit</button>
+                            </div>
+
+                            <!-- OTP Modal -->
+                            <div class="modal fade" id="otpModal" tabindex="-1" role="dialog"
+                                 aria-labelledby="otpModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="otpModalLabel">Enter OTP</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeOtpModal()">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label for="otp">OTP</label>
+                                                <input type="text" name="otp" class="form-control" id="otp" placeholder="Enter OTP">
+                                            </div>
+                                            <span id="otp-status-message" class="d-block mt-2"></span>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <span id="timer"></span>
+                                            <button type="button" id="otpButton" class="btn btn-secondary" onclick="generateOtp()">Resend OTP</button>
+                                            <button type="button" id="validate-otp-btn" class="btn btn-primary" onclick="verifyAndRegisterAssist()">Validate OTP</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Registration Form Section -->
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader">
+        <div class="line"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            $('#category').select2({
+                placeholder: "Select Category",
+                allowClear: true
+            });
+
+            $('#category').on('change', function () {
+                const category = $(this).val();
+                updateSubcategories(category);
+            });
+
+            updateSubcategories(document.getElementById('category').value);
+        });
+    </script>
+
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/otp.js"></script>
+    <script src="/assets/js/assist.js"></script>
+    <script src="/assets/js/utils.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="/assets/js/location.js"></script>
+
+</body>
+
+</html>

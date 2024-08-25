@@ -21,12 +21,12 @@ public class AssistAPPController {
 
     @GetMapping("/register")
     public String registration(){
-        return ASSIST_REGISTER;
+        return AppConstant.AppHTMLPage.ASSIST_REGISTER;
     }
 
     @GetMapping("/login")
     public String login() {
-        return ASSIST_LOGIN;
+        return AppConstant.AppHTMLPage.ASSIST_LOGIN;
     }
 
     @GetMapping("/forgot-password")
@@ -36,7 +36,7 @@ public class AssistAPPController {
 
     @GetMapping("/availability")
     public String availability() {
-        return ASSIST_AVAILABILITY;
+        return AppConstant.AppHTMLPage.ASSIST_AVAILABILITY;
     }
 
     @GetMapping("/search")

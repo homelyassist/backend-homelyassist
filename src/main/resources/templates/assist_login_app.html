@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Login - HomelyAssist</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="/assets/img/homelyAssistlogo.jpeg" rel="icon">
+    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .btn-get-started {
+            background-color: #6cb83a;
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-get-started:hover {
+            background-color: #f5cb42;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        #confirm-form {
+            margin-top: 80px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+        }
+        .form-control {
+            border-radius: 20px;
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 10px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2e8b57;
+            margin-bottom: 30px;
+        }
+        .forgot-password-link {
+            display: block;
+            margin-top: 15px;
+            color: #007bff;
+            cursor: pointer;
+            text-align: left; /* Aligns link to the left */
+        }
+        .forgot-password-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Login Form Section -->
+<section id="confirm-form" class="confirm-form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title" >
+                    <h2>Confirm Your Login details</h2>
+                </div>
+                <form action="#" role="form" >
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="tel" name="mobile" class="form-control" id="mobile" placeholder="Mobile Number" required maxlength="10">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="/assist/forgot-password" class="forgot-password-link">Forgot Password?</a>
+                        </div>
+                        <div class="col-md-12 btn-container">
+                            <button type="button" class="btn btn-success" onclick="assistLogin()">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="preloader">
+    <div class="line"></div>
+</div>
+
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/assist.js"></script>
+</body>
+
+</html>

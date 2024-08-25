@@ -35,6 +35,12 @@ public class AppConstant {
 
     public static class AppHTMLPage {
         public static final String ASSIST = "assist_app";
+
+        public static final String ASSIST_REGISTER = "assist_register_app";
+
+        public static final String ASSIST_LOGIN = "assist_login_app";
+
+        public static final String ASSIST_AVAILABILITY = "assist_availability_app";
     }
 
     public static final String VALID_TOKEN = "OK";
