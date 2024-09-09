@@ -8,12 +8,6 @@ function getMemberBearerToken() {
     return 'Bearer ' + token;
 }
 
-function logout() {
-    localStorage.removeItem("token");
-    localStorage.removeItem("uuid");
-    window.location.assign("/");
-}
-
 function showPopupNotification(message) {
     // Create notification div
     var notificationDiv = document.createElement('div');

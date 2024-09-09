@@ -41,6 +41,8 @@ public class AppConstant {
         public static final String ASSIST_LOGIN = "assist_login_app";
 
         public static final String ASSIST_AVAILABILITY = "assist_availability_app";
+
+        public static final String ASSIST_FORGOT_PASSWORD = "forgot_password_app";
     }
 
     public static final String VALID_TOKEN = "OK";

@@ -5,10 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import static com.homelyassist.utils.AppConstant.HTMLPage.ASSIST_AVAILABILITY;
-import static com.homelyassist.utils.AppConstant.HTMLPage.ASSIST_FORGOT_PASSWORD;
-import static com.homelyassist.utils.AppConstant.HTMLPage.ASSIST_LOGIN;
-import static com.homelyassist.utils.AppConstant.HTMLPage.ASSIST_REGISTER;
 import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_AGRICULTURE_ASSIST;
 import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_ASSIST;
 import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_CONSTRUCTION_ASSIST;
@@ -31,7 +27,7 @@ public class AssistAPPController {
 
     @GetMapping("/forgot-password")
     public String forgotPassword() {
-        return ASSIST_FORGOT_PASSWORD;
+        return AppConstant.AppHTMLPage.ASSIST_FORGOT_PASSWORD;
     }
 
     @GetMapping("/availability")

@@ -5,7 +5,7 @@ const category_map = {
     'maid_assist': 'maid'
 }
 
-async function verifyAndRegisterAssist() {
+async function verifyAndRegisterAssist(app = false) {
     await validate();
 
     const validOpt = await validateOtp();
@@ -61,7 +61,7 @@ async function verifyAndRegisterAssist() {
     }
 
     localStorage.setItem('uuid', data.uuid);
-    window.location.assign("/assist/availability");
+    window.location.assign(appendApp(app, "/assist/availability"));
 }
 
 async function validateAndGenerateOtp() {
@@ -224,7 +224,7 @@ async function updateAvailabilityInfo() {
 
 
 
-async function assistLogin() {
+async function assistLogin(app = false) {
     const mobile = document.getElementById("mobile").value;
     const password = document.getElementById("password").value;
 
@@ -256,7 +256,7 @@ async function assistLogin() {
             localStorage.setItem("token", data.token);
             localStorage.setItem("uuid", data.uuid);
             localStorage.setItem("assist_type", data.type);
-            window.location.assign("/assist/availability");
+            window.location.assign(appendApp(app, "/assist/availability"));
         } else {
             console.error("Error login to server")
             alert(data.error);
@@ -550,5 +550,23 @@ function updateSubcategories(category, checked = false) {
             placeholder: "Select subcategories"
         });
     }
+}
+
+function logout(app = false) {
+    localStorage.removeItem("token");
+    localStorage.removeItem("uuid");
+    if (app) {
+        window.location.assign("/app/assist");
+    } else {
+        window.location.assign("/");
+    }
+}
+
+function appendApp(app, path) {
+    if (app) {
+        path = "/app" + path
+    }
+
+    return path
 }
 

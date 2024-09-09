@@ -81,7 +81,7 @@ async function validateOtp() {
     }
 }
 
-async function verifyOtpAndPasswordReset() {
+async function verifyOtpAndPasswordReset(app = false) {
     try {
         // Get the values from the form
         const phoneNumber = document.getElementById('mobile').value;
@@ -111,7 +111,11 @@ async function verifyOtpAndPasswordReset() {
         // Check if the response is successful
         if (response.ok) {
             alert('OTP verified and password reset successful.');
-            window.location.href = '/assist/login';
+            if (app) {
+                window.location.href = '/app/assist/login';
+            } else {
+                window.location.href = '/assist/login';
+            }
         } else {
             const errorData = await response.json();
             alert('Failed to reset password: ' + errorData.message || response.statusText);
