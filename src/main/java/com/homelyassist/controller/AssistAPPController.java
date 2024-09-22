@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_AGRICULTURE_ASSIST;
 import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_ASSIST;
 import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_CONSTRUCTION_ASSIST;
 import static com.homelyassist.utils.AppConstant.HTMLPage.SEARCH_ELECTRICAL_ASSIST;
@@ -42,7 +41,7 @@ public class AssistAPPController {
 
     @GetMapping("/agriculture/search")
     public String searchAgricultureAssist() {
-        return SEARCH_AGRICULTURE_ASSIST;
+        return AppConstant.AppHTMLPage.SEARCH_AGRICULTURE_ASSIST;
     }
 
     @GetMapping("/construction/search")
